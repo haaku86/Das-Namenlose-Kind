@@ -8,3 +8,5 @@ Auch wenn wir (das Team) dich ein wenig an die Hand nehmen um die Geschichte wei
 Und das Beste: Du kannst dir deinen eigenen Charakter erstellen, spannende Kämpfe führen und deinen Charakter verbessern. Du kannst "Das namenlose Kind" so genießen, wie du es möchtest. Als Pen and Paper mit Charakter, Gegenständen und Würfeln oder einfach als Fighting Novel (interaktives Buch).
 
 Dich erwartet aber in jedem Fall ein spannendes Abenteuer. Wir wünschen viel Spaß!
+
+Um Das PnP zu starten einfach runterladen, entpacken und die "Das Namenlose Kind.html" starten.
