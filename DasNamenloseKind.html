@@ -2377,7 +2377,7 @@ Du bist unter Deck. Was tust du?
 Nur das Lösungswort eingeben (kein der/die/das/etc. davor). Die Lösung besteht aus einem einzigen Wort:
 &lt;&lt;textbox &quot;$antwort1&quot; &quot;&quot;&gt;&gt;
 
-[[Ich habe die erste Antwort!]]</tw-passagedata><tw-passagedata pid="204" name="Ich habe die erste Antwort!" tags="" position="3943,908" size="100,100">&lt;&lt;if $antwort1 is &quot;Echo&quot;&gt;&gt;
+[[Ich habe die erste Antwort!]]</tw-passagedata><tw-passagedata pid="204" name="Ich habe die erste Antwort!" tags="" position="3949.6666666666665,899.6666666666666" size="100,100">&lt;&lt;if $antwort1 is &quot;Echo&quot;&gt;&gt;
 Er stellt dir eine neue Frage. Du hattest wohl recht.
 
 [[Ich höre mir die 2. Frage an]]
@@ -2916,7 +2916,7 @@ Ja, das könnte sein. Man wird es noch erfahren. Die letzten Tage waren anstreng
 [[Ich verschwinde in meine Kajüte und komme erst raus, wenn wir da sind (Geschichte weiterführen)]]
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="246" name="Name eingeben" tags="" position="4189,4662" size="100,100">Wie könnte diese Stadt wohl heißen?
 &lt;&lt;textbox &quot;$stadt&quot; &quot;&quot;&gt;&gt;
-[[Vielleicht so]]</tw-passagedata><tw-passagedata pid="247" name="Ich gehe zur Stadtmitte" tags="" position="4727,48" size="100,100">&lt;img src=&quot;images/kap3.png&quot;&gt;
+[[Vielleicht so]]</tw-passagedata><tw-passagedata pid="247" name="Ich gehe zur Stadtmitte" tags="" position="4728.666666666667,48" size="100,100">&lt;img src=&quot;images/kap3.png&quot;&gt;
 &lt;&lt;audio meer stop&gt;&gt;
 &lt;&lt;audio theme3 stop&gt;&gt;
 &lt;&lt;audio markt volume 0.2 loop play&gt;&gt;
@@ -3486,8 +3486,12 @@ Du hast den Anführer und den anderen Oger überrumpelt. Du kämpfst gegen einen
 [[Den Anführer laufen lassen]]</tw-passagedata><tw-passagedata pid="318" name="Den Anführer hinrichten" tags="" position="4903.333333333333,1761.3333333333333" size="100,100">Mit einem kräftigen letzten Schlag enthauptest du den Anführer. Der leblose Körper sackt zu Boden und der Kopf rollt einige Meter weiter weg. Durch den Krach des Kampfes haben sich einige Minenarbeiter in die Höhle geschlichen und dich angefeuert. Als der rollende Kopf des Anführers zum Halten kommt jubeln die Minenarbeiter lautstark und mit aller Kraft. Übrige Oger die isch eventuell in dunklen Ecken auf ihre Chance gewartet haben flüchten und die abgemagerten Arbeiter der Mine heben dich mit letzter Kraft hoch und feiern dich.
 &lt;&lt;set $ogertot += 1&gt;&gt;
 Einer der Arbeiter hebt den Ranzen des Anführers hoch und gibt ihn dir. Du findest neben unidentifierzierbarem Fleisch (das du NICHT einsteckst), 40 Taler und eine prunkvolle Einhandaxt. Sie ist etwas stumpf doch ein Schmied könnte sie wieder schärfen und zu einem gefährlichen Begleiter machen.
+&lt;&lt;set $gesinnung -= 10&gt;&gt;
+&lt;img src=&quot;Gegenstandskarten/Stumpfe prunkvolle Einhandaxt.jpg&quot;&gt;
 
-&lt;img src=&quot;Gegenstandskarten/Stumpfe prunkvolle Einhandaxt.jpg&quot;&gt;</tw-passagedata><tw-passagedata pid="319" name="Den Anführer laufen lassen" tags="" position="5024.999999999999,1764.6666666666665" size="100,100">Doppelklick auf diesen Absatz zum Bearbeiten.</tw-passagedata><tw-passagedata pid="320" name="Ich habe gegen die Oger verloren" tags="" position="4861.666666666666,1528" size="100,100">&lt;&lt;audio fight4 stop&gt;&gt;
+Du sagst den Minenarbeitern sie sollen nachhause gehen, sich ausruhen und zu ihren Familien zurückkehren und in ein paar Tagen wieder an die normale Arbeit gehen. Sie jubeln und feiern dich. Loblieder singend verlassen die ensklavten Arbeiter die Mine. Auch du machst dich auf den Heimweg.
+
+[[Ich gehe zur Stadtmitte]]</tw-passagedata><tw-passagedata pid="319" name="Den Anführer laufen lassen" tags="" position="5024.999999999999,1764.6666666666665" size="100,100">&lt;&lt;set $gesinnung += 5&gt;&gt;</tw-passagedata><tw-passagedata pid="320" name="Ich habe gegen die Oger verloren" tags="" position="4861.666666666666,1528" size="100,100">&lt;&lt;audio fight4 stop&gt;&gt;
 &lt;&lt;audio gameover volume 0.5 loop play&gt;&gt;
 Du liegst am Boden und spuckst dein eigenes Blut aus, während die Oger dir dein Hab und Gut abnehmen. Du hörst ihr dreckiges Grunzen und siehst wie sie aufgebauscht vom Kampf einen Minenarbeiter einfach niederprügeln.
 
