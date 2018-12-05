@@ -304,11 +304,13 @@ color: #800000;
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">!function(){l10nStrings.identity="Spiel",l10nStrings.aborting="Vorzeitig abgebrochen",l10nStrings.cancel="Abbrechen",l10nStrings.close="Schließen",l10nStrings.ok="OK",l10nStrings.errorTitle="Fehler",l10nStrings.errorNonexistentPassage='die Passage "{passage}" existiert nicht',l10nStrings.errorSaveMissingData="Im Speicherstand fehlen notwendige Daten. Entweder ist die geladene Datei kein Speicherstand oder der Speicherstand ist korrupt",l10nStrings.errorSaveIdMismatch="Speicherstand ist vom falschen {identity}",l10nStrings._warningGermanLacking="in ihrem Browser entweder deaktiviert oder nicht möglich",l10nStrings._warningOutroDegraded=", darum läuft dieses {identity} in einem herabgesetzten Modus. Sie können zwar fortfahren, allerdings kann es sein, dass nicht alle Teile wie gewünscht funktionieren.",l10nStrings.warningNoWebStorage="Das Web Storage API ist {_warningGermanLacking}{_warningOutroDegraded}",l10nStrings.warningDegraded="Einige Features, die diese/s {identity} benötigt sind {_warningGermanLacking}{_warningOutroDegraded}",l10nStrings.debugViewTitle="Fehlersuche-Ansicht",l10nStrings.debugViewToggle="Fehlersuche-Ansicht umschalten",l10nStrings.uiBarToggle="Benutzeroberflächenleiste umschlaten",l10nStrings.uiBarBackward="Im {identity}-Ablauf zurück gehen",l10nStrings.uiBarForward="Im {identity}-Ablauf nach vor gehen",l10nStrings.uiBarJumpto="Zu einem bestimmten Punkt im {identity}-Ablauf springen",l10nStrings.jumptoTitle="Springe zu",l10nStrings.jumptoTurn="Zug",l10nStrings.jumptoUnavailable="Momentan sind keine Sprungmarken vorhanden…",l10nStrings.savesTitle="Speicherstände",l10nStrings.savesDisallowed="Speichern ist in dieser Passage nicht gestattet.",l10nStrings.savesEmptySlot="— Speicherslot leer —",l10nStrings.savesIncapable="Die Möglichkeit zu Speichern ist {_warningGermanLacking}, darum ist die Speicherfunktion für diese Sitzung deaktiviert.",l10nStrings.savesLabelAuto="Automatischer Speicherstand",l10nStrings.savesLabelDelete="Löschen",l10nStrings.savesLabelExport="Auf Datensträger speichern…",l10nStrings.savesLabelImport="Von Datenträger laden…",l10nStrings.savesLabelLoad="Laden",l10nStrings.savesLabelClear="Alle löschen",l10nStrings.savesLabelSave="Speichern",l10nStrings.savesLabelSlot="Slot",l10nStrings.savesSavedOn="Gespeichert nach",l10nStrings.savesUnavailable="Keine Speicherstand-Slots gefunden…",l10nStrings.savesUnknownDate="unbekannt",l10nStrings.settingsTitle="Einstellungen",l10nStrings.settingsOff="Aus",l10nStrings.settingsOn="An",l10nStrings.settingsReset="Auf Standardwerte zurücksetzen",l10nStrings.restartTitle="Neustart",l10nStrings.restartPrompt="Sind sie sicher, dass Sie neu starten wollen? Ihr Fortschritt nach dem letzten Speichern geht verloren.",l10nStrings.shareTitle="Teilen",l10nStrings.autoloadTitle="Automatisch laden",l10nStrings.autoloadCancel="Zum Start gehen",l10nStrings.autoloadOk="Automatischen Speicherstand laden",l10nStrings.autoloadPrompt="Ein automatischer Speicherstand existiert bereits. Trotzdem laden oder zum Start gehen?",l10nStrings.macroBackText="Zurück",l10nStrings.macroReturnText="Return"}();
 
 Config.history.controls = false;
 
 UIBar.stow()
+
 
 
 
@@ -411,13 +413,13 @@ Ich glaub den Namen hab ich schon mal gehört. Machst du nicht so einen Podcast 
 &lt;&lt;radiobutton &quot;$geschlecht&quot; Abenteurerin&gt;&gt; Abenteurerin
 &lt;&lt;button Weiter Willkommen&gt;&gt;&lt;&lt;/button&gt;&gt;
 
-&lt;&lt;if $name is &quot;Falko&quot;&gt;&gt; Hey! 
+&lt;&lt;elseif $name is &quot;Falko&quot;&gt;&gt; Hey! 
 Ich glaub den Namen hab ich schon mal gehört. Machst du nicht so einen Podcast über so Kram? Schön dich hier zu treffen. Du sollst ja angeblich der Bestaussehenste sein. Du bekommst einen Bonus von +2 auf Intellekt (kommen wir gleich zu)! Sagst du mir kurz, ob du einen Abenteurer oder eine Abenteurerin spielst?
 &lt;&lt;radiobutton &quot;$geschlecht&quot; Abenteurer checked&gt;&gt; Abenteurer
 &lt;&lt;radiobutton &quot;$geschlecht&quot; Abenteurerin&gt;&gt; Abenteurerin
 &lt;&lt;button Weiter Willkommen&gt;&gt;&lt;&lt;/button&gt;&gt;
 
-&lt;&lt;if $name is &quot;falko&quot;&gt;&gt; Hey! 
+&lt;&lt;elseif $name is &quot;falko&quot;&gt;&gt; Hey! 
 Ich glaub den Namen hab ich schon mal gehört. Machst du nicht so einen Podcast über so Kram? Schön dich hier zu treffen. Du sollst ja angeblich der Bestaussehenste sein. Du bekommst einen Bonus von +2 auf Intellekt (kommen wir gleich zu)! Sagst du mir kurz, ob du einen Abenteurer oder eine Abenteurerin spielst?
 &lt;&lt;radiobutton &quot;$geschlecht&quot; Abenteurer checked&gt;&gt; Abenteurer
 &lt;&lt;radiobutton &quot;$geschlecht&quot; Abenteurerin&gt;&gt; Abenteurerin
@@ -1755,7 +1757,7 @@ Du verlässt die Taverne. Du hast $taler Taler in der Tasche. Bevor du das Dorf 
 [[Zum Schmied]]
 [[Zum Gemischtwarenladen]]
 [[Nirgendswo hin. Ich verlasse sofort das Dorf]]
-	&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="132" name="Was willst du?" tags="" position="2500.3333333333335,385" size="100,100">&lt;&lt;audio theme stop&gt;&gt;
+	&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="132" name="Was willst du?" tags="" position="2500,385" size="100,100">&lt;&lt;audio theme stop&gt;&gt;
 &lt;&lt;audio spooky loop play&gt;&gt;
 Die Gestalt reagiert zuerst nicht. Du fragst erneut und die Gestalt kommt einen Schritt näher an dich heran und steht nun neben deinem Bett. Sie beugt sich langsam zu dir vor. Dir läuft ein kalter Schauer über den Rücken und du beginnst innerlich zu frieren.
 
@@ -1780,7 +1782,7 @@ So sehr du dieses Angebot verwerflich finden möchtest, tief in deinem Inneren b
 [[Ich kümmere mich um Loran Dewis]]
 [[Ich habe kein Interesse. Verschwinde und lass mich in ruhe]]
 
-</tw-passagedata><tw-passagedata pid="133" name="Ich kümmere mich um Loran Dewis" tags="" position="2502.3333333333335,611.3333333333334" size="100,100">Die Augen des Mannes beginnen zu strahlen.
+</tw-passagedata><tw-passagedata pid="133" name="Ich kümmere mich um Loran Dewis" tags="" position="2502,611" size="100,100">Die Augen des Mannes beginnen zu strahlen.
 
 &quot;Gut. Sehr gut. Das wollte ich hören. Pass auf. Wenn du die Taverne verlässt und dich rechts hältst, so triffst du bald auf ein weißes Haus mit kupfernen Verzierungen an den Fenstern. Dort wohnt Loran. Das Fenster zu seinem Zimmer liegt auf der linken Seite. Ich habe es dir mit einem kleinen roten Kreis makiert. Steig durch das Fenster, töte Loran und deine Aufgabe ist erledigt. Ich werde dir deine Belohnung dann bei einer passenden Gelgenheit zukommen lassen. Damit du weißt, dass ich es ernst meine, hier hast du schon mal einen Vorschuss.&quot;
 
@@ -1792,7 +1794,7 @@ Du hast nun $taler Taler.
 
 Der Mann verlässt das Zimmer lautlos und verschwindet. Du sammelst dich ein paar Minuten und stehst schließlich auf und ziehst dich an.
 
-[[Ich mache mich auf den Weg nach Loran]]</tw-passagedata><tw-passagedata pid="134" name="Ich habe kein Interesse. Verschwinde und lass mich in ruhe" tags="" position="2502.6666666666665,501.6666666666667" size="100,100">Du lehnst sein Angebot ab. Diese Entscheidung überrascht nicht nur ihn, sondern auch dich. 
+[[Ich mache mich auf den Weg nach Loran]]</tw-passagedata><tw-passagedata pid="134" name="Ich habe kein Interesse. Verschwinde und lass mich in ruhe" tags="" position="2502,501" size="100,100">Du lehnst sein Angebot ab. Diese Entscheidung überrascht nicht nur ihn, sondern auch dich. 
 
 &quot;Gut, ich verstehe. Schade. Wir sehen uns... Vielleicht.&quot;
 
@@ -1808,19 +1810,19 @@ Du bist nun am Haus, das dir der Fremde beschrieben hat. Du gehst links ums Haus
 
 In dem Zimmer scheint kein Licht, weshalb du glaubst, dass Loran in seinem Bett schlafen wird. Sein Bett kannst du jedoch nicht sehen und dir bleibt nichts anderes übrig, als durch das Fenster in das dunkle Zimmer zu steigen.
 
-[[Ich betrete das Zimmer von Loran]]</tw-passagedata><tw-passagedata pid="136" name="Ich betrete das Zimmer von Loran" tags="" position="2501,941.6666666666666" size="100,100">Du steigst vorsichtig und leise in das Zimmer ein. Schon beim Reinsteigen kannst du im Augenwinkel ein Bett erkennen. Als du ganz reingeklettert bist und kurz Inne hältst, um deine Umgebung zu begutachten, blickst du zum Bett und dir gefriert das Blut in den Adern.
+[[Ich betrete das Zimmer von Loran]]</tw-passagedata><tw-passagedata pid="136" name="Ich betrete das Zimmer von Loran" tags="" position="2501,941" size="100,100">Du steigst vorsichtig und leise in das Zimmer ein. Schon beim Reinsteigen kannst du im Augenwinkel ein Bett erkennen. Als du ganz reingeklettert bist und kurz Inne hältst, um deine Umgebung zu begutachten, blickst du zum Bett und dir gefriert das Blut in den Adern.
 
 Loran wird wohl keine Affäre mit der Frau des Fremden haben, denn in dem Bett liegt ein Kleinkind. Du schätzt es auf 4 Jahre. Als du näher herantrittst, kannst du den Namen &quot;Loran&quot; eingeschnitzt in das Kopfteil des Bettes lesen. Dami ist für dich bestätigt, dass es sich bei Loran tatsächlich um den vierjährigen Knirps vor dir handelt.
 
 Wieso sollte jemand ein Kleinkind loswerden wollen? Eifersucht? Ein uneheliches Kind? Egal. Keine weiteren Gedanken verschwenden. Du musst hier schnell wieder weg. Du kannst ja nicht ewig in einem fremden Haus bleiben. Triff deine Entscheidung...
 
 @@.fade-in-out;[[Ich beseitige Loran]]@@
-[[Ich drehe sofort wieder um und gehe zurück zur Taverne]]</tw-passagedata><tw-passagedata pid="137" name="Ich beseitige Loran" tags="" position="2500.3333333333335,1051.3333333333333" size="100,100">Deine blutige Tat ist vollbracht. Du bist nicht stolz, doch die Gier in dir ist befriedigt. Du gehst zurück zur Taverne und fliehst in dein Zimmer.
+[[Ich drehe sofort wieder um und gehe zurück zur Taverne]]</tw-passagedata><tw-passagedata pid="137" name="Ich beseitige Loran" tags="" position="2500,1051" size="100,100">Deine blutige Tat ist vollbracht. Du bist nicht stolz, doch die Gier in dir ist befriedigt. Du gehst zurück zur Taverne und fliehst in dein Zimmer.
 
 Selbst mich hast du an dieser Stelle sprachlos gemacht. An deinen Händen klebt das Blut eines Kindes...
 &lt;&lt;set $gesinnung -= 20&gt;&gt;
 &lt;&lt;set $loran += 1&gt;&gt;
-[[Zum nächsten Morgen springen]]</tw-passagedata><tw-passagedata pid="138" name="Ich drehe sofort wieder um und gehe zurück zur Taverne" tags="" position="2502.6666666666665,831.6666666666666" size="100,100">Anscheinend ist deine Gier doch nicht so groß, wie der Fremde und du angenommen habt. Ein Kind ist zu viel des Guten. Du verlässt wieder das Zimmer und kehrst zurück zur Taverne. Du fühlst dich erleichtert, dass Richtige getan zu haben, dennoch graut es dir vor den möglichen Konsequenzen, die dich in der Taverne erwarten könnten.
+[[Zum nächsten Morgen springen]]</tw-passagedata><tw-passagedata pid="138" name="Ich drehe sofort wieder um und gehe zurück zur Taverne" tags="" position="2502,831" size="100,100">Anscheinend ist deine Gier doch nicht so groß, wie der Fremde und du angenommen habt. Ein Kind ist zu viel des Guten. Du verlässt wieder das Zimmer und kehrst zurück zur Taverne. Du fühlst dich erleichtert, dass Richtige getan zu haben, dennoch graut es dir vor den möglichen Konsequenzen, die dich in der Taverne erwarten könnten.
 
 In deinem Zimmer angekommen schießen dir dutzende Fragen durch den Kopf: Was wird der Fremde nun mit dir machen? Wird er jemand anderen anheuern, um Loran töten zu lassen? Die Panik und Angst in dir schnürt dir die Luft ab. Du solltest ab sofort ein Auge offen halten. Der Fremde wird diese Aktion sicherlich nicht gutheißen...
 
@@ -1852,7 +1854,7 @@ Du hast $taler Taler.
 Mit vollen Taschen, motiviert und voller Tatendrang verlässt du das Dorf. Nein nein, keine Sorge. Du verlässt das Dorf aus dem gegenüberliegenden Ausgang. Keine Felder und Berge mehr. So gemein bin nicht mal ich.
 
 Du verlässt das Dorf durch einen weiteren Felsspalt. Hinter dem Felsspalt überwältigt dich ein wundervoller Anblick. Weit entfernt am Horizont siehst du das Meer. Die Sonne und der blaue Himmel reflektieren sich in ihm und weiße Schäfchenwolken komplettieren dieses malerische Bild zur Perfektion. Der Weg zum Meer schlängelt sich durch Wiesen, Strand und durch ein kleines Fischerdorf. So viel kannst du bereits von hier erkennen. Der Weg zum Meer ist lang und es wird dich einige Stunden dauern, bis du dort angekommen bist. Du atmest einmal tief, riechst zwar noch keine Meerluft, aber das wird sich bald ändern. Du beginnst deine Reise zum Meer.
-[[Auf zum Meer!]]</tw-passagedata><tw-passagedata pid="142" name="Lebenstrank kaufen" tags="" position="3092.6666666666665,516.3333333333334" size="100,100">&quot;Einen Muntermacher? Gute Wahl. Belebt sogar halbtote wieder zum Leben. Das macht 10 Taler!
+[[Auf zum Meer!]]</tw-passagedata><tw-passagedata pid="142" name="Lebenstrank kaufen" tags="" position="3092,516" size="100,100">&quot;Einen Muntermacher? Gute Wahl. Belebt sogar halbtote wieder zum Leben. Das macht 10 Taler!
 
 &lt;&lt;if $taler gte 10&gt;&gt;
 	&lt;&lt;print &quot;Du überlegst kurz, ob du es wirklich kaufen willst.&quot;&gt;&gt;
@@ -1878,7 +1880,7 @@ Du überlegst kurz, ob du es wirklich kaufen willst.
 	&lt;&lt;elseif $taler lt 3&gt;&gt;
 Du suchst in deinen Taschen nach Talern. Die Dame bemerkt es und rät dir, einmal mit dem Glücksspieler zu sprechen.&lt;&lt;/if&gt;&gt;
 [[Ich möchte das getrocknete Fleisch doch nicht kaufen]]
-Du hast $taler Taler.</tw-passagedata><tw-passagedata pid="145" name="Ich möchte den Regenerationstrank wirklich kaufen" tags="" position="3088.6666666666665,627.3333333333334" size="100,100">Die Dame nickt und reicht dir das kleine, aber sehr wertvolle Fläschchen.
+Du hast $taler Taler.</tw-passagedata><tw-passagedata pid="145" name="Ich möchte den Regenerationstrank wirklich kaufen" tags="" position="3088,627" size="100,100">Die Dame nickt und reicht dir das kleine, aber sehr wertvolle Fläschchen.
 
 &quot;Aber gerne. 15 Talerchen mehr für meine leere Brieftasche. Die Firma dankt, sag ich immer!&quot;
 
@@ -1887,12 +1889,12 @@ Den letzten Satz hätte sie sich sparen können, aber nett ist sie trotzdem.
 Du hast noch $taler Taler.
 [[Zum Gemischtwarenladen]]
 [[Nirgendswo hin. Ich verlasse sofort das Dorf]]
-</tw-passagedata><tw-passagedata pid="146" name="Ich möchte den Regenerationstrank doch nicht kaufen" tags="" position="3091.6666666666665,967.3333333333334" size="100,100">Die Dame guckt ein wenig enttäuscht.
+</tw-passagedata><tw-passagedata pid="146" name="Ich möchte den Regenerationstrank doch nicht kaufen" tags="" position="3091,967" size="100,100">Die Dame guckt ein wenig enttäuscht.
 
 &quot;Darf es etwas anderes sein?&quot;
 
 [[Zum Gemischtwarenladen]]
-[[Nirgendswo hin. Ich verlasse sofort das Dorf]]</tw-passagedata><tw-passagedata pid="147" name="Ich möchte das getrocknete Fleisch wirklich kaufen" tags="" position="3093.6666666666665,737.3333333333334" size="100,100">Die Dame nickt und reicht dir ein kleines, aber schweres Päckchen.
+[[Nirgendswo hin. Ich verlasse sofort das Dorf]]</tw-passagedata><tw-passagedata pid="147" name="Ich möchte das getrocknete Fleisch wirklich kaufen" tags="" position="3093,737" size="100,100">Die Dame nickt und reicht dir ein kleines, aber schweres Päckchen.
 
 &quot;Aber gerne. 3 Talerchen mehr für meine leere Brieftasche. Die Firma dankt, sag ich immer! Hihi&quot;
 
@@ -1901,12 +1903,12 @@ Den letzten Satz hätte sie sich sparen können, aber nett ist sie trotzdem.
 &lt;&lt;set $fleisch += 1&gt;&gt;
 Du hast noch $taler Taler und $fleisch x getrocknetes Fleisch.
 [[Zum Gemischtwarenladen]]
-[[Nirgendswo hin. Ich verlasse sofort das Dorf]]</tw-passagedata><tw-passagedata pid="148" name="Ich möchte das getrocknete Fleisch doch nicht kaufen" tags="" position="3091.6666666666665,1073.3333333333333" size="100,100">Die Dame guckt ein wenig enttäuscht.
+[[Nirgendswo hin. Ich verlasse sofort das Dorf]]</tw-passagedata><tw-passagedata pid="148" name="Ich möchte das getrocknete Fleisch doch nicht kaufen" tags="" position="3091,1073" size="100,100">Die Dame guckt ein wenig enttäuscht.
 
 &quot;Darf es etwas anderes sein?&quot;
 
 [[Zum Gemischtwarenladen]]
-[[Nirgendswo hin. Ich verlasse sofort das Dorf]]</tw-passagedata><tw-passagedata pid="149" name="Ich möchte den Lebenstrank wirklich kaufen" tags="" position="3088.6666666666665,1185.3333333333333" size="100,100">Die Dame nickt und reicht dir ein kleines Fläschchen.
+[[Nirgendswo hin. Ich verlasse sofort das Dorf]]</tw-passagedata><tw-passagedata pid="149" name="Ich möchte den Lebenstrank wirklich kaufen" tags="" position="3088,1185" size="100,100">Die Dame nickt und reicht dir ein kleines Fläschchen.
 
 &quot;Aber gerne. 10 Talerchen mehr für meine leere Brieftasche. Die Firma dankt, sag ich immer!&quot;
 
@@ -1914,7 +1916,7 @@ Den letzten Satz hätte sie sich sparen können, aber nett ist sie trotzdem.
 &lt;&lt;set $taler -= 10&gt;&gt;
 Du hast noch $taler Taler.
 [[Zum Gemischtwarenladen]]
-[[Nirgendswo hin. Ich verlasse sofort das Dorf]]</tw-passagedata><tw-passagedata pid="150" name="Ich möchte den Lebenstrank doch nicht kaufen" tags="" position="3090.6666666666665,852.3333333333334" size="100,100">Die Dame guckt ein wenig enttäuscht.
+[[Nirgendswo hin. Ich verlasse sofort das Dorf]]</tw-passagedata><tw-passagedata pid="150" name="Ich möchte den Lebenstrank doch nicht kaufen" tags="" position="3090,852" size="100,100">Die Dame guckt ein wenig enttäuscht.
 
 &quot;Darf es etwas anderes sein?&quot;
 [[Zum Gemischtwarenladen]]
@@ -2214,7 +2216,7 @@ Du wühlst in deiner leeren Tasche nach Talern. Der Kapitän bemerkt es und gibt
 
 &quot;Sieh dich ma um, Matrose. Sieht das hier so aus, als wäre irgendwo ein Gäsezimmer versteckt? Ich könnt nicht mal ne Maus hier unterbringen.&quot;
 
-[[Ich hätte da noch was]]</tw-passagedata><tw-passagedata pid="185" name="Ich hätte gerne einen Krug feinstes Met" tags="" position="3941,2219.6666666666665" size="100,100">Der Wirt schüttelt mit dem Kopf.
+[[Ich hätte da noch was]]</tw-passagedata><tw-passagedata pid="185" name="Ich hätte gerne einen Krug feinstes Met" tags="" position="3941,2219" size="100,100">Der Wirt schüttelt mit dem Kopf.
 
 &quot;Den hätten wir hier alle gern. Allerdings verkaufen wir den Met, den wir von unseren Schiffahrten mitbringen an das Dorf Willos. Wir brauchen die Taler mehr, wie den Met. Hier gibt&#39;s nur gutes Wasser. Mehr nicht.&quot;
 
@@ -2381,7 +2383,7 @@ Du bist unter Deck. Was tust du?
 Nur das Lösungswort eingeben (kein der/die/das/etc. davor). Die Lösung besteht aus einem einzigen Wort:
 &lt;&lt;textbox &quot;$antwort1&quot; &quot;&quot;&gt;&gt;
 
-[[Ich habe die erste Antwort!]]</tw-passagedata><tw-passagedata pid="204" name="Ich habe die erste Antwort!" tags="" position="3949.6666666666665,899.6666666666666" size="100,100">&lt;&lt;if $antwort1 is &quot;Echo&quot;&gt;&gt;
+[[Ich habe die erste Antwort!]]</tw-passagedata><tw-passagedata pid="204" name="Ich habe die erste Antwort!" tags="" position="3949,899" size="100,100">&lt;&lt;if $antwort1 is &quot;Echo&quot;&gt;&gt;
 Er stellt dir eine neue Frage. Du hattest wohl recht.
 
 [[Ich höre mir die 2. Frage an]]
@@ -2600,7 +2602,7 @@ Als der Kapitän gerade zu einem nächsten Satz ausholt, erklingt ein lautes Ruf
 &quot;PIIRAAATEEEEEEN!&quot;
 
 [[Was war das?!]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="220" name="Ich ringe mit dem Seemann" tags="" position="4052.3333333333335,2341" size="100,100">&lt;&lt;audio drunk stop&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="220" name="Ich ringe mit dem Seemann" tags="" position="4052,2341" size="100,100">&lt;&lt;audio drunk stop&gt;&gt;
 &lt;&lt;audio fight2 loop play&gt;&gt;
 Sichtlich eingeschüchtert nickst du, woraufhin der wutschnaubende Seemann knurrt. Du möchtest gerade aufstehen, da streckt der Seemann seinen Daumen an der Faust auf dem Tisch aus. 
 
@@ -2666,7 +2668,7 @@ Du hast den Säbel erhalten:
 Der Kapitän wirft dir noch einen Lebenstrank zu.
 
 &lt;img src=&quot;Gegenstandskarten/Lebenstrank.jpg&quot;&gt;
-[[Ich stürme auf Deck!]]</tw-passagedata><tw-passagedata pid="224" name="Ich stürme auf Deck!" tags="" position="4174,2878.3333333333335" size="100,100">&lt;&lt;audio fight3 loop play&gt;&gt;
+[[Ich stürme auf Deck!]]</tw-passagedata><tw-passagedata pid="224" name="Ich stürme auf Deck!" tags="" position="4174,2878" size="100,100">&lt;&lt;audio fight3 loop play&gt;&gt;
 &lt;&lt;audio swords play&gt;&gt;
 Du stürmst auf Deck und kannst sehen, wie erste Piraten bereits das Schiff geentert haben. Es fallen Schüsse und du hörst das hektische Rasseln von Säbeln.
 
@@ -2920,7 +2922,7 @@ Ja, das könnte sein. Man wird es noch erfahren. Die letzten Tage waren anstreng
 [[Ich verschwinde in meine Kajüte und komme erst raus, wenn wir da sind (Geschichte weiterführen)]]
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="246" name="Name eingeben" tags="" position="4189,4662" size="100,100">Wie könnte diese Stadt wohl heißen?
 &lt;&lt;textbox &quot;$stadt&quot; &quot;&quot;&gt;&gt;
-[[Vielleicht so]]</tw-passagedata><tw-passagedata pid="247" name="Ich gehe zur Stadtmitte" tags="" position="4728.666666666667,48" size="100,100">&lt;img src=&quot;images/kap3.png&quot;&gt;
+[[Vielleicht so]]</tw-passagedata><tw-passagedata pid="247" name="Ich gehe zur Stadtmitte" tags="" position="4728,48" size="100,100">&lt;img src=&quot;images/kap3.png&quot;&gt;
 &lt;&lt;audio meer stop&gt;&gt;
 &lt;&lt;audio fight4 stop&gt;&gt;
 &lt;&lt;audio mine stop&gt;&gt;
@@ -3061,7 +3063,7 @@ Du antwortest...
 
 [[Lass uns in ein Zimmer. Ich erzähle dir was los war...]]
 [[Nein danke. Wenn ich es vergessen will, dann gehe ich in die Taverne]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="251" name="In&#39;s Gildenhaus" tags="" position="5081.333333333333,51" size="100,100">&lt;&lt;if $gilde eq 1&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="251" name="In&#39;s Gildenhaus" tags="" position="5081,51" size="100,100">&lt;&lt;if $gilde eq 1&gt;&gt;
 Du betrittst das Gildenhaus und stehst in einer großen Eingangshalle. Die Wände sind mit Wappen und Flaggen geschmückt, riesige Kronleuchter zieren die Decke und viele erfahrene Kämpfer tummeln sich hier. Es wird viel durcheinander geredet. Ein paar jüngere Kämpfer vollführen Schaukämpfe mit Holzwaffen und bereits ergraute Kämpfer rufen ihnen Tipps und Tricks zu. Wenn jemand ein Kämpfer werden will und damit Geld verdienen will, dann ist er hier genau richtig. Du gehst in Richtung Rezeption. Ein muskolöser Mann steht dahinter und sieht dich an, als du näher kommst. Er nickt freundlich, aber mit ernster Miene.
 
 &quot;Willkommen im Gildenhaus. Wenn ihr tapfer und stark seid und ein paar Taler verdienen wollt, so seid ihr hier richtig. Ihr solltet jedoch Schild und Schwert tragen können. Sonst können wir euch nicht gebrauchen.
@@ -3509,7 +3511,7 @@ Der Hauptschacht geht weiter geradeaus. Irgendwo am Ende dieses Schachtes sollte
 [[Links in einen Nebenschacht]]
 [[Rechts in einen Nebenschacht]]
 
-gehen willst.</tw-passagedata><tw-passagedata pid="307" name="Kapitel 2" tags="" position="2985,50" size="100,100">[[Zum nächsten Morgen springen]]</tw-passagedata><tw-passagedata pid="308" name="Kapitel 1" tags="" position="0,598" size="100,100">[[Hab ich]]</tw-passagedata><tw-passagedata pid="309" name="Weiter dem Hauptschacht entlang" tags="" position="5080.666666666666,1064.6666666666665" size="100,100">Du folgst also weiter dem Hauptschacht. Du möchtest das Problem direkt angehen und dich nicht ablenken lassen. Irgendwo müssen die Oger ja ihr Lager haben. Und sobald du es gefunden hast können sich die Oger warm anziehen. Von überall her kommen noch immer vereinzelnd Schreie oder Ogerrufe.
+gehen willst.</tw-passagedata><tw-passagedata pid="307" name="Kapitel 2" tags="" position="2985,50" size="100,100">[[Zum nächsten Morgen springen]]</tw-passagedata><tw-passagedata pid="308" name="Kapitel 1" tags="" position="0,598" size="100,100">[[Hab ich]]</tw-passagedata><tw-passagedata pid="309" name="Weiter dem Hauptschacht entlang" tags="" position="5080,1064" size="100,100">Du folgst also weiter dem Hauptschacht. Du möchtest das Problem direkt angehen und dich nicht ablenken lassen. Irgendwo müssen die Oger ja ihr Lager haben. Und sobald du es gefunden hast können sich die Oger warm anziehen. Von überall her kommen noch immer vereinzelnd Schreie oder Ogerrufe.
 
 Nach längerem Fußmarsch allerdings endet der Hauptschacht in einer großen Höhle. Von der Höhle aus gehen viele weitere kleine Nebenschächte ab. In der Mitte der Höhle stehen einige Tische, Pulte und Stühle. Auch ein kleiner Holzbau steht etwas prunkvoller an einer Wand. Da werden die Oger wohl übernachten. Oder besser gesagt die Menschen, die eigentlich diese Miene leiten. Immer wieder zieren menschliche Knochen und Reste den kalten und feuchten Boden. Vereinzelnd führen Schienen in die Nebenschächte und leere Loren stehen bereit zur Abholung. Aus den Schächten klingt das rhytmische Schlagen von Spitzhacken und das Brummen der Schienen, wenn Loren drüber fahren. 
 
@@ -3518,15 +3520,15 @@ An den Tischen in der Mitte sitzen 4 Oger. 2 Oger sitzen ein wenig weiter weg. D
 Du könntest aber auch die beiden Oger angreifen die etwas weiter weg sitzen. Schnell und tödlich. Vielleicht lässt sich der Anführer davon beeindrucken und flüchtet. Das wird aber mit ein wenig Glück vonstatten gehen müssen. Sonst musst du gegen alle 4 Oger kämpfen. Wofür entscheidest du dich?
 
 [[Ich greife den Anführer direkt an!]]
-[[Ich greife die zwei Oger an und hoffe auf&#39;s Beste!]]</tw-passagedata><tw-passagedata pid="310" name="Links in einen Nebenschacht" tags="" position="4987.333333333333,936.3333333333333" size="100,100">Diese Abzweigung gibt es noch nicht. Noch. :)
+[[Ich greife die zwei Oger an und hoffe auf&#39;s Beste!]]</tw-passagedata><tw-passagedata pid="310" name="Links in einen Nebenschacht" tags="" position="4987,936" size="100,100">Diese Abzweigung gibt es noch nicht. Noch. :)
 
-[[Weiter dem Hauptschacht entlang]]</tw-passagedata><tw-passagedata pid="311" name="Rechts in einen Nebenschacht" tags="" position="5170.666666666667,936.3333333333334" size="100,100">Diese Abzweigung gibt es noch nicht. Noch. :)
+[[Weiter dem Hauptschacht entlang]]</tw-passagedata><tw-passagedata pid="311" name="Rechts in einen Nebenschacht" tags="" position="5170,936" size="100,100">Diese Abzweigung gibt es noch nicht. Noch. :)
 
 [[Weiter dem Hauptschacht entlang]]</tw-passagedata><tw-passagedata pid="312" name="Ich greife den Anführer direkt an!" tags="" position="4994,1188" size="100,100">Du beschließt dich voll auf&#39;s Ganze zu gehen. Dir ist bewusst, dass du da nicht lebend raus kommst, wenn du es nicht schaffst den Anführer zu töten. Du atmest noch einmal tief ein und stürmst dann auf den Anführer zu. Voll mit Adrenalin nimmst du einen der massiven Eichentische und wirfst ihn den beiden etwas weiter wegstehenden Ogern entgegen. Getötet hast du sie zwar nicht, aber ihre Ohnmacht sollte sie für ein paar Minuten ausgesetzt haben. Der Anführer und der Oger der bei ihm steht sind verdutzt. Du hast sie überrumpelt. 
 
 Die beiden ohnmächtigen Oger werden in ein paar Minuten in den Kampf einschreiten, wenn du den Anführer nicht schnell genug getötet hast. Ein Timer wird dir die übrige Zeit anzeigen. Klicke auf &quot;Kampf gegen den Anführer beginnen&quot;, wenn du die Sonderregel verstanden hast und bereit für den Kampf bist.
 
-[[Kampf gegen den Anführer beginnen]]</tw-passagedata><tw-passagedata pid="313" name="Ich greife die zwei Oger an und hoffe auf&#39;s Beste!" tags="" position="5155.666666666667,1189.6666666666665" size="100,100">Du beschließt dich die Sache mit etwas Glück anzugehen. Dir ist bewusst, dass du da nicht lebend raus kommst, wenn du es nicht schaffst den Anführer einzuschüchtern. Du atmest noch einmal tief ein und stürmst dann auf die beiden Oger zu. Voll mit Adrenalin nimmst du einen der massiven Eichentische und wirfst ihn dem Anführer und seinen Gefolgsmann entgegen. Getötet hast du sie zwar nicht, aber ihre Ohnmacht sollte sie für ein paar Minuten ausgesetzt haben. Die beiden Oger sind verdutzt. Du hast sie überrumpelt. 
+[[Kampf gegen den Anführer beginnen]]</tw-passagedata><tw-passagedata pid="313" name="Ich greife die zwei Oger an und hoffe auf&#39;s Beste!" tags="" position="5155,1189" size="100,100">Du beschließt dich die Sache mit etwas Glück anzugehen. Dir ist bewusst, dass du da nicht lebend raus kommst, wenn du es nicht schaffst den Anführer einzuschüchtern. Du atmest noch einmal tief ein und stürmst dann auf die beiden Oger zu. Voll mit Adrenalin nimmst du einen der massiven Eichentische und wirfst ihn dem Anführer und seinen Gefolgsmann entgegen. Getötet hast du sie zwar nicht, aber ihre Ohnmacht sollte sie für ein paar Minuten ausgesetzt haben. Die beiden Oger sind verdutzt. Du hast sie überrumpelt. 
 
 Der ohnmächtigen Oger und Anführer werden in ein paar Minuten in den Kampf einschreiten, wenn du die beiden Oger nicht vorher getötet hast. Ein Timer wird dir die übrige Zeit anzeigen. Klicke auf &quot;Kampf gegen die beiden Oger beginnen&quot;, wenn du die Sonderregel verstanden hast und bereit für den Kampf bist.
 
@@ -3552,21 +3554,21 @@ Du hast den Anführer und den anderen Oger überrumpelt. Du kämpfst gegen einen
       &lt;&lt;/if&gt;&gt;
   &lt;&lt;/repeat&gt;&gt;
 &lt;&lt;/silently&gt;&gt;
-</tw-passagedata><tw-passagedata pid="315" name="Ich habe den Anführer der Oger besiegt!" tags="" position="5105.666666666667,1421.333333333333" size="100,100">Mit einem kräftigen letzten Schlag enthauptest du den Anführer. Der leblose Körper sackt zu Boden und der Kopf rollt einige Meter weiter weg. Durch den Krach des Kampfes haben sich einige Minenarbeiter in die Höhle geschlichen und dich angefeuert. Als der rollende Kopf des Anführers zum Halten kommt jubeln die Minenarbeiter lautstark und mit aller Kraft. Mit dem leblosen Zusammensacken des Anführers lassen die eventuell übrigen Orks ihre Waffen fallen und wollen aus der Mine flüchten. Übrige Oger die eventuell in dunklen Ecken auf ihre Chance gewartet haben flüchten ebenfalls. Die angeschlagenen Orks humpeln davon.Übrige Oger die eventuell in dunklen Ecken auf ihre Chance gewartet haben flüchten und die abgemagerten Arbeiter der Mine heben dich mit letzter Kraft hoch und feiern dich.
+</tw-passagedata><tw-passagedata pid="315" name="Ich habe den Anführer der Oger besiegt!" tags="" position="5105,1421" size="100,100">Mit einem kräftigen letzten Schlag enthauptest du den Anführer. Der leblose Körper sackt zu Boden und der Kopf rollt einige Meter weiter weg. Durch den Krach des Kampfes haben sich einige Minenarbeiter in die Höhle geschlichen und dich angefeuert. Als der rollende Kopf des Anführers zum Halten kommt jubeln die Minenarbeiter lautstark und mit aller Kraft. Mit dem leblosen Zusammensacken des Anführers lassen die eventuell übrigen Orks ihre Waffen fallen und wollen aus der Mine flüchten. Übrige Oger die eventuell in dunklen Ecken auf ihre Chance gewartet haben flüchten ebenfalls. Die angeschlagenen Orks humpeln davon.Übrige Oger die eventuell in dunklen Ecken auf ihre Chance gewartet haben flüchten und die abgemagerten Arbeiter der Mine heben dich mit letzter Kraft hoch und feiern dich.
 &lt;&lt;set $ogertot += 1&gt;&gt;
 Einer der Arbeiter hebt den Ranzen des Anführers hoch und gibt ihn dir. Du findest neben unidentifierzierbarem Fleisch (das du NICHT einsteckst), 40 Taler und eine prunkvolle Einhandaxt. Sie ist etwas stumpf doch ein Schmied könnte sie wieder schärfen und zu einem gefährlichen Begleiter machen.
 &lt;img src=&quot;Gegenstandskarten/Stumpfe prunkvolle Einhandaxt.jpg&quot;&gt;
 &lt;&lt;set $taler += 40&gt;&gt;
 Du sagst den Minenarbeitern sie sollen nachhause gehen, sich ausruhen und zu ihren Familien zurückkehren und in ein paar Tagen wieder an die normale Arbeit gehen. Sie jubeln und feiern dich. Loblieder singend verlassen die ensklavten Arbeiter die Mine. Auch du machst dich auf den Heimweg. Du hast nun $taler Taler.
 
-[[Ich gehe zur Stadtmitte]]</tw-passagedata><tw-passagedata pid="316" name="Die anderen beiden Oger kommen" tags="" position="4991.666666666666,1422.9999999999998" size="100,100">Mitten in den Kampf vertieft bemerkst du nicht, dass die beiden Oger wieder wach sind. Sie überrumpeln dich und beide Oger dürfen dich einmal angreifen. Danach geht der Kampf dort weiter, wo du aufgehört hast.
+[[Ich gehe zur Stadtmitte]]</tw-passagedata><tw-passagedata pid="316" name="Die anderen beiden Oger kommen" tags="" position="4991,1422" size="100,100">Mitten in den Kampf vertieft bemerkst du nicht, dass die beiden Oger wieder wach sind. Sie überrumpeln dich und beide Oger dürfen dich einmal angreifen. Danach geht der Kampf dort weiter, wo du aufgehört hast.
 
 [[Ich habe den Anführer der Oger besiegt!]]
 [[Alle drei Oger sind tot und nur der Anführer lebt noch!]]
-[[Ich habe gegen die Oger verloren]]</tw-passagedata><tw-passagedata pid="317" name="Alle drei Oger sind tot und nur der Anführer lebt noch!" tags="" position="4994.999999999999,1534.6666666666665" size="100,100">Auf dem Boden verteilt sich das Blut seiner Untergebenen. Du reißt einem der Oger den Kopf von den Schultern und wirfst ihn auf den Anführer. Dieser schreit einmal laut, senkt dann aber seine Arme und seinen Kopf. Du erkennst das er aufgibt. Du kannst den Anführer nun hinrichten um ein Exampel zu statuieren oder ihn laufen lassen um deine Gutmütigkeit zu beweisen. Wofür entscheidest du dich?
+[[Ich habe gegen die Oger verloren]]</tw-passagedata><tw-passagedata pid="317" name="Alle drei Oger sind tot und nur der Anführer lebt noch!" tags="" position="4994,1534" size="100,100">Auf dem Boden verteilt sich das Blut seiner Untergebenen. Du reißt einem der Oger den Kopf von den Schultern und wirfst ihn auf den Anführer. Dieser schreit einmal laut, senkt dann aber seine Arme und seinen Kopf. Du erkennst das er aufgibt. Du kannst den Anführer nun hinrichten um ein Exampel zu statuieren oder ihn laufen lassen um deine Gutmütigkeit zu beweisen. Wofür entscheidest du dich?
 
 [[Den Anführer hinrichten]]
-[[Den Anführer laufen lassen]]</tw-passagedata><tw-passagedata pid="318" name="Den Anführer hinrichten" tags="" position="4943.333333333333,1656.3333333333333" size="100,100">Mit einem kräftigen letzten Schlag enthauptest du den Anführer. Der leblose Körper sackt zu Boden und der Kopf rollt einige Meter weiter weg. Durch den Krach des Kampfes haben sich einige Minenarbeiter in die Höhle geschlichen und dich angefeuert. Als der rollende Kopf des Anführers zum Halten kommt jubeln die Minenarbeiter lautstark und mit aller Kraft. Übrige Oger die eventuell in dunklen Ecken auf ihre Chance gewartet haben flüchten und die abgemagerten Arbeiter der Mine heben dich mit letzter Kraft hoch und feiern dich.
+[[Den Anführer laufen lassen]]</tw-passagedata><tw-passagedata pid="318" name="Den Anführer hinrichten" tags="" position="4943,1656" size="100,100">Mit einem kräftigen letzten Schlag enthauptest du den Anführer. Der leblose Körper sackt zu Boden und der Kopf rollt einige Meter weiter weg. Durch den Krach des Kampfes haben sich einige Minenarbeiter in die Höhle geschlichen und dich angefeuert. Als der rollende Kopf des Anführers zum Halten kommt jubeln die Minenarbeiter lautstark und mit aller Kraft. Übrige Oger die eventuell in dunklen Ecken auf ihre Chance gewartet haben flüchten und die abgemagerten Arbeiter der Mine heben dich mit letzter Kraft hoch und feiern dich.
 &lt;&lt;set $ogertot += 1&gt;&gt;
 Einer der Arbeiter hebt den Ranzen des Anführers hoch und gibt ihn dir. Du findest neben unidentifierzierbarem Fleisch (das du NICHT einsteckst), 40 Taler und eine prunkvolle Einhandaxt. Sie ist etwas stumpf doch ein Schmied könnte sie wieder schärfen und zu einem gefährlichen Begleiter machen.
 &lt;&lt;set $gesinnung -= 10&gt;&gt;
@@ -3574,7 +3576,7 @@ Einer der Arbeiter hebt den Ranzen des Anführers hoch und gibt ihn dir. Du find
 &lt;&lt;set $taler += 40&gt;&gt;
 Du sagst den Minenarbeitern sie sollen nachhause gehen, sich ausruhen und zu ihren Familien zurückkehren und in ein paar Tagen wieder an die normale Arbeit gehen. Sie jubeln und feiern dich. Loblieder singend verlassen die ensklavten Arbeiter die Mine. Auch du machst dich auf den Heimweg. Du hast nun $taler Taler.
 
-[[Ich gehe zur Stadtmitte]]</tw-passagedata><tw-passagedata pid="319" name="Den Anführer laufen lassen" tags="" position="5064.999999999999,1652.9999999999998" size="100,100">Du entschließt dich den Oger zu verschonen. Auch wenn der Oger damit seine Ehre verloren hat und er gedemütigt wurde damit, so nimmt er doch die Chance wahr und läuft so schnell er kann zurück. Er gerät ins Stolpern und fällt den bereits jubelnden Minenarbeitern direkt vor die Füße.
+[[Ich gehe zur Stadtmitte]]</tw-passagedata><tw-passagedata pid="319" name="Den Anführer laufen lassen" tags="" position="5064,1652" size="100,100">Du entschließt dich den Oger zu verschonen. Auch wenn der Oger damit seine Ehre verloren hat und er gedemütigt wurde damit, so nimmt er doch die Chance wahr und läuft so schnell er kann zurück. Er gerät ins Stolpern und fällt den bereits jubelnden Minenarbeitern direkt vor die Füße.
 &lt;&lt;set $ogerlaufen = 1&gt;&gt;
 Die aufgeheizte Meute entreißt dem bereits geschwächten Oger seine Axt und enthäupten ihn. Auch wenn der Anblick unschön ist, so hat der Oger es am Ende doch verdient, oder? Die Entscheidung der Meute spielt sich nicht auf deine Gesinnung aus.
 &lt;&lt;set $taler += 60&gt;&gt;
@@ -3582,14 +3584,14 @@ Einer der Minenarbeiter wirft dir einen Beutel voll Taler zu. Du erhälst 60 Tal
 &lt;&lt;set $gesinnung += 5&gt;&gt;
 Du sagst den Minenarbeitern sie sollen nachhause gehen, sich ausruhen und zu ihren Familien zurückkehren und in ein paar Tagen wieder an die normale Arbeit gehen. Sie jubeln und feiern dich. Loblieder singend verlassen die ensklavten Arbeiter die Mine. Auch du machst dich auf den Heimweg.
 
-[[Ich gehe zur Stadtmitte]]</tw-passagedata><tw-passagedata pid="320" name="Ich habe gegen die Oger verloren" tags="" position="4873.333333333332,1433" size="100,100">&lt;&lt;audio fight4 stop&gt;&gt;
+[[Ich gehe zur Stadtmitte]]</tw-passagedata><tw-passagedata pid="320" name="Ich habe gegen die Oger verloren" tags="" position="4873,1433" size="100,100">&lt;&lt;audio fight4 stop&gt;&gt;
 &lt;&lt;audio gameover volume 0.5 loop play&gt;&gt;
 Du liegst am Boden und spuckst dein eigenes Blut aus, während die Oger dir dein Hab und Gut abnehmen. Du hörst ihr dreckiges Grunzen und siehst wie sie aufgebauscht vom Kampf einen Minenarbeiter einfach niederprügeln.
 
 Klicke auf den Pfeil oben links, um deinen letzten Speicherstand zu laden:
 &lt;img src=&quot;images/speichern.jpg&quot;&gt;
 
-Wir werden dich nie vergessen, $name.</tw-passagedata><tw-passagedata pid="321" name="Kampf gegen die beiden Oger beginnen" tags="" position="5160.666666666667,1312.9999999999998" size="100,100">&lt;&lt;audio mine stop&gt;&gt;
+Wir werden dich nie vergessen, $name.</tw-passagedata><tw-passagedata pid="321" name="Kampf gegen die beiden Oger beginnen" tags="" position="5160,1312" size="100,100">&lt;&lt;audio mine stop&gt;&gt;
 &lt;&lt;audio fight4 volume 0.5 loop play&gt;&gt;
 &lt;&lt;set _time to 360&gt;&gt;\
 In &lt;span class=&quot;redtext&quot;&gt;@@#countdown;_time@@&lt;/span&gt; Sekunden kommen der Anführer und ein weiterer Oger!
@@ -3610,26 +3612,26 @@ Du hast die beiden Oger überrumpelt. Du kämpfst gegen zwei Minen-Oger. Nimm di
     &lt;&lt;stop&gt;&gt;
       &lt;&lt;/if&gt;&gt;
   &lt;&lt;/repeat&gt;&gt;
-&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="322" name="Ich habe die beiden Oger besiegt!" tags="" position="5229,1424.6666666666665" size="100,100">Noch bevor der Anführer und der 3. Oger wach geworden sind hast du die beiden Oger getötet. Du stürmst auf die beiden zu und verpasst dem 3. Oger einen tötlichen Schlag. Er konnte dich nicht abwehren. Der Anführer hingegen ist zwar schon wach, aber schwer benommen. Hier kommt dein Glück in&#39;s Spiel. Wirf einen W6.
+&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="322" name="Ich habe die beiden Oger besiegt!" tags="" position="5229,1424" size="100,100">Noch bevor der Anführer und der 3. Oger wach geworden sind hast du die beiden Oger getötet. Du stürmst auf die beiden zu und verpasst dem 3. Oger einen tötlichen Schlag. Er konnte dich nicht abwehren. Der Anführer hingegen ist zwar schon wach, aber schwer benommen. Hier kommt dein Glück in&#39;s Spiel. Wirf einen W6.
 
 1-3 und der Anführer wehrt deinen Angriff ab und du musst gegen ihn kämpfen
 4-6 und der Anführer kann deinen Angriff nicht abwehren und du hast ihn besiegt
 
 [[Ich habe den Anführer der Oger besiegt!]]
-[[Ich konnte den Anführer der Oger nicht überwältigen]]</tw-passagedata><tw-passagedata pid="323" name="Der Anführer und ein weiterer Oger kommen" tags="" position="5351.666666666667,1425" size="100,100">Mitten in den Kampf vertieft bemerkst du nicht, dass der Anführer und der Oger wieder wach sind. Sie überrumpeln dich und der Oger und der Anführer dürfen dich einmal angreifen. Danach geht der Kampf dort weiter, wo du aufgehört hast.
+[[Ich konnte den Anführer der Oger nicht überwältigen]]</tw-passagedata><tw-passagedata pid="323" name="Der Anführer und ein weiterer Oger kommen" tags="" position="5351,1425" size="100,100">Mitten in den Kampf vertieft bemerkst du nicht, dass der Anführer und der Oger wieder wach sind. Sie überrumpeln dich und der Oger und der Anführer dürfen dich einmal angreifen. Danach geht der Kampf dort weiter, wo du aufgehört hast.
 
 [[Ich habe den Anführer der Oger besiegt!]]
 [[Alle drei Oger sind tot und nur der Anführer lebt noch!]]
-[[Ich habe gegen die Oger verloren]]</tw-passagedata><tw-passagedata pid="324" name="Ich konnte den Anführer der Oger nicht überwältigen" tags="" position="5230.666666666667,1542.9999999999998" size="100,100">Der Anführer ist überrumpelt und noch etwas benommen. Der Kampf gegen den Anführer beginnt. Du bist dank der Benommenheit des Anführers einmalig 2-mal hintereinander dran.
+[[Ich habe gegen die Oger verloren]]</tw-passagedata><tw-passagedata pid="324" name="Ich konnte den Anführer der Oger nicht überwältigen" tags="" position="5230,1542" size="100,100">Der Anführer ist überrumpelt und noch etwas benommen. Der Kampf gegen den Anführer beginnt. Du bist dank der Benommenheit des Anführers einmalig 2-mal hintereinander dran.
 
 [[Ich habe den Anführer der Oger besiegt!]]
-[[Der Anführer der Oger hat mich besiegt!]]</tw-passagedata><tw-passagedata pid="325" name="Der Anführer der Oger hat mich besiegt!" tags="" position="5232.333333333334,1651.333333333333" size="100,100">&lt;&lt;audio fight4 stop&gt;&gt;
+[[Der Anführer der Oger hat mich besiegt!]]</tw-passagedata><tw-passagedata pid="325" name="Der Anführer der Oger hat mich besiegt!" tags="" position="5232,1651" size="100,100">&lt;&lt;audio fight4 stop&gt;&gt;
 &lt;&lt;audio gameover volume 0.5 loop play&gt;&gt;
 Du liegst am Boden und spuckst dein eigenes Blut aus, während der Anführerder Oger dir dein Hab und Gut abnimmt. Du hörst seinen Siegesschrei und siehst wie er aufgebauscht vom Kampf einen Minenarbeiter einfach niederprügelt.
 
 Klicke auf den Pfeil oben links, um deinen letzten Speicherstand zu laden:
 &lt;img src=&quot;images/speichern.jpg&quot;&gt;
-Wir werden dich nie vergessen, $name.</tw-passagedata><tw-passagedata pid="326" name="Wegen der Sache mit den Oger..." tags="" position="5188,161.66666666666666" size="100,100">&lt;&lt;if $ogertot eq 1&gt;&gt;
+Wir werden dich nie vergessen, $name.</tw-passagedata><tw-passagedata pid="326" name="Wegen der Sache mit den Oger..." tags="" position="5188,161" size="100,100">&lt;&lt;if $ogertot eq 1&gt;&gt;
 Der Mann sieht dich bereits von weitem und begrüßt dich klatschend.
 &lt;&lt;set $ogertot += 1&gt;&gt;
 &quot;Na wenn das mal nicht Ogerschlächter $name ist! Die gefangengenommenen Minenarbeiter waren bereits hier und haben mir einiges erzählt. Vor allem aber viel über dich. Respekt und Glückwunsch. Einen Oger zu enthaupten ist echt nicht leicht. Vor allem nicht wenn noch weitere Oger drumherum sind. Du hast meinen tiefsten Respekt. Das war wirklich einmalig. Ich und alle von $stadt danken dir. Endlich können wir wieder Eisen schürfen und Handel betreiben. Vielen vielen Dank! 
@@ -3657,7 +3659,7 @@ Du stehst mit einem verwirrtem und fragenden Blick vor dem Mann. Der schüttelt 
 &quot;Also noch mal. Töte die Oger in der örtlichen Miene. Du solltest gut vorbereitet sein. &quot;Verrückt&quot; ist nicht gleich &quot;dumm&quot;. Ein Verrückter geht Risikos ein. Nur der Dumme geht unvorbereitet in eine Schlacht. Schau mal beim Lederer vorbei. Der sollte wenigstens einen leichten Schutz für dich haben. Wenn du keine Taler hast, dann schau mal an das &lt;span class=&quot;redtext&quot;&gt;Anschlagbrett&lt;/span&gt;. Da solltest du noch ein wenig dazu verdienen können. Dann mal viel Glück und lass dich nicht zerreißen. Verlass einfach die Stadt und folge den Schildern. Kannst die Mine nicht wirklich verfehlen. Auf Hals und Beinbruch, Neuling.&quot;
 
 [[Ich gehe zur Stadtmitte]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="327" name="Wegen der Sache mit dem Sklavenhändler..." tags="" position="5188.666666666666,373.6666666666667" size="100,100">Doppelklick auf diesen Absatz zum Bearbeiten.</tw-passagedata><tw-passagedata pid="328" name="Wegen der Sache mit dem Mord..." tags="" position="5189.333333333333,269.99999999999994" size="100,100">Doppelklick auf diesen Absatz zum Bearbeiten.</tw-passagedata><tw-passagedata pid="329" name="Die Stadt verlassen und weiterziehen" tags="" position="6212,59.66666666666665" size="100,100">&lt;&lt;if $ogerfertig eq 1&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="327" name="Wegen der Sache mit dem Sklavenhändler..." tags="" position="5188,373" size="100,100">Doppelklick auf diesen Absatz zum Bearbeiten.</tw-passagedata><tw-passagedata pid="328" name="Wegen der Sache mit dem Mord..." tags="" position="5189,269" size="100,100">Doppelklick auf diesen Absatz zum Bearbeiten.</tw-passagedata><tw-passagedata pid="329" name="Die Stadt verlassen und weiterziehen" tags="" position="6212,59" size="100,100">&lt;&lt;if $ogerfertig eq 1&gt;&gt;
 Oger fertig!
 &lt;&lt;elseif $händlerfertig eq 1&gt;&gt;
 &lt;&lt;elseif $mordfertig eq 1&gt;&gt;
