@@ -305,11 +305,13 @@ color: #800000;
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">!function(){l10nStrings.identity="Spiel",l10nStrings.aborting="Vorzeitig abgebrochen",l10nStrings.cancel="Abbrechen",l10nStrings.close="Schließen",l10nStrings.ok="OK",l10nStrings.errorTitle="Fehler",l10nStrings.errorNonexistentPassage='die Passage "{passage}" existiert nicht',l10nStrings.errorSaveMissingData="Im Speicherstand fehlen notwendige Daten. Entweder ist die geladene Datei kein Speicherstand oder der Speicherstand ist korrupt",l10nStrings.errorSaveIdMismatch="Speicherstand ist vom falschen {identity}",l10nStrings._warningGermanLacking="in ihrem Browser entweder deaktiviert oder nicht möglich",l10nStrings._warningOutroDegraded=", darum läuft dieses {identity} in einem herabgesetzten Modus. Sie können zwar fortfahren, allerdings kann es sein, dass nicht alle Teile wie gewünscht funktionieren.",l10nStrings.warningNoWebStorage="Das Web Storage API ist {_warningGermanLacking}{_warningOutroDegraded}",l10nStrings.warningDegraded="Einige Features, die diese/s {identity} benötigt sind {_warningGermanLacking}{_warningOutroDegraded}",l10nStrings.debugViewTitle="Fehlersuche-Ansicht",l10nStrings.debugViewToggle="Fehlersuche-Ansicht umschalten",l10nStrings.uiBarToggle="Benutzeroberflächenleiste umschlaten",l10nStrings.uiBarBackward="Im {identity}-Ablauf zurück gehen",l10nStrings.uiBarForward="Im {identity}-Ablauf nach vor gehen",l10nStrings.uiBarJumpto="Zu einem bestimmten Punkt im {identity}-Ablauf springen",l10nStrings.jumptoTitle="Springe zu",l10nStrings.jumptoTurn="Zug",l10nStrings.jumptoUnavailable="Momentan sind keine Sprungmarken vorhanden…",l10nStrings.savesTitle="Speicherstände",l10nStrings.savesDisallowed="Speichern ist in dieser Passage nicht gestattet.",l10nStrings.savesEmptySlot="— Speicherslot leer —",l10nStrings.savesIncapable="Die Möglichkeit zu Speichern ist {_warningGermanLacking}, darum ist die Speicherfunktion für diese Sitzung deaktiviert.",l10nStrings.savesLabelAuto="Automatischer Speicherstand",l10nStrings.savesLabelDelete="Löschen",l10nStrings.savesLabelExport="Auf Datensträger speichern…",l10nStrings.savesLabelImport="Von Datenträger laden…",l10nStrings.savesLabelLoad="Laden",l10nStrings.savesLabelClear="Alle löschen",l10nStrings.savesLabelSave="Speichern",l10nStrings.savesLabelSlot="Slot",l10nStrings.savesSavedOn="Gespeichert nach",l10nStrings.savesUnavailable="Keine Speicherstand-Slots gefunden…",l10nStrings.savesUnknownDate="unbekannt",l10nStrings.settingsTitle="Einstellungen",l10nStrings.settingsOff="Aus",l10nStrings.settingsOn="An",l10nStrings.settingsReset="Auf Standardwerte zurücksetzen",l10nStrings.restartTitle="Neustart",l10nStrings.restartPrompt="Sind sie sicher, dass Sie neu starten wollen? Ihr Fortschritt nach dem letzten Speichern geht verloren.",l10nStrings.shareTitle="Teilen",l10nStrings.autoloadTitle="Automatisch laden",l10nStrings.autoloadCancel="Zum Start gehen",l10nStrings.autoloadOk="Automatischen Speicherstand laden",l10nStrings.autoloadPrompt="Ein automatischer Speicherstand existiert bereits. Trotzdem laden oder zum Start gehen?",l10nStrings.macroBackText="Zurück",l10nStrings.macroReturnText="Return"}();
 
 Config.history.controls = false;
 
 UIBar.stow()
+
 
 
 
@@ -399,6 +401,11 @@ Wähle eine (fiktive) positive Eigenschaft von dir:
 &lt;&lt;radiobutton &quot;$positiv&quot; Mutig&gt;&gt; Mutig
 &lt;&lt;radiobutton &quot;$positiv&quot; Hilfsbereit&gt;&gt; Hilfsbereit
 &lt;&lt;radiobutton &quot;$positiv&quot; Freundlich&gt;&gt; Freundlich
+
+Wähle deine Klasse:
+&lt;&lt;radiobutton &quot;$klasse&quot; Kämpfer checked&gt;&gt; Kämpfer
+&lt;&lt;radiobutton &quot;$klasse&quot; Magier&gt;&gt; Magier
+&lt;&lt;radiobutton &quot;$klasse&quot; Dieb&gt;&gt; Dieb
 
 [[Fertig]]
 
@@ -621,25 +628,25 @@ Hätte nicht gedacht, dass einmal Mauritio höchstpersönlich ein Abenteuer best
 &lt;&lt;button Weiter Willkommen&gt;&gt;&lt;&lt;/button&gt;&gt;
 
 &lt;&lt;elseif $name is &quot;Nino&quot;&gt;&gt; Oh man... 
-Das kann ja was werden... Du bekommst einen Bonus von +2 auf Intelligenz (kommen wir gleich zu)! Sagst du mir kurz, ob du einen Abenteurer oder eine Abenteurerin spielst?
+Das kann ja was werden... Du bekommst einen Bonus von +2 auf Intellekt (kommen wir gleich zu)! Sagst du mir kurz, ob du einen Abenteurer oder eine Abenteurerin spielst?
 &lt;&lt;radiobutton &quot;$geschlecht&quot; Abenteurer checked&gt;&gt; Abenteurer
 &lt;&lt;radiobutton &quot;$geschlecht&quot; Abenteurerin&gt;&gt; Abenteurerin
 &lt;&lt;button Weiter Willkommen&gt;&gt;&lt;&lt;/button&gt;&gt;
 
 &lt;&lt;elseif $name is &quot;Collapse&quot;&gt;&gt; Oh man... 
-Das kann ja was werden... Du bekommst einen Bonus von +2 auf Intelligenz (kommen wir gleich zu)! Sagst du mir kurz, ob du einen Abenteurer oder eine Abenteurerin spielst?
+Das kann ja was werden... Du bekommst einen Bonus von +2 auf Intellekt (kommen wir gleich zu)! Sagst du mir kurz, ob du einen Abenteurer oder eine Abenteurerin spielst?
 &lt;&lt;radiobutton &quot;$geschlecht&quot; Abenteurer checked&gt;&gt; Abenteurer
 &lt;&lt;radiobutton &quot;$geschlecht&quot; Abenteurerin&gt;&gt; Abenteurerin
 &lt;&lt;button Weiter Willkommen&gt;&gt;&lt;&lt;/button&gt;&gt;
 
 &lt;&lt;elseif $name is &quot;collapse&quot;&gt;&gt; Oh man... 
-Das kann ja was werden... Du bekommst einen Bonus von +2 auf Intelligenz (kommen wir gleich zu)! Sagst du mir kurz, ob du einen Abenteurer oder eine Abenteurerin spielst?
+Das kann ja was werden... Du bekommst einen Bonus von +2 auf Intellekt (kommen wir gleich zu)! Sagst du mir kurz, ob du einen Abenteurer oder eine Abenteurerin spielst?
 &lt;&lt;radiobutton &quot;$geschlecht&quot; Abenteurer checked&gt;&gt; Abenteurer
 &lt;&lt;radiobutton &quot;$geschlecht&quot; Abenteurerin&gt;&gt; Abenteurerin
 &lt;&lt;button Weiter Willkommen&gt;&gt;&lt;&lt;/button&gt;&gt;
 
 &lt;&lt;elseif $name is &quot;nino&quot;&gt;&gt; Oh man... 
-Das kann ja was werden... Du bekommst einen Bonus von +2 auf Intelligenz (kommen wir gleich zu)! Sagst du mir kurz, ob du einen Abenteurer oder eine Abenteurerin spielst?
+Das kann ja was werden... Du bekommst einen Bonus von +2 auf Intellekt (kommen wir gleich zu)! Sagst du mir kurz, ob du einen Abenteurer oder eine Abenteurerin spielst?
 &lt;&lt;radiobutton &quot;$geschlecht&quot; Abenteurer checked&gt;&gt; Abenteurer
 &lt;&lt;radiobutton &quot;$geschlecht&quot; Abenteurerin&gt;&gt; Abenteurerin
 &lt;&lt;button Weiter Willkommen&gt;&gt;&lt;&lt;/button&gt;&gt;
@@ -654,15 +661,85 @@ Freut mich dich kennen zu lernen! Ich hätte da aber noch eine Frage. Bist du ei
 &lt;&lt;radiobutton &quot;$geschlecht&quot; Abenteurer checked&gt;&gt; Abenteurer
 &lt;&lt;radiobutton &quot;$geschlecht&quot; Abenteurerin&gt;&gt; Abenteurerin
 &lt;&lt;button Weiter Willkommen&gt;&gt;&lt;&lt;/button&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="Willkommen" tags="" position="330,25" size="100,100">Du bist also $geschlecht $name. Sehr schön!
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="Willkommen" tags="" position="330,25" size="100,100">&lt;&lt;if $klasse is &quot;Kämpfer&quot;&gt;&gt;
+
+Du bist also $geschlecht $name und bist $klasse/in. Sehr schön!
 
 Deine negative Eigenschaft: $negativ
 Deine positive Eigenschaft: $positiv
 
+Der/Die Kämpfer/in hat die Chance auf eine Fleischwunde als Schadensbonus. Ob du deinem Gegner eine Fleischwunde zufügst entscheidet der Wert Stärke. Du würfelst mit einem W10 die Wahrscheinlichkeit. Die Wahrscheinlichkeit steigt mit jedem 5. Punkt auf dem Wert Stärke. Hast du 5 Stärke, so verwundest du nur, wenn du eine 1 gewürfelt hast. Hast du 10 Stärke, so verwundest du bei einer 1 und 2. Hier die komplette Liste:
+
+ 5 Stärke: 1
+10 Stärke: 1-2
+15 Stärke: 1-3
+20 Stärke: 1-4
+25 Stärke: 1-5
+30 Stärke: 1-6
+35 Stärke: 1-7
+40 Stärke: 1-8
+45 Stärke: 1-9
+50 Stärke: Immer
+
+Dieser Bonusschaden wird IMMER nach einem ERFOLGREICHEN Angriff ausgewürfelt. Wie hoch der Schaden der Wunde ist, bestimmt der Schaden der Waffe. Der Schadensbonus ist auf jeder Waffenkarte mit einem &quot;+X Schaden&quot; festgelegt. Wie der eigentliche Kampf funktioniert wird später erklärt. Bitte behalte bis dahin deinen Bonusschaden im Hinterkopf. Du startest mit dem zerbrochenem Schwert.
+
 Hätten wir das auch geklärt. Nun noch eine klitze kleine Kleinigkeit und es kann losgehen. 
 
 Ich bin dein Spielleiter. Ich sage dir, was du hörst, riechst, schmeckst, denkst usw. Des Weiteren erzähle ich dir auch die Geschichte, kläre dich über die Gesamtsituation auf und führe die Geschichte voran. Ich bin also deine Sinne, deine Umwelt und dein Schicksal. Sei also lieb zu mir.
-&lt;&lt;button Weiter Ton&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="Ton" tags="" position="440,24" size="100,100">&lt;&lt;audio theme loop play&gt;&gt;
+&lt;&lt;button Weiter Ton&gt;&gt;&lt;&lt;/button&gt;&gt;
+
+&lt;&lt;elseif $klasse is &quot;Magier&quot;&gt;&gt;
+Du bist also $geschlecht $name und bist $klasse/in. Sehr schön!
+
+Deine negative Eigenschaft: $negativ
+Deine positive Eigenschaft: $positiv
+
+Der/Die Magier/in hat starke Zauber als Schadensbonus. Ob ein Zauber trifft oder nicht entscheidet der Wert Intellekt. Du würfelst mit einem W10 die Wahrscheinlichkeit. Die Wahrscheinlichkeit steigt mit jedem 5. Punkt auf dem Wert Intellekt. Hast du 5 Intellekt, so triffst du nur, wenn du eine 1 gewürfelt hast. Hast du 10 Intellekt, so triffst du bei einer 1 und 2. Hier die komplette Liste:
+
+ 5 Intellekt: 1
+10 Intellekt: 1-2
+15 Intellekt: 1-3
+20 Intellekt: 1-4
+25 Intellekt: 1-5
+30 Intellekt: 1-6
+35 Intellekt: 1-7
+40 Intellekt: 1-8
+45 Intellekt: 1-9
+50 Intellekt: Immer
+
+Dieser Bonusschaden wird IMMER nach einem ERFOLGREICHEN Angriff ausgewürfelt. Wie der Kampf funktioniert wird später erklärt. Bitte behalte bis dahin deinen Bonusschaden im Hinterkopf. Du darfst dir jetzt auch schon deinen ersten Level 1 Zauber nehmen. Bitte beachte, dass du deinen Zauber später nicht mehr ändern darfst. Nimmst Du also den Feuerball Level 1, so musst du bei dem Feuerball bleiben und kannst bei einem Levelaufstieg nicht einfach den Arkanblitz Level 2 auswählen.
+
+Hätten wir das auch geklärt. Nun noch eine klitze kleine Kleinigkeit und es kann losgehen. 
+
+Ich bin dein Spielleiter. Ich sage dir, was du hörst, riechst, schmeckst, denkst usw. Des Weiteren erzähle ich dir auch die Geschichte, kläre dich über die Gesamtsituation auf und führe die Geschichte voran. Ich bin also deine Sinne, deine Umwelt und dein Schicksal. Sei also lieb zu mir.
+&lt;&lt;button Weiter Ton&gt;&gt;&lt;&lt;/button&gt;&gt;
+
+&lt;&lt;else&gt;&gt;
+Du bist also $geschlecht $name und bist $klasse/in. Sehr schön!
+
+Deine negative Eigenschaft: $negativ
+Deine positive Eigenschaft: $positiv
+
+Der/Die Bieb/in hat die Chance eine Blutung zu verursachen als Schadensbonus. Ob der Angriff eine Blutung auslöst oder nicht entscheidet der Wert Geschick. Du würfelst mit einem W10 die Wahrscheinlichkeit. Die Wahrscheinlichkeit steigt mit jedem 5. Punkt auf dem Wert Geschick. Hast du 5 Geschick, so triffst du nur, wenn du eine 1 gewürfelt hast. Hast du 10 Geschick, so triffst du bei einer 1 und 2. Hier die komplette Liste:
+
+ 5 Geschick: 1
+10 Geschick: 1-2
+15 Geschick: 1-3
+20 Geschick: 1-4
+25 Geschick: 1-5
+30 Geschick: 1-6
+35 Geschick: 1-7
+40 Geschick: 1-8
+45 Geschick: 1-9
+50 Geschick: Immer
+
+Fügst Du deinem Gegner eine Blutung zu, so bekommt er jede Runde ein Drittel deines Waffenschadens als Bonusschaden bis der Gegner tot ist, auch wenn du deinen Gegner in einer Runde verfehlen solltest. Du musst deinen Bonusschaden also nur einmal auswürfeln. Sobald du einmal getroffen hast brauchst du den Bonusschaden nicht mehr zusätzlich auswürfeln. Wie der normale Kampf funktioniert wird später erklärt. Bitte behalte bis dahin deinen Bonusschaden im Hinterkopf.
+
+Hätten wir das auch geklärt. Nun noch eine klitze kleine Kleinigkeit und es kann losgehen. 
+
+Ich bin dein Spielleiter. Ich sage dir, was du hörst, riechst, schmeckst, denkst usw. Des Weiteren erzähle ich dir auch die Geschichte, kläre dich über die Gesamtsituation auf und führe die Geschichte voran. Ich bin also deine Sinne, deine Umwelt und dein Schicksal. Sei also lieb zu mir.
+&lt;&lt;button Weiter Ton&gt;&gt;&lt;&lt;/button&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="4" name="Ton" tags="" position="440,24" size="100,100">&lt;&lt;audio theme loop play&gt;&gt;
 Wenn du jetzt Musik hörst, dann hast du alles richtig gemacht. Solltest du keine Musik hören, hier ein paar Hinweise:
 
 - Dein Fernseher ist sehr leise/gemuted
@@ -725,6 +802,7 @@ Ganz wichtig:
 &lt;&lt;cacheaudio &quot;hurry&quot; &quot;music/hurry.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;gameover&quot; &quot;music/gameover.mp3&quot;&gt;&gt;
 &lt;&lt;set $gesinnung = 0&gt;&gt;
+&lt;&lt;set $klasse = 0&gt;&gt;
 &lt;&lt;set $gewürfelt = 0&gt;&gt;
 &lt;&lt;set $taler = 5&gt;&gt;
 &lt;&lt;set $erz = 0&gt;&gt;
@@ -806,7 +884,7 @@ Du fasst all deinen Mut zusammen und stürmst auf den Busch zu und erblickst ein
 Du stehst kurz vor einem Kampf. Ich erkläre dir kurz wie Kämpfe ablaufen. 
 
 1.) Du würfelst mit einem W6 ob du dein Ziel triffst. 
-2a.) Triffst du (1-3) so kannst du mit dem W20 Würfel/den W20 Würfeln (je nach Körperkraft) deinen Schaden auswürfeln. Schaue nun auf den Charakterbogen deines Gegners und ziehe ihm die entsprechenden Lebenspunkte ab.
+2a.) Triffst du (1-3) so kannst du mit dem W20 Würfel/den W20 Würfeln (je nach Stärke) deinen Schaden auswürfeln. Würfel jetzt wie anfangs erklärt mit einem W10 ob du Bonusschaden machst oder nicht. Schaue dann auf den Charakterbogen deines Gegners und ziehe ihm die entsprechenden Lebenspunkte ab (Also normaler Schaden + Bonusschaden).
 2b.) Triffst du nicht (4-6), so musst du eine Runde aussetzen (darfst keinen Schaden auswürfeln) und dein Gegner ist dran. 
 3a.) Wie auch bei dir würfelst du für den Gegner, ob er dich überhaupt trifft. 1-3 und dein Gegner trifft. 4-6 und dein Gegner verfehlt.
 3b.) Trifft er würfelst du entsprechend der Würfelangabe auf dem Charakterbogen deines Gegners den Schaden aus, den du selbst bekommst. Ein +X (X steht für einen beliebigen Wert) hinter den Würfeln ist zusätzlicher Schaden. Beispiel: Würfelt dein Gegner eine 6 und hat auf seinem Bogen eine +2 hinter seinen Würfeln stehen, so bekommst du 6+2 Schaden. Also insgesamt 8. Auch hier gilt: Ich vertrau dir. Sei ehrlich, so macht es am meisten Spaß.
@@ -823,7 +901,7 @@ Du drehst dich um und erblickst einen zähnefletschenden Wolf. Sein graues Fell 
 Du stehst kurz vor einem Kampf. Ich erkläre dir kurz wie Kämpfe ablaufen. 
 
 1.) Du würfelst mit einem W6, ob du dein Ziel triffst. 
-2a.) Triffst du (1-3) so kannst du mit dem W20 Würfel/den W20 Würfeln (je nach Körperkraft) deinen Schaden auswürfeln. Schaue nun auf den Charakterbogen deines Gegners und ziehe ihm die entsprechenden Lebenspunkte ab.
+2a.) Triffst du (1-3) so kannst du mit dem W20 Würfel/den W20 Würfeln (je nach Stärke) deinen Schaden auswürfeln. Würfel jetzt wie anfangs erklärt mit einem W10 ob du Bonusschaden machst oder nicht. Schaue dann auf den Charakterbogen deines Gegners und ziehe ihm die entsprechenden Lebenspunkte ab (Also normaler Schaden + Bonusschaden).
 2b.) Triffst du nicht (4-6), so musst du eine Runde aussetzen (darfst keinen Schaden auswürfeln) und dein Gegner ist dran. 
 3a.) Wie auch bei dir würfelst du für den Gegner, ob er dich überhaupt trifft. 1-3 und dein Gegner trifft. 4-6 und dein Gegner verfehlt.
 3b.) Trifft er würfelst du entsprechend der Würfelangabe auf dem Charakterbogen deines Gegners den Schaden aus, den du selbst bekommst. Ein +X (X steht für einen beliebigen Wert) hinter den Würfeln ist zusätzlicher Schaden. Beispiel: Würfelt dein Gegner eine 6 und hat auf seinem Bogen eine +2 hinter seinen Würfeln stehen, so bekommst du 6+2 Schaden. Also insgesamt 8. Auch hier gilt: Ich vertrau dir. Sei ehrlich, so macht es am meisten Spaß.
@@ -833,9 +911,7 @@ Du stehst kurz vor einem Kampf. Ich erkläre dir kurz wie Kämpfe ablaufen.
 PS: Solange der Spielleiter es nicht anders angibt, hast DU immer den ersten Schlag bei einem Kampf. Sollte so etwas wie &quot;XYZ hat den ersten Schlag&quot; vor einem Kampf stehen, so beginnt der Kampf bei Punkt 3.).
 
 [[Ich hab gewonnen!]]
-[[Ich hab verloren!]]
-
-</tw-passagedata><tw-passagedata pid="20" name="Ich versuche zu fliehen" tags="" position="370,367" size="100,100">Tut mir leid, aber das ist in diesem Fall nicht möglich. Warum? Weil du erst einmal lernen musst, wie man kämpft! Du willst doch nicht das Tutorial überspringen, oder?
+[[Ich hab verloren!]]</tw-passagedata><tw-passagedata pid="20" name="Ich versuche zu fliehen" tags="" position="370,367" size="100,100">Tut mir leid, aber das ist in diesem Fall nicht möglich. Warum? Weil du erst einmal lernen musst, wie man kämpft! Du willst doch nicht das Tutorial überspringen, oder?
 
 [[Ich stürme auf das Knurren hinter mir zu]]
 [[Ich stürme auf das Knurren im Busch zu]]</tw-passagedata><tw-passagedata pid="21" name="Ich hab gewonnen!" tags="" position="373,691" size="100,100">Das hast du wirklich gut gemacht. Nun noch eine weitere kleine Erklärung und es geht mit deinem Abenteuer weiter. 
@@ -864,9 +940,9 @@ Stärke:
 
 Beeinflusst wie stark du bist und wieviel Schaden du machst. Jeder 5. Punkt in diesem Wert gibt dir einen W20 zusätzlich als Schaden. Beispiel:
 
-5 KK = 1 W20 Schaden
-10 KK = 2 W20 Schaden
-15 KK = 3 W20 Schaden
+5 Stärke = 1 W20 Schaden + Bonusschaden der Waffe
+10 Stärke = 2 W20 Schaden + Bonusschaden der Waffe
+15 Stärke = 3 W20 Schaden + Bonusschaden der Waffe
 
 Trage es wie folgt ein (mit deinen eigenen Werten):
 &lt;img src=&quot;images/beispielschaden.jpg&quot;&gt;
@@ -894,7 +970,13 @@ Hat keine direkten Auswirkungen. Dieser Wert bestimmt wie geschickt dein Charakt
 
 Intellekt:
 
-Hat keine direkten Auswirkungen. Dieser Wert bestimmt die Intelligenz deines Charakters. Schlaue Charaktere können Rätsel schneller und Probleme ohne Gewalt lösen (manchmal) und sind etwas lieber gesehen, als kopflose Dumpfbacken.
+Hat direkte Auswirkungen auf deinen Zauberschaden. Der wird wie folgt berechnet:
+
+5 Intellekt = 1 W20 Schaden + Bonusschaden des Zaubers
+10 Intellekt = 2 W20 Schaden + Bonusschaden des Zaubers
+15 Intellekt = 3 W20 Schaden + Bonusschaden des Zaubers
+
+Dieser Wert bestimmt zudem auch die Intelligenz deines Charakters. Schlaue Charaktere können Rätsel schneller und Probleme ohne Gewalt lösen (manchmal) und sind etwas lieber gesehen, als kopflose Dumpfbacken.
 
 Charme:
 
