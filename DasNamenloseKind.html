@@ -306,11 +306,21 @@ color: #800000;
 
 
 
+
+
+
+
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">!function(){l10nStrings.identity="Spiel",l10nStrings.aborting="Vorzeitig abgebrochen",l10nStrings.cancel="Abbrechen",l10nStrings.close="Schließen",l10nStrings.ok="OK",l10nStrings.errorTitle="Fehler",l10nStrings.errorNonexistentPassage='die Passage "{passage}" existiert nicht',l10nStrings.errorSaveMissingData="Im Speicherstand fehlen notwendige Daten. Entweder ist die geladene Datei kein Speicherstand oder der Speicherstand ist korrupt",l10nStrings.errorSaveIdMismatch="Speicherstand ist vom falschen {identity}",l10nStrings._warningGermanLacking="in ihrem Browser entweder deaktiviert oder nicht möglich",l10nStrings._warningOutroDegraded=", darum läuft dieses {identity} in einem herabgesetzten Modus. Sie können zwar fortfahren, allerdings kann es sein, dass nicht alle Teile wie gewünscht funktionieren.",l10nStrings.warningNoWebStorage="Das Web Storage API ist {_warningGermanLacking}{_warningOutroDegraded}",l10nStrings.warningDegraded="Einige Features, die diese/s {identity} benötigt sind {_warningGermanLacking}{_warningOutroDegraded}",l10nStrings.debugViewTitle="Fehlersuche-Ansicht",l10nStrings.debugViewToggle="Fehlersuche-Ansicht umschalten",l10nStrings.uiBarToggle="Benutzeroberflächenleiste umschlaten",l10nStrings.uiBarBackward="Im {identity}-Ablauf zurück gehen",l10nStrings.uiBarForward="Im {identity}-Ablauf nach vor gehen",l10nStrings.uiBarJumpto="Zu einem bestimmten Punkt im {identity}-Ablauf springen",l10nStrings.jumptoTitle="Springe zu",l10nStrings.jumptoTurn="Zug",l10nStrings.jumptoUnavailable="Momentan sind keine Sprungmarken vorhanden…",l10nStrings.savesTitle="Speicherstände",l10nStrings.savesDisallowed="Speichern ist in dieser Passage nicht gestattet.",l10nStrings.savesEmptySlot="— Speicherslot leer —",l10nStrings.savesIncapable="Die Möglichkeit zu Speichern ist {_warningGermanLacking}, darum ist die Speicherfunktion für diese Sitzung deaktiviert.",l10nStrings.savesLabelAuto="Automatischer Speicherstand",l10nStrings.savesLabelDelete="Löschen",l10nStrings.savesLabelExport="Auf Datensträger speichern…",l10nStrings.savesLabelImport="Von Datenträger laden…",l10nStrings.savesLabelLoad="Laden",l10nStrings.savesLabelClear="Alle löschen",l10nStrings.savesLabelSave="Speichern",l10nStrings.savesLabelSlot="Slot",l10nStrings.savesSavedOn="Gespeichert nach",l10nStrings.savesUnavailable="Keine Speicherstand-Slots gefunden…",l10nStrings.savesUnknownDate="unbekannt",l10nStrings.settingsTitle="Einstellungen",l10nStrings.settingsOff="Aus",l10nStrings.settingsOn="An",l10nStrings.settingsReset="Auf Standardwerte zurücksetzen",l10nStrings.restartTitle="Neustart",l10nStrings.restartPrompt="Sind sie sicher, dass Sie neu starten wollen? Ihr Fortschritt nach dem letzten Speichern geht verloren.",l10nStrings.shareTitle="Teilen",l10nStrings.autoloadTitle="Automatisch laden",l10nStrings.autoloadCancel="Zum Start gehen",l10nStrings.autoloadOk="Automatischen Speicherstand laden",l10nStrings.autoloadPrompt="Ein automatischer Speicherstand existiert bereits. Trotzdem laden oder zum Start gehen?",l10nStrings.macroBackText="Zurück",l10nStrings.macroReturnText="Return"}();
 
 Config.history.controls = false;
 
 UIBar.stow()
+
+
+
+
+
 
 
 
@@ -661,27 +671,27 @@ Freut mich dich kennen zu lernen! Ich hätte da aber noch eine Frage. Bist du ei
 &lt;&lt;radiobutton &quot;$geschlecht&quot; Abenteurer checked&gt;&gt; Abenteurer
 &lt;&lt;radiobutton &quot;$geschlecht&quot; Abenteurerin&gt;&gt; Abenteurerin
 &lt;&lt;button Weiter Willkommen&gt;&gt;&lt;&lt;/button&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="Willkommen" tags="" position="330,25" size="100,100">&lt;&lt;if $klasse is &quot;Kämpfer&quot;&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="Willkommen" tags="" position="328,25" size="100,100">&lt;&lt;if $klasse is &quot;Kämpfer&quot;&gt;&gt;
 
 Du bist also $geschlecht $name und bist $klasse/in. Sehr schön!
 
 Deine negative Eigenschaft: $negativ
 Deine positive Eigenschaft: $positiv
 
-Der/Die Kämpfer/in hat die Chance auf eine Fleischwunde als Schadensbonus. Ob du deinem Gegner eine Fleischwunde zufügst entscheidet der Wert Stärke. Du würfelst mit einem W10 die Wahrscheinlichkeit. Die Wahrscheinlichkeit steigt mit jedem 5. Punkt auf dem Wert Stärke. Hast du 5 Stärke, so verwundest du nur, wenn du eine 1 gewürfelt hast. Hast du 10 Stärke, so verwundest du bei einer 1 und 2. Hier die komplette Liste:
+Der/Die Kämpfer/in hat die Fähigkeit seine Gegner zu verwunden. Ob du deinen Gegner verwundest bestimmt der Wert Stärke. Du würfelst mit einem W10 die Wahrscheinlichkeit. Der gewürfelte Wert muss deinem Stärkewert oder niedriger entsprechen. Hast du 5 Stärke, so musst du mit einem W10 eine 5 oder weniger würfeln. Hast du 7 Stärke, so musst du für eine Wunde eine 7 oder weniger würfeln. Hier die komplette Liste:
 
- 5 Stärke: 1
-10 Stärke: 1-2
-15 Stärke: 1-3
-20 Stärke: 1-4
-25 Stärke: 1-5
-30 Stärke: 1-6
-35 Stärke: 1-7
-40 Stärke: 1-8
-45 Stärke: 1-9
-50 Stärke: Immer
+ 1 Stärke: 1 oder niedriger
+ 2 Stärke: 2 oder niedriger
+ 3 Stärke: 3 oder niedriger
+ 4 Stärke: 4 oder niedriger
+ 5 Stärke: 5 oder niedriger
+ 6 Stärke: 6 oder niedriger
+ 7 Stärke: 7 oder niedriger
+ 8 Stärke: 8 oder niedriger
+ 9 Stärke: 9 oder niedriger
+10 Stärke: Du verwundest immer
 
-Dieser Bonusschaden wird IMMER nach einem ERFOLGREICHEN Angriff ausgewürfelt. Wie hoch der Schaden der Wunde ist, bestimmt der Schaden der Waffe. Der Schadensbonus ist auf jeder Waffenkarte mit einem &quot;+X Schaden&quot; festgelegt. Wie der eigentliche Kampf funktioniert wird später erklärt. Bitte behalte bis dahin deinen Bonusschaden im Hinterkopf. Du startest mit dem zerbrochenem Schwert.
+Dieser Bonusschaden wird IMMER nach einem ERFOLGREICHEN Angriff ausgewürfelt. Wie hoch der Schaden der Wunde ist, bestimmt der Schaden der Waffe. Der Schadensbonus ist auf jeder Waffenkarte mit einem &quot;+X Schaden&quot; festgelegt. Wie der eigentliche Kampf funktioniert wird später erklärt. Bitte behalte bis dahin deinen Bonusschaden im Hinterkopf. Du startest ohne eine Waffe.
 
 Hätten wir das auch geklärt. Nun noch eine klitze kleine Kleinigkeit und es kann losgehen. 
 
@@ -694,22 +704,27 @@ Du bist also $geschlecht $name und bist $klasse/in. Sehr schön!
 Deine negative Eigenschaft: $negativ
 Deine positive Eigenschaft: $positiv
 
-Der/Die Magier/in hat starke Zauber als Schadensbonus. Ob ein Zauber trifft oder nicht entscheidet der Wert Intellekt. Du würfelst mit einem W10 die Wahrscheinlichkeit. Die Wahrscheinlichkeit steigt mit jedem 5. Punkt auf dem Wert Intellekt. Hast du 5 Intellekt, so triffst du nur, wenn du eine 1 gewürfelt hast. Hast du 10 Intellekt, so triffst du bei einer 1 und 2. Hier die komplette Liste:
+Der/Die Magier/in hat verschiedene Level an Zauber. Welcher Level eines Zaubers gewirkt wird hängt vom Intellekt des Magiers ab. Du würfelst mit einem W10 das Level. Würfelst du eine 3, so wirkt dein Charakter einen Level 3 Zauber, solange er mindestens 3 Intellekt hat. Würfelst du eine 2, so zaubert dein Charakter einen Level 2 Zauber, wenn der Charakter mindestens 2 Intellekt hat usw. Hier die Auflistung:
 
- 5 Intellekt: 1
-10 Intellekt: 1-2
-15 Intellekt: 1-3
-20 Intellekt: 1-4
-25 Intellekt: 1-5
-30 Intellekt: 1-6
-35 Intellekt: 1-7
-40 Intellekt: 1-8
-45 Intellekt: 1-9
-50 Intellekt: Immer
+ 1 Intellekt: 1
+ 2 Intellekt: 1-2
+ 3 Intellekt: 1-3
+ 4 Intellekt: 1-4
+ 5 Intellekt: 1-5
+ 6 Intellekt: 1-6
+ 7 Intellekt: 1-7
+ 8 Intellekt: 1-8
+ 9 Intellekt: 1-9
+10 Intellekt: Nur noch Level 10
 
-Dieser Bonusschaden wird IMMER nach einem ERFOLGREICHEN Angriff ausgewürfelt. Wie der Kampf funktioniert wird später erklärt. Bitte behalte bis dahin deinen Bonusschaden im Hinterkopf. Du darfst dir jetzt auch schon deinen ersten Level 1 Zauber nehmen. Bitte beachte, dass du deinen Zauber später nicht mehr ändern darfst. Nimmst Du also den Feuerball Level 1, so musst du bei dem Feuerball bleiben und kannst bei einem Levelaufstieg nicht einfach den Arkanblitz Level 2 auswählen.
+Würfelt man einen Zauber, der den eigenen Intellekt übersteigt, so muss man einen weiteren W10 werfen. Hat der zweite W10 den gleichen oder niedrigeren Wert des vorher gewürfelten Zaubers, so gelingt das Wirken des Zaubers. Kurzes Beispiel:
 
-Hätten wir das auch geklärt. Nun noch eine klitze kleine Kleinigkeit und es kann losgehen. 
+Der Charakter hat 3 Intellekt und wirft mit dem ersten W10 eine 5.
+Der Charakter wirft ein weiteres Mal einen W10 und hat eine 6. Somit gelingt das Wirken und der Magier wirkt den Level 5 Zauber, trotz des niedrigeren Intellekts.
+
+Bitte beachte, dass du deinen Zauber später nicht mehr ändern darfst. Wähle jetzt also zwischen Feuer, Gift und Frost und nimm dir die entsprechenden Karten.
+
+Hätten wir das nun auch geklärt. Nun noch eine klitze kleine Kleinigkeit und es kann losgehen. 
 
 Ich bin dein Spielleiter. Ich sage dir, was du hörst, riechst, schmeckst, denkst usw. Des Weiteren erzähle ich dir auch die Geschichte, kläre dich über die Gesamtsituation auf und führe die Geschichte voran. Ich bin also deine Sinne, deine Umwelt und dein Schicksal. Sei also lieb zu mir.
 &lt;&lt;button Weiter Ton&gt;&gt;&lt;&lt;/button&gt;&gt;
@@ -720,18 +735,18 @@ Du bist also $geschlecht $name und bist $klasse/in. Sehr schön!
 Deine negative Eigenschaft: $negativ
 Deine positive Eigenschaft: $positiv
 
-Der/Die Bieb/in hat die Chance eine Blutung zu verursachen als Schadensbonus. Ob der Angriff eine Blutung auslöst oder nicht entscheidet der Wert Geschick. Du würfelst mit einem W10 die Wahrscheinlichkeit. Die Wahrscheinlichkeit steigt mit jedem 5. Punkt auf dem Wert Geschick. Hast du 5 Geschick, so triffst du nur, wenn du eine 1 gewürfelt hast. Hast du 10 Geschick, so triffst du bei einer 1 und 2. Hier die komplette Liste:
+Der/Die Dieb/in hat die Chance eine Blutung zu verursachen als Schadensbonus. Ob der Angriff eine Blutung auslöst oder nicht entscheidet der Wert Geschick. Du würfelst mit einem W10 die Wahrscheinlichkeit. Die Wahrscheinlichkeit steigt mit jedem Punkt auf dem Wert Geschick. Hast du 5 Geschick, so triffst du nur, wenn du eine 5 oder niedriger gewürfelt hast. Hast du 10 Geschick, so triffst du definitiv. Hier die komplette Liste:
 
- 5 Geschick: 1
-10 Geschick: 1-2
-15 Geschick: 1-3
-20 Geschick: 1-4
-25 Geschick: 1-5
-30 Geschick: 1-6
-35 Geschick: 1-7
-40 Geschick: 1-8
-45 Geschick: 1-9
-50 Geschick: Immer
+ 1 Geschick: 1
+ 2 Geschick: 1-2
+ 3 Geschick: 1-3
+ 4 Geschick: 1-4
+ 5 Geschick: 1-5
+ 6 Geschick: 1-6
+ 7 Geschick: 1-7
+ 8 Geschick: 1-8
+ 9 Geschick: 1-9
+10 Geschick: Immer
 
 Fügst Du deinem Gegner eine Blutung zu, so bekommt er jede Runde ein Drittel deines Waffenschadens als Bonusschaden bis der Gegner tot ist, auch wenn du deinen Gegner in einer Runde verfehlen solltest. Du musst deinen Bonusschaden also nur einmal auswürfeln. Sobald du einmal getroffen hast brauchst du den Bonusschaden nicht mehr zusätzlich auswürfeln. Wie der normale Kampf funktioniert wird später erklärt. Bitte behalte bis dahin deinen Bonusschaden im Hinterkopf.
 
@@ -877,14 +892,14 @@ Ps: Ich vertrau dir an dieser Stelle. Bitte sei ehrlich zu mir und zu dir selbst
 
 (Norden liegt da -&gt;)
 
-[[Ich weiß wo Norden liegt]]</tw-passagedata><tw-passagedata pid="18" name="Ich stürme auf das Knurren im Busch zu" tags="" position="370,476" size="100,100">&lt;&lt;audio theme stop&gt;&gt;
+[[Ich weiß wo Norden liegt]]</tw-passagedata><tw-passagedata pid="18" name="Ich stürme auf das Knurren im Busch zu" tags="" position="368,476" size="100,100">&lt;&lt;audio theme stop&gt;&gt;
 &lt;&lt;audio fight loop play&gt;&gt;
 Du fasst all deinen Mut zusammen und stürmst auf den Busch zu und erblickst einen zähnenfletschenden Wolf. Sein graues Fell ist aufgerichtet und er ist zum Angriff bereit. Du musst mit ihm Kämpfen, ob du willst oder nicht.
 
 Du stehst kurz vor einem Kampf. Ich erkläre dir kurz wie Kämpfe ablaufen. 
 
 1.) Du würfelst mit einem W6 ob du dein Ziel triffst. 
-2a.) Triffst du (1-3) so kannst du mit dem W20 Würfel/den W20 Würfeln (je nach Stärke) deinen Schaden auswürfeln. Würfel jetzt wie anfangs erklärt mit einem W10 ob du Bonusschaden machst oder nicht. Schaue dann auf den Charakterbogen deines Gegners und ziehe ihm die entsprechenden Lebenspunkte ab (Also normaler Schaden + Bonusschaden).
+2a.) Triffst du (1-3) so kannst du mit dem W20 Würfel/den W20 Würfeln (je nach Stärke/Geschick) deinen Schaden auswürfeln. Würfel jetzt wie anfangs erklärt mit einem W10 ob du Bonusschaden machst oder nicht. Schaue dann auf den Charakterbogen deines Gegners und ziehe ihm die entsprechenden Lebenspunkte ab (Also normaler Schaden + Bonusschaden).Als Magier würfelst du hier natürlich keine W20 sondern nur den W10 für das Level des Zaubers.Als Magier würfelst du hier natürlich keine W20 sondern nur den W10 für das Level des Zaubers. Die Erklärung gab es bereits bei der Charaktererstellung. Du findest sie aber auch nochmal in dem Ordner &quot;Erklärungen&quot;.
 2b.) Triffst du nicht (4-6), so musst du eine Runde aussetzen (darfst keinen Schaden auswürfeln) und dein Gegner ist dran. 
 3a.) Wie auch bei dir würfelst du für den Gegner, ob er dich überhaupt trifft. 1-3 und dein Gegner trifft. 4-6 und dein Gegner verfehlt.
 3b.) Trifft er würfelst du entsprechend der Würfelangabe auf dem Charakterbogen deines Gegners den Schaden aus, den du selbst bekommst. Ein +X (X steht für einen beliebigen Wert) hinter den Würfeln ist zusätzlicher Schaden. Beispiel: Würfelt dein Gegner eine 6 und hat auf seinem Bogen eine +2 hinter seinen Würfeln stehen, so bekommst du 6+2 Schaden. Also insgesamt 8. Auch hier gilt: Ich vertrau dir. Sei ehrlich, so macht es am meisten Spaß.
@@ -901,7 +916,7 @@ Du drehst dich um und erblickst einen zähnefletschenden Wolf. Sein graues Fell 
 Du stehst kurz vor einem Kampf. Ich erkläre dir kurz wie Kämpfe ablaufen. 
 
 1.) Du würfelst mit einem W6, ob du dein Ziel triffst. 
-2a.) Triffst du (1-3) so kannst du mit dem W20 Würfel/den W20 Würfeln (je nach Stärke) deinen Schaden auswürfeln. Würfel jetzt wie anfangs erklärt mit einem W10 ob du Bonusschaden machst oder nicht. Schaue dann auf den Charakterbogen deines Gegners und ziehe ihm die entsprechenden Lebenspunkte ab (Also normaler Schaden + Bonusschaden).
+2a.) Triffst du (1-3) so kannst du mit dem W20 Würfel/den W20 Würfeln (je nach Stärke/Geschick) deinen Schaden auswürfeln. Würfel danach wie anfangs erklärt mit einem W10 ob du Bonusschaden machst oder nicht. Schaue dann auf den Charakterbogen deines Gegners und ziehe ihm die entsprechenden Lebenspunkte ab (Also normaler Schaden + Bonusschaden). Als Magier würfelst du hier natürlich keine W20 sondern nur den W10 für das Level des Zaubers. Die Erklärung gab es bereits bei der Charaktererstellung. Du findest sie aber auch nochmal in dem Ordner &quot;Erklärungen&quot;.
 2b.) Triffst du nicht (4-6), so musst du eine Runde aussetzen (darfst keinen Schaden auswürfeln) und dein Gegner ist dran. 
 3a.) Wie auch bei dir würfelst du für den Gegner, ob er dich überhaupt trifft. 1-3 und dein Gegner trifft. 4-6 und dein Gegner verfehlt.
 3b.) Trifft er würfelst du entsprechend der Würfelangabe auf dem Charakterbogen deines Gegners den Schaden aus, den du selbst bekommst. Ein +X (X steht für einen beliebigen Wert) hinter den Würfeln ist zusätzlicher Schaden. Beispiel: Würfelt dein Gegner eine 6 und hat auf seinem Bogen eine +2 hinter seinen Würfeln stehen, so bekommst du 6+2 Schaden. Also insgesamt 8. Auch hier gilt: Ich vertrau dir. Sei ehrlich, so macht es am meisten Spaß.
@@ -932,49 +947,53 @@ So, und nun nimm dir den leeren Charakterbogen. Der sieht so aus:
 
 [[Hab ihn!]]</tw-passagedata><tw-passagedata pid="24" name="Hab ihn!" tags="" position="772,24" size="100,100">Wunderbar!
 
-Bevor wir anfangen müssen wir erstmal deinen Charakter festlegen. Name, Geschlecht, Beruf, Alter sind selbsterklärend. Bitte trag sie auf dem Charakterbogen ein.
+Bevor wir mit dem Abenteuer beginnen können müssen wir nämlich erstmal deinen Charakter finalisieren. Bitte trage dazu erstmal oben Name, Geschlecht etc. ein. Fertig? Gut! Dann geht&#39;s jetzt an die Attribute deines Charakters. Du musst nun 4 Punkte auf 6 Attribute verteilen. Jeder Wert hat aber bereits einen Punkt.
 
-Nun widmen wir uns den etwas komplizierteren Werten. Auf die folgenden Werte darfst du nun insgesamt 25 Punkte verteilen (Jeder Wert muss mindestens 1 Punkt haben!): 
+Hier die Erklärung und Auswirkungen der Attribute:
 
 Stärke: 
 
-Beeinflusst wie stark du bist und wieviel Schaden du machst. Jeder 5. Punkt in diesem Wert gibt dir einen W20 zusätzlich als Schaden. Beispiel:
+Beeinflusst wie stark du bist und wieviel Schaden du machst. Jeder 3. Punkt in diesem Wert gibt dir einen W20 zusätzlich als Basisschaden. Beispiel:
 
-5 Stärke = 1 W20 Schaden + Bonusschaden der Waffe
-10 Stärke = 2 W20 Schaden + Bonusschaden der Waffe
-15 Stärke = 3 W20 Schaden + Bonusschaden der Waffe
+ 1-2 Stärke = 1 W20 Schaden
+ 3-4 Stärke = 2 W20 Schaden
+ 5-6 Stärke = 3 W20 Schaden
+ 7-8 Stärke = 4 W20 Schaden
+9-10 Stärke = 5 W20 Schaden
 
 Trage es wie folgt ein (mit deinen eigenen Werten):
 &lt;img src=&quot;images/beispielschaden.jpg&quot;&gt;
 
-Auch wenn Schaden sehr attraktiv erscheint, so verteile nicht alle Punkte in Stärke. Lebensenergie und Intellekt sind ebenfalls sehr wichtig!
-
 Lebensenergie:
 
-Beeinflusst wieviele Lebenspunkte du hast und wie stark dein Durchhaltevermögen ist. Charaktere mit niedriger Lebensenergie sind meistens nicht so hartnäckig im Überleben wie Charaktere mit hoher Lebensenergie. Jeder 3. Punkt in diesem Wert gibt dir 35 Lebenspunkte. Beispiel:
+Beeinflusst wieviele Lebenspunkte du hast und wie stark dein Durchhaltevermögen ist. Charaktere mit niedriger Lebensenergie sind meistens nicht so hartnäckig im Überleben wie Charaktere mit hoher Lebensenergie. Jeder Punkt in diesem Wert gibt dir 35 Lebenspunkte. Beispiel:
 
-3 LE = 35 Lebenspunkte
-6 LE = 70 Lebenspunkte
-9 LE = 105 Lebenspunkte
+1 LE =  35 Lebenspunkte
+2 LE =  70 Lebenspunkte
+3 LE = 105 Lebenspunkte
+4 LE = 140 Lebenspunkte
+5 LE = 175 Lebenspunkte
 
 Trage es wie folgt ein (mit deinen eigenen Werten):
 &lt;img src=&quot;images/beispielleben.jpg&quot;&gt;
 
-Tipp: Schreibe deine Lebenspunkte so auf: 70/70. Nun musst du am Ende des Kampfes nur die vordere Zahl wegradieren und den neuen Wert angeben. So vergisst du deine Gesamtanzahl nicht und hast einen besseren Überblick.
+Tipp: Schreibe deine Lebenspunkte so auf: 70/70. Nun musst du während des Kampfes nur die vordere Zahl wegradieren und den neuen Wert angeben. So vergisst du deine Gesamtanzahl nicht und hast einen besseren Überblick.
 
 Viele Lebenspunkte wirken auf den ersten Blick praktisch, doch wenn dein Charakter &quot;Dumm wie Brot&quot; ist oder nur ein halbes Hemd, wirst du nicht sehr weit kommen. Überlege also gut, wie viele Punkte du hier investierst.
 
-Geschicklichkeit:
+Geschick:
 
-Hat keine direkten Auswirkungen. Dieser Wert bestimmt wie geschickt dein Charakter ist. Geschickte Charaktere können einer plötzlich nahekommenden Gefahr besser ausweichen, verletzen sich nicht so schnell bei Stürzen und sondergleichen.
+Dieser Wert hat direkte Auswirkungen. Dieser Wert bestimmt wie geschickt dein Charakter ist und wieviel Schaden er macht. Jeder 3. Punkt in diesem Wert gibt dir einen W20 zusätzlich als Basisschaden. Beispiel:
+
+ 1-3 Geschick = 1 W20 Schaden
+ 4-7 Geschick = 2 W20 Schaden
+8-10 Geschick = 3 W20 Schaden
+
+Geschickte Charaktere können einer plötzlich nahekommenden Gefahr besser ausweichen, verletzen sich nicht so schnell bei Stürzen und sondergleichen.
 
 Intellekt:
 
-Hat direkte Auswirkungen auf deinen Zauberschaden. Der wird wie folgt berechnet:
-
-5 Intellekt = 1 W20 Schaden + Bonusschaden des Zaubers
-10 Intellekt = 2 W20 Schaden + Bonusschaden des Zaubers
-15 Intellekt = 3 W20 Schaden + Bonusschaden des Zaubers
+Hat direkte Auswirkungen auf den Schadensbonus von Zaubern. Die Höhe des Intellekts wird dem Zauber als Bonusschaden dazugerechnet. Mit 3 Intellekt macht man also +3 Bonusschaden.
 
 Dieser Wert bestimmt zudem auch die Intelligenz deines Charakters. Schlaue Charaktere können Rätsel schneller und Probleme ohne Gewalt lösen (manchmal) und sind etwas lieber gesehen, als kopflose Dumpfbacken.
 
@@ -984,17 +1003,15 @@ Hat keine direkten Auswirkungen. Dieser Wert bestimmt den Charme deines Charakte
 
 Glück:
 
-Mal hat man Glück, mal nicht. Dieser Wert bestimmt wieviel Glück du auf deinem Abenteuer haben wirst. JEDER Charakter hat hier von Anfang an 2 Punkte. Diese Punkte sind Pflicht und du musst sie eintragen. Diese 2 Punkte werden dir allerdings nicht von deinen 25 Punkten abgezogen. Sie sind also eine Art Bonus.
+Mal hat man Glück, mal nicht. Dieser Wert bestimmt wieviel Glück du auf deinem Abenteuer haben wirst.
 
 Am Ende sollte dein Bogen ungefähr so aussehen:
 
 &lt;img src=&quot;images/beispielwerte.jpg&quot;&gt;
 
-Natürlich ist die Vergabe der Punkte deine Entscheidung. Ich wollte nur verbildlichen, wie es am Ende aussehen kann.
+Natürlich ist die Vergabe der Punkte deine Entscheidung. Ich empfehle trotzdem sehr stark, dass Du als Magier/in auf Intellekt gehst, mit dem Kämpfer auf Stärke und Lebensenergie und mit dem Dieb auf Geschick. Ein Charakter mit allen Punkten quer verteilt wird nicht lange überleben.
 
-Wenn du nun alle 25 Punkte auf deine 6 Eigenschaften verteilt sowie du Körperkraft und Lebensenergie umgerechnet hast, dann kann es schon losgehen! Diesmal wirklich!
-
-PS: Der Rüstungswert kommt später. Dort wird noch nichts eingetragen.
+PS: Rüstungswert (RW) kommt später. Dort wird noch nichts eingetragen.
 &lt;img src=&quot;images/rüstungswert.jpg&quot;&gt;
 
 Kommen wir nun zum Rucksack.
@@ -1007,15 +1024,17 @@ Du gehst langsam auf den leblosen Wolf zu und beugst dich hinunter. In dem Momen
 
 An dieser Stelle musst du nun zum ersten Mal auf einem deiner Werte würfeln. Dies ist die letzte Erklärung. Versprochen!
 
-In diesem Fall musst du auf Geschicklichkeit würfeln. Nimm den W20 und würfle. Hast du Zahlen unter oder gleich deinem Geschicklichkeitswert gewürfelt? Gut! Du hast den Wurf geschafft! Sind die Zahlen über deinem Wert? Schade. Du hast den Wurf nicht geschafft. Beispiel:
+In diesem Fall musst du auf Geschick würfeln. Nimm den W10 und würfle. Hast du Zahlen unter oder gleich deinem Geschickwert gewürfelt? Gut! Du hast den Wurf geschafft! Sind die Zahlen über deinem Wert? Schade. Du hast den Wurf nicht geschafft. Beispiel:
 
-Deine Geschicklichkeit ist 13. Gewürfelt hast du 7. Damit hast du den Wurf auf deinen Wert geschafft.
+Dein Geschick ist 8. Gewürfelt hast du 7. Damit hast du den Wurf auf deinen Wert geschafft.
 
-Deine Geschicklichkeit ist 13. Gewürfelt hast du 13. Damit hast du den Wurf auf deinen Wert geschafft.
+Dein Geschick ist 8. Gewürfelt hast du 8. Damit hast du den Wurf auf deinen Wert geschafft.
 
-Deine Geschicklichkeit ist 13. Gewürfelt hast du 15. Damit hast du den Wurf nicht geschafft.
+Dein Geschick ist 8. Gewürfelt hast du 9. Damit hast du den Wurf nicht geschafft.
 
-Merk dir das Prinzip. Du wirst es noch sehr oft brauchen. Kleine Info: Würfelst du eine 20, so ist es IMMER ein kritischer Fehlschlag. Auch hier bitte ich um Ehrlichkeit.
+Wenn ich also sage &quot;Würfel auf Stärke&quot;, dann funktioniert das auch genau nach dem selben Prinzip.
+
+Merk dir das Prinzip. Du wirst es noch sehr oft brauchen. Kleine Info: Würfelst du eine 10, so ist es IMMER ein kritischer Fehlschlag. Auch hier bitte ich um Ehrlichkeit.
 
 [[Ok, werde es mir merken]]
 </tw-passagedata><tw-passagedata pid="27" name="Ok, werde es mir merken" tags="" position="480,260" size="100,100">Du gehst langsam auf den leblosen Wolf zu und beugst dich hinunter. In dem Moment, in dem du deine Hand zu dem Wolf ausstreckst, knurrt der andere Wolf und schnappt kräftig nach deiner Hand.
@@ -1081,6 +1100,21 @@ Du erwachst am nächsten Morgen, streckst dich und brauchst ein paar Augenblicke
 
 [[Ich gehe den Trampelpfad weiter]]</tw-passagedata><tw-passagedata pid="44" name="Ich sehe mich weiter in der Hütte um" tags="" position="701,1146" size="100,100">&lt;&lt;audio &quot;theme&quot; stop&gt;&gt;
 &lt;&lt;audio &quot;kerze&quot; loop play&gt;&gt;
+&lt;&lt;if $klasse is &quot;Magier&quot;&gt;&gt;
+Du schaust dich noch ein wenig in der Hütte um und entdeckst eine kleine Kerze. Neben ihr liegt ein Feuerstein und ein kleines Stück Metall. Mit ein wenig Übung und Geduld schaffst du es die Kerze zu entzünden. Sie ist zwar klein, aber die Wärme tut gut. Du stellst die Kerze mit sicherem Abstand neben das Strohbett, schließlich willst du ja nicht in der Nacht Feuer fangen. 
+
+Während du dich noch ein wenig in der Hütte umsiehst, aber nichts Nützliches entdeckst, fällt dir ein kleines Schimmern zwischen den Holzdielen des Bodens auf. Du bückst dich und kommst so gerade eben mit deiner Fingerspitze dran und fischt es raus. Es ist ein alter, aber noch brauchbarer Ring. Deine Magie reagiert sofort mit dem Ring und du weißt: Du musst diesen Ring tragen.
+
+&lt;img src=&quot;Gegenstandskarten/Geschlaengelter Ring.jpg&quot;&gt;
+
+Du hast einen Geschlängelten Ring erhalten. Du darfst dir nun die entsprechende Karte nehmen.
+
+Du hast nun einen Schadensbonus von +2. Dieser wird auf deinen gewürfelten Schaden zusätzlich zum Bonus deines Intellekts addiert. Beispiel:
+
+Du hast 3 Intellekt und damit einen Bonus von +3 Schaden. Dazu kommen nun die +2 Schaden des Rings. Du hast nun also +5 Bonusschaden.
+
+Du entdeckst sonst nichts mehr. Neben einem Tisch, dem Strohbett und einem kleinen Schrank ist nichts mehr hier.
+&lt;&lt;else&gt;&gt;
 Du schaust dich noch ein wenig in der Hütte um und entdeckst eine kleine Kerze. Neben ihr liegt ein Feuerstein und ein kleines Stück Metall. Mit ein wenig Übung und Geduld schaffst du es die Kerze zu entzünden. Sie ist zwar klein, aber die Wärme tut gut. Du stellst die Kerze mit sicherem Abstand neben das Strohbett, schließlich willst du ja nicht in der Nacht Feuer fangen. 
 
 Während du dich noch ein wenig in der Hütte umsiehst, aber nichts Nützliches entdeckst, fällt dir ein kleines Messer auf. Es ist verrostet und stumpf, macht aber trotzdem mehr Schaden als deine blanke Faust.
@@ -1099,9 +1133,8 @@ Tipp: Schreibe dir deinen Schadensbonus rechts neben deinen Schaden. So kannst d
 
 Du entdeckst sonst nichts mehr. Neben einem Tisch, dem Strohbett und einem kleinen Schrank ist nichts mehr hier.
 &lt;&lt;set $messer += 1&gt;&gt;
+&lt;&lt;/if&gt;&gt;
 [[Ich gehe jetzt schlafen]]
-
-
 
 </tw-passagedata><tw-passagedata pid="45" name="Ich gehe jetzt schlafen" tags="" position="699,1256" size="100,100">Es weht ein leichter, kalter Zug durch die Hütte und lässt die Flamme der Kerze leicht flackern. Die Kerze ist nicht groß, schenkt jedoch genug Wärme, um dich über Nacht nicht komplett durchfrieren zu lassen. Du regenerierst deine gesamten Lebenspunkte.
 
@@ -1305,7 +1338,9 @@ Du gehst zurück zu deinem Ausgangspunkt. Nach dieser Aktion gehst du...
 
 [[Sakram?]]
 [[Ich habe noch weitere Anliegen]]</tw-passagedata><tw-passagedata pid="78" name="Ich hätte gerne etwas zu essen" tags="" position="1897,260" size="100,100">&lt;&lt;if $taler gte 2&gt;&gt;
-Der Wirt stellt dir eine üppige Portion hin. &#39;Das macht 2 Taler. Guten Hunger&#39; wünscht er dir noch, bevor du ordentlich reinhaust.
+Der Wirt stellt dir eine üppige Portion hin. 
+&quot;Das macht 2 Taler. Guten Hunger!&quot;
+wünscht er dir noch, bevor du ordentlich reinhaust.
 	&lt;&lt;set $taler -= 2&gt;&gt;
 	&lt;&lt;set $essen += 1&gt;&gt;
 	&lt;&lt;elseif $taler lt 2&gt;&gt;
@@ -1315,7 +1350,9 @@ Du suchst in deinen Taschen nach Talern. Der Wirt bemerkt es und rät dir, einma
 Du hast $taler Taler.
 
 [[Ich habe noch weitere Anliegen]]</tw-passagedata><tw-passagedata pid="79" name="Ich hätte gerne einen Krug Met!" tags="" position="1900,497" size="100,100">&lt;&lt;if $taler gte 1&gt;&gt;
-Der Wirt stellt dir einen großen Krug Met hin. &#39;Das macht 1 Taler. Prost&#39; wünscht er dir noch, bevor du den Krug leerziehst.
+Der Wirt stellt dir einen großen Krug Met hin. 
+&quot;Das macht 1 Taler. Prost!&quot; 
+wünscht er dir noch, bevor du den Krug leerziehst.
 	&lt;&lt;set $taler -= 1&gt;&gt;
 	&lt;&lt;elseif $taler lt 1&gt;&gt;
 Du suchst in deinen Taschen nach Talern. Der Wirt bemerkt es und rät dir, einmal mit dem Glücksspieler zu sprechen.
@@ -1358,13 +1395,13 @@ Freudig springst du auf. Du hast 2 Taler gewonnen. Du hast nun insgesamt $taler 
 Der Glücksspieler lacht leise. Du hast 1 Taler verloren. Du hast nun $taler Taler.
 
 [[Zurück zum Wirt]]</tw-passagedata><tw-passagedata pid="84" name="Zurück zum Wirt" tags="" position="1896,375" size="100,100">&lt;&lt;if $aufgabe gte 1&gt;&gt;
-	&lt;&lt;print &quot;&#39;Hallo $geschlecht! Was kann ich für euch tun?&#39;&quot;&gt;&gt;
+&quot;Hallo $geschlecht! Was kann ich für euch tun?&quot;
 [[Ich hätte gerne ein Zimmer (Geschichte weiterführen)]]
 [[Ich hätte gerne etwas zu essen]]
 [[Ich hätte gerne einen Krug Met!]]
 [[Ich möchte schnell ein paar Taler verdienen]]
-	&lt;&lt;elseif $aufgabe lte 0&gt;&gt;
-	&lt;&lt;print &quot;&#39;Hallo $geschlecht! Was kann ich für euch tun?&#39;&quot;&gt;&gt;
+	&lt;&lt;else&gt;&gt;
+	&quot;Hallo $geschlecht! Was kann ich für euch tun?&quot;
 [[Ich hätte gerne ein Zimmer (Geschichte weiterführen)]]
 [[Ich hätte gerne etwas zu essen]]
 [[Ich hätte gerne einen Krug Met!]]
@@ -1423,7 +1460,8 @@ Als du schon fast aufgegeben hast und dich mit dem Gedanken des Verhungerns anfr
 Was tust du?
 
 [[Ich versuche den Fuchs zu fangen]]
-[[Ich lasse den Fuchs in ruhe und gehe weiter]]</tw-passagedata><tw-passagedata pid="89" name="Respektvoll aber ein wenig gierig das Skelett durchsuchen" tags="" position="1286,367" size="100,100">Du durchsuchst das Skelett nach eventuellen Habseligkeiten. Du findest nichts, auch nicht unter dem Skelett. Die Hose ist bereits so gut wie weggefault und die den Speeren und Schwertern hat der Zahn der Zeit zu sehr zugesetzt. Sie sind allesamt unbrauchbar.
+[[Ich lasse den Fuchs in ruhe und gehe weiter]]</tw-passagedata><tw-passagedata pid="89" name="Respektvoll aber ein wenig gierig das Skelett durchsuchen" tags="" position="1286,367" size="100,100">&lt;&lt;if $klasse is &quot;Dieb&quot;&gt;&gt;
+Du durchsuchst das Skelett nach eventuellen Habseligkeiten. Du findest nichts, auch nicht unter dem Skelett. Die Hose ist bereits so gut wie weggefault und die den Speeren und Schwertern hat der Zahn der Zeit zu sehr zugesetzt. Sie sind allesamt unbrauchbar.
 
 Als du dich gerade vom Skelett abwendest, fällt dir auf, dass das Lederwams, das das Skelett trägt eigentlich noch ganz gut ist. Es ist ein wenig durchlöchert, wahrscheinlich von Pfeilen, aber ein bisschen Schutz bietet es trotzdem. 
 
@@ -1431,20 +1469,37 @@ Als du dich gerade vom Skelett abwendest, fällt dir auf, dass das Lederwams, da
 
 Du hast ein altes Lederwams erhalten. Du darfst dir nun die entsprechende Karte nehmen. 
 
-Das Lederwams ist eine Rüstung und bietet dir Schutz. Rüstungsschutz wird ganz einfach berechnet: In diesem Fall ist es ein Rüstungsbonus +2. Würfelt dein Gegner eine 4, so bekommst du nur 2 Schaden. Würfelt dein Gegner eine 15, so bekommst du nur 13 Schutz. Der Rüstungsbonus deiner Rüstung wird also einfach dem Angriff deines Gegners abgezogen. So einfach. Sollte dein Gegner unter oder gleich deinem Rüstungsbonus würfeln, so bekommst du garkeinen Schaden. Super, oder?
+Das Lederwams erlaubt es dir dich geschickter zu bewegen und du aknnst dadurch besser Auswichen. Ausweichen wird ganz einfach berechnet: In diesem Fall ist es Ausweichen von +2. Würfelt dein Gegner eine 4, so bekommst du nur 2 Schaden. Würfelt dein Gegner eine 15, so bekommst du nur 13 Schaden. Der Ausweichbonus deiner Rüstung wird also einfach dem Angriff deines Gegners abgezogen. So einfach. Sollte dein Gegner unter oder gleich deinem Ausweichbonus würfeln, so bekommst du garkeinen Schaden. Super, oder?
 
 Eine Rüstung ist ein wertvoller Gegenstand. Gratulation zu deinem Fund!
 
 Du möchtest jetzt...
 &lt;&lt;set $gesinnung -= 1&gt;&gt;
 &lt;&lt;set $wams += 1&gt;&gt;
+&lt;&lt;else&gt;&gt;
+Du durchsuchst das Skelett nach eventuellen Habseligkeiten. Du findest nichts, auch nicht unter dem Skelett. Die Hose ist bereits so gut wie weggefault und die den Speeren und Schwertern hat der Zahn der Zeit zu sehr zugesetzt. Sie sind allesamt unbrauchbar.
+
+Als du dich gerade vom Skelett abwendest, fällt dir auf, dass das Lederwams, das das Skelett trägt eigentlich noch ganz gut ist. Es ist ein wenig durchlöchert, wahrscheinlich von Pfeilen, aber ein bisschen Schutz bietet es trotzdem. 
+
+&lt;img src=&quot;Gegenstandskarten/Alter Lederwams.jpg&quot;&gt;
+
+Du hast ein altes Lederwams erhalten. Du darfst dir nun die entsprechende Karte nehmen. 
+
+Das Lederwams ist eine Rüstung und bietet dir Schutz. Rüstungsschutz wird ganz einfach berechnet: In diesem Fall ist es ein Rüstungsbonus +2. Würfelt dein Gegner eine 4, so bekommst du nur 2 Schaden. Würfelt dein Gegner eine 15, so bekommst du nur 13 Schaden. Der Rüstungsbonus deiner Rüstung wird also einfach dem Angriff deines Gegners abgezogen. So einfach. Sollte dein Gegner unter oder gleich deinem Rüstungsbonus würfeln, so bekommst du garkeinen Schaden. Super, oder?
+
+Eine Rüstung ist ein wertvoller Gegenstand. Gratulation zu deinem Fund!
+
+Du möchtest jetzt...
+&lt;&lt;set $gesinnung -= 1&gt;&gt;
+&lt;&lt;set $wams += 1&gt;&gt;
+&lt;&lt;/if&gt;&gt;
 [[Weiter dem Trampelpfad folgen und hoffen auf jemanden zu treffen]]</tw-passagedata><tw-passagedata pid="90" name="Ich versuche den Fuchs zu fangen" tags="" position="1293,595" size="100,100">Dein Hunger ist einfach zu groß. Gelenkt von deinen Instinkten willst du diesen Fuchs. Koste es, was es wolle.
 
 Wirf auf Geschicklichkeit.
 
 [[Ich habe den Fuchs gefangen]]
 [[Ich habe den Fuchs nicht gefangen]]
-[[Ich habe den Fuchs nicht gefangen (Kritisch)]]</tw-passagedata><tw-passagedata pid="91" name="Ich lasse den Fuchs in ruhe und gehe weiter" tags="" position="1311,1150" size="100,100">Du ignorierst deinen Hunger und entschließt dich den Fuchs nicht zu jagen.
+[[Ich habe den Fuchs nicht gefangen (Kritisch)]]</tw-passagedata><tw-passagedata pid="91" name="Ich lasse den Fuchs in ruhe und gehe weiter" tags="" position="1301,1150" size="100,100">Du ignorierst deinen Hunger und entschließt dich den Fuchs nicht zu jagen.
 
 [[Ich möchte nur noch weitergehen]]</tw-passagedata><tw-passagedata pid="92" name="Ich habe den Fuchs gefangen" tags="" position="1296,707" size="100,100">Stolz auf deine Leistung ist die Freude auch schon wieder vorbei. Dir wird ein wichtiger Fakt bewusst. Du hast keine Möglichkeit das Fleisch zu braten, zu Grillen oder wenigstens zu kochen. Doch dein Hunger ist einfach größer. Du reißt den Fuchs in kleine Stücke und isst, was du du für &quot;verträglich&quot; hältst. Es schmeckt absolut widerlich, aber es füllt den Magen. Fragt sich nur für wie lange...
 &lt;&lt;set $essen += 1&gt;&gt;
@@ -1452,7 +1507,7 @@ Wirf auf Geschicklichkeit.
 
 [[Aber ich habe so ein hunger]]</tw-passagedata><tw-passagedata pid="94" name="Ich habe den Fuchs nicht gefangen (Kritisch)" tags="" position="1300,813" size="100,100">Du schleichst dich an den Fuchs heran, aber stolperst dabei und fällst ungünstig auf dein Gesicht. Der Fuchs erschrickt so sehr, dass er sich zu dir umdreht, dich panisch beißt und dann das Weite sucht. Du bekommst 1W6 Schaden (wenn dieser Schaden dich töten würde, setze deine Lebenspunkte auf 1).
 
-[[Aber ich habe so ein hunger]]</tw-passagedata><tw-passagedata pid="95" name="Aber ich habe so ein hunger" tags="" position="1196,1047" size="100,100">Der Fuchs ist weg und dein Magen ist nach wie vor leer. Zu allem Übel knurrt er jetzt auch noch und du kriegst Bauchschmerzen. Du bekommst 1W6 Schaden.
+[[Aber ich habe so ein hunger]]</tw-passagedata><tw-passagedata pid="95" name="Aber ich habe so ein hunger" tags="" position="1301,1042" size="100,100">Der Fuchs ist weg und dein Magen ist nach wie vor leer. Zu allem Übel knurrt er jetzt auch noch und du kriegst Bauchschmerzen. Du bekommst 1W6 Schaden.
 
 [[Ich möchte nur noch weitergehen]]</tw-passagedata><tw-passagedata pid="96" name="Ich möchte nur noch weitergehen" tags="" position="1520,150" size="100,100">Wie auch gestern siehst du bis auf Felder und Berge nichts. Der Trampelpfad führt endlos durch die Landschaft und deine Hoffnungen auf ein Dorf zu treffen schwinden. Deine Laune ist nicht die Beste und so lässt du deprimiert den Kopf hängen. 
 
@@ -1672,7 +1727,7 @@ Du hast ein Lederschild gefunden.
 
 &lt;img src=&quot;Gegenstandskarten/Lederschild.jpg&quot;&gt;
 
-Das Lederschild gewährt dir Rüstung. Rüstungsbonus wird ganz einfach berechnet: In diesem Fall ist es ein Rüstungsbonus +2. Würfelt dein Gegner eine 4, so bekommst du nur 2 Schaden. Würfelt dein Gegner eine 15, so bekommst du nur 13 Schutz. Der Rüstungsbonus wird also einfach dem Angriff deines Gegners abgezogen. So einfach. Sollte dein Gegner unter oder gleich deinem Rüstungsbonus würfeln, so bekommst du garkeinen Schaden. Super, oder?
+Das Lederschild gewährt dir Rüstung. Rüstungsbonus wird ganz einfach berechnet: In diesem Fall ist es ein Rüstungsbonus +2. Würfelt dein Gegner eine 4, so bekommst du nur 2 Schaden. Würfelt dein Gegner eine 15, so bekommst du nur 13 Schaden. Der Rüstungsbonus wird also einfach dem Angriff deines Gegners abgezogen. So einfach. Sollte dein Gegner unter oder gleich deinem Rüstungsbonus würfeln, so bekommst du garkeinen Schaden. Super, oder?
 
 Du kannst den Rüstungsbonus nun auf deinem Charakterbogen eintragen.
 
@@ -1726,7 +1781,8 @@ Du hättest nicht so viel Met trinken sollen. Als du versuchst zur Ruhe zu komme
 Du hast einen aufregenden und anstrengenden Tag hinter dir. Kaum dass du unter der frisch gewaschenen Bettwäsche liegst, da schläfst du auch schon ein. Die Nacht ist sehr erholsam. Du regenerierst deine gesamten Lebenspunkte.
 [[Gute Nacht!]]
 	&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="129" name="Ich hätte jetzt wirklich gerne ein Zimmer" tags="" position="2385,154" size="100,100">&lt;&lt;if $taler gte 10&gt;&gt;
-Der Wirt nickt. &#39;Das macht 10 Taler. Ich wünsche eine angenehme Nacht.&#39; brummt er, bevor du dein Zimmer aufsuchst.
+Der Wirt nickt. 
+&quot;Das macht 10 Taler. Ich wünsche eine angenehme Nacht.&quot; brummt er, bevor du dein Zimmer aufsuchst.
 	&lt;&lt;set $taler -= 10&gt;&gt;
 [[Du betrittst dein Zimmer]]
 	&lt;&lt;elseif $taler lt 10&gt;&gt;
@@ -1793,6 +1849,18 @@ Tipp: Schreibe dir deinen Schadensbonus rechts neben deinen Schaden. So kannst d
 
 &lt;img src=&quot;images/beispieldmg.jpg&quot;&gt;
 
+Solltest Du eine/n Magier/in spielen: 
+
+Es ist ein alter, aber noch brauchbarer Ring. Deine Magie reagiert sofort mit dem Ring und du weißt: Du musst diesen Ring tragen.
+
+&lt;img src=&quot;Gegenstandskarten/Geschlaengelter Ring.jpg&quot;&gt;
+
+Du hast einen Geschlängelten Ring erhalten. Du darfst dir nun die entsprechende Karte nehmen.
+
+Du hast nun einen Schadensbonus von +2. Dieser wird auf deinen gewürfelten Schaden zusätzlich zum Bonus deines Intellekts addiert. Beispiel:
+
+Du hast 3 Intellekt und damit einen Bonus von +3 Schaden. Dazu kommen nun die +2 Schaden des Rings. Du hast nun also +5 Bonusschaden. Du bekommst KEIN MESSER.
+
 Du verlässt die Taverne. Bevor du das Dorf verlässt gehst du...
 [[Zum Schmied]]
 [[Zum Gemischtwarenladen]]
@@ -1820,8 +1888,19 @@ Du hast nun einen Schadensbonus von +2. Dieser wird auf deinen gewürfelten Scha
 Du würfelst mit einem W20 eine 13. Nun kannst du den Bonus von +2 drauf addieren und hast nun 15 Schaden gemacht.
 
 Tipp: Schreibe dir deinen Schadensbonus rechts neben deinen Schaden. So kannst du ihn nicht vergessen.
-
 &lt;img src=&quot;images/beispieldmg.jpg&quot;&gt;
+
+Solltest Du eine/n Magier/in spielen: 
+
+Es ist ein alter, aber noch brauchbarer Ring. Deine Magie reagiert sofort mit dem Ring und du weißt: Du musst diesen Ring tragen.
+
+&lt;img src=&quot;Gegenstandskarten/Geschlaengelter Ring.jpg&quot;&gt;
+
+Du hast einen Geschlängelten Ring erhalten. Du darfst dir nun die entsprechende Karte nehmen.
+
+Du hast nun einen Schadensbonus von +2. Dieser wird auf deinen gewürfelten Schaden zusätzlich zum Bonus deines Intellekts addiert. Beispiel:
+
+Du hast 3 Intellekt und damit einen Bonus von +3 Schaden. Dazu kommen nun die +2 Schaden des Rings. Du hast nun also +5 Bonusschaden. Du bekommst KEIN MESSER.
 
 Unter dem Butterbrot liegt allerdings noch etwas... 
 
@@ -3395,38 +3474,24 @@ Du hast den Auftrag bereits abgeschlossen. Es gibt hier nichts mehr zu tun für 
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="279" name="&quot;Gesucht: Diepsing&quot; annehmen" tags="" position="5749,250" size="100,100">Diese Quest gibt es noch nicht. NOCH nicht. :)
 [[Ich gehe zur Stadtmitte]]</tw-passagedata><tw-passagedata pid="280" name="&quot;Kammerjäger&quot; annehmen" tags="" position="5865,254" size="100,100">Diese Quest gibt es noch nicht. NOCH nicht. :)
 [[Ich gehe zur Stadtmitte]]</tw-passagedata><tw-passagedata pid="281" name="&quot;Wolfsplage&quot; annehmen" tags="" position="5990,252" size="100,100">Diese Quest gibt es noch nicht. NOCH nicht. :)
-[[Ich gehe zur Stadtmitte]]</tw-passagedata><tw-passagedata pid="282" name="Zum Lederer" tags="" position="6094,146" size="100,100">Ein schlanker aber durchtrainierter junger Mann steht vor dir. Er lächelt gezwungen aber nett.
+[[Ich gehe zur Stadtmitte]]</tw-passagedata><tw-passagedata pid="282" name="Zum Lederer" tags="" position="6094,146" size="100,100">&lt;&lt;if $klasse is &quot;Dieb&quot;&gt;&gt;
+Ein schlanker aber durchtrainierter junger Mann steht vor dir. Er lächelt gezwungen aber nett.
 
 &quot;Was darf&#39;s denn sein? Meine Lederwaren sind vom aller feinsten!&quot;
 
-[[Lederhandschuhe kaufen (15 Taler)]]
-[[Lederkappe kaufen (20 Taler)]]
-[[Lederhose kaufen (30 Taler)]]
-[[Ich gehe zur Stadtmitte]]</tw-passagedata><tw-passagedata pid="283" name="Lederhandschuhe kaufen (15 Taler)" tags="" position="6099,360" size="100,100">&lt;&lt;if $taler gte 15&gt;&gt;
-&quot;Die Lederhandschuhe? Sehr gute Wahl!&quot;
-&lt;&lt;set $taler -= 15&gt;&gt;
-Du hast noch $taler Taler.
-[[Ich gehe zur Stadtmitte]]
-	&lt;&lt;elseif $taler lt 15&gt;&gt;
-Du suchst in deinen Taschen nach Talern. Der Lederer rät dir einmal einen Blick auf das &lt;span class=&quot;redtext&quot;&gt;Anschlagbrett&lt;/span&gt; zu werfen.
-[[Ich gehe zur Stadtmitte]]
-	&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="284" name="Lederkappe kaufen (20 Taler)" tags="" position="6098,254" size="100,100">&lt;&lt;if $taler gte 20&gt;&gt;
-&quot;Die Kappe also! Sehr gute Wahl!&quot;
-&lt;&lt;set $taler -= 20&gt;&gt;
-Du hast noch $taler Taler.
-[[Ich gehe zur Stadtmitte]]
-	&lt;&lt;elseif $taler lt 20&gt;&gt;
-Du suchst in deinen Taschen nach Talern. Der Lederer rät dir einmal einen Blick auf das &lt;span class=&quot;redtext&quot;&gt;Anschlagbrett&lt;/span&gt; zu werfen.
-[[Ich gehe zur Stadtmitte]]
-	&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="285" name="Lederhose kaufen (30 Taler)" tags="" position="6100,467" size="100,100">&lt;&lt;if $taler gte 30&gt;&gt;
-&quot;Die Hose soll es sein! Sehr Recht!&quot;
-&lt;&lt;set $taler -= 30&gt;&gt;
-Du hast noch $taler Taler.
-[[Ich gehe zur Stadtmitte]]
-	&lt;&lt;elseif $taler lt 30&gt;&gt;
-Du suchst in deinen Taschen nach Talern. Der Lederer rät dir einmal einen Blick auf das &lt;span class=&quot;redtext&quot;&gt;Anschlagbrett&lt;/span&gt; zu werfen.
-[[Ich gehe zur Stadtmitte]]
-	&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="286" name="Schlonze ausfindig machen" tags="" position="5634,356" size="100,100">&lt;&lt;if $fleisch gte 1&gt;&gt;
+[[Lederhandschuhe kaufen (+1 Ausweichen, 15 Taler)]]
+[[Lederkappe kaufen (+1 Ausweichen, 20 Taler)]]
+[[Lederhose kaufen (+1 Ausweichen, 30 Taler)]]
+&lt;&lt;else&gt;&gt;
+Ein schlanker aber durchtrainierter junger Mann steht vor dir. Er lächelt gezwungen aber nett.
+
+&quot;Was darf&#39;s denn sein? Meine Lederwaren sind vom aller feinsten!&quot;
+
+[[Lederhandschuhe kaufen (+1 Rüstung, 15 Taler)]]
+[[Lederkappe kaufen (+2 Rüstung, 20 Taler)]]
+[[Lederhose kaufen (+2 Rüstung, 30 Taler)]]
+&lt;&lt;/if&gt;&gt;
+[[Ich gehe zur Stadtmitte]]</tw-passagedata><tw-passagedata pid="283" name="Schlonze ausfindig machen" tags="" position="5634,356" size="100,100">&lt;&lt;if $fleisch gte 1&gt;&gt;
 Du stehst in der Stadtmitte und kratzt dir am Kopf. Du hast keine Ahnung wie du diesen Schlonze ausfindig machen sollst. Du hast keine Anhaltspunkte oder Tipps. Du beginnst die Anwohner zu fragen. Doch mehr als ein
 
 &quot;Wir wollen mit dieser ekelhaften Gestalt nichts zu tun haben.&quot; oder
@@ -3460,40 +3525,38 @@ Nun dir wohl nichts anderes übrig als die Stadt Richtung...
 [[Westen zu verlassen]]
 [[Norden zu verlassen]]
 [[Osten zu verlassen]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="287" name="Süden zu verlassen" tags="" position="5658,576" size="100,100">Nach einigen Stunden Wandern, rätseln und ahnungslosigkeit landest du wieder in der Stadt. Der Weg war wohl nicht der Richtige.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="284" name="Süden zu verlassen" tags="" position="5658,576" size="100,100">Nach einigen Stunden Wandern, rätseln und ahnungslosigkeit landest du wieder in der Stadt. Der Weg war wohl nicht der Richtige.
 
-[[Ich gehe zur Stadtmitte]] </tw-passagedata><tw-passagedata pid="288" name="Westen zu verlassen" tags="" position="5658,466" size="100,100">Nach einigen Stunden Wandern, rätseln und ahnungslosigkeit landest du wieder in der Stadt. Der Weg war wohl nicht der Richtige.
+[[Ich gehe zur Stadtmitte]] </tw-passagedata><tw-passagedata pid="285" name="Westen zu verlassen" tags="" position="5658,466" size="100,100">Nach einigen Stunden Wandern, rätseln und ahnungslosigkeit landest du wieder in der Stadt. Der Weg war wohl nicht der Richtige.
 
-[[Ich gehe zur Stadtmitte]] </tw-passagedata><tw-passagedata pid="289" name="Norden zu verlassen" tags="" position="5656,791" size="100,100">Du atmest einmal tief durch. Schlonze erledigen klingt einfach. Eventuell... Jedoch ist es nicht so leicht ihn zu finden. Wie fängst du an zu suchen? Möchtest du...
+[[Ich gehe zur Stadtmitte]] </tw-passagedata><tw-passagedata pid="286" name="Norden zu verlassen" tags="" position="5656,791" size="100,100">Du atmest einmal tief durch. Schlonze erledigen klingt einfach. Eventuell... Jedoch ist es nicht so leicht ihn zu finden. Wie fängst du an zu suchen? Möchtest du...
 
 [[Spuren suchen]]
-[[Dich umsehen]]</tw-passagedata><tw-passagedata pid="290" name="Osten zu verlassen" tags="" position="5656,683" size="100,100">Nach einigen Stunden Wandern, rätseln und ahnungslosigkeit landest du wieder in der Stadt. Der Weg war wohl nicht der Richtige.
+[[Dich umsehen]]</tw-passagedata><tw-passagedata pid="287" name="Osten zu verlassen" tags="" position="5656,683" size="100,100">Nach einigen Stunden Wandern, rätseln und ahnungslosigkeit landest du wieder in der Stadt. Der Weg war wohl nicht der Richtige.
 
-[[Ich gehe zur Stadtmitte]] </tw-passagedata><tw-passagedata pid="291" name="Spuren suchen" tags="" position="5547,792" size="100,100">Naja, also wenn du möchtest kannst du gerne nach Spuren suchen, aber was versprichst du dir genau davon?
+[[Ich gehe zur Stadtmitte]] </tw-passagedata><tw-passagedata pid="288" name="Spuren suchen" tags="" position="5547,792" size="100,100">Naja, also wenn du möchtest kannst du gerne nach Spuren suchen, aber was versprichst du dir genau davon?
 
 [[Ich will jetzt Spuren suchen!]]
-[[Hast recht. Spuren suchen macht keinen Sinn]]</tw-passagedata><tw-passagedata pid="292" name="Dich umsehen" tags="" position="5654,900" size="100,100">Doppelklick auf diesen Absatz zum Bearbeiten.</tw-passagedata><tw-passagedata pid="293" name="Ich will jetzt Spuren suchen!" tags="" position="5438,791" size="100,100">Seufz...
+[[Hast recht. Spuren suchen macht keinen Sinn]]</tw-passagedata><tw-passagedata pid="289" name="Dich umsehen" tags="" position="5654,900" size="100,100">Doppelklick auf diesen Absatz zum Bearbeiten.</tw-passagedata><tw-passagedata pid="290" name="Ich will jetzt Spuren suchen!" tags="" position="5438,791" size="100,100">Seufz...
 
 Na gut. Dann würfel mal auf Intelligenz. Viel Glück...
 
 [[Ich konnte Spuren lesen]]
-[[Ich konnte die Spuren nicht lesen]]</tw-passagedata><tw-passagedata pid="294" name="Hast recht. Spuren suchen macht keinen Sinn" tags="" position="5547,898" size="100,100">Natürlich. Du befindest dich am Stadtausgang. Dort gehen alle paar Minuten jemand her. Du wirst wohl allerlei Spuren und Abdrücke finden. Die Idee in allen Ehren, aber sinvoll ist es halt nicht. Du solltest...
+[[Ich konnte die Spuren nicht lesen]]</tw-passagedata><tw-passagedata pid="291" name="Hast recht. Spuren suchen macht keinen Sinn" tags="" position="5547,898" size="100,100">Natürlich. Du befindest dich am Stadtausgang. Dort gehen alle paar Minuten jemand her. Du wirst wohl allerlei Spuren und Abdrücke finden. Die Idee in allen Ehren, aber sinvoll ist es halt nicht. Du solltest...
 
-[[Dich umsehen]] </tw-passagedata><tw-passagedata pid="295" name="Ich konnte Spuren lesen" tags="" position="5329,791" size="100,100">Gratulation! Du hast dutzende und aberdutzende Fußspuren entdeckt. Hunderte sogar. Doch das hilft dir nicht wirklich weiter. Du befindest dich am Stadtausgang. Dort gehen minütlich Menschen ein und aus. Was hast du erwartet? Du solltest...
+[[Dich umsehen]] </tw-passagedata><tw-passagedata pid="292" name="Ich konnte Spuren lesen" tags="" position="5329,791" size="100,100">Gratulation! Du hast dutzende und aberdutzende Fußspuren entdeckt. Hunderte sogar. Doch das hilft dir nicht wirklich weiter. Du befindest dich am Stadtausgang. Dort gehen minütlich Menschen ein und aus. Was hast du erwartet? Du solltest...
 
 [[Dich umsehen]]
 
-</tw-passagedata><tw-passagedata pid="296" name="Ich konnte die Spuren nicht lesen" tags="" position="5440,898" size="100,100">Macht nichts! Es hätte dir eh nicht viel gebracht. Du befindest dich am Stadtausgang. Dort sind dutzende Fußabdrücke und Spuren. Du solltest...
+</tw-passagedata><tw-passagedata pid="293" name="Ich konnte die Spuren nicht lesen" tags="" position="5440,898" size="100,100">Macht nichts! Es hätte dir eh nicht viel gebracht. Du befindest dich am Stadtausgang. Dort sind dutzende Fußabdrücke und Spuren. Du solltest...
 
-[[Dich umsehen]] </tw-passagedata><tw-passagedata pid="297" name="Rucksack?" tags="" position="882,24" size="100,100">Zum Rucksack! Exakt. Auch wenn ich möchte, dass du viel Spaß beim Spielen hast und du so frei handeln kannst, wie du es magst und du so viel entscheiden kannst wie du magst, so muss ich dich leider auch ein wenig begrenzen. Zumindest was dein Platz für Gegenstände angeht. Ein bisschen puzzlen und ein wenig Tüfteln gehört dazu. Macht doch viel mehr Spaß, wenn ich dich ein bisschen fordere. Das ist dein Rucksack:
+[[Dich umsehen]] </tw-passagedata><tw-passagedata pid="294" name="Rucksack?" tags="" position="882,24" size="100,100">Zum Rucksack! Exakt. Auch wenn ich möchte, dass du viel Spaß beim Spielen hast und du so frei handeln kannst, wie du es magst und du so viel entscheiden kannst wie du magst, so muss ich dich leider auch ein wenig begrenzen. Zumindest was dein Platz für Gegenstände angeht. Ein bisschen puzzlen und ein wenig Tüfteln gehört dazu. Macht doch viel mehr Spaß, wenn ich dich ein bisschen fordere. Das ist dein Rucksack:
 
 &lt;img src=&quot;images/rucksack.jpg&quot; height=&quot;1200&quot; width=&quot;800&quot;&gt;
 
-Dein Rucksack ist dein Inventar. Druck ihn dir in DinA4 aus und hör mir jetzt nochmal gut zu. Um dein Inventar etwas zu limitieren, darfst du nur so viele Gegenstände mitnehmen, wie sie flach auf den Rucksack gelegt passen, nachdem du sie ausgedruckt hast. Kriegst du einen Gegenstand, so legst du ihn auf den Rucksack. Den nächsten Gegenstand legst du dann daneben usw. Das sieht ungefähr so aus:
+Dein Rucksack ist dein Inventar. Druck ihn dir in DinA4 aus und hör mir jetzt nochmal gut zu. Um dein Inventar etwas zu limitieren, darfst du nur so viele Gegenstände mitnehmen, wie sie flach auf den Rucksack gelegt passen, nachdem du sie ausgedruckt hast. Kriegst du einen Gegenstand, so legst du ihn auf den Rucksack. Den nächsten Gegenstand legst du dann daneben usw. 
 
-
-
-Sollten keine Gegenstandskarten mehr auf den Rucksack passen, so kannst du keine weiteren Gegenstände mehr mitnehmen oder musst alte Gegenstände loswerden. Zu Gegenständen in deinem Rucksack zählen auch deine Waffen/Schild und deine Rüstung (Helm, Hose, Brust) und deine Taler. Lege jetzt also schonmal die Gegenstandskarte &quot;Taler&quot; auf deinen Rucksack. Solltest du keine Möglichkeit haben zu drucken: Dein Limit ist bei 25 Gegenständen.
+Sollten keine Gegenstandskarten mehr auf den Rucksack passen, so kannst du keine weiteren Gegenstände mehr mitnehmen oder musst alte Gegenstände loswerden. Zu Gegenständen in deinem Rucksack zählen auch deine Waffen/Schild und deine Rüstung (Helm, Hose, Brust) und deine Taler. Lege jetzt also schonmal die Gegenstandskarte &quot;Taler&quot; auf deinen Rucksack. Solltest du keine Möglichkeit haben zu drucken: Dein Limit liegt bei 25 Gegenständen.
 
 Es gibt Gegenstände die doppelt oder dreifach so groß sind, wie eine normale Karte. Ich werde dir an den passenden Stellen bescheid sagen.
 
@@ -3503,7 +3566,7 @@ Hast du alles verstanden?
 
 (Die Erklärungen enden hier und die Geschichte beginnt - Versprochen!)
 
-[[Hab ich]]</tw-passagedata><tw-passagedata pid="298" name="Was ist &quot;Das namenlose Kind&quot;?" tags="" position="1000,22" size="100,100">&quot;Das namenlose Kind&quot; (vorläufiger Name) ist ein digitales Pen and Paper oder auch &quot;Fighting Novel&quot;. Du erlebst hier ein interaktives Buch, dessen Ausgang deine Entscheidungen beinflusst. Du kannst bestimmen wo es lang geht, wie es weitergeht, wo du abbiegst und vieles mehr!
+[[Hab ich]]</tw-passagedata><tw-passagedata pid="295" name="Was ist &quot;Das namenlose Kind&quot;?" tags="" position="1000,22" size="100,100">&quot;Das namenlose Kind&quot; (vorläufiger Name) ist ein digitales Pen and Paper oder auch &quot;Fighting Novel&quot;. Du erlebst hier ein interaktives Buch, dessen Ausgang deine Entscheidungen beinflusst. Du kannst bestimmen wo es lang geht, wie es weitergeht, wo du abbiegst und vieles mehr!
 
 Auch wenn wir (das Team) dich ein wenig an die Hand nehmen um die Geschichte weiterzuführen, so kannst du das Meiste selbst entscheiden. Aufgaben erledigen oder nicht, nett sein oder nicht. Alles deine Entscheidung. 
 
@@ -3512,14 +3575,14 @@ Und das Beste: Du kannst dir deinen eigenen Charakter erstellen, spannende Kämp
 Dich erwartet aber in jedem Fall ein spannendes Abenteuer. Wir wünschen viel Spaß!
 
 Zurück zu:
-[[Der Anfang]] </tw-passagedata><tw-passagedata pid="299" name="Charaktererstellung überspringen" tags="" position="1125,20" size="100,100">Ok, dann überspringen wir die Erstellung deines Charakters, Erklärungen und alles Andere. Kämpfe kannst du nun einfach mit &quot;Gewonnen&quot; überspringen und dafür einfach die Geschichte und die Interaktivität genießen. Viel Spaß! Hast du schon Lust auf das spannende Abenteuer?
+[[Der Anfang]] </tw-passagedata><tw-passagedata pid="296" name="Charaktererstellung überspringen" tags="" position="1125,20" size="100,100">Ok, dann überspringen wir die Erstellung deines Charakters, Erklärungen und alles Andere. Kämpfe kannst du nun einfach mit &quot;Gewonnen&quot; überspringen und dafür einfach die Geschichte und die Interaktivität genießen. Viel Spaß! Hast du schon Lust auf das spannende Abenteuer?
 &lt;&lt;set $name = &quot;John Doe&quot;&gt;&gt;
 &lt;&lt;set $geschlecht = &quot;Abenteurer&quot;&gt;&gt;
-[[Hab ich]]</tw-passagedata><tw-passagedata pid="300" name="Zur Mine" tags="" position="5078,604" size="100,100">&lt;&lt;audio markt stop&gt;&gt;
+[[Hab ich]]</tw-passagedata><tw-passagedata pid="297" name="Zur Mine" tags="" position="5078,604" size="100,100">&lt;&lt;audio markt stop&gt;&gt;
 &lt;&lt;audio theme4 stop&gt;&gt;
 Dank der guten Beschilderung der Mine findest du Sie recht schnell und einfach. Als du vor dem Mineneingang stehst wirfst du einen Blick darauf. Der Eingang sieht normal und gepflegt aus. Man sieht dem Eingang an, dass die Mine wichtig ist und noch immer stark genutzt wird. Es liegen allerdings auch vereinzelnd Knochen rum. Menschliche Knochen. Sie sind angenagt. An einigen hängt noch verwesendes Fleich. Die Oger hatten wohl keinen Hunger mehr. Es stinkt ekelhaft und du hälst dir die Nase zu. Durch die Holztür die in die Mine führt hörst du das rhytmische Schlagen von Spitzhacken auf Stein. Ab und an hörst du einen Oger grunzen oder einen Menschen vor Schmerzen schreien. Du hörst mindestens 4 verschiedene Oger. Atme noch einmal tief durch und fass dir Mut. Das wird nicht leicht.
 
-[[Die von Ogern belagerte Mine betreten]]</tw-passagedata><tw-passagedata pid="301" name="Zufallsgenerator template" tags="" position="1243,18" size="100,100">&lt;&lt;nobr&gt;&gt;
+[[Die von Ogern belagerte Mine betreten]]</tw-passagedata><tw-passagedata pid="298" name="Zufallsgenerator template" tags="" position="1243,18" size="100,100">&lt;&lt;nobr&gt;&gt;
     &lt;&lt;switch random(1, 6)&gt;&gt;
     &lt;&lt;case 1&gt;&gt;
         You enter a building.
@@ -3530,14 +3593,14 @@ Dank der guten Beschilderung der Mine findest du Sie recht schnell und einfach. 
     &lt;&lt;default&gt;&gt;
         Solltest du dies lesen, so versuche es einfach nochmal. Dann hab ich beim Programmieren mist gebaut. :(
     &lt;&lt;/switch&gt;&gt;
-&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="302" name="Die von Ogern belagerte Mine betreten" tags="" position="5078,714" size="100,100">&lt;&lt;audio mine volume 0.5 loop play&gt;&gt;
+&lt;&lt;/nobr&gt;&gt;</tw-passagedata><tw-passagedata pid="299" name="Die von Ogern belagerte Mine betreten" tags="" position="5078,714" size="100,100">&lt;&lt;audio mine volume 0.5 loop play&gt;&gt;
 &lt;&lt;if $positiv is &quot;Optimistisch&quot;&gt;&gt;
 (Durch deine Eigeschaft Optimismus hast du einen Bonus freigeschaltet)
 Auch wenn du schwer schlucken musst bei all den Schreien und Grunzern, so bist du dir doch ziemlich sicher zu gewinnen. Dein Optimismus macht sich bezahlt! +1 Bonus auf Stärke solange Du dich in dieser Mine aufhälst. Vor dir führt ein langer Minenschacht weier hinunter. Dir bleibt also nicht anderes übrig:
 &lt;&lt;else&gt;&gt;
 Dir schlottern ziemlich die Knie und die Schreie und Grunzer setzen dir ziemlich zu. Auch wenn du schon einiges hinter dir hast, so setzt dich die Lage ziemlich unter Stress. Vor dir führt ein langer Minenschacht weier hinunter. Dir bleibt also nicht anderes übrig:
 &lt;&lt;/if&gt;&gt;
-[[Dem Minenschacht weiter folgen]]</tw-passagedata><tw-passagedata pid="303" name="Den Bettler ignorieren und zu der Würfelspielerin gehen" tags="" position="4948,377" size="100,100">&lt;&lt;if $gewürfelt is 1&gt;&gt;
+[[Dem Minenschacht weiter folgen]]</tw-passagedata><tw-passagedata pid="300" name="Den Bettler ignorieren und zu der Würfelspielerin gehen" tags="" position="4948,377" size="100,100">&lt;&lt;if $gewürfelt is 1&gt;&gt;
 Die Würfelspielerin lehnt ab. Du hattest deinen Wurf bereits. Sie winkt auch schon jemand anderen heran.
 [[Zur Taverne &quot;Zum Grauen Wolf&quot;]]
 &lt;&lt;else&gt;&gt;
@@ -3549,7 +3612,7 @@ Willst du dein Glück versuchen und 10 Taler setzen? Wirfst du eine 6 hast du ge
 
 [[Ich würfel!]]
 [[Ich würfle nicht!]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="304" name="Ich würfel!" tags="" position="4720,585" size="100,100">&lt;&lt;nobr&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="301" name="Ich würfel!" tags="" position="4720,585" size="100,100">&lt;&lt;nobr&gt;&gt;
     &lt;&lt;switch random(1, 6)&gt;&gt;
     &lt;&lt;case 1&gt;&gt;
        Du schüttelst den Becher wie wild und knallst ihn dann auf den Tisch. Du hebst langsam den Becher und entdeckst eine... 1! Die hagere Dame lacht dich aus und nimmt sich fies kichernd deine 10 Taler. Das war wohl leider nichts...
@@ -3585,7 +3648,7 @@ Willst du dein Glück versuchen und 10 Taler setzen? Wirfst du eine 6 hast du ge
         Solltest du dies lesen, so versuche es einfach nochmal. Dann hab ich beim Programmieren mist gebaut. :(
     &lt;&lt;/switch&gt;&gt;
 &lt;&lt;/nobr&gt;&gt;
-[[Zur Taverne &quot;Zum Grauen Wolf&quot;]]</tw-passagedata><tw-passagedata pid="305" name="Ich würfle nicht!" tags="" position="4720,479" size="100,100">[[Zur Taverne &quot;Zum Grauen Wolf&quot;]]</tw-passagedata><tw-passagedata pid="306" name="Dem Minenschacht weiter folgen" tags="" position="5079,823" size="100,100">Auf deinem Weg durch den langen Schacht kommst du an einigen Minenarbeitern vorbei. Du sagst ihnen sie sollen flüchten und das du die Ogern vernichten wirst. Allerdings haben die Oger den Minenarbeitern so viel angst gemacht, dass sie sich kein Stück rühren. Sie arbeiten lieber weiter als einfach aus der Mine zu flüchten. Selbst wenn kein Oger in der Nähe zu sein scheint. Kämpfe gegen die Oger werden definitiv nicht leicht. 
+[[Zur Taverne &quot;Zum Grauen Wolf&quot;]]</tw-passagedata><tw-passagedata pid="302" name="Ich würfle nicht!" tags="" position="4720,479" size="100,100">[[Zur Taverne &quot;Zum Grauen Wolf&quot;]]</tw-passagedata><tw-passagedata pid="303" name="Dem Minenschacht weiter folgen" tags="" position="5079,823" size="100,100">Auf deinem Weg durch den langen Schacht kommst du an einigen Minenarbeitern vorbei. Du sagst ihnen sie sollen flüchten und das du die Ogern vernichten wirst. Allerdings haben die Oger den Minenarbeitern so viel angst gemacht, dass sie sich kein Stück rühren. Sie arbeiten lieber weiter als einfach aus der Mine zu flüchten. Selbst wenn kein Oger in der Nähe zu sein scheint. Kämpfe gegen die Oger werden definitiv nicht leicht. 
 
 Der Hauptschacht geht weiter geradeaus. Irgendwo am Ende dieses Schachtes sollten die Oger ihr Lager haben. Links und rechts allerdings gibt es noch Nebenschächte. Du kannst nun entscheiden, ob du
 
@@ -3593,7 +3656,7 @@ Der Hauptschacht geht weiter geradeaus. Irgendwo am Ende dieses Schachtes sollte
 [[Links in einen Nebenschacht]]
 [[Rechts in einen Nebenschacht]]
 
-gehen willst.</tw-passagedata><tw-passagedata pid="307" name="Kapitel 2" tags="" position="2985,50" size="100,100">[[Zum nächsten Morgen springen]]</tw-passagedata><tw-passagedata pid="308" name="Kapitel 1" tags="" position="0,598" size="100,100">[[Hab ich]]</tw-passagedata><tw-passagedata pid="309" name="Weiter dem Hauptschacht entlang" tags="" position="5080,1064" size="100,100">Du folgst also weiter dem Hauptschacht. Du möchtest das Problem direkt angehen und dich nicht ablenken lassen. Irgendwo müssen die Oger ja ihr Lager haben. Und sobald du es gefunden hast können sich die Oger warm anziehen. Von überall her kommen noch immer vereinzelnd Schreie oder Ogerrufe.
+gehen willst.</tw-passagedata><tw-passagedata pid="304" name="Kapitel 2" tags="" position="2985,50" size="100,100">[[Zum nächsten Morgen springen]]</tw-passagedata><tw-passagedata pid="305" name="Kapitel 1" tags="" position="0,598" size="100,100">[[Hab ich]]</tw-passagedata><tw-passagedata pid="306" name="Weiter dem Hauptschacht entlang" tags="" position="5080,1064" size="100,100">Du folgst also weiter dem Hauptschacht. Du möchtest das Problem direkt angehen und dich nicht ablenken lassen. Irgendwo müssen die Oger ja ihr Lager haben. Und sobald du es gefunden hast können sich die Oger warm anziehen. Von überall her kommen noch immer vereinzelnd Schreie oder Ogerrufe.
 
 Nach längerem Fußmarsch allerdings endet der Hauptschacht in einer großen Höhle. Von der Höhle aus gehen viele weitere kleine Nebenschächte ab. In der Mitte der Höhle stehen einige Tische, Pulte und Stühle. Auch ein kleiner Holzbau steht etwas prunkvoller an einer Wand. Da werden die Oger wohl übernachten. Oder besser gesagt die Menschen, die eigentlich diese Miene leiten. Immer wieder zieren menschliche Knochen und Reste den kalten und feuchten Boden. Vereinzelnd führen Schienen in die Nebenschächte und leere Loren stehen bereit zur Abholung. Aus den Schächten klingt das rhytmische Schlagen von Spitzhacken und das Brummen der Schienen, wenn Loren drüber fahren. 
 
@@ -3602,19 +3665,19 @@ An den Tischen in der Mitte sitzen 4 Oger. 2 Oger sitzen ein wenig weiter weg. D
 Du könntest aber auch die beiden Oger angreifen die etwas weiter weg sitzen. Schnell und tödlich. Vielleicht lässt sich der Anführer davon beeindrucken und flüchtet. Das wird aber mit ein wenig Glück vonstatten gehen müssen. Sonst musst du gegen alle 4 Oger kämpfen. Wofür entscheidest du dich?
 
 [[Ich greife den Anführer direkt an!]]
-[[Ich greife die zwei Oger an und hoffe auf&#39;s Beste!]]</tw-passagedata><tw-passagedata pid="310" name="Links in einen Nebenschacht" tags="" position="4987,936" size="100,100">Diese Abzweigung gibt es noch nicht. Noch. :)
+[[Ich greife die zwei Oger an und hoffe auf&#39;s Beste!]]</tw-passagedata><tw-passagedata pid="307" name="Links in einen Nebenschacht" tags="" position="4987,936" size="100,100">Diese Abzweigung gibt es noch nicht. Noch. :)
 
-[[Weiter dem Hauptschacht entlang]]</tw-passagedata><tw-passagedata pid="311" name="Rechts in einen Nebenschacht" tags="" position="5170,936" size="100,100">Diese Abzweigung gibt es noch nicht. Noch. :)
+[[Weiter dem Hauptschacht entlang]]</tw-passagedata><tw-passagedata pid="308" name="Rechts in einen Nebenschacht" tags="" position="5170,936" size="100,100">Diese Abzweigung gibt es noch nicht. Noch. :)
 
-[[Weiter dem Hauptschacht entlang]]</tw-passagedata><tw-passagedata pid="312" name="Ich greife den Anführer direkt an!" tags="" position="4994,1188" size="100,100">Du beschließt dich voll auf&#39;s Ganze zu gehen. Dir ist bewusst, dass du da nicht lebend raus kommst, wenn du es nicht schaffst den Anführer zu töten. Du atmest noch einmal tief ein und stürmst dann auf den Anführer zu. Voll mit Adrenalin nimmst du einen der massiven Eichentische und wirfst ihn den beiden etwas weiter wegstehenden Ogern entgegen. Getötet hast du sie zwar nicht, aber ihre Ohnmacht sollte sie für ein paar Minuten ausgesetzt haben. Der Anführer und der Oger der bei ihm steht sind verdutzt. Du hast sie überrumpelt. 
+[[Weiter dem Hauptschacht entlang]]</tw-passagedata><tw-passagedata pid="309" name="Ich greife den Anführer direkt an!" tags="" position="4994,1188" size="100,100">Du beschließt dich voll auf&#39;s Ganze zu gehen. Dir ist bewusst, dass du da nicht lebend raus kommst, wenn du es nicht schaffst den Anführer zu töten. Du atmest noch einmal tief ein und stürmst dann auf den Anführer zu. Voll mit Adrenalin nimmst du einen der massiven Eichentische und wirfst ihn den beiden etwas weiter wegstehenden Ogern entgegen. Getötet hast du sie zwar nicht, aber ihre Ohnmacht sollte sie für ein paar Minuten ausgesetzt haben. Der Anführer und der Oger der bei ihm steht sind verdutzt. Du hast sie überrumpelt. 
 
 Die beiden ohnmächtigen Oger werden in ein paar Minuten in den Kampf einschreiten, wenn du den Anführer nicht schnell genug getötet hast. Ein Timer wird dir die übrige Zeit anzeigen. Klicke auf &quot;Kampf gegen den Anführer beginnen&quot;, wenn du die Sonderregel verstanden hast und bereit für den Kampf bist.
 
-[[Kampf gegen den Anführer beginnen]]</tw-passagedata><tw-passagedata pid="313" name="Ich greife die zwei Oger an und hoffe auf&#39;s Beste!" tags="" position="5155,1189" size="100,100">Du beschließt dich die Sache mit etwas Glück anzugehen. Dir ist bewusst, dass du da nicht lebend raus kommst, wenn du es nicht schaffst den Anführer einzuschüchtern. Du atmest noch einmal tief ein und stürmst dann auf die beiden Oger zu. Voll mit Adrenalin nimmst du einen der massiven Eichentische und wirfst ihn dem Anführer und seinen Gefolgsmann entgegen. Getötet hast du sie zwar nicht, aber ihre Ohnmacht sollte sie für ein paar Minuten ausgesetzt haben. Die beiden Oger sind verdutzt. Du hast sie überrumpelt. 
+[[Kampf gegen den Anführer beginnen]]</tw-passagedata><tw-passagedata pid="310" name="Ich greife die zwei Oger an und hoffe auf&#39;s Beste!" tags="" position="5155,1189" size="100,100">Du beschließt dich die Sache mit etwas Glück anzugehen. Dir ist bewusst, dass du da nicht lebend raus kommst, wenn du es nicht schaffst den Anführer einzuschüchtern. Du atmest noch einmal tief ein und stürmst dann auf die beiden Oger zu. Voll mit Adrenalin nimmst du einen der massiven Eichentische und wirfst ihn dem Anführer und seinen Gefolgsmann entgegen. Getötet hast du sie zwar nicht, aber ihre Ohnmacht sollte sie für ein paar Minuten ausgesetzt haben. Die beiden Oger sind verdutzt. Du hast sie überrumpelt. 
 
 Der ohnmächtigen Oger und Anführer werden in ein paar Minuten in den Kampf einschreiten, wenn du die beiden Oger nicht vorher getötet hast. Ein Timer wird dir die übrige Zeit anzeigen. Klicke auf &quot;Kampf gegen die beiden Oger beginnen&quot;, wenn du die Sonderregel verstanden hast und bereit für den Kampf bist.
 
-[[Kampf gegen die beiden Oger beginnen]]</tw-passagedata><tw-passagedata pid="314" name="Kampf gegen den Anführer beginnen" tags="" position="4994,1308" size="100,100">&lt;&lt;audio mine stop&gt;&gt;
+[[Kampf gegen die beiden Oger beginnen]]</tw-passagedata><tw-passagedata pid="311" name="Kampf gegen den Anführer beginnen" tags="" position="4994,1308" size="100,100">&lt;&lt;audio mine stop&gt;&gt;
 &lt;&lt;audio fight4 volume 0.5 loop play&gt;&gt;
 &lt;&lt;set _time to 6&gt;&gt;\
 In &lt;span class=&quot;redtext&quot;&gt;@@#countdown;_time@@&lt;/span&gt; Sekunden kommen 2 weitere Oger!
@@ -3636,21 +3699,21 @@ Du hast den Anführer und den anderen Oger überrumpelt. Du kämpfst gegen einen
       &lt;&lt;/if&gt;&gt;
   &lt;&lt;/repeat&gt;&gt;
 &lt;&lt;/silently&gt;&gt;
-</tw-passagedata><tw-passagedata pid="315" name="Ich habe den Anführer der Oger besiegt!" tags="" position="5105,1421" size="100,100">Mit einem kräftigen letzten Schlag enthauptest du den Anführer. Der leblose Körper sackt zu Boden und der Kopf rollt einige Meter weiter weg. Durch den Krach des Kampfes haben sich einige Minenarbeiter in die Höhle geschlichen und dich angefeuert. Als der rollende Kopf des Anführers zum Halten kommt jubeln die Minenarbeiter lautstark und mit aller Kraft. Mit dem leblosen Zusammensacken des Anführers lassen die eventuell übrigen Orks ihre Waffen fallen und wollen aus der Mine flüchten. Übrige Oger die eventuell in dunklen Ecken auf ihre Chance gewartet haben flüchten ebenfalls. Die angeschlagenen Orks humpeln davon.Übrige Oger die eventuell in dunklen Ecken auf ihre Chance gewartet haben flüchten und die abgemagerten Arbeiter der Mine heben dich mit letzter Kraft hoch und feiern dich.
+</tw-passagedata><tw-passagedata pid="312" name="Ich habe den Anführer der Oger besiegt!" tags="" position="5105,1421" size="100,100">Mit einem kräftigen letzten Schlag enthauptest du den Anführer. Der leblose Körper sackt zu Boden und der Kopf rollt einige Meter weiter weg. Durch den Krach des Kampfes haben sich einige Minenarbeiter in die Höhle geschlichen und dich angefeuert. Als der rollende Kopf des Anführers zum Halten kommt jubeln die Minenarbeiter lautstark und mit aller Kraft. Mit dem leblosen Zusammensacken des Anführers lassen die eventuell übrigen Orks ihre Waffen fallen und wollen aus der Mine flüchten. Übrige Oger die eventuell in dunklen Ecken auf ihre Chance gewartet haben flüchten ebenfalls. Die angeschlagenen Orks humpeln davon.Übrige Oger die eventuell in dunklen Ecken auf ihre Chance gewartet haben flüchten und die abgemagerten Arbeiter der Mine heben dich mit letzter Kraft hoch und feiern dich.
 &lt;&lt;set $ogertot += 1&gt;&gt;
 Einer der Arbeiter hebt den Ranzen des Anführers hoch und gibt ihn dir. Du findest neben unidentifierzierbarem Fleisch (das du NICHT einsteckst), 40 Taler und eine prunkvolle Einhandaxt. Sie ist etwas stumpf doch ein Schmied könnte sie wieder schärfen und zu einem gefährlichen Begleiter machen.
 &lt;img src=&quot;Gegenstandskarten/Stumpfe prunkvolle Einhandaxt.jpg&quot;&gt;
 &lt;&lt;set $taler += 40&gt;&gt;
 Du sagst den Minenarbeitern sie sollen nachhause gehen, sich ausruhen und zu ihren Familien zurückkehren und in ein paar Tagen wieder an die normale Arbeit gehen. Sie jubeln und feiern dich. Loblieder singend verlassen die ensklavten Arbeiter die Mine. Auch du machst dich auf den Heimweg. Du hast nun $taler Taler.
 
-[[Ich gehe zur Stadtmitte]]</tw-passagedata><tw-passagedata pid="316" name="Die anderen beiden Oger kommen" tags="" position="4991,1422" size="100,100">Mitten in den Kampf vertieft bemerkst du nicht, dass die beiden Oger wieder wach sind. Sie überrumpeln dich und beide Oger dürfen dich einmal angreifen. Danach geht der Kampf dort weiter, wo du aufgehört hast.
+[[Ich gehe zur Stadtmitte]]</tw-passagedata><tw-passagedata pid="313" name="Die anderen beiden Oger kommen" tags="" position="4991,1422" size="100,100">Mitten in den Kampf vertieft bemerkst du nicht, dass die beiden Oger wieder wach sind. Sie überrumpeln dich und beide Oger dürfen dich einmal angreifen. Danach geht der Kampf dort weiter, wo du aufgehört hast.
 
 [[Ich habe den Anführer der Oger besiegt!]]
 [[Alle drei Oger sind tot und nur der Anführer lebt noch!]]
-[[Ich habe gegen die Oger verloren]]</tw-passagedata><tw-passagedata pid="317" name="Alle drei Oger sind tot und nur der Anführer lebt noch!" tags="" position="4994,1534" size="100,100">Auf dem Boden verteilt sich das Blut seiner Untergebenen. Du reißt einem der Oger den Kopf von den Schultern und wirfst ihn auf den Anführer. Dieser schreit einmal laut, senkt dann aber seine Arme und seinen Kopf. Du erkennst das er aufgibt. Du kannst den Anführer nun hinrichten um ein Exampel zu statuieren oder ihn laufen lassen um deine Gutmütigkeit zu beweisen. Wofür entscheidest du dich?
+[[Ich habe gegen die Oger verloren]]</tw-passagedata><tw-passagedata pid="314" name="Alle drei Oger sind tot und nur der Anführer lebt noch!" tags="" position="4994,1534" size="100,100">Auf dem Boden verteilt sich das Blut seiner Untergebenen. Du reißt einem der Oger den Kopf von den Schultern und wirfst ihn auf den Anführer. Dieser schreit einmal laut, senkt dann aber seine Arme und seinen Kopf. Du erkennst das er aufgibt. Du kannst den Anführer nun hinrichten um ein Exampel zu statuieren oder ihn laufen lassen um deine Gutmütigkeit zu beweisen. Wofür entscheidest du dich?
 
 [[Den Anführer hinrichten]]
-[[Den Anführer laufen lassen]]</tw-passagedata><tw-passagedata pid="318" name="Den Anführer hinrichten" tags="" position="4943,1656" size="100,100">Mit einem kräftigen letzten Schlag enthauptest du den Anführer. Der leblose Körper sackt zu Boden und der Kopf rollt einige Meter weiter weg. Durch den Krach des Kampfes haben sich einige Minenarbeiter in die Höhle geschlichen und dich angefeuert. Als der rollende Kopf des Anführers zum Halten kommt jubeln die Minenarbeiter lautstark und mit aller Kraft. Übrige Oger die eventuell in dunklen Ecken auf ihre Chance gewartet haben flüchten und die abgemagerten Arbeiter der Mine heben dich mit letzter Kraft hoch und feiern dich.
+[[Den Anführer laufen lassen]]</tw-passagedata><tw-passagedata pid="315" name="Den Anführer hinrichten" tags="" position="4943,1656" size="100,100">Mit einem kräftigen letzten Schlag enthauptest du den Anführer. Der leblose Körper sackt zu Boden und der Kopf rollt einige Meter weiter weg. Durch den Krach des Kampfes haben sich einige Minenarbeiter in die Höhle geschlichen und dich angefeuert. Als der rollende Kopf des Anführers zum Halten kommt jubeln die Minenarbeiter lautstark und mit aller Kraft. Übrige Oger die eventuell in dunklen Ecken auf ihre Chance gewartet haben flüchten und die abgemagerten Arbeiter der Mine heben dich mit letzter Kraft hoch und feiern dich.
 &lt;&lt;set $ogertot += 1&gt;&gt;
 Einer der Arbeiter hebt den Ranzen des Anführers hoch und gibt ihn dir. Du findest neben unidentifierzierbarem Fleisch (das du NICHT einsteckst), 40 Taler und eine prunkvolle Einhandaxt. Sie ist etwas stumpf doch ein Schmied könnte sie wieder schärfen und zu einem gefährlichen Begleiter machen.
 &lt;&lt;set $gesinnung -= 10&gt;&gt;
@@ -3658,7 +3721,7 @@ Einer der Arbeiter hebt den Ranzen des Anführers hoch und gibt ihn dir. Du find
 &lt;&lt;set $taler += 40&gt;&gt;
 Du sagst den Minenarbeitern sie sollen nachhause gehen, sich ausruhen und zu ihren Familien zurückkehren und in ein paar Tagen wieder an die normale Arbeit gehen. Sie jubeln und feiern dich. Loblieder singend verlassen die ensklavten Arbeiter die Mine. Auch du machst dich auf den Heimweg. Du hast nun $taler Taler.
 
-[[Ich gehe zur Stadtmitte]]</tw-passagedata><tw-passagedata pid="319" name="Den Anführer laufen lassen" tags="" position="5064,1652" size="100,100">Du entschließt dich den Oger zu verschonen. Auch wenn der Oger damit seine Ehre verloren hat und er gedemütigt wurde damit, so nimmt er doch die Chance wahr und läuft so schnell er kann zurück. Er gerät ins Stolpern und fällt den bereits jubelnden Minenarbeitern direkt vor die Füße.
+[[Ich gehe zur Stadtmitte]]</tw-passagedata><tw-passagedata pid="316" name="Den Anführer laufen lassen" tags="" position="5064,1652" size="100,100">Du entschließt dich den Oger zu verschonen. Auch wenn der Oger damit seine Ehre verloren hat und er gedemütigt wurde damit, so nimmt er doch die Chance wahr und läuft so schnell er kann zurück. Er gerät ins Stolpern und fällt den bereits jubelnden Minenarbeitern direkt vor die Füße.
 &lt;&lt;set $ogerlaufen = 1&gt;&gt;
 Die aufgeheizte Meute entreißt dem bereits geschwächten Oger seine Axt und enthäupten ihn. Auch wenn der Anblick unschön ist, so hat der Oger es am Ende doch verdient, oder? Die Entscheidung der Meute spielt sich nicht auf deine Gesinnung aus.
 &lt;&lt;set $taler += 60&gt;&gt;
@@ -3666,14 +3729,14 @@ Einer der Minenarbeiter wirft dir einen Beutel voll Taler zu. Du erhälst 60 Tal
 &lt;&lt;set $gesinnung += 5&gt;&gt;
 Du sagst den Minenarbeitern sie sollen nachhause gehen, sich ausruhen und zu ihren Familien zurückkehren und in ein paar Tagen wieder an die normale Arbeit gehen. Sie jubeln und feiern dich. Loblieder singend verlassen die ensklavten Arbeiter die Mine. Auch du machst dich auf den Heimweg.
 
-[[Ich gehe zur Stadtmitte]]</tw-passagedata><tw-passagedata pid="320" name="Ich habe gegen die Oger verloren" tags="" position="4873,1433" size="100,100">&lt;&lt;audio fight4 stop&gt;&gt;
+[[Ich gehe zur Stadtmitte]]</tw-passagedata><tw-passagedata pid="317" name="Ich habe gegen die Oger verloren" tags="" position="4873,1433" size="100,100">&lt;&lt;audio fight4 stop&gt;&gt;
 &lt;&lt;audio gameover volume 0.5 loop play&gt;&gt;
 Du liegst am Boden und spuckst dein eigenes Blut aus, während die Oger dir dein Hab und Gut abnehmen. Du hörst ihr dreckiges Grunzen und siehst wie sie aufgebauscht vom Kampf einen Minenarbeiter einfach niederprügeln.
 
 Klicke auf den Pfeil oben links, um deinen letzten Speicherstand zu laden:
 &lt;img src=&quot;images/speichern.jpg&quot;&gt;
 
-Wir werden dich nie vergessen, $name.</tw-passagedata><tw-passagedata pid="321" name="Kampf gegen die beiden Oger beginnen" tags="" position="5160,1312" size="100,100">&lt;&lt;audio mine stop&gt;&gt;
+Wir werden dich nie vergessen, $name.</tw-passagedata><tw-passagedata pid="318" name="Kampf gegen die beiden Oger beginnen" tags="" position="5160,1312" size="100,100">&lt;&lt;audio mine stop&gt;&gt;
 &lt;&lt;audio fight4 volume 0.5 loop play&gt;&gt;
 &lt;&lt;set _time to 360&gt;&gt;\
 In &lt;span class=&quot;redtext&quot;&gt;@@#countdown;_time@@&lt;/span&gt; Sekunden kommen der Anführer und ein weiterer Oger!
@@ -3694,26 +3757,26 @@ Du hast die beiden Oger überrumpelt. Du kämpfst gegen zwei Minen-Oger. Nimm di
     &lt;&lt;stop&gt;&gt;
       &lt;&lt;/if&gt;&gt;
   &lt;&lt;/repeat&gt;&gt;
-&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="322" name="Ich habe die beiden Oger besiegt!" tags="" position="5229,1424" size="100,100">Noch bevor der Anführer und der 3. Oger wach geworden sind hast du die beiden Oger getötet. Du stürmst auf die beiden zu und verpasst dem 3. Oger einen tötlichen Schlag. Er konnte dich nicht abwehren. Der Anführer hingegen ist zwar schon wach, aber schwer benommen. Hier kommt dein Glück in&#39;s Spiel. Wirf einen W6.
+&lt;&lt;/silently&gt;&gt;</tw-passagedata><tw-passagedata pid="319" name="Ich habe die beiden Oger besiegt!" tags="" position="5229,1424" size="100,100">Noch bevor der Anführer und der 3. Oger wach geworden sind hast du die beiden Oger getötet. Du stürmst auf die beiden zu und verpasst dem 3. Oger einen tötlichen Schlag. Er konnte dich nicht abwehren. Der Anführer hingegen ist zwar schon wach, aber schwer benommen. Hier kommt dein Glück in&#39;s Spiel. Wirf einen W6.
 
 1-3 und der Anführer wehrt deinen Angriff ab und du musst gegen ihn kämpfen
 4-6 und der Anführer kann deinen Angriff nicht abwehren und du hast ihn besiegt
 
 [[Ich habe den Anführer der Oger besiegt!]]
-[[Ich konnte den Anführer der Oger nicht überwältigen]]</tw-passagedata><tw-passagedata pid="323" name="Der Anführer und ein weiterer Oger kommen" tags="" position="5351,1425" size="100,100">Mitten in den Kampf vertieft bemerkst du nicht, dass der Anführer und der Oger wieder wach sind. Sie überrumpeln dich und der Oger und der Anführer dürfen dich einmal angreifen. Danach geht der Kampf dort weiter, wo du aufgehört hast.
+[[Ich konnte den Anführer der Oger nicht überwältigen]]</tw-passagedata><tw-passagedata pid="320" name="Der Anführer und ein weiterer Oger kommen" tags="" position="5351,1425" size="100,100">Mitten in den Kampf vertieft bemerkst du nicht, dass der Anführer und der Oger wieder wach sind. Sie überrumpeln dich und der Oger und der Anführer dürfen dich einmal angreifen. Danach geht der Kampf dort weiter, wo du aufgehört hast.
 
 [[Ich habe den Anführer der Oger besiegt!]]
 [[Alle drei Oger sind tot und nur der Anführer lebt noch!]]
-[[Ich habe gegen die Oger verloren]]</tw-passagedata><tw-passagedata pid="324" name="Ich konnte den Anführer der Oger nicht überwältigen" tags="" position="5230,1542" size="100,100">Der Anführer ist überrumpelt und noch etwas benommen. Der Kampf gegen den Anführer beginnt. Du bist dank der Benommenheit des Anführers einmalig 2-mal hintereinander dran.
+[[Ich habe gegen die Oger verloren]]</tw-passagedata><tw-passagedata pid="321" name="Ich konnte den Anführer der Oger nicht überwältigen" tags="" position="5230,1542" size="100,100">Der Anführer ist überrumpelt und noch etwas benommen. Der Kampf gegen den Anführer beginnt. Du bist dank der Benommenheit des Anführers einmalig 2-mal hintereinander dran.
 
 [[Ich habe den Anführer der Oger besiegt!]]
-[[Der Anführer der Oger hat mich besiegt!]]</tw-passagedata><tw-passagedata pid="325" name="Der Anführer der Oger hat mich besiegt!" tags="" position="5232,1651" size="100,100">&lt;&lt;audio fight4 stop&gt;&gt;
+[[Der Anführer der Oger hat mich besiegt!]]</tw-passagedata><tw-passagedata pid="322" name="Der Anführer der Oger hat mich besiegt!" tags="" position="5232,1651" size="100,100">&lt;&lt;audio fight4 stop&gt;&gt;
 &lt;&lt;audio gameover volume 0.5 loop play&gt;&gt;
 Du liegst am Boden und spuckst dein eigenes Blut aus, während der Anführerder Oger dir dein Hab und Gut abnimmt. Du hörst seinen Siegesschrei und siehst wie er aufgebauscht vom Kampf einen Minenarbeiter einfach niederprügelt.
 
 Klicke auf den Pfeil oben links, um deinen letzten Speicherstand zu laden:
 &lt;img src=&quot;images/speichern.jpg&quot;&gt;
-Wir werden dich nie vergessen, $name.</tw-passagedata><tw-passagedata pid="326" name="Wegen der Sache mit den Oger..." tags="" position="5188,161" size="100,100">&lt;&lt;if $ogertot eq 1&gt;&gt;
+Wir werden dich nie vergessen, $name.</tw-passagedata><tw-passagedata pid="323" name="Wegen der Sache mit den Oger..." tags="" position="5188,161" size="100,100">&lt;&lt;if $ogertot eq 1&gt;&gt;
 Der Mann sieht dich bereits von weitem und begrüßt dich klatschend.
 &lt;&lt;set $ogertot += 1&gt;&gt;
 &quot;Na wenn das mal nicht Ogerschlächter $name ist! Die gefangengenommenen Minenarbeiter waren bereits hier und haben mir einiges erzählt. Vor allem aber viel über dich. Respekt und Glückwunsch. Einen Oger zu enthaupten ist echt nicht leicht. Vor allem nicht wenn noch weitere Oger drumherum sind. Du hast meinen tiefsten Respekt. Das war wirklich einmalig. Ich und alle von $stadt danken dir. Endlich können wir wieder Eisen schürfen und Handel betreiben. Vielen vielen Dank! 
@@ -3741,7 +3804,7 @@ Du stehst mit einem verwirrtem und fragenden Blick vor dem Mann. Der schüttelt 
 &quot;Also noch mal. Töte die Oger in der örtlichen Miene. Du solltest gut vorbereitet sein. &quot;Verrückt&quot; ist nicht gleich &quot;dumm&quot;. Ein Verrückter geht Risikos ein. Nur der Dumme geht unvorbereitet in eine Schlacht. Schau mal beim Lederer vorbei. Der sollte wenigstens einen leichten Schutz für dich haben. Wenn du keine Taler hast, dann schau mal an das &lt;span class=&quot;redtext&quot;&gt;Anschlagbrett&lt;/span&gt;. Da solltest du noch ein wenig dazu verdienen können. Dann mal viel Glück und lass dich nicht zerreißen. Verlass einfach die Stadt und folge den Schildern. Kannst die Mine nicht wirklich verfehlen. Auf Hals und Beinbruch, Neuling.&quot;
 
 [[Ich gehe zur Stadtmitte]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="327" name="Wegen der Sache mit dem Sklavenhändler..." tags="" position="5188,373" size="100,100">Doppelklick auf diesen Absatz zum Bearbeiten.</tw-passagedata><tw-passagedata pid="328" name="Wegen der Sache mit dem Mord..." tags="" position="5189,269" size="100,100">Doppelklick auf diesen Absatz zum Bearbeiten.</tw-passagedata><tw-passagedata pid="329" name="Die Stadt verlassen und weiterziehen" tags="" position="6212,59" size="100,100">&lt;&lt;if $ogerfertig eq 1&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="324" name="Wegen der Sache mit dem Sklavenhändler..." tags="" position="5188,373" size="100,100">Doppelklick auf diesen Absatz zum Bearbeiten.</tw-passagedata><tw-passagedata pid="325" name="Wegen der Sache mit dem Mord..." tags="" position="5189,269" size="100,100">Doppelklick auf diesen Absatz zum Bearbeiten.</tw-passagedata><tw-passagedata pid="326" name="Die Stadt verlassen und weiterziehen" tags="" position="6308.666666666667,67.33333333333333" size="100,100">&lt;&lt;if $ogerfertig eq 1&gt;&gt;
 Oger fertig!
 &lt;&lt;elseif $händlerfertig eq 1&gt;&gt;
 &lt;&lt;elseif $mordfertig eq 1&gt;&gt;
@@ -3749,7 +3812,55 @@ Oger fertig!
 &lt;&lt;else&gt;&gt;
 Du weißt nicht wohin, deine Taschen sind leer und du hast das Gefühl, dass du noch etwas zu erledigen hättest. Du beschließt dich also die Stadt nicht vorläufig zu verlassen.
 [[Ich gehe zur Stadtmitte]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata></tw-storydata></div>
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="327" name="Lederhandschuhe kaufen (+1 Ausweichen, 15 Taler)" tags="" position="6096.666666666667,355" size="100,100">&lt;&lt;if $taler gte 15&gt;&gt;
+&quot;Die Lederhandschuhe? Sehr gute Wahl!&quot;
+&lt;&lt;set $taler -= 15&gt;&gt;
+Du hast noch $taler Taler.
+[[Ich gehe zur Stadtmitte]]
+	&lt;&lt;elseif $taler lt 15&gt;&gt;
+Du suchst in deinen Taschen nach Talern. Der Lederer rät dir einmal einen Blick auf das &lt;span class=&quot;redtext&quot;&gt;Anschlagbrett&lt;/span&gt; zu werfen.
+[[Ich gehe zur Stadtmitte]]
+	&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="328" name="Lederkappe kaufen (+1 Ausweichen, 20 Taler)" tags="" position="6099,467.3333333333334" size="100,100">&lt;&lt;if $taler gte 20&gt;&gt;
+&quot;Die Kappe also! Sehr gute Wahl!&quot;
+&lt;&lt;set $taler -= 20&gt;&gt;
+Du hast noch $taler Taler.
+[[Ich gehe zur Stadtmitte]]
+	&lt;&lt;elseif $taler lt 20&gt;&gt;
+Du suchst in deinen Taschen nach Talern. Der Lederer rät dir einmal einen Blick auf das &lt;span class=&quot;redtext&quot;&gt;Anschlagbrett&lt;/span&gt; zu werfen.
+[[Ich gehe zur Stadtmitte]]
+	&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="329" name="Lederhose kaufen (+1 Ausweichen, 30 Taler)" tags="" position="6097.333333333333,250.3333333333334" size="100,100">&lt;&lt;if $taler gte 30&gt;&gt;
+&quot;Die Hose soll es sein! Sehr Recht!&quot;
+&lt;&lt;set $taler -= 30&gt;&gt;
+Du hast noch $taler Taler.
+[[Ich gehe zur Stadtmitte]]
+	&lt;&lt;elseif $taler lt 30&gt;&gt;
+Du suchst in deinen Taschen nach Talern. Der Lederer rät dir einmal einen Blick auf das &lt;span class=&quot;redtext&quot;&gt;Anschlagbrett&lt;/span&gt; zu werfen.
+[[Ich gehe zur Stadtmitte]]
+	&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="330" name="Lederhandschuhe kaufen (+1 Rüstung, 15 Taler)" tags="" position="6098,573.3333333333334" size="100,100">&lt;&lt;if $taler gte 15&gt;&gt;
+&quot;Die Lederhandschuhe? Sehr gute Wahl!&quot;
+&lt;&lt;set $taler -= 15&gt;&gt;
+Du hast noch $taler Taler.
+[[Ich gehe zur Stadtmitte]]
+	&lt;&lt;elseif $taler lt 15&gt;&gt;
+Du suchst in deinen Taschen nach Talern. Der Lederer rät dir einmal einen Blick auf das &lt;span class=&quot;redtext&quot;&gt;Anschlagbrett&lt;/span&gt; zu werfen.
+[[Ich gehe zur Stadtmitte]]
+	&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="331" name="Lederkappe kaufen (+2 Rüstung, 20 Taler)" tags="" position="6101.333333333333,679.3333333333334" size="100,100">&lt;&lt;if $taler gte 20&gt;&gt;
+&quot;Die Kappe also! Sehr gute Wahl!&quot;
+&lt;&lt;set $taler -= 20&gt;&gt;
+Du hast noch $taler Taler.
+[[Ich gehe zur Stadtmitte]]
+	&lt;&lt;elseif $taler lt 20&gt;&gt;
+Du suchst in deinen Taschen nach Talern. Der Lederer rät dir einmal einen Blick auf das &lt;span class=&quot;redtext&quot;&gt;Anschlagbrett&lt;/span&gt; zu werfen.
+[[Ich gehe zur Stadtmitte]]
+	&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="332" name="Lederhose kaufen (+2 Rüstung, 30 Taler)" tags="" position="6104,786" size="100,100">&lt;&lt;if $taler gte 30&gt;&gt;
+&quot;Die Hose soll es sein! Sehr Recht!&quot;
+&lt;&lt;set $taler -= 30&gt;&gt;
+Du hast noch $taler Taler.
+[[Ich gehe zur Stadtmitte]]
+	&lt;&lt;elseif $taler lt 30&gt;&gt;
+Du suchst in deinen Taschen nach Talern. Der Lederer rät dir einmal einen Blick auf das &lt;span class=&quot;redtext&quot;&gt;Anschlagbrett&lt;/span&gt; zu werfen.
+[[Ich gehe zur Stadtmitte]]
+	&lt;&lt;/if&gt;&gt;</tw-passagedata></tw-storydata></div>
 	<script id="script-sugarcube" type="text/javascript">
 	/*! SugarCube JS */
 	if(document.documentElement.getAttribute("data-init")==="loading"){!function(window,document,jQuery,undefined){"use strict";function _classCallCheck(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}function _toConsumableArray(e){if(Array.isArray(e)){for(var t=0,r=Array(e.length);t<e.length;t++)r[t]=e[t];return r}return Array.from(e)}var _createClass=function(){function e(e,t){for(var r=0;r<t.length;r++){var n=t[r];n.enumerable=n.enumerable||!1,n.configurable=!0,"value"in n&&(n.writable=!0),Object.defineProperty(e,n.key,n)}}return function(t,r,n){return r&&e(t.prototype,r),n&&e(t,n),t}}(),_slicedToArray=function(){function e(e,t){var r=[],n=!0,a=!1,i=undefined;try{for(var o,s=e[Symbol.iterator]();!(n=(o=s.next()).done)&&(r.push(o.value),!t||r.length!==t);n=!0);}catch(e){a=!0,i=e}finally{try{!n&&s.return&&s.return()}finally{if(a)throw i}}return r}return function(t,r){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return e(t,r);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}(),_typeof="function"==typeof Symbol&&"symbol"==typeof Symbol.iterator?function(e){return typeof e}:function(e){return e&&"function"==typeof Symbol&&e.constructor===Symbol&&e!==Symbol.prototype?"symbol":typeof e},Alert=function(){function e(e,t,r,n){var a="fatal"===e,i="Apologies! "+(a?"A fatal":"An")+" error has occurred.";i+=a?" Aborting.":" You may be able to continue, but some parts may not work properly.",null==t&&null==r||(i+="\n\nError",null!=t&&(i+=" ["+t+"]"),i+=null!=r?": "+r.replace(/^(?:(?:uncaught\s+(?:exception:\s+)?)?error:\s+)+/i,"")+".":": unknown error."),"object"===("undefined"==typeof n?"undefined":_typeof(n))&&n.stack&&(i+="\n\nStack Trace:\n"+n.stack),window.alert(i)}function t(t,r,n){e(null,t,r,n)}function r(t,r,n){e("fatal",t,r,n)}return function(e){window.onerror=function(n,a,i,o,s){"complete"===document.readyState?t(null,n,s):(r(null,n,s),window.onerror=e,"function"==typeof window.onerror&&window.onerror.apply(this,arguments))}}(window.onerror),Object.freeze(Object.defineProperties({},{error:{value:t},fatal:{value:r}}))}();!function(){function e(e,t){var a=String(e);switch(t){case"start":return a&&r.test(a)?a.replace(r,""):a;case"end":return a&&n.test(a)?a.replace(n,""):a;default:throw new Error('_trimFrom called with incorrect where parameter value: "'+t+'"')}}function t(e,t){var r=Number.parseInt(e,10)||0;if(r<1)return"";var n="undefined"==typeof t?"":String(t);for(""===n&&(n=" ");n.length<r;){var a=n.length,i=r-a;n+=a>i?n.slice(0,i):n}return n.length>r&&(n=n.slice(0,r)),n}var r=/^[\s\u00A0\uFEFF][\s\u00A0\uFEFF]*/,n=/[\s\u00A0\uFEFF][\s\u00A0\uFEFF]*$/;Array.prototype.includes||Object.defineProperty(Array.prototype,"includes",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includes called on null or undefined");if(0===arguments.length)return!1;var e=this.length>>>0;if(0===e)return!1;var t=arguments[0],r=Number(arguments[1])||0;for(r<0&&(r=Math.max(0,e+r));r<e;++r){var n=this[r];if(t===n||t!==t&&n!==n)return!0}return!1}}),String.prototype.padStart||Object.defineProperty(String.prototype,"padStart",{configurable:!0,writable:!0,value:function(e,r){if(null==this)throw new TypeError("String.prototype.padStart called on null or undefined");var n=String(this),a=n.length,i=Number.parseInt(e,10);return i<=a?n:t(i-a,r)+n}}),String.prototype.padEnd||Object.defineProperty(String.prototype,"padEnd",{configurable:!0,writable:!0,value:function(e,r){if(null==this)throw new TypeError("String.prototype.padEnd called on null or undefined");var n=String(this),a=n.length,i=Number.parseInt(e,10);return i<=a?n:n+t(i-a,r)}}),String.prototype.trimStart||Object.defineProperty(String.prototype,"trimStart",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimStart called on null or undefined");return e(this,"start")}}),String.prototype.trimLeft||Object.defineProperty(String.prototype,"trimLeft",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimLeft called on null or undefined");return e(this,"start")}}),String.prototype.trimEnd||Object.defineProperty(String.prototype,"trimEnd",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimEnd called on null or undefined");return e(this,"end")}}),String.prototype.trimRight||Object.defineProperty(String.prototype,"trimRight",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.trimRight called on null or undefined");return e(this,"end")}})}(),function(){function _random(){var e=void 0,t=void 0;switch(arguments.length){case 0:throw new Error("_random called with insufficient parameters");case 1:e=0,t=arguments[0];break;default:e=arguments[0],t=arguments[1]}if(e>t){var r=[t,e];e=r[0],t=r[1]}return Math.floor(_nativeMathRandom()*(t-e+1))+e}function _randomIndex(e,t){var r=void 0,n=void 0;switch(t.length){case 1:r=0,n=e-1;break;case 2:r=0,n=Math.trunc(t[1]);break;default:r=Math.trunc(t[1]),n=Math.trunc(t[2])}return Number.isNaN(r)?r=0:!Number.isFinite(r)||r>=e?r=e-1:r<0&&(r=e+r,r<0&&(r=0)),Number.isNaN(n)?n=0:!Number.isFinite(n)||n>=e?n=e-1:n<0&&(n=e+n,n<0&&(n=e-1)),_random(r,n)}function _getCodePointStartAndEnd(e,t){var r=e.charCodeAt(t);if(Number.isNaN(r))return{char:"",start:-1,end:-1};if(r<55296||r>57343)return{char:e.charAt(t),start:t,end:t};if(r>=55296&&r<=56319){var n=t+1;if(n>=e.length)throw new Error("high surrogate without trailing low surrogate");var a=e.charCodeAt(n);if(a<56320||a>57343)throw new Error("high surrogate without trailing low surrogate");return{char:e.charAt(t)+e.charAt(n),start:t,end:n}}if(0===t)throw new Error("low surrogate without leading high surrogate");var i=t-1,o=e.charCodeAt(i);if(o<55296||o>56319)throw new Error("low surrogate without leading high surrogate");return{char:e.charAt(i)+e.charAt(t),start:i,end:t}}var _nativeMathRandom=Math.random;Object.defineProperty(Array,"random",{configurable:!0,writable:!0,value:function(e){if(null==e||"object"!==("undefined"==typeof e?"undefined":_typeof(e))||!Object.prototype.hasOwnProperty.call(e,"length"))throw new TypeError("Array.random array parameter must be an array or array-lke object");var t=e.length>>>0;if(0!==t){var r=0===arguments.length?_random(0,t-1):_randomIndex(t,Array.prototype.slice.call(arguments,1));return e[r]}}}),Object.defineProperty(Array.prototype,"concatUnique",{configurable:!0,writable:!0,value:function e(){if(null==this)throw new TypeError("Array.prototype.concatUnique called on null or undefined");var t=Array.from(this);if(0===arguments.length)return t;var r=Array.prototype.reduce.call(arguments,function(e,t){return e.concat(t)},[]),n=r.length;if(0===n)return t;for(var a=Array.prototype.indexOf,i=Array.prototype.push,o=0;o<n;++o){var e=r[o];a.call(t,e)===-1&&i.call(t,e)}return t}}),Object.defineProperty(Array.prototype,"count",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.count called on null or undefined");for(var e=Array.prototype.indexOf,t=arguments[0],r=Number(arguments[1])||0,n=0;(r=e.call(this,t,r))!==-1;)++n,++r;return n}}),Object.defineProperty(Array.prototype,"delete",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.delete called on null or undefined");if(0===arguments.length)return[];var e=this.length>>>0;if(0===e)return[];for(var t=Array.prototype.indexOf,r=Array.prototype.push,n=Array.prototype.splice,a=Array.prototype.concat.apply([],arguments),i=[],o=0,s=a.length;o<s;++o)for(var u=a[o],l=0;(l=t.call(this,u,l))!==-1;)r.apply(i,n.call(this,l,1));return i}}),Object.defineProperty(Array.prototype,"deleteAt",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.deleteAt called on null or undefined");if(0===arguments.length)return[];var e=this.length>>>0;if(0===e)return[];for(var t=Array.prototype.splice,r=[].concat(_toConsumableArray(new Set(Array.prototype.concat.apply([],arguments).map(function(t){return t<0?Math.max(0,e+t):t})).values())),n=[].concat(_toConsumableArray(r)).sort(function(e,t){return t-e}),a=[],i=0,o=r.length;i<o;++i)a[i]=this[r[i]];for(var s=0,u=n.length;s<u;++s)t.call(this,n[s],1);return a}}),Object.defineProperty(Array.prototype,"flatten",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.flatten called on null or undefined");return Array.prototype.reduce.call(this,function(e,t){return e.concat(Array.isArray(t)?t.flatten():t)},[])}}),Object.defineProperty(Array.prototype,"includesAll",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includesAll called on null or undefined");if(1===arguments.length)return Array.isArray(arguments[0])?Array.prototype.includesAll.apply(this,arguments[0]):Array.prototype.includes.apply(this,arguments);for(var e=0,t=arguments.length;e<t;++e)if(!Array.prototype.some.call(this,function(e){return e===this.val||e!==e&&this.val!==this.val},{val:arguments[e]}))return!1;return!0}}),Object.defineProperty(Array.prototype,"includesAny",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.includesAny called on null or undefined");if(1===arguments.length)return Array.isArray(arguments[0])?Array.prototype.includesAny.apply(this,arguments[0]):Array.prototype.includes.apply(this,arguments);for(var e=0,t=arguments.length;e<t;++e)if(Array.prototype.some.call(this,function(e){return e===this.val||e!==e&&this.val!==this.val},{val:arguments[e]}))return!0;return!1}}),Object.defineProperty(Array.prototype,"pluck",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.pluck called on null or undefined");var e=this.length>>>0;if(0!==e){var t=0===arguments.length?_random(0,e-1):_randomIndex(e,[].concat(Array.prototype.slice.call(arguments)));return Array.prototype.splice.call(this,t,1)[0]}}}),Object.defineProperty(Array.prototype,"pluckMany",{configurable:!0,writable:!0,value:function(e){if(null==this)throw new TypeError("Array.prototype.pluckMany called on null or undefined");var t=this.length>>>0;if(0===t)return[];var r=Math.trunc(e);if(!Number.isInteger(r))throw new Error("Array.prototype.pluckMany want parameter must be an integer");if(r<1)return[];r>t&&(r=t);var n=Array.prototype.splice,a=[],i=t-1;do a.push(n.call(this,_random(0,i--),1)[0]);while(a.length<r);return a}}),Object.defineProperty(Array.prototype,"pushUnique",{configurable:!0,writable:!0,value:function e(){if(null==this)throw new TypeError("Array.prototype.pushUnique called on null or undefined");var t=arguments.length;if(0===t)return this.length>>>0;for(var r=Array.prototype.indexOf,n=Array.prototype.push,a=0;a<t;++a){var e=arguments[a];r.call(this,e)===-1&&n.call(this,e)}return this.length>>>0}}),Object.defineProperty(Array.prototype,"random",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.random called on null or undefined");var e=this.length>>>0;if(0!==e){var t=0===arguments.length?_random(0,e-1):_randomIndex(e,[].concat(Array.prototype.slice.call(arguments)));return this[t]}}}),Object.defineProperty(Array.prototype,"randomMany",{configurable:!0,writable:!0,value:function(e){if(null==this)throw new TypeError("Array.prototype.randomMany called on null or undefined");var t=this.length>>>0;if(0===t)return[];var r=Math.trunc(e);if(!Number.isInteger(r))throw new Error("Array.prototype.randomMany want parameter must be an integer");if(r<1)return[];r>t&&(r=t);var n=new Map,a=[],i=t-1;do{var o=void 0;do o=_random(0,i);while(n.has(o));n.set(o,!0),a.push(this[o])}while(a.length<r);return a}}),Object.defineProperty(Array.prototype,"shuffle",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.shuffle called on null or undefined");var e=this.length>>>0;if(0===e)return this;for(var t=e-1;t>0;--t){var r=Math.floor(_nativeMathRandom()*(t+1));if(t!==r){var n=this[t];this[t]=this[r],this[r]=n}}return this}}),Object.defineProperty(Array.prototype,"unshiftUnique",{configurable:!0,writable:!0,value:function e(){if(null==this)throw new TypeError("Array.prototype.unshiftUnique called on null or undefined");var t=arguments.length;if(0===t)return this.length>>>0;for(var r=Array.prototype.indexOf,n=Array.prototype.unshift,a=0;a<t;++a){var e=arguments[a];r.call(this,e)===-1&&n.call(this,e)}return this.length>>>0}}),Object.defineProperty(Function.prototype,"partial",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Function.prototype.partial called on null or undefined");var e=Array.prototype.slice,t=this,r=e.call(arguments,0);return function(){for(var n=[],a=0,i=0;i<r.length;++i)n.push(r[i]===undefined?arguments[a++]:r[i]);return t.apply(this,n.concat(e.call(arguments,a)))}}}),Object.defineProperty(Math,"clamp",{configurable:!0,writable:!0,value:function e(t,r,n){var e=Number(t);return Number.isNaN(e)?NaN:e.clamp(r,n)}}),Object.defineProperty(Math,"easeInOut",{configurable:!0,writable:!0,value:function(e){return 1-(Math.cos(Number(e)*Math.PI)+1)/2}}),Object.defineProperty(Number.prototype,"clamp",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Number.prototype.clamp called on null or undefined");if(2!==arguments.length)throw new Error("Number.prototype.clamp called with an incorrect number of parameters");var e=Number(arguments[0]),t=Number(arguments[1]);if(e>t){var r=[t,e];e=r[0],t=r[1]}return Math.min(Math.max(this,e),t)}}),RegExp.escape||!function(){var e=/[\\^$*+?.()|[\]{}]/g,t=new RegExp(e.source);Object.defineProperty(RegExp,"escape",{configurable:!0,writable:!0,value:function(r){var n=String(r);return n&&t.test(n)?n.replace(e,"\\$&"):n}})}(),function(){var e=/{(\d+)(?:,([+-]?\d+))?}/g,t=new RegExp(e.source);Object.defineProperty(String,"format",{configurable:!0,writable:!0,value:function(r){function n(e,t,r){if(!t)return e;var n=Math.abs(t)-e.length;if(n<1)return e;var a=String(r).repeat(n);return t<0?e+a:a+e}if(arguments.length<2)return 0===arguments.length?"":r;var a=2===arguments.length&&Array.isArray(arguments[1])?[].concat(_toConsumableArray(arguments[1])):Array.prototype.slice.call(arguments,1);return 0===a.length?r:t.test(r)?(e.lastIndex=0,r.replace(e,function(e,t,r){var i=a[t];if(null==i)return"";for(;"function"==typeof i;)i=i();switch("undefined"==typeof i?"undefined":_typeof(i)){case"string":break;case"object":i=JSON.stringify(i);break;default:i=String(i)}return n(i,r?Number.parseInt(r,10):0," ")})):r}})}(),Object.defineProperty(String.prototype,"contains",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.contains called on null or undefined");return String.prototype.indexOf.apply(this,arguments)!==-1}}),Object.defineProperty(String.prototype,"count",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.count called on null or undefined");var e=String(arguments[0]||"");if(""===e)return 0;for(var t=String.prototype.indexOf,r=e.length,n=Number(arguments[1])||0,a=0;(n=t.call(this,e,n))!==-1;)++a,n+=r;return a}}),Object.defineProperty(String.prototype,"splice",{configurable:!0,writable:!0,value:function(e,t,r){if(null==this)throw new TypeError("String.prototype.splice called on null or undefined");var n=this.length>>>0;if(0===n)return"";var a=Number(e);Number.isSafeInteger(a)?a<0&&(a+=n,a<0&&(a=0)):a=0,a>n&&(a=n);var i=Number(t);(!Number.isSafeInteger(i)||i<0)&&(i=0);var o=this.slice(0,a);return"undefined"!=typeof r&&(o+=r),a+i<n&&(o+=this.slice(a+i)),o}}),Object.defineProperty(String.prototype,"splitOrEmpty",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.splitOrEmpty called on null or undefined");return""===String(this)?[]:String.prototype.split.apply(this,arguments)}}),Object.defineProperty(String.prototype,"toLocaleUpperFirst",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.toLocaleUpperFirst called on null or undefined");var e=String(this),t=_getCodePointStartAndEnd(e,0),r=t.char,n=t.end;return n===-1?"":r.toLocaleUpperCase()+e.slice(n+1)}}),Object.defineProperty(String.prototype,"toUpperFirst",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.toUpperFirst called on null or undefined");var e=String(this),t=_getCodePointStartAndEnd(e,0),r=t.char,n=t.end;return n===-1?"":r.toUpperCase()+e.slice(n+1)}}),Object.defineProperty(Date.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:date)",this.toISOString()]}}),Object.defineProperty(Function.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:eval)","("+this.toString()+")"]}}),Object.defineProperty(Map.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:map)",[].concat(_toConsumableArray(this))]}}),Object.defineProperty(RegExp.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:eval)",this.toString()]}}),Object.defineProperty(Set.prototype,"toJSON",{configurable:!0,writable:!0,value:function(){return["(revive:set)",[].concat(_toConsumableArray(this))]}}),Object.defineProperty(JSON,"reviveWrapper",{configurable:!0,writable:!0,value:function(e,t){if("string"!=typeof e)throw new TypeError("JSON.reviveWrapper code parameter must be a string");return["(revive:eval)",[e,t]]}}),Object.defineProperty(JSON,"_real_parse",{value:JSON.parse}),Object.defineProperty(JSON,"parse",{configurable:!0,writable:!0,value:function value(text,reviver){return JSON._real_parse(text,function(key,val){var value=val;if(Array.isArray(value)&&2===value.length)switch(value[0]){case"(revive:set)":value=new Set(value[1]);break;case"(revive:map)":value=new Map(value[1]);break;case"(revive:date)":value=new Date(value[1]);break;case"(revive:eval)":try{if(Array.isArray(value[1])){var $ReviveData$=value[1][1];value=eval(value[1][0])}else value=eval(value[1])}catch(e){}}else if("string"==typeof value&&"@@revive@@"===value.slice(0,10))try{value=eval(value.slice(10))}catch(e){}if("function"==typeof reviver)try{value=reviver(key,value)}catch(e){}return value})}}),Object.defineProperty(Array.prototype,"contains",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.contains called on null or undefined");return Array.prototype.includes.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"containsAll",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.containsAll called on null or undefined");return Array.prototype.includesAll.apply(this,arguments)}}),Object.defineProperty(Array.prototype,"containsAny",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("Array.prototype.containsAny called on null or undefined");return Array.prototype.includesAny.apply(this,arguments)}}),Object.defineProperty(String.prototype,"readBracketedList",{configurable:!0,writable:!0,value:function(){if(null==this)throw new TypeError("String.prototype.readBracketedList called on null or undefined");for(var e=new RegExp("(?:\\[\\[((?:\\s|\\S)*?)\\]\\])|([^\"'\\s]\\S*)","gm"),t=[],r=void 0;null!==(r=e.exec(this));)r[1]?t.push(r[1]):r[2]&&t.push(r[2]);return t}})}();var Browser=function(){var e=navigator.userAgent.toLowerCase(),t=e.includes("windows phone"),r=Object.freeze({Android:!t&&e.includes("android"),BlackBerry:/blackberry|bb10/.test(e),iOS:!t&&/ip(?:hone|ad|od)/.test(e),Windows:t||e.includes("iemobile"),any:function(){return r.Android||r.BlackBerry||r.iOS||r.Windows}}),n=!r.Windows&&!/khtml|trident|edge/.test(e)&&e.includes("gecko"),a=!e.includes("opera")&&/msie|trident/.test(e),i=a?function(){var t=/(?:msie\s+|rv:)(\d+\.\d)/.exec(e);return t?Number(t[1]):0}():null,o=e.includes("opera")||e.includes(" opr/"),s=o?function(){var t=new RegExp((/khtml|chrome/.test(e)?"opr":"version")+"\\/(\\d+\\.\\d+)"),r=t.exec(e);return r?Number(r[1]):0}():null;return Object.freeze({userAgent:e,isMobile:r,isGecko:n,isIE:a,ieVersion:i,isOpera:o,operaVersion:s})}(),Has=function(){var e=function(){try{return"function"==typeof document.createElement("audio").canPlayType}catch(e){}return!1}(),t=function(){try{return"Blob"in window&&"File"in window&&"FileList"in window&&"FileReader"in window&&!Browser.isMobile.any()&&(!Browser.isOpera||Browser.operaVersion>=15)}catch(e){}return!1}(),r=function(){try{return"geolocation"in navigator&&"function"==typeof navigator.geolocation.getCurrentPosition&&"function"==typeof navigator.geolocation.watchPosition}catch(e){}return!1}(),n=function(){try{return"MutationObserver"in window&&"function"==typeof window.MutationObserver}catch(e){}return!1}(),a=function(){try{return"performance"in window&&"function"==typeof window.performance.now}catch(e){}return!1}();return Object.freeze({audio:e,fileAPI:t,geolocation:r,mutationObserver:n,performance:a})}(),_ref3=function(){function e(t){if("object"!==("undefined"==typeof t?"undefined":_typeof(t))||null==t)return t;if("function"==typeof t.clone)return t.clone(!0);if(t.nodeType&&"function"==typeof t.cloneNode)return t.cloneNode(!0);var r=void 0;return Array.isArray(t)?r=[]:t instanceof Date?r=new Date(t.getTime()):t instanceof Map?(r=new Map,t.forEach(function(t,n){r.set(n,e(t))})):t instanceof RegExp?r=new RegExp(t):t instanceof Set?(r=new Set,t.forEach(function(t){r.add(e(t))})):r=Object.create(Object.getPrototypeOf(t)),Object.keys(t).forEach(function(n){return r[n]=e(t[n])}),r}function t(e){for(var t=document.createDocumentFragment(),r=document.createElement("p"),n=void 0;null!==(n=e.firstChild);){if(n.nodeType===Node.ELEMENT_NODE){var a=n.nodeName.toUpperCase();switch(a){case"BR":if(null!==n.nextSibling&&n.nextSibling.nodeType===Node.ELEMENT_NODE&&"BR"===n.nextSibling.nodeName.toUpperCase()){e.removeChild(n.nextSibling),e.removeChild(n),t.appendChild(r),r=document.createElement("p");continue}if(!r.hasChildNodes()){e.removeChild(n);continue}break;case"ADDRESS":case"ARTICLE":case"ASIDE":case"BLOCKQUOTE":case"CENTER":case"DIV":case"DL":case"FIGURE":case"FOOTER":case"FORM":case"H1":case"H2":case"H3":case"H4":case"H5":case"H6":case"HEADER":case"HR":case"MAIN":case"NAV":case"OL":case"P":case"PRE":case"SECTION":case"TABLE":case"UL":r.hasChildNodes()&&(t.appendChild(r),r=document.createElement("p")),t.appendChild(n);continue}}r.appendChild(n)}r.hasChildNodes()&&t.appendChild(r),e.appendChild(t)}function r(){try{return document.activeElement||null}catch(e){return null}}function n(e,t,r){var n="object"===("undefined"==typeof e?"undefined":_typeof(e))?e:document.getElementById(e);if(null==n)return null;var a=Array.isArray(t)?t:[t];jQuery(n).empty();for(var i=0,o=a.length;i<o;++i)if(Story.has(a[i]))return new Wikifier(n,Story.get(a[i]).processText().trim()),n;if(null!=r){var s=String(r).trim();""!==s&&new Wikifier(n,s)}return n}function a(e,t,r){return jQuery(document.createElement("span")).addClass("error").attr("title",r).text(L10n.get("errorTitle")+": "+(t||"unknown error")).appendTo(e),!1}function i(e,t){var r=i;switch("undefined"==typeof e?"undefined":_typeof(e)){case"number":if(Number.isNaN(e))return t;break;case"object":if(null===e)return t;if(Array.isArray(e))return e.map(function(e){return r(e,t)}).join(", ");if(e instanceof Set)return[].concat(_toConsumableArray(e)).map(function(e){return r(e,t)}).join(", ");if(e instanceof Map){var n=[].concat(_toConsumableArray(e)).map(function(e){return r(e[0],t)+" ⇒ "+r(e[1],t)}).join("; ");return"( "+n+" )"}return e instanceof Date?e.toLocaleString():"function"==typeof e.toString?e.toString():Object.prototype.toString.call(e);case"function":case"undefined":return t}return String(e)}return Object.freeze(Object.defineProperties({},{clone:{value:e},convertBreaks:{value:t},safeActiveElement:{value:r},setPageElement:{value:n},throwError:{value:a},toStringOrDefault:{value:i}}))}(),clone=_ref3.clone,convertBreaks=_ref3.convertBreaks,safeActiveElement=_ref3.safeActiveElement,setPageElement=_ref3.setPageElement,throwError=_ref3.throwError,toStringOrDefault=_ref3.toStringOrDefault;!function(){function e(e){13!==e.which&&32!==e.which||(e.preventDefault(),jQuery(safeActiveElement()||this).trigger("click"))}function t(e){return function(){var t=jQuery(this);t.is("[aria-pressed]")&&t.attr("aria-pressed","true"===t.attr("aria-pressed")?"false":"true"),e.apply(this,arguments)}}function r(e){return t(function(){jQuery(this).off(".aria-clickable").removeAttr("tabindex aria-controls aria-pressed").not("a,button").removeAttr("role").end().filter("button").prop("disabled",!0),e.apply(this,arguments)})}jQuery.fn.extend({ariaClick:function(n,a){if(0===this.length||0===arguments.length)return this;var i=n,o=a;return null==o&&(o=i,i=undefined),i=jQuery.extend({namespace:undefined,one:!1,selector:undefined,data:undefined,controls:undefined,pressed:undefined,label:undefined},i),"string"!=typeof i.namespace?i.namespace="":"."!==i.namespace[0]&&(i.namespace="."+i.namespace),"boolean"==typeof i.pressed&&(i.pressed=i.pressed?"true":"false"),this.filter("button").prop("type","button"),this.not("a,button").attr("role","button"),this.attr("tabindex",0),null!=i.controls&&this.attr("aria-controls",i.controls),null!=i.pressed&&this.attr("aria-pressed",i.pressed),null!=i.label&&this.attr({"aria-label":i.label,title:i.label}),this.not("button").on("keypress.aria-clickable"+i.namespace,i.selector,e),this.on("click.aria-clickable"+i.namespace,i.selector,i.data,i.one?r(o):t(o)),this}})}(),function(){jQuery.extend({wikiWithOptions:function(e){for(var t=arguments.length,r=Array(t>1?t-1:0),n=1;n<t;n++)r[n-1]=arguments[n];if(0!==r.length){var a=document.createDocumentFragment();r.forEach(function(t){return new Wikifier(a,t,e)});var i=[].concat(_toConsumableArray(a.querySelectorAll(".error"))).map(function(e){return e.textContent.replace(/^(?:(?:Uncaught\s+)?Error:\s+)+/,"")});if(i.length>0)throw new Error(i.join("; "))}},wiki:function(){for(var e=arguments.length,t=Array(e),r=0;r<e;r++)t[r]=arguments[r];this.wikiWithOptions.apply(this,[undefined].concat(t))}}),jQuery.fn.extend({wikiWithOptions:function(e){for(var t=arguments.length,r=Array(t>1?t-1:0),n=1;n<t;n++)r[n-1]=arguments[n];if(0===this.length||0===r.length)return this;var a=document.createDocumentFragment();return r.forEach(function(t){return new Wikifier(a,t,e)}),this.append(a),this},wiki:function(){for(var e=arguments.length,t=Array(e),r=0;r<e;r++)t[r]=arguments[r];return this.wikiWithOptions.apply(this,[undefined].concat(t))}})}();var Util=function(){function e(e){return Object.freeze(Object.assign(Object.create(null),e))}function t(e){return Object.prototype.toString.call(e).slice(8,-1)}function r(e){var t=void 0;switch("undefined"==typeof e?"undefined":_typeof(e)){case"number":t=e;break;case"string":t=Number(e);break;default:return!1}return!Number.isNaN(t)&&Number.isFinite(t)}function n(e){return"boolean"==typeof e||"string"==typeof e&&("true"===e||"false"===e)}function a(e){return String(e).trim().replace(/[^\w\s\u2013\u2014-]+/g,"").replace(/[_\s\u2013\u2014-]+/g,"-").toLocaleLowerCase()}function i(e){if(null==e)return"";var t=String(e);return t&&h.test(t)?t.replace(p,function(e){return g[e]}):t}function o(e){if(null==e)return"";var t=String(e);return t&&y.test(t)?t.replace(m,function(e){return v[e.toLowerCase()]}):t}function s(e,t){var r=String(e),n=Math.trunc(t),a=r.charCodeAt(n);if(Number.isNaN(a))return{char:"",start:-1,end:-1};var i={char:r.charAt(n),start:n,end:n};if(a<55296||a>57343)return i;if(a>=55296&&a<=56319){var o=n+1;if(o>=r.length)return i;var s=r.charCodeAt(o);return s<56320||s>57343?i:(i.char=i.char+r.charAt(o),i.end=o,i)}if(0===n)return i;var u=n-1,l=r.charCodeAt(u);return l<55296||l>56319?i:(i.char=r.charAt(u)+i.char,i.start=u,i)}function u(){return(Has.performance?performance:Date).now()}function l(e){var t=/^([+-]?(?:\d*\.)?\d+)([Mm]?[Ss])$/,r=t.exec(String(e));if(null===r)throw new SyntaxError('invalid time value syntax: "'+e+'"');var n=Number(r[1]);if(/^[Ss]$/.test(r[2])&&(n*=1e3),Number.isNaN(n)||!Number.isFinite(n))throw new RangeError('invalid time value: "'+e+'"');return n}function c(e){if("number"!=typeof e||Number.isNaN(e)||!Number.isFinite(e)){var t=void 0;switch("undefined"==typeof e?"undefined":_typeof(e)){case"string":t='"'+e+'"';break;case"number":t=String(e);break;default:t=Object.prototype.toString.call(e)}throw new Error("invalid milliseconds: "+t)}return e+"ms"}function d(e){if(!e.includes("-"))switch(e){case"bgcolor":return"backgroundColor";case"float":return"cssFloat";default:return e}var t="-ms-"===e.slice(0,4)?e.slice(1):e;return t.split("-").map(function(e,t){return 0===t?e:e.toUpperFirst()}).join("")}function f(e){var t=document.createElement("a"),r=Object.create(null);t.href=e,t.search&&t.search.replace(/^\?/,"").splitOrEmpty(/(?:&(?:amp;)?|;)/).forEach(function(e){var t=e.split("="),n=_slicedToArray(t,2),a=n[0],i=n[1];r[a]=i});var n=t.host&&"/"!==t.pathname[0]?"/"+t.pathname:t.pathname;return{href:t.href,protocol:t.protocol,host:t.host,hostname:t.hostname,port:t.port,path:""+n+t.search,pathname:n,query:t.search,search:t.search,queries:r,searches:r,hash:t.hash}}var p=/[&<>"'`]/g,h=new RegExp(p.source),g=Object.freeze({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;","`":"&#96;"}),m=/&(?:amp|#38|#x26|lt|#60|#x3c|gt|#62|#x3e|quot|#34|#x22|apos|#39|#x27|#96|#x60);/gi,y=new RegExp(m.source,"i"),v=Object.freeze({"&amp;":"&","&#38;":"&","&#x26;":"&","&lt;":"<","&#60;":"<","&#x3c;":"<","&gt;":">","&#62;":">","&#x3e;":">","&quot;":'"',"&#34;":'"',"&#x22;":'"',"&apos;":"'","&#39;":"'","&#x27;":"'","&#96;":"`","&#x60;":"`"});return Object.freeze(Object.defineProperties({},{toEnum:{value:e},toStringTag:{value:t},isNumeric:{value:r},isBoolean:{value:n},slugify:{value:a},escape:{value:i},unescape:{value:o},charAndPosAt:{value:s},fromCssTime:{value:l},toCssTime:{value:c},fromCssProperty:{value:d},parseUrl:{value:f},now:{value:u},random:{value:Math.random},entityEncode:{value:i},entityDecode:{value:o},evalExpression:{value:function(){return Scripting.evalJavaScript.apply(Scripting,arguments)}},evalStatements:{value:function(){return Scripting.evalJavaScript.apply(Scripting,arguments)}}}))}(),SimpleAudio=function(){function e(){return g}function t(e){g=!!e,l("mute",g)}function r(){return p}function n(e){p=Math.clamp(e,.2,5),l("rate",p)}function a(){return h}function i(e){h=Math.clamp(e,0,1),l("volume",h)}function o(){l("stop")}function s(e,t){if("function"!=typeof t)throw new Error("callback parameter must be a function");f.set(e,t)}function u(e){f.delete(e)}function l(e,t){f.forEach(function(r){return r(e,t)})}function c(){for(var e=arguments.length,t=Array(e),r=0;r<e;r++)t[r]=arguments[r];return new(Function.prototype.bind.apply(m,[null].concat(t)))}function d(){for(var e=arguments.length,t=Array(e),r=0;r<e;r++)t[r]=arguments[r];return new(Function.prototype.bind.apply(y,[null].concat(t)))}var f=new Map,p=1,h=1,g=!1,m=function(){function e(t){if(_classCallCheck(this,e),Array.isArray(t))this._create(t);else{if(!(t instanceof e))throw new Error("sources parameter must be an array of either URLs or source objects");this._copy(t)}}return _createClass(e,[{key:"_create",value:function(t){if(!Array.isArray(t)||0===t.length)throw new Error("sources parameter must be an array of either URLs or source objects");var r=/^data:\s*audio\/([^;,]+)\s*[;,]/i,n=/\.([^.\/\\]+)$/,a=e.getType,i=[],o=document.createElement("audio");if(t.forEach(function(e){var t=null;switch("undefined"==typeof e?"undefined":_typeof(e)){case"string":var s=void 0;if("data:"===e.slice(0,5)){if(s=r.exec(e),null===s)throw new Error("source data URI missing media type")}else if(s=n.exec(Util.parseUrl(e).pathname),null===s)throw new Error("source URL missing file extension");var u=a(s[1]);null!==u&&(t={src:e,type:u});break;case"object":if(null===e)throw new Error("source object cannot be null");if(!e.hasOwnProperty("src"))throw new Error('source object missing required "src" property');
