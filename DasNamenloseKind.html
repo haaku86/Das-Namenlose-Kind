@@ -311,11 +311,13 @@ color: #800000;
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">!function(){l10nStrings.identity="Spiel",l10nStrings.aborting="Vorzeitig abgebrochen",l10nStrings.cancel="Abbrechen",l10nStrings.close="Schließen",l10nStrings.ok="OK",l10nStrings.errorTitle="Fehler",l10nStrings.errorNonexistentPassage='die Passage "{passage}" existiert nicht',l10nStrings.errorSaveMissingData="Im Speicherstand fehlen notwendige Daten. Entweder ist die geladene Datei kein Speicherstand oder der Speicherstand ist korrupt",l10nStrings.errorSaveIdMismatch="Speicherstand ist vom falschen {identity}",l10nStrings._warningGermanLacking="in ihrem Browser entweder deaktiviert oder nicht möglich",l10nStrings._warningOutroDegraded=", darum läuft dieses {identity} in einem herabgesetzten Modus. Sie können zwar fortfahren, allerdings kann es sein, dass nicht alle Teile wie gewünscht funktionieren.",l10nStrings.warningNoWebStorage="Das Web Storage API ist {_warningGermanLacking}{_warningOutroDegraded}",l10nStrings.warningDegraded="Einige Features, die diese/s {identity} benötigt sind {_warningGermanLacking}{_warningOutroDegraded}",l10nStrings.debugViewTitle="Fehlersuche-Ansicht",l10nStrings.debugViewToggle="Fehlersuche-Ansicht umschalten",l10nStrings.uiBarToggle="Benutzeroberflächenleiste umschlaten",l10nStrings.uiBarBackward="Im {identity}-Ablauf zurück gehen",l10nStrings.uiBarForward="Im {identity}-Ablauf nach vor gehen",l10nStrings.uiBarJumpto="Zu einem bestimmten Punkt im {identity}-Ablauf springen",l10nStrings.jumptoTitle="Springe zu",l10nStrings.jumptoTurn="Zug",l10nStrings.jumptoUnavailable="Momentan sind keine Sprungmarken vorhanden…",l10nStrings.savesTitle="Speicherstände",l10nStrings.savesDisallowed="Speichern ist in dieser Passage nicht gestattet.",l10nStrings.savesEmptySlot="— Speicherslot leer —",l10nStrings.savesIncapable="Die Möglichkeit zu Speichern ist {_warningGermanLacking}, darum ist die Speicherfunktion für diese Sitzung deaktiviert.",l10nStrings.savesLabelAuto="Automatischer Speicherstand",l10nStrings.savesLabelDelete="Löschen",l10nStrings.savesLabelExport="Auf Datensträger speichern…",l10nStrings.savesLabelImport="Von Datenträger laden…",l10nStrings.savesLabelLoad="Laden",l10nStrings.savesLabelClear="Alle löschen",l10nStrings.savesLabelSave="Speichern",l10nStrings.savesLabelSlot="Slot",l10nStrings.savesSavedOn="Gespeichert nach",l10nStrings.savesUnavailable="Keine Speicherstand-Slots gefunden…",l10nStrings.savesUnknownDate="unbekannt",l10nStrings.settingsTitle="Einstellungen",l10nStrings.settingsOff="Aus",l10nStrings.settingsOn="An",l10nStrings.settingsReset="Auf Standardwerte zurücksetzen",l10nStrings.restartTitle="Neustart",l10nStrings.restartPrompt="Sind sie sicher, dass Sie neu starten wollen? Ihr Fortschritt nach dem letzten Speichern geht verloren.",l10nStrings.shareTitle="Teilen",l10nStrings.autoloadTitle="Automatisch laden",l10nStrings.autoloadCancel="Zum Start gehen",l10nStrings.autoloadOk="Automatischen Speicherstand laden",l10nStrings.autoloadPrompt="Ein automatischer Speicherstand existiert bereits. Trotzdem laden oder zum Start gehen?",l10nStrings.macroBackText="Zurück",l10nStrings.macroReturnText="Return"}();
 
 Config.history.controls = false;
 
 UIBar.stow()
+
 
 
 
@@ -1791,12 +1793,12 @@ Der Wirt nickt.
 	&lt;&lt;elseif $taler lt 10&gt;&gt;
 Du suchst in deinen Taschen nach Talern. Der Wirt bemerkt es und rät dir, einmal mit dem Glücksspieler zu sprechen.
 [[Ich habe noch weitere Anliegen]]
-	&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="130" name="Gute Nacht!" tags="" position="2498,271" size="100,100">&lt;&lt;if $gesinnung gte 0&gt;&gt;
-Du hast eine erholsame Nacht. Es ist nichts ungewöhnliches vorgefallen.
-[[Zum nächsten Morgen springen]]
-	&lt;&lt;elseif $gesinnung lte -7&gt;&gt;
+	&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="130" name="Gute Nacht!" tags="" position="2498,271" size="100,100">&lt;&lt;if $gesinnung lte -7&gt;&gt;
 Du hast eine unruhige Nacht und schläfst schlecht. Du wälzt dich hin und her und schwitzt. Als du plötzlich wach wirst, bemerkst du eine schwarze Gestalt an deinem Fußende. Sie steht einfach nur da und sieht dich an. Die Gestalt ist komplett in schwarz gekleidet und trägt einen Ledermantel und einen Schal, der dir den Blick auf das Gesicht verwehrt. Es herrscht eine lange, unangenehme Stille, die nur von dem lauten Atmen der fremden Gestalt unterbrochen wird. Sie wirkt nicht bedrohlich oder aggressiv - eher geduldig und wartend. Du richtest dein Wort an die Gestalt.
 [[Was willst du?]]
+	&lt;&lt;else&gt;&gt;
+Du hattest eine erholsame Nacht und regenerierst alle Lebenspuntke.
+[[Zum nächsten Morgen springen]]
 	&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="131" name="Zum nächsten Morgen springen" tags="" position="2982,169" size="100,100">&lt;&lt;audio spooky stop&gt;&gt;
 &lt;&lt;audio theme stop&gt;&gt;
 &lt;&lt;audio theme2 loop play&gt;&gt;
@@ -2271,6 +2273,7 @@ Du gehst zum Wirt und begrüßt ihn. Er erwidert deinen Gruß mit einem freundli
 [[Ich würde gerne eine paar Taler verdienen]]
 [[Gibt es eine epische Aufgabe für mich?]]
 [[Ich habe 10 Fische für dich]]
+[[Ich betrete das Fischerdorf]]
 	&lt;&lt;else&gt;&gt;
 Du betrittst die Taverne. Auch wenn diese kleine Hütte nicht wie eine Taverne aussieht. Es hat mehr was von einem kleinen Wohnzimmer. Es steht ein Tisch in der Mitte und ein paar Stühle stehen herum. Für so ein kleines Dorf wäre eine größere Taverne aber auch unnötig. 
 
@@ -2282,6 +2285,7 @@ Du gehst zum Wirt und begrüßt ihn. Er erwidert deinen Gruß mit einem freundli
 [[Ich hätte gerne einen Krug feinstes Met]]
 [[Ich würde gerne eine paar Taler verdienen]]
 [[Gibt es eine epische Aufgabe für mich?]]
+[[Ich betrete das Fischerdorf]]
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="170" name="Spreche einen Fischer an" tags="" position="3342,1373" size="100,100">&lt;&lt;if $oger gte 1&gt;&gt;
 Ein Fischer steht vor seinem Haus und scheint ein paar Bretter seiner Hütte wieder mit ein paar festen Schlägen anzubringen. Er bemerkt dich nicht.
 
@@ -2498,13 +2502,11 @@ Was tust du?
 [[Ich gehe zu dem betrunkenen Seebären]]
 [[Ich verschwinde in meine Kajüte und komme erst raus, wenn wir da sind (Geschichte weiterführen)]]</tw-passagedata><tw-passagedata pid="197" name="Ich verschwinde in meine Kajüte und komme erst raus, wenn wir da sind (Geschichte weiterführen)" tags="" position="4601,112" size="100,100">&lt;&lt;if $chap2 is 1&gt;&gt;
 Ihr seid nach einigen Tagen in der Großstadt angekommen. Die Seemänner verabschieden sich von dir und gehen mit den Piraten im Schlepptau zur Marinebasis. Du bedankst dich noch einmal bei den Seemännern und verlässt den Hafen. Der Ausdruck &quot;Großstadt&quot; ist treffend. Schon vom Hafen aus kannst du unzählige Häuser, Gaststätten, Tavernen, Bibliotheken und vieles mehr entdecken.
-[Ich gehe zur Stadtmitte]
-Leider endet die aktuelle Version hier und daher funktioniert der Link nicht. Ich arbeite aber bereits am dritten Kapitel. Bitte habe noch etwas Geduld! :)
 &lt;&lt;else&gt;&gt;
 Ihr seid nach einigen Tagen in der Großstadt angekommen. Der 1.Maat verabschiedet sich von dir, du dankst ihm noch einmal und verlässt den Hafen. Der Ausdruck &quot;Großstadt&quot; ist treffend. Schon vom Hafen aus kannst du unzählige Häuser, Gaststätten, Tavernen, Bibliotheken und vieles mehr entdecken.
-[Ich gehe zur Stadtmitte]
-Leider endet die aktuelle Version hier und daher funktioniert der Link nicht. Ich arbeite aber am bereits dritten Kapitel. Bitte habe noch etwas Geduld! :)
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="198" name="Zurück an Deck" tags="" position="3635,291" size="100,100">Du stehst wieder auf dem Deck. Was möchtest du nun tun?
+&lt;&lt;/if&gt;&gt;
+[[Ich gehe zur Stadtmitte]]
+</tw-passagedata><tw-passagedata pid="198" name="Zurück an Deck" tags="" position="3635,291" size="100,100">Du stehst wieder auf dem Deck. Was möchtest du nun tun?
 
 [[Ich möchte einfach nur den Moment genießen und dem Gesang lauschen]]
 [[Ich möchte unter Deck gehen und gucken was dort so los ist]]
@@ -2945,7 +2947,7 @@ Kurz darauf kommt auch euer Kapitän aus der Kajüte. Die Brust blutend, auf all
 &quot;Hört auf den Grünschnabel hier, er scheint etwas Besonderes zu sein.&quot;
 
 Die Blicke der Seemänner richten sich auf dich...
-[[Leb wohl, Kapitän]]</tw-passagedata><tw-passagedata pid="233" name="Ich habe den Kapitän besiegt" tags="" position="4189.333333333333,3554" size="100,100">&lt;&lt;audio fight3 stop&gt;&gt;
+[[Leb wohl, Kapitän]]</tw-passagedata><tw-passagedata pid="233" name="Ich habe den Kapitän besiegt" tags="" position="4189,3554" size="100,100">&lt;&lt;audio fight3 stop&gt;&gt;
 &lt;&lt;audio meer loop play&gt;&gt;
 Der Kapitän liegt schwer verletzt am Boden. Nur noch in der Lage zu atmen, stellt er keine Bedrohung mehr da. Seine Leute sehen es und lassen die Säbel fallen. Es wird still auf Deck. Auch die Seemänner nehmen ihre Waffen runter. Jeder Kamerad zählt, aber wenn der Kapitän fällt, ist die Schlacht vorbei.
 
@@ -3414,7 +3416,7 @@ Ihr antwortet ihm freundlichen.
 [[Sag mir welche Aufgaben es gibt]]</tw-passagedata><tw-passagedata pid="264" name="Ich hab&#39;n Messer. Reicht das?" tags="" position="5082,271" size="100,100">Der Mann schüttelt mit dem Kopf.
 
 &quot;Kommt wieder, wenn wir euch gebrauchen können.&quot;
-[[Ich gehe zur Stadtmitte]]</tw-passagedata><tw-passagedata pid="265" name="Sag mir welche Aufgaben es gibt" tags="" position="5078.333333333333,382" size="100,100">&lt;&lt;set $klasse = &quot;Magier&quot;&gt;&gt;
+[[Ich gehe zur Stadtmitte]]</tw-passagedata><tw-passagedata pid="265" name="Sag mir welche Aufgaben es gibt" tags="" position="5078,382" size="100,100">&lt;&lt;set $klasse = &quot;Magier&quot;&gt;&gt;
 &lt;&lt;if $klasse is &quot;Magier&quot;&gt;&gt;
 &quot;Ich hätte da einen Auftrag der ein kluges Köpfchen abverlangt. Es geht um einen Mord eines kleinen Mädchens der aufgeklärt werden müsste. Die Stadtwachen sagen sie sei abgehauen und haben deswegen die Ermittlung beendet. Die Eltern des kleinen Mädchens allerdings sind sich sicher, dass es Mord war. Ich übrigens auch. Wo das Problem ist fragst du dich? Literweise Blut aber keine Leiche oder Mordwaffe, noch sont irgendwelche Spuren. Das ist das Problem. Ohne Leiche zählt das Mädchen als verschwunden und ihre Eltern bekommen nie die Gewissheit und werden für immer eine innere unruhe in sich tragen. Und der Mörder kommt einfach so davon. Also findet den Mörder und die Mordwaffe und weitere Beweise und bringt ihn zum Schafott! Würdet ihr das tun?&quot;
 
@@ -3621,11 +3623,11 @@ Na gut. Dann würfel mal auf Intelligenz. Viel Glück...
 
 Dein Rucksack ist dein Inventar. Druck ihn dir in DinA4 aus und hör mir jetzt nochmal gut zu. Um dein Inventar etwas zu limitieren, darfst du nur so viele Gegenstände mitnehmen, wie sie flach auf den Rucksack gelegt passen, nachdem du sie ausgedruckt hast. Kriegst du einen Gegenstand, so legst du ihn auf den Rucksack. Den nächsten Gegenstand legst du dann daneben usw. 
 
-Sollten keine Gegenstandskarten mehr auf den Rucksack passen, so kannst du keine weiteren Gegenstände mehr mitnehmen oder musst alte Gegenstände loswerden. Zu Gegenständen in deinem Rucksack zählen auch deine Waffen/Schild und deine Rüstung (Helm, Hose, Brust) und deine Taler. Lege jetzt also schonmal die Gegenstandskarte &quot;Taler&quot; auf deinen Rucksack. Solltest du keine Möglichkeit haben zu drucken: Dein Limit liegt bei 25 Gegenständen.
+Sollten keine Gegenstandskarten mehr auf den Rucksack passen, so kannst du keine weiteren Gegenstände mehr mitnehmen oder musst alte Gegenstände loswerden. Zu Gegenständen in deinem Rucksack zählen NICHT Waffen/Schild und deine Rüstung (Helm, Hose, Brust). Deine Taler hingegen schon. Lege jetzt also schonmal die Gegenstandskarte &quot;Taler&quot; auf deinen Rucksack. Solltest du keine Möglichkeit haben zu drucken: Dein Limit liegt bei 8 Gegenständen.
 
 Es gibt Gegenstände die doppelt oder dreifach so groß sind, wie eine normale Karte. Ich werde dir an den passenden Stellen bescheid sagen.
 
-Bitte beachte, dass Gegenstände nicht gestapelt werden können. Wenn du 5 Butterbrote dabei hast, so nehmen sie 5 Plätze ein. Hast du 2 Tränke dabei, so nehmen sie 2 Plätze ein. Jeder Gegenstand hat seinen eigenen Platz.
+Bitte beachte, dass Gegenstände des gleichen Typs gestapelt werden können. Wenn du 5 Butterbrote dabei hast, so nehmen sie lediglich einen Platz ein. 
 
 Hast du alles verstanden?
 
@@ -3876,7 +3878,7 @@ Er nickt zufrieden.
 &quot;Sehr gut. Ein messerscharfer Verstand kann mitunter tiefer schneiden wie ein Messer aus Stahl. Nicht mein Ding, aber muss es auch nicht. Leider kann ich dir nicht mehr sagen, wie ich es schon tat. Ein 8 jähriges Mädchen verlor ihr Leben und literweise Blut. Die Leiche oder die Mordwaffe sowie andere Spuren sind nicht aufzufinden. Nichtmal Spuren im Blut. Als sei der Mörder ein Geist gewesen. Echt gruselig. Die Familie wohnt im einzigen roten Haus in der Stadt. Oder besser gesagt vor der Stadt. Es ist die rotgestrichene Holzhütte vor den Stadtmauern. Seht euch den Schauplatz an und tut was nötig ist. Ich verlasse mich auf euch!&quot;
 
 [[Ich gehe zur Stadtmitte]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="326" name="Die Stadt verlassen und weiterziehen" tags="" position="6308.666666666667,67.33333333333333" size="100,100">&lt;&lt;if $ogerfertig eq 1&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="326" name="Die Stadt verlassen und weiterziehen" tags="" position="6308,67" size="100,100">&lt;&lt;if $ogerfertig eq 1&gt;&gt;
 Oger fertig!
 &lt;&lt;elseif $händlerfertig eq 1&gt;&gt;
 &lt;&lt;elseif $mordfertig eq 1&gt;&gt;
@@ -3884,7 +3886,7 @@ Oger fertig!
 &lt;&lt;else&gt;&gt;
 Du weißt nicht wohin, deine Taschen sind leer und du hast das Gefühl, dass du noch etwas zu erledigen hättest. Du beschließt dich also die Stadt nicht vorläufig zu verlassen.
 [[Ich gehe zur Stadtmitte]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="327" name="Lederhandschuhe kaufen (+1 Ausweichen, 15 Taler)" tags="" position="6096.666666666667,355" size="100,100">&lt;&lt;if $taler gte 15&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="327" name="Lederhandschuhe kaufen (+1 Ausweichen, 15 Taler)" tags="" position="6096,355" size="100,100">&lt;&lt;if $taler gte 15&gt;&gt;
 &quot;Die Lederhandschuhe? Sehr gute Wahl!&quot;
 &lt;&lt;set $taler -= 15&gt;&gt;
 Du hast noch $taler Taler.
@@ -3892,7 +3894,7 @@ Du hast noch $taler Taler.
 	&lt;&lt;elseif $taler lt 15&gt;&gt;
 Du suchst in deinen Taschen nach Talern. Der Lederer rät dir einmal einen Blick auf das &lt;span class=&quot;redtext&quot;&gt;Anschlagbrett&lt;/span&gt; zu werfen.
 [[Ich gehe zur Stadtmitte]]
-	&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="328" name="Lederkappe kaufen (+1 Ausweichen, 20 Taler)" tags="" position="6099,467.3333333333334" size="100,100">&lt;&lt;if $taler gte 20&gt;&gt;
+	&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="328" name="Lederkappe kaufen (+1 Ausweichen, 20 Taler)" tags="" position="6099,467" size="100,100">&lt;&lt;if $taler gte 20&gt;&gt;
 &quot;Die Kappe also! Sehr gute Wahl!&quot;
 &lt;&lt;set $taler -= 20&gt;&gt;
 Du hast noch $taler Taler.
@@ -3900,7 +3902,7 @@ Du hast noch $taler Taler.
 	&lt;&lt;elseif $taler lt 20&gt;&gt;
 Du suchst in deinen Taschen nach Talern. Der Lederer rät dir einmal einen Blick auf das &lt;span class=&quot;redtext&quot;&gt;Anschlagbrett&lt;/span&gt; zu werfen.
 [[Ich gehe zur Stadtmitte]]
-	&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="329" name="Lederhose kaufen (+1 Ausweichen, 30 Taler)" tags="" position="6097.333333333333,250.3333333333334" size="100,100">&lt;&lt;if $taler gte 30&gt;&gt;
+	&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="329" name="Lederhose kaufen (+1 Ausweichen, 30 Taler)" tags="" position="6097,250" size="100,100">&lt;&lt;if $taler gte 30&gt;&gt;
 &quot;Die Hose soll es sein! Sehr Recht!&quot;
 &lt;&lt;set $taler -= 30&gt;&gt;
 Du hast noch $taler Taler.
@@ -3908,7 +3910,7 @@ Du hast noch $taler Taler.
 	&lt;&lt;elseif $taler lt 30&gt;&gt;
 Du suchst in deinen Taschen nach Talern. Der Lederer rät dir einmal einen Blick auf das &lt;span class=&quot;redtext&quot;&gt;Anschlagbrett&lt;/span&gt; zu werfen.
 [[Ich gehe zur Stadtmitte]]
-	&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="330" name="Lederhandschuhe kaufen (+1 Rüstung, 15 Taler)" tags="" position="6098,573.3333333333334" size="100,100">&lt;&lt;if $taler gte 15&gt;&gt;
+	&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="330" name="Lederhandschuhe kaufen (+1 Rüstung, 15 Taler)" tags="" position="6098,573" size="100,100">&lt;&lt;if $taler gte 15&gt;&gt;
 &quot;Die Lederhandschuhe? Sehr gute Wahl!&quot;
 &lt;&lt;set $taler -= 15&gt;&gt;
 Du hast noch $taler Taler.
@@ -3916,7 +3918,7 @@ Du hast noch $taler Taler.
 	&lt;&lt;elseif $taler lt 15&gt;&gt;
 Du suchst in deinen Taschen nach Talern. Der Lederer rät dir einmal einen Blick auf das &lt;span class=&quot;redtext&quot;&gt;Anschlagbrett&lt;/span&gt; zu werfen.
 [[Ich gehe zur Stadtmitte]]
-	&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="331" name="Lederkappe kaufen (+2 Rüstung, 20 Taler)" tags="" position="6101.333333333333,679.3333333333334" size="100,100">&lt;&lt;if $taler gte 20&gt;&gt;
+	&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="331" name="Lederkappe kaufen (+2 Rüstung, 20 Taler)" tags="" position="6101,679" size="100,100">&lt;&lt;if $taler gte 20&gt;&gt;
 &quot;Die Kappe also! Sehr gute Wahl!&quot;
 &lt;&lt;set $taler -= 20&gt;&gt;
 Du hast noch $taler Taler.
@@ -3932,7 +3934,7 @@ Du hast noch $taler Taler.
 	&lt;&lt;elseif $taler lt 30&gt;&gt;
 Du suchst in deinen Taschen nach Talern. Der Lederer rät dir einmal einen Blick auf das &lt;span class=&quot;redtext&quot;&gt;Anschlagbrett&lt;/span&gt; zu werfen.
 [[Ich gehe zur Stadtmitte]]
-	&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="333" name="Zur rotgestrichenen Holzhütte" tags="" position="4969.666666666667,608" size="100,100">&lt;&lt;audio markt stop&gt;&gt;
+	&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="333" name="Zur rotgestrichenen Holzhütte" tags="" position="4969,608" size="100,100">&lt;&lt;audio markt stop&gt;&gt;
 &lt;&lt;audio theme4 stop&gt;&gt;
 &lt;&lt;audio mystery volume 0.5 loop play&gt;&gt;
 Wenige Minuten Fußmarsch später und du stehst vor einer großen Holzhütte. In rot gestrichen wie der Mann in der Gilde sagte. 
