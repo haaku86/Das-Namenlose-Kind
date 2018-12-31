@@ -316,11 +316,15 @@ color: #800000;
 
 
 
+
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">!function(){l10nStrings.identity="Spiel",l10nStrings.aborting="Vorzeitig abgebrochen",l10nStrings.cancel="Abbrechen",l10nStrings.close="Schließen",l10nStrings.ok="OK",l10nStrings.errorTitle="Fehler",l10nStrings.errorNonexistentPassage='die Passage "{passage}" existiert nicht',l10nStrings.errorSaveMissingData="Im Speicherstand fehlen notwendige Daten. Entweder ist die geladene Datei kein Speicherstand oder der Speicherstand ist korrupt",l10nStrings.errorSaveIdMismatch="Speicherstand ist vom falschen {identity}",l10nStrings._warningGermanLacking="in ihrem Browser entweder deaktiviert oder nicht möglich",l10nStrings._warningOutroDegraded=", darum läuft dieses {identity} in einem herabgesetzten Modus. Sie können zwar fortfahren, allerdings kann es sein, dass nicht alle Teile wie gewünscht funktionieren.",l10nStrings.warningNoWebStorage="Das Web Storage API ist {_warningGermanLacking}{_warningOutroDegraded}",l10nStrings.warningDegraded="Einige Features, die diese/s {identity} benötigt sind {_warningGermanLacking}{_warningOutroDegraded}",l10nStrings.debugViewTitle="Fehlersuche-Ansicht",l10nStrings.debugViewToggle="Fehlersuche-Ansicht umschalten",l10nStrings.uiBarToggle="Benutzeroberflächenleiste umschlaten",l10nStrings.uiBarBackward="Im {identity}-Ablauf zurück gehen",l10nStrings.uiBarForward="Im {identity}-Ablauf nach vor gehen",l10nStrings.uiBarJumpto="Zu einem bestimmten Punkt im {identity}-Ablauf springen",l10nStrings.jumptoTitle="Springe zu",l10nStrings.jumptoTurn="Zug",l10nStrings.jumptoUnavailable="Momentan sind keine Sprungmarken vorhanden…",l10nStrings.savesTitle="Speicherstände",l10nStrings.savesDisallowed="Speichern ist in dieser Passage nicht gestattet.",l10nStrings.savesEmptySlot="— Speicherslot leer —",l10nStrings.savesIncapable="Die Möglichkeit zu Speichern ist {_warningGermanLacking}, darum ist die Speicherfunktion für diese Sitzung deaktiviert.",l10nStrings.savesLabelAuto="Automatischer Speicherstand",l10nStrings.savesLabelDelete="Löschen",l10nStrings.savesLabelExport="Auf Datensträger speichern…",l10nStrings.savesLabelImport="Von Datenträger laden…",l10nStrings.savesLabelLoad="Laden",l10nStrings.savesLabelClear="Alle löschen",l10nStrings.savesLabelSave="Speichern",l10nStrings.savesLabelSlot="Slot",l10nStrings.savesSavedOn="Gespeichert nach",l10nStrings.savesUnavailable="Keine Speicherstand-Slots gefunden…",l10nStrings.savesUnknownDate="unbekannt",l10nStrings.settingsTitle="Einstellungen",l10nStrings.settingsOff="Aus",l10nStrings.settingsOn="An",l10nStrings.settingsReset="Auf Standardwerte zurücksetzen",l10nStrings.restartTitle="Neustart",l10nStrings.restartPrompt="Sind sie sicher, dass Sie neu starten wollen? Ihr Fortschritt nach dem letzten Speichern geht verloren.",l10nStrings.shareTitle="Teilen",l10nStrings.autoloadTitle="Automatisch laden",l10nStrings.autoloadCancel="Zum Start gehen",l10nStrings.autoloadOk="Automatischen Speicherstand laden",l10nStrings.autoloadPrompt="Ein automatischer Speicherstand existiert bereits. Trotzdem laden oder zum Start gehen?",l10nStrings.macroBackText="Zurück",l10nStrings.macroReturnText="Return"}();
 
 Config.history.controls = false;
 
 UIBar.stow()
+
+
 
 
 
@@ -3134,7 +3138,7 @@ Das Kind ist um die 4 Jahre alt und sprechen fällt ihm noch etwas schwer. Es is
 
 Zum Glück ist der kleine Junge noch nicht lang in diesem Loch gewesen. Zu lange für ein so kleines Kind, keine Frage. Doch es hätte schlimmer sein können. Du redest noch eine Weile mit dem Jungen, um sein Vertrauen zu gewinnen und ihm das Gefühl zu geben, dass er nun in Sicherheit ist. Ihr geht zurück zum Beiboot.
 &lt;&lt;set $junge += 1&gt;&gt;
-[[Wir gehen zurück an Bord]]</tw-passagedata><tw-passagedata pid="244" name="Wir gehen zurück an Bord" tags="" position="4069,4274" size="100,100">&lt;&lt;if $junge is 1&gt;&gt;
+[[Wir gehen zurück an Bord]]</tw-passagedata><tw-passagedata pid="244" name="Wir gehen zurück an Bord" tags="" position="4309,4547" size="100,100">&lt;&lt;if $junge is 1&gt;&gt;
 Zurück an Bord schickst du den Jungen gemeinsam mit einem der Seemänner in die Küche. Er soll erstmal was essen und trinken. Außerdem soll er nicht zufällig alleine auf die Piraten stoßen, die nun wieder unter Deck gefangen sind. Der Junge nickt und fragt, ob du ihn nicht lieber begleiten kannst. Leider musst du es verneinen. Du hast erstmal Wichtigeres zu tun.
 
 Du gehst unter Deck und holst den Piraten, der dir von der Insel erzählt hat aus den provisorisch umgebauten Zellen, die mal Kajüten waren. Du fragst ihn, ob er von dem Kind wusste und ob er euch deshalb dorthin lockte.
@@ -3897,13 +3901,12 @@ Du stehst mit einem verwirrtem und fragenden Blick vor dem Mann. Der schüttelt 
 &quot;Also noch mal. Töte die Oger in der örtlichen Miene. Du solltest gut vorbereitet sein. &quot;Verrückt&quot; ist nicht gleich &quot;dumm&quot;. Ein Verrückter geht Risikos ein. Nur der Dumme geht unvorbereitet in eine Schlacht. Schau mal beim Lederer vorbei. Der sollte wenigstens einen leichten Schutz für dich haben. Wenn du keine Taler hast, dann schau mal an das &lt;span class=&quot;redtext&quot;&gt;Anschlagbrett&lt;/span&gt;. Da solltest du noch ein wenig dazu verdienen können. Dann mal viel Glück und lass dich nicht zerreißen. Verlass einfach die Stadt und folge den Schildern. Kannst die Mine nicht wirklich verfehlen. Auf Hals und Beinbruch, Neuling.&quot;
 
 [[Ich gehe zur Stadtmitte]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="324" name="Wegen der Sache mit dem Sklavenhändler..." tags="" position="5188,373" size="100,100">Doppelklick auf diesen Absatz zum Bearbeiten.</tw-passagedata><tw-passagedata pid="325" name="Wegen der Sache mit dem Mord..." tags="" position="5189,269" size="100,100">&lt;&lt;if $kindtot eq 1&gt;&gt;
-&lt;&lt;elseif $kindweg eq 1&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="324" name="Wegen der Sache mit dem Sklavenhändler..." tags="" position="5188,373" size="100,100">Doppelklick auf diesen Absatz zum Bearbeiten.</tw-passagedata><tw-passagedata pid="325" name="Wegen der Sache mit dem Mord..." tags="" position="5189,269" size="100,100">&lt;&lt;if $kindweg eq 1&gt;&gt;
 &lt;&lt;elseif $kindheile eq 1&gt;&gt;
 &lt;&lt;else&gt;&gt;
-Er nickt zufrieden.
+Er nickt.
 
-&quot;Sehr gut. Ein messerscharfer Verstand kann mitunter tiefer schneiden wie ein Messer aus Stahl. Nicht mein Ding, aber muss es auch nicht. Leider kann ich dir nicht mehr sagen, wie ich es schon tat. Ein 8 jähriges Mädchen verlor ihr Leben und literweise Blut. Die Leiche oder die Mordwaffe sowie andere Spuren sind nicht aufzufinden. Nichtmal Spuren im Blut. Als sei der Mörder ein Geist gewesen. Echt gruselig. Die Familie wohnt im einzigen roten Haus in der Stadt. Oder besser gesagt vor der Stadt. Es ist die rotgestrichene Holzhütte vor den Stadtmauern. Seht euch den Schauplatz an und tut was nötig ist. Ich verlasse mich auf euch!&quot;
+&quot;Ein messerscharfer Verstand kann mitunter tiefer schneiden wie ein Messer aus Stahl. Nicht mein Ding, aber muss es auch nicht. Leider kann ich dir nicht mehr sagen, wie ich es schon tat. Ein 8 jähriges Mädchen verlor ihr Leben und literweise Blut. Die Leiche oder die Mordwaffe sowie andere Spuren sind nicht aufzufinden. Nichtmal Spuren im Blut. Als sei der Mörder ein Geist gewesen. Echt gruselig. Die Familie wohnt im einzigen roten Haus in der Stadt. Oder besser gesagt vor der Stadt. Es ist die rotgestrichene Holzhütte vor den Stadtmauern. Seht euch den Schauplatz an und tut was nötig ist. Ich verlasse mich auf euch!&quot;
 
 [[Ich gehe zur Stadtmitte]]
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="326" name="Die Stadt verlassen und weiterziehen" tags="" position="6308,67" size="100,100">&lt;&lt;if $ogerfertig eq 1&gt;&gt;
@@ -3962,7 +3965,7 @@ Du hast noch $taler Taler.
 	&lt;&lt;elseif $taler lt 30&gt;&gt;
 Du suchst in deinen Taschen nach Talern. Der Lederer rät dir einmal einen Blick auf das &lt;span class=&quot;redtext&quot;&gt;Anschlagbrett&lt;/span&gt; zu werfen.
 [[Ich gehe zur Stadtmitte]]
-	&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="333" name="Zur rotgestrichenen Holzhütte" tags="" position="4965,604.3333333333334" size="100,100">&lt;&lt;audio markt stop&gt;&gt;
+	&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="333" name="Zur rotgestrichenen Holzhütte" tags="" position="4965,604" size="100,100">&lt;&lt;audio markt stop&gt;&gt;
 &lt;&lt;audio theme4 stop&gt;&gt;
 &lt;&lt;audio mystery volume 0.7 loop play&gt;&gt;
 &lt;&lt;audio rain volume 0.9 loop play&gt;&gt;
@@ -3980,24 +3983,24 @@ Als du ein weiteres Mal etwas beherzter klopfst geht langsam, wie von Geisterhan
 [[Ich sorge für Licht]]
 [[Ich betrete den ersten Raum links]]
 [[Ich betrete den zweiten Raum links]]
-[[Ich betrete den einzigen Raum rechts]]</tw-passagedata><tw-passagedata pid="335" name="Ich schaue mich einmal genauer um" tags="" position="4817.666666666667,1059" size="100,100">Du gehst einmal um die gesamte Hütte herum und achtest auf alles. Alle Fenster sind verriegelt und auch die Kellerluke ist fest verschlossen und verrammelt. Du findest außerdem Fußspuren. Größe 45 ungefähr. Es scheint also ein Mann gewesen zu sein. Oder eine Frau mit sehr großen Füßen. Die Spuren kommen aus Richtung des Waldes, der sich relativ nah an der Hütte befindet. Sie sind sehr gut auszumachen und der Abdruck ist tief. Derjenige der hier entlang ging war also schwer. So ca. 110 Kilo oder etwas mehr, schätzt du. Die Fußspuren führen seltsamerweise nur zur Hütte hin und enden an der Wand der Holzhütte. Du gehst absichtlich noch ein paar weitere Runden um&#39;s Haus. Nichts. Diese sehr prägnanten Spuren tauchen nur einmal auf und enden direkt an der Wand der Hütte. Es gibt keine Spuren zurück noch irgendwelche anderen Spüren an der Wand. Wer auch immer irgendwie in die Hütte gekommen ist muss noch drin sein! So vermutest du es zumindest. 
+[[Ich betrete den einzigen Raum rechts]]</tw-passagedata><tw-passagedata pid="335" name="Ich schaue mich einmal genauer um" tags="" position="4817,1059" size="100,100">Du gehst einmal um die gesamte Hütte herum und achtest auf alles. Alle Fenster sind verriegelt und auch die Kellerluke ist fest verschlossen und verrammelt. Du findest außerdem Fußspuren. Größe 45 ungefähr. Es scheint also ein Mann gewesen zu sein. Oder eine Frau mit sehr großen Füßen. Die Spuren kommen aus Richtung des Waldes, der sich relativ nah an der Hütte befindet. Sie sind sehr gut auszumachen und der Abdruck ist tief. Derjenige der hier entlang ging war also schwer. So ca. 110 Kilo oder etwas mehr, schätzt du. Die Fußspuren führen seltsamerweise nur zur Hütte hin und enden an der Wand der Holzhütte. Du gehst absichtlich noch ein paar weitere Runden um&#39;s Haus. Nichts. Diese sehr prägnanten Spuren tauchen nur einmal auf und enden direkt an der Wand der Hütte. Es gibt keine Spuren zurück noch irgendwelche anderen Spüren an der Wand. Wer auch immer irgendwie in die Hütte gekommen ist muss noch drin sein! So vermutest du es zumindest. 
 
 Du hast einen Hinweis gefunden!
 &lt;&lt;set $spur1 +=1&gt;&gt;
 Du solltest dich nun drinen umsehen.
 &lt;&lt;set $clue +=1&gt;&gt;
-[[Ich gehe hinein]]</tw-passagedata><tw-passagedata pid="336" name="Ich suche erstmal hier draußen nach Hinweisen" tags="" position="4821.666666666667,833" size="100,100">Auch wenn du ein intelligenter Magier bist, so wird dein Intellekt allein nicht reichen. Mit Hilfe eines kleinen Zaubers könntest du eventuelle Spuren finden. 
+[[Ich gehe hinein]]</tw-passagedata><tw-passagedata pid="336" name="Ich suche erstmal hier draußen nach Hinweisen" tags="" position="4821,833" size="100,100">Auch wenn du ein intelligenter Magier bist, so wird dein Intellekt allein nicht reichen. Mit Hilfe eines kleinen Zaubers könntest du eventuelle Spuren finden. 
 
 Wirf einen W10 auf Intellekt. Hast Du den exakten oder niedrigeren Wert deines Intellekts hast du es geschafft. Wirfst Du drüber, so ist es dir nicht gelungen.
 
 [[Ich konnte den Zauber wirken]]
-[[Ich konnte den Zauber nicht wirken]]</tw-passagedata><tw-passagedata pid="337" name="Ich konnte den Zauber wirken" tags="" position="4817.666666666667,944.6666666666666" size="100,100">Mit einem Fingerschnipp verschwinden wie von Geisterhand allerlei Fußspuren, Abdrücke und weitere Spuren. Auch die Dunkelheit und der Regen blenden vor deinem inneren Auge aus. Nur eine Spur bleibt übrig und vor deinem inneren Auge leuchtet sie in einem hellen Blau. Du bist dir sicher, dass das die richtige Spur ist.
+[[Ich konnte den Zauber nicht wirken]]</tw-passagedata><tw-passagedata pid="337" name="Ich konnte den Zauber wirken" tags="" position="4817,944" size="100,100">Mit einem Fingerschnipp verschwinden wie von Geisterhand allerlei Fußspuren, Abdrücke und weitere Spuren. Auch die Dunkelheit und der Regen blenden vor deinem inneren Auge aus. Nur eine Spur bleibt übrig und vor deinem inneren Auge leuchtet sie in einem hellen Blau. Du bist dir sicher, dass das die richtige Spur ist.
 
-[[Ich schaue mich einmal genauer um]]</tw-passagedata><tw-passagedata pid="338" name="Ich konnte den Zauber nicht wirken" tags="" position="4711,949.6666666666666" size="100,100">Du strengst dich an, so gut es nur geht. Doch das Einzige was dir gelingt ist eine kleine Rauchwolke die mit einem starken Schwefelgeruch in deine Nase steigt. Das hat dir leider nichts gebracht. Ein wenig deprimiert begibst Du dich in&#39;s Haus.
+[[Ich schaue mich einmal genauer um]]</tw-passagedata><tw-passagedata pid="338" name="Ich konnte den Zauber nicht wirken" tags="" position="4711,949" size="100,100">Du strengst dich an, so gut es nur geht. Doch das Einzige was dir gelingt ist eine kleine Rauchwolke die mit einem starken Schwefelgeruch in deine Nase steigt. Das hat dir leider nichts gebracht. Ein wenig deprimiert begibst Du dich in&#39;s Haus.
 
-[[Ich gehe hinein]]</tw-passagedata><tw-passagedata pid="339" name="Ich sorge für Licht" tags="" position="4490,886.3333333333333" size="100,100">Für ein wenig Licht sorgen ist für dich kein Problem. Du schnippst mit deinem Finger und ein warmes, gelbliches Licht füllt nun die Hütte. Das ist schon besser. Endlich siehst Du mal was. Und ganz so gruselig ist es nun auch nicht mehr!
+[[Ich gehe hinein]]</tw-passagedata><tw-passagedata pid="339" name="Ich sorge für Licht" tags="" position="4490,886" size="100,100">Für ein wenig Licht sorgen ist für dich kein Problem. Du schnippst mit deinem Finger und ein warmes, gelbliches Licht füllt nun die Hütte. Das ist schon besser. Endlich siehst Du mal was. Und ganz so gruselig ist es nun auch nicht mehr!
 &lt;&lt;set $licht +=1&gt;&gt;
-[[Zurück in den Vorraum]]</tw-passagedata><tw-passagedata pid="340" name="Ich betrete den ersten Raum links" tags="" position="4273.333333333333,885.6666666666666" size="100,100">&lt;&lt;if $licht eq 1 and $wz eq 0&gt;&gt;
+[[Zurück in den Vorraum]]</tw-passagedata><tw-passagedata pid="340" name="Ich betrete den ersten Raum links" tags="" position="4273,885" size="100,100">&lt;&lt;if $licht eq 1 and $wz eq 0&gt;&gt;
 Dies scheint das Wohnzimmer zu sein. Mehrere Sitzmöglichkeiten und ein Tisch füllen den Raum. Vereinzelnd stehen Kerzenständer in den Ecken. Auf dem Tisch stehen neben einer Tasse auch eine leere Vase und eine kleine Schüssel aus Holz gefüllt mit frischem Obst.
 
 Du schaust dich weiter um und achtest auf alles, was irgendwie nicht in&#39;s Bild passt. Dir will aber partout nichts einfallen. Magie könnte hier helfen.
@@ -4011,16 +4014,16 @@ Du hast dich hier bereits umgesehen. Ein weiteres Mal würde nichts bringen, au�
 Du siehst absolut nichts. Nur ab und an, wenn ein Blitz aufhellt kannst Du einen kurzen Blick auf den Raum werfen. So kannst Du nichts erkennen. Du brauchst erstmal Licht.
 
 [[Zurück in den Vorraum]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="341" name="Ich betrete den zweiten Raum links" tags="" position="4379,884.0000000000001" size="100,100">&lt;&lt;if $licht eq 1 and $kz eq 0&gt;&gt;
-Dies scheint das Kinderzimmer zu sein. Ein kleines Bett, eine Spielzeugkiste und ein paar Stofftiere liegen herum. Es ist unordentlich. So wie ein Kinderzimmer nunmal ist. Auf dem Fensterbrett steht eine Miniatur-Leinwand auf einer Miniatur-Staffelei. Das Bild zeigt eine Art Kellerraum. Bücherregale, ein Altar in der Mitte und 3 grün brennende Kerzen stehen um den Altar herum. Als Du dir das Bild einmal genauer ansiehst sticht es plötzlich in deinem Kopf, als hätte man dir ein Messer hineingestochen. Ruckartig zuckst Du zurück. Irgendwas stimmt mit dem Bild nicht.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="341" name="Ich betrete den zweiten Raum links" tags="" position="4379,884" size="100,100">&lt;&lt;if $licht eq 1 and $kz eq 0&gt;&gt;
+Dies scheint das Kinderzimmer zu sein. Ein kleines Bett, eine Spielzeugkiste und ein paar Stofftiere liegen herum. Es ist unordentlich und die erwähnte Blutlache sickert langsam in den Holzboden. Auf dem Fensterbrett steht eine Miniatur-Leinwand auf einer Miniatur-Staffelei. Das Bild zeigt eine Art Kellerraum. Bücherregale, ein Altar in der Mitte und 3 grün brennende Kerzen stehen um den Altar herum. Als Du dir das Bild einmal genauer ansiehst sticht es plötzlich in deinem Kopf, als hätte man dir ein Messer hineingestochen. Ruckartig zuckst Du zurück. Irgendwas stimmt mit dem Bild nicht.
 
 [[Das Zimmer genauer untersuchen]]
-
+[[Zurück in den Vorraum]]
 &lt;&lt;else&gt;&gt;
 Du siehst absolut nichts. Nur ab und an, wenn ein Blitz aufhellt kannst Du einen kurzen Blick auf den Raum werfen. So kannst Du nichts erkennen. Du brauchst erstmal Licht.
 
 [[Zurück in den Vorraum]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="342" name="Ich betrete den einzigen Raum rechts" tags="" position="4598.666666666667,886" size="100,100">&lt;&lt;if $licht eq 1 and $sz eq 0&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="342" name="Ich betrete den einzigen Raum rechts" tags="" position="4598,886" size="100,100">&lt;&lt;if $licht eq 1 and $sz eq 0&gt;&gt;
 Dies scheint das Schlafzimmer zu sein. Ein Doppelbett, Nachtschränkchen und Kerzenständer. Nichts besonderes, aber auch nicht ärmlich eingerichtet. Das Bett ist gemacht und die Hausschuhe der Eltern stehen noch vor dem Bett. Du hebst eine Augenbraue. Irgendetwas stimmt da nicht. Wenn man morgens aufsteht, so zieht man die Hausschuhe doch an. Und würde sie dann Später, wenn man wieder in&#39;s Bett geht wieder vor das Bett stellen. Es sei denn man verlässt das Haus. Dann würden die Hausschuhe im Flur stehen. Dort waren die Schuhe aber auch nicht. Das wäre dir aufgefallen. Irgendwas muss hier passiert sein. Mit Magie könntest Du eventuell einen Hinweis finden.
 
 [[Das Schlafzimmer mit Magie absuchen]]
@@ -4032,7 +4035,7 @@ Du hast dich hier bereits umgesehen. Ein weiteres Mal würde nichts bringen, au�
 Du siehst absolut nichts. Nur ab und an, wenn ein Blitz aufhellt kannst Du einen kurzen Blick auf den Raum werfen. So kannst Du nichts erkennen. Du brauchst erstmal Licht.
 
 [[Zurück in den Vorraum]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="343" name="Zurück in den Vorraum" tags="" position="4953.333333333333,822.3333333333331" size="100,100">&lt;&lt;if $licht eq 1&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="343" name="Zurück in den Vorraum" tags="" position="4953,822" size="100,100">&lt;&lt;if $licht eq 1&gt;&gt;
 Du stehst in einem kleinen Vorraum. Von hier kommst Du in alle Räume hinein. Was möchtest Du tun?
 
 [[Ich betrete den ersten Raum links]]
@@ -4048,10 +4051,10 @@ Du stehst wieder in dem kleinen Vorraum. Von hier kommst Du in alle Räume hinei
 [[Ich betrete den ersten Raum links]]
 [[Ich betrete den zweiten Raum links]]
 [[Ich betrete den einzigen Raum rechts]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="344" name="Das Wohnzimmer mit Magie absuchen" tags="" position="4273.333333333333,988.9999999999999" size="100,100">Wirf einen W10 auf Intellekt. Hast Du den exakten oder niedrigeren Wert deines Intellekts hast du es geschafft. Wirfst Du drüber, so ist es dir nicht gelungen.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="344" name="Das Wohnzimmer mit Magie absuchen" tags="" position="4273,988" size="100,100">Wirf einen W10 auf Intellekt. Hast Du den exakten oder niedrigeren Wert deines Intellekts hast du es geschafft. Wirfst Du drüber, so ist es dir nicht gelungen.
 
 [[Ich konnte Magie im Wohnzimmer anwenden]]
-[[Ich konnte keine Magie im Wohnzimmer anwenden]]</tw-passagedata><tw-passagedata pid="345" name="Ich konnte Magie im Wohnzimmer anwenden" tags="" position="4223.333333333332,1094" size="100,100">&lt;&lt;if $spur1 eq 1&gt;&gt;
+[[Ich konnte keine Magie im Wohnzimmer anwenden]]</tw-passagedata><tw-passagedata pid="345" name="Ich konnte Magie im Wohnzimmer anwenden" tags="" position="4223,1094" size="100,100">&lt;&lt;if $spur1 eq 1&gt;&gt;
 Du schnippst mit deinen Fingern und ein blaues Licht erhellt für einen Augenblick das Zimmer. Du schließt die Augen und als Du sie wieder öffnest umgibt ein blaues Schimmern den Teppich. Dir fällt auf das der Teppich schief liegt und der Teppich zersaust aussieht. Auch wenn das Zimmer nicht akkurat aufgeräumt ist, so ist es doch irgendwie &quot;ordentlich&quot;. Der schiefe und zerzauste Teppich passen da nicht rein. Irgendwas oder irgendwer hat etwas mit diesem Teppich angestellt. Da bist Du dir sehr sicher!
 
 Desweiteren kannst Du durch die Wand der Hütte die Fußspuren erkennen, die Du draußen bereits entdeckt hast. Die Fußspuren draußen hörten also genau vor dem Wohnzimmer auf. Vielleicht ist Der oder Die irgendwie in&#39;s Wohnzimmer gekommen und hat dabei den Teppich verrückt.
@@ -4065,20 +4068,20 @@ Ein blaues Licht erhellt für einen Augenblick das Zimmer. Du schließt die Auge
 Du hast einen Hinweis gefunden!
 &lt;&lt;set $clue +=1&gt;&gt;
 [[Zurück in den Vorraum]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="346" name="Ich konnte keine Magie im Wohnzimmer anwenden" tags="" position="4331.666666666667,1095.6666666666667" size="100,100">Du strengst dich an, so gut es nur geht. Doch das Einzige was dir gelingt ist eine kleine Rauchwolke die mit einem starken Schwefelgeruch in deine Nase steigt. Das hat dir leider nichts gebracht. Etwas in dir ist gerade gestorben und Du lässt den Kopf hängen.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="346" name="Ich konnte keine Magie im Wohnzimmer anwenden" tags="" position="4331,1095" size="100,100">Du strengst dich an, so gut es nur geht. Doch das Einzige was dir gelingt ist eine kleine Rauchwolke die mit einem starken Schwefelgeruch in deine Nase steigt. Das hat dir leider nichts gebracht. Etwas in dir ist gerade gestorben und Du lässt den Kopf hängen.
 &lt;&lt;set $wz +=1&gt;&gt;
-[[Zurück in den Vorraum]]</tw-passagedata><tw-passagedata pid="347" name="Das Schlafzimmer mit Magie absuchen" tags="" position="4597.333333333333,997.3333333333334" size="100,100">Wirf einen W10 auf Intellekt. Hast Du den exakten oder niedrigeren Wert deines Intellekts hast du es geschafft. Wirfst Du drüber, so ist es dir nicht gelungen.
+[[Zurück in den Vorraum]]</tw-passagedata><tw-passagedata pid="347" name="Das Schlafzimmer mit Magie absuchen" tags="" position="4597,997" size="100,100">Wirf einen W10 auf Intellekt. Hast Du den exakten oder niedrigeren Wert deines Intellekts hast du es geschafft. Wirfst Du drüber, so ist es dir nicht gelungen.
 
 [[Ich konnte Magie im Schlafzimmer anwenden]]
-[[Ich konnte keine Magie im Schlafzimmer anwenden]]</tw-passagedata><tw-passagedata pid="348" name="Ich konnte Magie im Schlafzimmer anwenden" tags="" position="4525.666666666666,1102.3333333333335" size="100,100">Du schnippst mit deinen Fingern und ein blaues Licht erhellt für einen Augenblick das Zimmer. Du schließt die Augen und als Du sie wieder öffnest kannst Du ganz schwach 3 Schemen erkennen. Wie aus schwarzem Rauch gemacht liegen 2 Schemen im Bett. Der dritte Schemen kommt aus einer Wand geschwebt und stellt sich vor die beiden Schemen im Bett. Er macht eine Bewegung mit seiner Hand. Darauf hin stehen die beiden Schemen auf und verlassen das Zimmer durch die Tür. Die beiden Schemen bewegen sich merkwürdig. So als seien sie in Trance. Nachdem die beiden Schemen zur Tür raus sind verschwindet das dritte Schemen in Richtung des gegenüber liegenden Raumes und löst sich danach auf.
+[[Ich konnte keine Magie im Schlafzimmer anwenden]]</tw-passagedata><tw-passagedata pid="348" name="Ich konnte Magie im Schlafzimmer anwenden" tags="" position="4525,1102" size="100,100">Du schnippst mit deinen Fingern und ein blaues Licht erhellt für einen Augenblick das Zimmer. Du schließt die Augen und als Du sie wieder öffnest kannst Du ganz schwach 3 Schemen erkennen. Wie aus schwarzem Rauch gemacht liegen 2 Schemen im Bett. Der dritte Schemen kommt aus einer Wand geschwebt und stellt sich vor die beiden Schemen im Bett. Er macht eine Bewegung mit seiner Hand. Darauf hin stehen die beiden Schemen auf und verlassen das Zimmer durch die Tür. Die beiden Schemen bewegen sich merkwürdig. So als seien sie in Trance. Nachdem die beiden Schemen zur Tür raus sind verschwindet das dritte Schemen in Richtung des gegenüber liegenden Raumes und löst sich danach auf.
 
 Du bist dir sicher, dass Du gerade gesehen hast was hier vor ein paar Nächten passiert ist.
 &lt;&lt;set $sz +=1&gt;&gt;
 Du hast einen Hinweis gefunden!
 &lt;&lt;set $clue +=1&gt;&gt;
-[[Zurück in den Vorraum]]</tw-passagedata><tw-passagedata pid="349" name="Ich konnte keine Magie im Schlafzimmer anwenden" tags="" position="4650.666666666666,1100.6666666666667" size="100,100">Du strengst dich an, so gut es nur geht. Doch das Einzige was dir gelingt ist eine kleine Rauchwolke die mit einem starken Schwefelgeruch in deine Nase steigt. Das hat dir leider nichts gebracht. Etwas in dir ist gerade gestorben und Du lässt den Kopf hängen. Das ist aber auch ein schwerer Zauber.
+[[Zurück in den Vorraum]]</tw-passagedata><tw-passagedata pid="349" name="Ich konnte keine Magie im Schlafzimmer anwenden" tags="" position="4650,1100" size="100,100">Du strengst dich an, so gut es nur geht. Doch das Einzige was dir gelingt ist eine kleine Rauchwolke die mit einem starken Schwefelgeruch in deine Nase steigt. Das hat dir leider nichts gebracht. Etwas in dir ist gerade gestorben und Du lässt den Kopf hängen. Das ist aber auch ein schwerer Zauber.
 &lt;&lt;set $sz +=1&gt;&gt;
-[[Zurück in den Vorraum]]</tw-passagedata><tw-passagedata pid="350" name="Ich möchte noch einmal das Kinderzimmer untersuchen" tags="" position="4541.000000000001,1214.0000000000002" size="100,100">&lt;&lt;if $licht eq 1 and $kz eq 0&gt;&gt;
+[[Zurück in den Vorraum]]</tw-passagedata><tw-passagedata pid="350" name="Ich möchte noch einmal das Kinderzimmer untersuchen" tags="" position="4541,1214" size="100,100">&lt;&lt;if $licht eq 1 and $kz eq 0&gt;&gt;
 Dies scheint das Kinderzimmer zu sein. Ein kleines Bett, eine Spielzeugkiste und ein paar Stofftiere liegen herum. Es ist unordentlich. So wie ein Kinderzimmer nunmal ist. Auf dem Fensterbrett steht eine Miniatur-Leinwand auf einer Miniatur-Staffelei. Das Bild zeigt eine Art Kellerraum. Bücherregale, ein Altar in der Mitte und 3 grün brennende Kerzen stehen um den Altar herum. Als Du dir das Bild einmal genauer ansiehst sticht es plötzlich in deinem Kopf, als hätte man dir ein Messer hineingestochen. Ruckartig zuckst Du zurück. Irgendwas stimmt mit dem Bild nicht.
 
 [[Das Zimmer genauer untersuchen]]
@@ -4087,20 +4090,20 @@ Dies scheint das Kinderzimmer zu sein. Ein kleines Bett, eine Spielzeugkiste und
 Du siehst absolut nichts. Nur ab und an, wenn ein Blitz aufhellt kannst Du einen kurzen Blick auf den Raum werfen. So kannst Du nichts erkennen. Du brauchst erstmal Licht.
 
 [[Zurück in den Vorraum]]
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="351" name="Das Zimmer genauer untersuchen" tags="" position="4425.666666666667,1214" size="100,100">Du schnippst mit deinen Fingern und ein blaues Licht erhellt für einen Augenblick das Zimmer. Du schließt die Augen und als Du sie wieder öffnest siehst Du plötzlich ein Schemen geformt aus schwarzem Rauch. Das Schemen scheint das Kind zu sein. Es liegt im Bett. Plötzlich kommt ein zweites, großes Schemen rein geschwebt und macht eine merkwürdige Handbewegung. Das Schemen des Kindes wird plötzlich zu einer kleinen Kugel und verschwindet in dem Miniaturbild auf dem Fensterbrett. Das große Schemen verkleinert sich nun ebenfalls und folgt dem kleineren Schemen in&#39;s Bild. Du bist dir sicher: Das Kind ist irgendwie in diesem Bild gefangen. 
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="351" name="Das Zimmer genauer untersuchen" tags="" position="4425,1214" size="100,100">Du schnippst mit deinen Fingern und ein blaues Licht erhellt für einen Augenblick das Zimmer. Du schließt die Augen und als Du sie wieder öffnest siehst Du plötzlich ein Schemen geformt aus schwarzem Rauch. Das Schemen scheint das Kind zu sein. Es liegt im Bett. Plötzlich kommt ein zweites, großes Schemen rein geschwebt und macht eine merkwürdige Handbewegung. Das Schemen des Kindes wird plötzlich zu einer kleinen Kugel und verschwindet in dem Miniaturbild auf dem Fensterbrett. Das große Schemen verkleinert sich nun ebenfalls und folgt dem kleineren Schemen in&#39;s Bild. Du bist dir sicher: Das Kind ist irgendwie in diesem Bild gefangen. Dir fällt außerdem auf, dass die Blutlache verschwunden ist. Eine Halluzination um die Stadtwache auf eine falsche Fährte zu locken?
 
 Du stellst dich vor das Bild und...
 
 [[Berührst das Bild]]
-[[Zurück in den Vorraum]]</tw-passagedata><tw-passagedata pid="352" name="Berührst das Bild" tags="" position="4426.000000000001,1324.0000000000002" size="100,100">Bist Du sicher, dass Du alles durchsucht hast?
+[[Zurück in den Vorraum]]</tw-passagedata><tw-passagedata pid="352" name="Berührst das Bild" tags="" position="4426,1324" size="100,100">Bist Du sicher, dass Du alles durchsucht hast?
 
 [[Ja, ich möchte das Bild berühren]]
-[[Zurück in den Vorraum]]</tw-passagedata><tw-passagedata pid="353" name="Ja, ich möchte das Bild berühren" tags="" position="4426.000000000001,1430.666666666667" size="100,100">&lt;&lt;audio rain stop&gt;&gt;
+[[Zurück in den Vorraum]]</tw-passagedata><tw-passagedata pid="353" name="Ja, ich möchte das Bild berühren" tags="" position="4426,1430" size="100,100">&lt;&lt;audio rain stop&gt;&gt;
 Als Du das Miniaturbild so gerade eben mit der Fingerspitze berührst schießt plötzlich schwarzer Rauch aus dem Bild, schlängelt sich blitzschnell um deinen Arm und reißt dich in&#39;s Bild. Dir wird schwarz vor Augen, Du hast das Gefühl zu fallen und Du fühlst einen unwahrscheinlichen Druck auf deinem ganzen Körper. Du hast das Gefühl zu zerplatzen. Dann wirst Du plötzlich Federleicht, das Gefühl zu fallen hört abrubt auf und dir wird wieder klar vor Augen.
 
 Du befindest dich in einem Keller. Steinwände, feuchte Stellen und Kälte zieren den langen Gang. Nur am Ende des Ganges leuchtet ein kleines Licht. Licht das durch das Schlüsselloch einer Tür durchschimmert. Du weißt nicht warum, aber Du bist dir sicher, dass Du das Kind und dessen Entführer hinter dieser Tür findest. Du sprintest auf die Tür zu und...
 
-[[Reiß die Tür auf!]]</tw-passagedata><tw-passagedata pid="354" name="Reiß die Tür auf!" tags="" position="4429.333333333334,1540.666666666667" size="100,100">&lt;&lt;if $clue eq 0&gt;&gt;
+[[Reiß die Tür auf!]]</tw-passagedata><tw-passagedata pid="354" name="Reiß die Tür auf!" tags="" position="4429,1540" size="100,100">&lt;&lt;if $clue eq 0&gt;&gt;
 Du reißt mit aller Kraft die Tür auf und machst dich gedanklich schon auf einen harten Kampf gefasst. Dein Herz rast und pumpt das Adrenalin durch deine Adern. Jeder Muskel ist bereit und dein Verstand geht schon die Verse deiner Angriffszauber runter. Doch nachdem sich der Staub etwas legt und Du deine Arme die Du vorher schützend vor dein Gesicht gehalten hast runternimmst siehst Du nichts. Kein Kind, kein Entführer. Du siehst lediglich ein paar Bücherregale, einen blutverschmierten Altar und 3 abgebrannte Fackeln.
 
 Du gehst zum Altar und schaust auf das Blut. Du weißt nicht warum, aber Du weißt das dies das Blut des Kindes ist. Irgendetwas sagt dir das. Du konntest das Kind leider nicht retten. Du haust mit deiner Faust auf den Altar. Du hasst dich gerade selbst. &quot;Hätte ich doch nur mehr Hinweise gefunden!&quot; wirfst Du dir vor. Dein Faust blutet und du senkst deinen Kopf. Deine Gedanken widmest Du dem Kind.
