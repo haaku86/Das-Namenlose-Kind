@@ -318,11 +318,17 @@ color: #800000;
 
 
 
+
+
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">!function(){l10nStrings.identity="Spiel",l10nStrings.aborting="Vorzeitig abgebrochen",l10nStrings.cancel="Abbrechen",l10nStrings.close="Schließen",l10nStrings.ok="OK",l10nStrings.errorTitle="Fehler",l10nStrings.errorNonexistentPassage='die Passage "{passage}" existiert nicht',l10nStrings.errorSaveMissingData="Im Speicherstand fehlen notwendige Daten. Entweder ist die geladene Datei kein Speicherstand oder der Speicherstand ist korrupt",l10nStrings.errorSaveIdMismatch="Speicherstand ist vom falschen {identity}",l10nStrings._warningGermanLacking="in ihrem Browser entweder deaktiviert oder nicht möglich",l10nStrings._warningOutroDegraded=", darum läuft dieses {identity} in einem herabgesetzten Modus. Sie können zwar fortfahren, allerdings kann es sein, dass nicht alle Teile wie gewünscht funktionieren.",l10nStrings.warningNoWebStorage="Das Web Storage API ist {_warningGermanLacking}{_warningOutroDegraded}",l10nStrings.warningDegraded="Einige Features, die diese/s {identity} benötigt sind {_warningGermanLacking}{_warningOutroDegraded}",l10nStrings.debugViewTitle="Fehlersuche-Ansicht",l10nStrings.debugViewToggle="Fehlersuche-Ansicht umschalten",l10nStrings.uiBarToggle="Benutzeroberflächenleiste umschlaten",l10nStrings.uiBarBackward="Im {identity}-Ablauf zurück gehen",l10nStrings.uiBarForward="Im {identity}-Ablauf nach vor gehen",l10nStrings.uiBarJumpto="Zu einem bestimmten Punkt im {identity}-Ablauf springen",l10nStrings.jumptoTitle="Springe zu",l10nStrings.jumptoTurn="Zug",l10nStrings.jumptoUnavailable="Momentan sind keine Sprungmarken vorhanden…",l10nStrings.savesTitle="Speicherstände",l10nStrings.savesDisallowed="Speichern ist in dieser Passage nicht gestattet.",l10nStrings.savesEmptySlot="— Speicherslot leer —",l10nStrings.savesIncapable="Die Möglichkeit zu Speichern ist {_warningGermanLacking}, darum ist die Speicherfunktion für diese Sitzung deaktiviert.",l10nStrings.savesLabelAuto="Automatischer Speicherstand",l10nStrings.savesLabelDelete="Löschen",l10nStrings.savesLabelExport="Auf Datensträger speichern…",l10nStrings.savesLabelImport="Von Datenträger laden…",l10nStrings.savesLabelLoad="Laden",l10nStrings.savesLabelClear="Alle löschen",l10nStrings.savesLabelSave="Speichern",l10nStrings.savesLabelSlot="Slot",l10nStrings.savesSavedOn="Gespeichert nach",l10nStrings.savesUnavailable="Keine Speicherstand-Slots gefunden…",l10nStrings.savesUnknownDate="unbekannt",l10nStrings.settingsTitle="Einstellungen",l10nStrings.settingsOff="Aus",l10nStrings.settingsOn="An",l10nStrings.settingsReset="Auf Standardwerte zurücksetzen",l10nStrings.restartTitle="Neustart",l10nStrings.restartPrompt="Sind sie sicher, dass Sie neu starten wollen? Ihr Fortschritt nach dem letzten Speichern geht verloren.",l10nStrings.shareTitle="Teilen",l10nStrings.autoloadTitle="Automatisch laden",l10nStrings.autoloadCancel="Zum Start gehen",l10nStrings.autoloadOk="Automatischen Speicherstand laden",l10nStrings.autoloadPrompt="Ein automatischer Speicherstand existiert bereits. Trotzdem laden oder zum Start gehen?",l10nStrings.macroBackText="Zurück",l10nStrings.macroReturnText="Return"}();
 
 Config.history.controls = false;
 
 UIBar.stow()
+
+
+
 
 
 
@@ -508,6 +514,16 @@ Ich glaub den Namen hab ich schon mal gehört. Machst du nicht so einen Podcast 
 &lt;&lt;button Weiter Willkommen&gt;&gt;&lt;&lt;/button&gt;&gt;
 
 &lt;&lt;elseif $name is &quot;frosst77&quot;&gt;&gt; Hallo Bruderherz! Schön dich begrüßen zu dürfen! Du bekommst einen Bonus von +2 auf Intellekt. Welches Geschlecht möchtest du denn spielen?
+&lt;&lt;radiobutton &quot;$geschlecht&quot; Abenteurer checked&gt;&gt; Abenteurer
+&lt;&lt;radiobutton &quot;$geschlecht&quot; Abenteurerin&gt;&gt; Abenteurerin
+&lt;&lt;button Weiter Willkommen&gt;&gt;&lt;&lt;/button&gt;&gt;
+
+&lt;&lt;elseif $name is &quot;Holzwurmeliger&quot;&gt;&gt; Hallo Bruderherz! Schön dich begrüßen zu dürfen! Du bekommst einen Bonus von +2 auf Intellekt. Welches Geschlecht möchtest du denn spielen?
+&lt;&lt;radiobutton &quot;$geschlecht&quot; Abenteurer checked&gt;&gt; Abenteurer
+&lt;&lt;radiobutton &quot;$geschlecht&quot; Abenteurerin&gt;&gt; Abenteurerin
+&lt;&lt;button Weiter Willkommen&gt;&gt;&lt;&lt;/button&gt;&gt;
+
+&lt;&lt;elseif $name is &quot;holzwurmeliger&quot;&gt;&gt; Hallo Bruderherz! Schön dich begrüßen zu dürfen! Du bekommst einen Bonus von +2 auf Intellekt. Welches Geschlecht möchtest du denn spielen?
 &lt;&lt;radiobutton &quot;$geschlecht&quot; Abenteurer checked&gt;&gt; Abenteurer
 &lt;&lt;radiobutton &quot;$geschlecht&quot; Abenteurerin&gt;&gt; Abenteurerin
 &lt;&lt;button Weiter Willkommen&gt;&gt;&lt;&lt;/button&gt;&gt;
