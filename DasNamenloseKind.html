@@ -896,7 +896,8 @@ Solltest du keinen Drucker zur Hand haben, so findest du Charakterbögen und Geg
 &lt;&lt;set $kz = 0&gt;&gt;
 &lt;&lt;set $kindweg = 0&gt;&gt;
 &lt;&lt;set $kindtot = 0&gt;&gt;
-&lt;&lt;set $kindheile = 0&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="Hab ich" tags="" position="5,151" size="100,100">&lt;img src=&quot;images/kap1.png&quot;&gt;
+&lt;&lt;set $kindheile = 0&gt;&gt;
+&lt;&lt;set $damekleid = 0&gt;&gt;</tw-passagedata><tw-passagedata pid="7" name="Hab ich" tags="" position="5,151" size="100,100">&lt;img src=&quot;images/kap1.png&quot;&gt;
 Du erwachst in einem dicht bewachsenen Wald und schaust auf dem Rücken liegend direkt in die dichten Baumkronen, die sich sanft im Wind hin und her wiegen. Dein Gefühl sagt dir, es ist noch morgens. Wie du in den Wald gekommen bist, weißt du nicht. Du hast jedoch ein leichtes Brummen im Kopf. Es geht dir nicht schlecht, aber es ging dir auch mal besser. Du setzt dich auf und schaust dich um.
 
 Es ist ein angenehmer Tag. Die Sonne scheint, es sind nur vereinzelt Wolken am Himmel und doch ist es etwas kühl. Es wird bald Herbst werden. Du trägst eine dir unbekannte Hose und deine Lieblingsjacke. Um dich herum sind Bäume, Blätter, Gräser und Büsche und dir steigt der typische modrige Geruch aus Laub, Pilzen und entferntem Wild in die Nase. Alles deutet auf einen normalen Wald hin. Entdecken kannst du nichts Ungewöhnliches. Einzig der Fakt, dass du nicht weißt wie du hierherkamst, ist seltsam. Du versuchst dich zu erinnern, doch dir fällt einfach nichts mehr ein. Ein Humpen Met zu viel? Nein, dann wäre das Brummen im Kopf schlimmer. Einen kräftigen Hieb auf dem Kopf bei einer Schlägerei? Du tastest deinen Kopf ab, kannst jedoch nichts fühlen. Eine Schlägerei war es also auch nicht. Seltsam.
@@ -1317,13 +1318,13 @@ Als du aus dem schmalen Bergpass heraustrittst, musst du einen kurzen Moment die
 [[Zur Taverne]]
 [[Einmal um&#39;s Dorf um mich umzusehen]]
 [[Zu der Dame, die gerade ihre Wäsche an einem kleinen Bach wäscht]]</tw-passagedata><tw-passagedata pid="69" name="Zur Taverne" tags="" position="1904,150" size="100,100">Du entscheidest dich zur Taverne zu gehen und kommst an ein paar Kindern vorbei.
-&lt;&lt;if $gesinnung gte 6&gt;&gt;
-	&lt;&lt;print &quot;Das jüngste Kind, ein Mädchen, kommt zu dir gelaufen. Du schätzt sie auf 3 Jahre. Sie lächelt dich herzlich und warm an, dabei zieht sie einen kleinen Teddybär aus ihrer Tasche. &#39;Den schenk ich dir!&#39; sagt sie, lächelt dich noch einmal an und geht wieder mit den anderen Kindern spielen. Du kannst dir die Karte des Teddybärs nehmen.&quot;&gt;&gt;
-	&lt;&lt;elseif $gesinnung lte 6&gt;&gt;
-	&lt;&lt;print &quot;Die Kinder hören kurz auf zu spielen und winken dir lächelnd zu, bevor sie sich wieder ihrem Spiel zuwenden.&quot;&gt;&gt;
-&lt;&lt;/if&gt;&gt;
-	&lt;&lt;if $gesinnung lte 0&gt;&gt;
-	&lt;&lt;print &quot;Du wendest deinen Blick von den Kindern ab. In dem Moment bekommst du einen Ball an den Kopf. Ob das Zufall war? Du bekommst 1W6 Schaden.&quot;&gt;&gt;
+&lt;&lt;if $gesinnung eq 6&gt;&gt;
+Das jüngste Kind, ein Mädchen, kommt zu dir gelaufen. Du schätzt sie auf 3 Jahre. Sie lächelt dich herzlich und warm an, dabei zieht sie einen kleinen Teddybär aus ihrer Tasche. &quot;Den schenk ich dir!&quot; sagt sie, lächelt dich noch einmal an und geht wieder mit den anderen Kindern spielen. Du kannst dir die Karte des Teddybärs nehmen.
+	&lt;&lt;elseif $gesinnung eq 3 &gt;&gt;
+	Die Kinder hören kurz auf zu spielen und winken dir lächelnd zu, bevor sie sich wieder ihrem Spiel zuwenden.
+
+	&lt;&lt;elseif $gesinnung eq 0&gt;&gt;
+	Du wendest deinen Blick von den Kindern ab. In dem Moment bekommst du einen Ball an den Kopf. Ob das Zufall war? Du bekommst 1W6 Schaden.
 	&lt;&lt;/if&gt;&gt;
 Du betrittst die Taverne. Die Atmosphäre ist angenehm und einladend. Du kassierst ein paar interessante Blicke, wirst aber trotzdem nett begrüßt von Gästen und Wirt. Du trittst an den Wirt heran und er fragt
 
@@ -1336,7 +1337,8 @@ Du antwortest...
 [[Ich hätte gerne etwas zu essen]]
 [[Ich hätte gerne einen Krug Met!]]
 [[Ich möchte schnell ein paar Taler verdienen]]
-[[Habt ihr eine Aufgabe für mich?]]</tw-passagedata><tw-passagedata pid="70" name="Einmal um&#39;s Dorf um mich umzusehen" tags="" position="2024,153" size="100,100">Auf den ersten Blick fällt dir bereits auf, dass das Dorf eher klein ist. Du entscheidest dich also für einen kurzen Spaziergang um das Dorf, der nicht allzu lange dauern dürfte. Dein Weg führt dich vorbei an Weizen-, und Getreidefeldern, deren Ähren gelblich in der Sonne glänzen, an umzäunten Wiesen mit Kühen und Schafen, die darauf in vollster Zufriedenheit grasen und an einem kleinen Bach. Dieser verläuft genau an dem kleinen Dorf vorbei und wird die Hauptwasserquelle für die Dorfbewohner sein. Du stellst dir vor, wie Kinder mutig von Ufer zu Ufer springen, Waschweiber den neusten Klatsch dort verbreiten oder so mancher Ehemann in Ruhe die Angelrute wirft. 
+[[Habt ihr eine Aufgabe für mich?]]</tw-passagedata><tw-passagedata pid="70" name="Einmal um&#39;s Dorf um mich umzusehen" tags="" position="2024,153" size="100,100">&lt;&lt;if $damekleid eq 0&gt;&gt;
+Auf den ersten Blick fällt dir bereits auf, dass das Dorf eher klein ist. Du entscheidest dich also für einen kurzen Spaziergang um das Dorf, der nicht allzu lange dauern dürfte. Dein Weg führt dich vorbei an Weizen-, und Getreidefeldern, deren Ähren gelblich in der Sonne glänzen, an umzäunten Wiesen mit Kühen und Schafen, die darauf in vollster Zufriedenheit grasen und an einem kleinen Bach. Dieser verläuft genau an dem kleinen Dorf vorbei und wird die Hauptwasserquelle für die Dorfbewohner sein. Du stellst dir vor, wie Kinder mutig von Ufer zu Ufer springen, Waschweiber den neusten Klatsch dort verbreiten oder so mancher Ehemann in Ruhe die Angelrute wirft. 
 
 Dieser kleine Flecken Erde, umringt von Bergen und dadurch geschützt vor Gefahren und äußeren Bedrohungen, noch dazu dieser sehr praktisch liegende Bach machen diese Stelle einfach perfekt für ein kleines, friedfertiges Dorf. Es ist fast so, als hätte der Schöpfer selbst für genau dieses Dorf, diesen kleinen Flecken Paradies erschaffen.
 
@@ -1347,13 +1349,27 @@ Dieser Ort ist perfekt. Wenn du schon nicht weißt, wie du hierhergekommen bist 
 Nach wenigen Minuten bist du wieder an deinem Ausgangspunkt zurück. Erleichtert und gut gelaunt gehst du...
 
 [[Zur Taverne]]
-[[Zu der Dame, die gerade ihre Wäsche an einem kleinen Bach wäscht]]</tw-passagedata><tw-passagedata pid="71" name="Zu der Dame, die gerade ihre Wäsche an einem kleinen Bach wäscht" tags="" position="2144,152" size="100,100">Eine Dame im mittleren Alter kniet vor dem Bach und wäscht ihre Kleider. Jetzt gerade wäscht sie ein schönes Kleid aus Seide. Du schaust dir das Kleid genauer an und bist vertieft in diesem starken Rot des Seidenstoffs, dass du nicht bemerkst, dass dich die Dame anspricht.
+[[Zu der Dame, die gerade ihre Wäsche an einem kleinen Bach wäscht]]
+
+&lt;&lt;else&gt;&gt;
+Auf den ersten Blick fällt dir bereits auf, dass das Dorf eher klein ist. Du entscheidest dich also für einen kurzen Spaziergang um das Dorf, der nicht allzu lange dauern dürfte. Dein Weg führt dich vorbei an Weizen-, und Getreidefeldern, deren Ähren gelblich in der Sonne glänzen, an umzäunten Wiesen mit Kühen und Schafen, die darauf in vollster Zufriedenheit grasen und an einem kleinen Bach. Dieser verläuft genau an dem kleinen Dorf vorbei und wird die Hauptwasserquelle für die Dorfbewohner sein. Du stellst dir vor, wie Kinder mutig von Ufer zu Ufer springen, Waschweiber den neusten Klatsch dort verbreiten oder so mancher Ehemann in Ruhe die Angelrute wirft. 
+
+Dieser kleine Flecken Erde, umringt von Bergen und dadurch geschützt vor Gefahren und äußeren Bedrohungen, noch dazu dieser sehr praktisch liegende Bach machen diese Stelle einfach perfekt für ein kleines, friedfertiges Dorf. Es ist fast so, als hätte der Schöpfer selbst für genau dieses Dorf, diesen kleinen Flecken Paradies erschaffen.
+
+Du fühlst dich bereits jetzt wohl hier und wo du auch hinsiehst, siehst du nur glückliche oder zu mindestens zufriedene Menschen. Sie sehen dich zwar etwas verwundert an, da sie dich nicht kennen und du ein Fremder bist, doch trotzdem grüßen sie dich freundlich und wünschen dir einen schönen Tag. Du verbeugst dich höflich und wünschst ebenfalls einen guten Tag.
+
+Dieser Ort ist perfekt. Wenn du schon nicht weißt, wie du hierhergekommen bist oder wo du überhaupt bist, dann ist dieses Dorf wenigstens ein kleines Trostpflaster, der deine rasenden Gedanken beruhigt. 
+
+Nach wenigen Minuten bist du wieder an deinem Ausgangspunkt zurück. Erleichtert und gut gelaunt gehst du...
+
+[[Zur Taverne]]
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="71" name="Zu der Dame, die gerade ihre Wäsche an einem kleinen Bach wäscht" tags="" position="2144,152" size="100,100">Eine Dame im mittleren Alter kniet vor dem Bach und wäscht ihre Kleider. Jetzt gerade wäscht sie ein schönes Kleid aus Seide. Du schaust dir das Kleid genauer an und bist vertieft in diesem starken Rot des Seidenstoffs, dass du nicht bemerkst, dass dich die Dame anspricht.
 
 &quot;Hallo! Wie ich sehe gefällt euch mein Kleid?&quot;
-
+&lt;&lt;set $damekleid += 1&gt;&gt;
 [[Hallo! Ja, ich mag es sehr. Es ist schön]]
 [[Hallo! Geht so. Eine andere Farbe wäre besser]]
-[[Pff! Ich frage mich lediglich, wie ihr in dieses enge Kleid passt ohne es zu zerreißen]]</tw-passagedata><tw-passagedata pid="72" name="Hallo! Ja, ich mag es sehr. Es ist schön" tags="" position="2145,275" size="100,100">&lt;&lt;set $gesinnung += 2&gt;&gt;
+[[Pff! Ich frage mich lediglich, wie ihr in dieses enge Kleid passt ohne es zu zerreißen]]</tw-passagedata><tw-passagedata pid="72" name="Hallo! Ja, ich mag es sehr. Es ist schön" tags="" position="2145,275" size="100,100">&lt;&lt;set $gesinnung += 3&gt;&gt;
 Die Dame lächelt dich an und nickt.
 
 &quot;Das ist sehr nett von euch. Vielen Dank.&quot;
