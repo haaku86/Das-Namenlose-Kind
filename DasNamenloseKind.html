@@ -100,7 +100,7 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<div id="init-lacking">Your browser lacks required capabilities. Please upgrade it or switch to another to continue.</div>
 		<div id="init-loading"><div>Loading&hellip;</div></div>
 	</div>
-	<tw-storydata name="Das Namenlose Kind" startnode="1" creator="Twine" creator-version="2.3.5" ifid="0FD55D0D-032F-4DD9-8B05-B8BC65A2E7DC" zoom="0.6" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">body {
+	<tw-storydata name="Das Namenlose Kind" startnode="319" creator="Twine" creator-version="2.3.5" ifid="0FD55D0D-032F-4DD9-8B05-B8BC65A2E7DC" zoom="0.6" format="SugarCube" format-version="2.30.0" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">body {
 	background-image: url("images/paper.jpg");
 	background-repeat: repeat;
 	background-position: center;
@@ -717,86 +717,12 @@ Freut mich dich kennen zu lernen! Ich hätte da aber noch eine Frage. Bist du ei
 &lt;&lt;radiobutton &quot;$geschlecht&quot; Abenteurer checked&gt;&gt; Abenteurer
 &lt;&lt;radiobutton &quot;$geschlecht&quot; Abenteurerin&gt;&gt; Abenteurerin
 &lt;&lt;button Weiter Willkommen&gt;&gt;&lt;&lt;/button&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="Willkommen" tags="" position="326,23" size="100,100">&lt;&lt;if $klasse is &quot;Kämpfer&quot;&gt;&gt;
-
-Du bist also $geschlecht $name und bist $klasse/in. Sehr schön! Bitte nimm dir den entsprechenden vorgefertigten Charakterbogen &quot;Kämpfer&quot;.
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="Willkommen" tags="" position="326,23" size="100,100">Du bist also $geschlecht $name. Sehr schön! Bitte nimm dir den bereits fertigen Charakterbogen und trage unter Anmerkungen noch deine negative und positive Eigenschaft ein:
 
 Deine negative Eigenschaft: $negativ
 Deine positive Eigenschaft: $positiv
 
-Der/Die Kämpfer/in hat die Fähigkeit seine Gegner zu verwunden. Ob du deinen Gegner verwundest bestimmt der Wert Stärke. Du würfelst mit einem W10 die Wahrscheinlichkeit. Der gewürfelte Wert muss deinem Stärkewert oder niedriger entsprechen. Hast du 5 Stärke, so musst du mit einem W10 eine 5 oder weniger würfeln. Hast du 7 Stärke, so musst du für eine Wunde eine 7 oder weniger würfeln. Hier die komplette Liste:
-
- 1 Stärke: 1 oder niedriger
- 2 Stärke: 2 oder niedriger
- 3 Stärke: 3 oder niedriger
- 4 Stärke: 4 oder niedriger
- 5 Stärke: 5 oder niedriger
- 6 Stärke: 6 oder niedriger
- 7 Stärke: 7 oder niedriger
- 8 Stärke: 8 oder niedriger
- 9 Stärke: 9 oder niedriger
-10 Stärke: Du verwundest immer
-
-Dieser Bonusschaden wird IMMER nach einem ERFOLGREICHEN Angriff ausgewürfelt. Wie hoch der Schaden der Wunde ist, bestimmt der Schaden der Waffe. Der Schadensbonus ist auf jeder Waffenkarte mit einem &quot;+X Schaden&quot; festgelegt. Wie der eigentliche Kampf funktioniert wird später erklärt. Bitte behalte bis dahin deinen Bonusschaden im Hinterkopf. Du startest ohne eine Waffe.
-
-Hätten wir das auch geklärt. Nun noch eine klitze kleine Kleinigkeit und es kann losgehen. 
-
-Ich bin dein Spielleiter. Ich sage dir, was du hörst, riechst, schmeckst, denkst usw. Des Weiteren erzähle ich dir auch die Geschichte, kläre dich über die Gesamtsituation auf und führe die Geschichte voran. Ich bin also deine Sinne, deine Umwelt und dein Schicksal. Sei also lieb zu mir.
-&lt;&lt;button Weiter Ton&gt;&gt;&lt;&lt;/button&gt;&gt;
-
-&lt;&lt;elseif $klasse is &quot;Magier&quot;&gt;&gt;
-Du bist also $geschlecht $name und bist $klasse/in. Sehr schön! Bitte nimm dir den entsprechenden vorgefertigten Charakterbogen &quot;Magier&quot;.
-
-Deine negative Eigenschaft: $negativ
-Deine positive Eigenschaft: $positiv
-
-Der/Die Magier/in hat verschiedene Level an Zauber. Welcher Level eines Zaubers gewirkt wird hängt vom Intellekt des Magiers ab. Du würfelst mit einem W10 das Level. Würfelst du eine 3, so wirkt dein Charakter einen Level 3 Zauber, solange er mindestens 3 Intellekt hat. Würfelst du eine 2, so zaubert dein Charakter einen Level 2 Zauber, wenn der Charakter mindestens 2 Intellekt hat usw. Hier die Auflistung:
-
- 1 Intellekt: 1
- 2 Intellekt: 1-2
- 3 Intellekt: 1-3
- 4 Intellekt: 1-4
- 5 Intellekt: 1-5
- 6 Intellekt: 1-6
- 7 Intellekt: 1-7
- 8 Intellekt: 1-8
- 9 Intellekt: 1-9
-10 Intellekt: Nur noch Level 10
-
-Würfelt man einen Zauber, der den eigenen Intellekt übersteigt, so muss man einen weiteren W10 werfen. Hat der zweite W10 den gleichen oder niedrigeren Wert des vorher gewürfelten Zaubers, so gelingt das Wirken des Zaubers. Kurzes Beispiel:
-
-Der Charakter hat 3 Intellekt und wirft mit dem ersten W10 eine 5.
-Der Charakter wirft ein weiteres Mal einen W10 und hat eine 6. Somit gelingt das Wirken und der Magier wirkt den Level 5 Zauber, trotz des niedrigeren Intellekts.
-
-Bitte beachte, dass du deinen Zauber später nicht mehr ändern darfst. Wähle jetzt also zwischen Arkan, Feuer, Gift und Frost und nimm dir die entsprechenden Karten.
-
-Hätten wir das nun auch geklärt. Nun noch eine klitze kleine Kleinigkeit und es kann losgehen. 
-
-Ich bin dein Spielleiter. Ich sage dir, was du hörst, riechst, schmeckst, denkst usw. Des Weiteren erzähle ich dir auch die Geschichte, kläre dich über die Gesamtsituation auf und führe die Geschichte voran. Ich bin also deine Sinne, deine Umwelt und dein Schicksal. Sei also lieb zu mir.
-&lt;&lt;button Weiter Ton&gt;&gt;&lt;&lt;/button&gt;&gt;
-
-&lt;&lt;else&gt;&gt;
-Du bist also $geschlecht $name und bist $klasse/in. Sehr schön! Bitte nimm dir den entsprechenden vorgefertigten Charakterbogen &quot;Dieb&quot;.
-
-Deine negative Eigenschaft: $negativ
-Deine positive Eigenschaft: $positiv
-
-Der/Die Dieb/in hat die Chance eine Blutung zu verursachen als Schadensbonus. Ob der Angriff eine Blutung auslöst oder nicht entscheidet der Wert Geschick. Du würfelst mit einem W10 die Wahrscheinlichkeit. Die Wahrscheinlichkeit steigt mit jedem Punkt auf dem Wert Geschick. Hast du 5 Geschick, so triffst du nur, wenn du eine 5 oder niedriger gewürfelt hast. Hast du 10 Geschick, so triffst du definitiv. Hier die komplette Liste:
-
- 1 Geschick: 1
- 2 Geschick: 1-2
- 3 Geschick: 1-3
- 4 Geschick: 1-4
- 5 Geschick: 1-5
- 6 Geschick: 1-6
- 7 Geschick: 1-7
- 8 Geschick: 1-8
- 9 Geschick: 1-9
-10 Geschick: Immer
-
-Fügst Du deinem Gegner eine Blutung zu, so bekommt er jede Runde ein Drittel deines Waffenschadens als Bonusschaden bis der Gegner tot ist, auch wenn du deinen Gegner in einer Runde verfehlen solltest. Du musst deinen Bonusschaden also nur einmal auswürfeln. Sobald du einmal getroffen hast brauchst du den Bonusschaden nicht mehr zusätzlich auswürfeln. Wie der normale Kampf funktioniert wird später erklärt. Bitte behalte bis dahin deinen Bonusschaden im Hinterkopf.
-
-Hätten wir das auch geklärt. Nun noch eine klitze kleine Kleinigkeit und es kann losgehen. 
+Hätten wir das auch geklärt. Nun noch eine klitze kleine Kleinigkeit und es kann losgehen:
 
 Ich bin dein Spielleiter. Ich sage dir, was du hörst, riechst, schmeckst, denkst usw. Des Weiteren erzähle ich dir auch die Geschichte, kläre dich über die Gesamtsituation auf und führe die Geschichte voran. Ich bin also deine Sinne, deine Umwelt und dein Schicksal. Sei also lieb zu mir.
 &lt;&lt;button Weiter Ton&gt;&gt;&lt;&lt;/button&gt;&gt;
@@ -933,11 +859,19 @@ Du hast $taler Taler in der Tasche.
 
 [[Ich möchte herausfinden welche Richtung Norden ist]]</tw-passagedata><tw-passagedata pid="14" name="Ich möchte herausfinden welche Richtung Norden ist" tags="" position="257,151" size="100,100">Oho! Da ist jemand mutig und abenteuerlustig. Freut mich! Nachdem du nun weißt, dass deine Entscheidungen Konsequenzen haben, kommen wir zum nächsten Feature dieses Abenteuers. Nämlich dem &quot;Würfeln&quot;. Mit dem &quot;Würfeln&quot; machen wir die ganze Sache ein wenig spannender. Vertrau mir. 
 
-In diesem Fall brauchst du den 6-Seitigen Würfel, auch W6 (Würfel, 6 Seiten) genannt. Wie auch im richtigen Leben hängen einige Dinge vom Glück ab. Besonders wenn es ums Raten oder Schätzen geht. Leider ist $name in diesem Abenteuer nicht ganz so bewandert in Himmelsrichtungen. Daher kann $name hier nur mehr schlecht als recht raten wo genau Norden ist. Um dieses &quot;Raten&quot; etwas zu simulieren, brauchen wir den Würfel. Keine Sorge. Es ist ganz einfach. Nimm den Würfel in die Hand und würfle. Hast du eine 1-3 gewürfelt, so hast du richtig geraten/geschätzt. Hast du eine 4-6 gewürfelt, so liegst du falsch. Das war&#39;s schon. Einfach, oder? Sag ich ja. 
+In diesem Fall brauchst du den 100-Seitigen Würfel, auch W10 (Würfel, 100 Seiten) genannt. Wie auch im richtigen Leben hängen einige Dinge vom Glück ab. Besonders wenn es ums Raten oder Schätzen geht. Leider ist $name in diesem Abenteuer nicht ganz so bewandert in Himmelsrichtungen. Daher kann $name hier nur mehr schlecht als recht raten wo genau Norden ist. Um dieses &quot;Raten&quot; etwas zu simulieren, brauchen wir den Würfel. Keine Sorge. Es ist ganz einfach. Nimm den Würfel in die Hand und würfle. Und zwar würfelst Du auf den Wert &quot;Glück&quot;. Der hat eine Höhe von 10, allerdings kommen auch 20 als Bonus durch deine Begabung &quot;Soziales&quot; von 20 Punkten hinzu. Hast du eine 1-30 gewürfelt, so hast du den Wurf bestanden und richtig geraten/geschätzt. Hast du eine 31 oder höher gewürfelt, so liegst du falsch. Das war&#39;s schon. Der eigentliche Wert einer Fähigkeit, auf den letzten Endes gewürfelt wird, besteht aus den für diese Fähigkeit eingesetzten Punkten zuzüglich des Wertes der entsprechenden Begabung.
 
-Merk dir: 1-3 ist ein erfolgreicher Wurf. 4-6 ein fehlgeschlagener Wurf.
+Beispiel:
 
-Ps: Ich vertrau dir an dieser Stelle. Bitte sei ehrlich zu mir und zu dir selbst. Solltest du einen Wurf mal versemmeln, so lebe damit. Macht doch viel mehr Spaß so, oder?
+Hartmut hat insgesamt 200 seiner Punkte in Handeln gesteckt (Handeln = 20) und 50 davon in Holzfällen (Holzfällen = 50). Sein endgültiger Wert in Holzfällen berechnet sich folgendermaßen:
+
+Holzfällen 50 + Handeln 20 = Holzfällen 70
+
+Merk dir: gleich oder drunter ist immer ein gelungener Wurf, darüber gewürfelt ist immer ein fehlgeschlagener Wurf. DIES GILT FÜR JEDEN FÄHIGKEITSWURF!
+
+Ps: Ich vertrau dir an dieser Stelle. Bitte sei ehrlich zu mir und zu dir selbst. Solltest du einen Wurf mal versemmeln, so lebe damit. Macht doch viel mehr Spaß so, oder? Kleine Info: Es gibt auch Kritische Würfe. Bei einem Probenwurf kennzeichnen 10% des Fähigkeitswertes den Bereich für einen kritischen Erfolg. Liegt das Würfelergebnis in diesem Bereich, erledigt der Charakter die Aufgabe meist mit dem bestmöglichen Ergebnis. Würfe auf Begabungen haben keinen kritischen Erfolgsbereich.
+
+Die untere Grenze des Bereichs für einen kritischen Misserfolg wird durch 10% der Fähigkeit/Begabung plus 90 gekennzeichnet. Liegt der Wurf also zwischen dieser Zahl und 100, schlägt der Wurf kritisch fehl und der Charakter erledigt die Aufgabe meist mit dem schlechtmöglichsten Ergebnis.
 
 [[Ok, hab das mit dem Würfeln verstanden]]</tw-passagedata><tw-passagedata pid="15" name="Ok, hab das mit dem Würfeln verstanden" tags="" position="258,259" size="100,100">Sehr gut! Dann geht es nun weiter. Wirf einen W6. Hast du es geschafft?
 
@@ -955,34 +889,76 @@ Ps: Ich vertrau dir an dieser Stelle. Bitte sei ehrlich zu mir und zu dir selbst
 &lt;&lt;audio fight loop play&gt;&gt;
 Du fasst all deinen Mut zusammen und stürmst auf den Busch zu und erblickst einen zähnenfletschenden Wolf. Sein graues Fell ist aufgerichtet und er ist zum Angriff bereit. Du musst mit ihm Kämpfen, ob du willst oder nicht.
 
-Du stehst kurz vor einem Kampf. Ich erkläre dir kurz wie Kämpfe ablaufen. 
+Du stehst kurz vor einem Kampf. Ich erkläre dir kurz wie Kämpfe ablaufen: 
 
-1.) Du würfelst mit einem W6 ob du dein Ziel triffst. 
-2a.) Triffst du (1-3) so kannst du mit dem W20 Würfel/den W20 Würfeln (je nach Stärke/Geschick) deinen Schaden auswürfeln. Würfel jetzt wie anfangs erklärt mit einem W10 ob du Bonusschaden machst oder nicht. Schaue dann auf den Charakterbogen deines Gegners und ziehe ihm die entsprechenden Lebenspunkte ab (Also normaler Schaden + Bonusschaden).Als Magier würfelst du hier natürlich keine W20 sondern nur den W10 für das Level des Zaubers.Als Magier würfelst du hier natürlich keine W20 sondern nur den W10 für das Level des Zaubers. Die Erklärung gab es bereits bei der Charaktererstellung. Du findest sie aber auch nochmal in dem Ordner &quot;Erklärungen&quot;.
-2b.) Triffst du nicht (4-6), so musst du eine Runde aussetzen (darfst keinen Schaden auswürfeln) und dein Gegner ist dran. 
-3a.) Wie auch bei dir würfelst du für den Gegner, ob er dich überhaupt trifft. 1-3 und dein Gegner trifft. 4-6 und dein Gegner verfehlt.
-3b.) Trifft er würfelst du entsprechend der Würfelangabe auf dem Charakterbogen deines Gegners den Schaden aus, den du selbst bekommst. Ein +X (X steht für einen beliebigen Wert) hinter den Würfeln ist zusätzlicher Schaden. Beispiel: Würfelt dein Gegner eine 6 und hat auf seinem Bogen eine +2 hinter seinen Würfeln stehen, so bekommst du 6+2 Schaden. Also insgesamt 8. Auch hier gilt: Ich vertrau dir. Sei ehrlich, so macht es am meisten Spaß.
-4.) Dies tust du nun so lange, bis entweder dein Gegner tot ist oder du keine Lebenspunkte hast.
-5.) Hab spaß beim Würfeln und ärgern!
+1) Du würfelst mit einem W100 (oder einem W10 als 10er Stelle und einem W10 als 1er Stelle - Vorherfestlegen welcher Würfel welcher ist. Nicht mogeln!) deinen Angriffswurf auf die entsprechende Fähigkeit deines Charakters (In diesem Falle Faustkampf mit 30). Ist das Ergebnis ein Erfolg, trifft dein Charakter seinen Gegner und kann ihm Schaden zufügen. In diesem Fall musst du also 30 oder niedriger Würfeln.
 
-PS: Solange der Spielleiter es nicht anders angibt, hast DU immer den ersten Schlag bei einem Kampf. Sollte so etwas wie &quot;XYZ hat den ersten Schlag&quot; vor einem Kampf stehen, so beginnt der Kampf bei Punkt 3.).
+2) Nun kann dein Gegner versuchen deinen Angriff zu parieren. Würfel nun auf den Parieren-Wert deines Gegners. Ist das Ergebnis gleich oder niedriger, so hat dein Gegner pariert und dein Angriff ging schief. Konnte dein Gegner nicht parieren, so würfelst du nun einen W10 Schaden aus. Hast du zum Beispiel eine 8 gewürfelt, so bekommt der Wolf 8 Lebenspunkte abgezogen.
+
+3) Nun ist dein Gegner dran. Dies funktioniert genauso wie dein Angriff. Der Wolf hat die Attacke &quot;Biss&quot; mit einem Wert von 20. Würfle nun wieder einen W100 oder 2 W10. Hast du eine 20 oder niedriger gewürfelt, so gelingt der Angriff. Nun kannst Du auf deinen Parier-Wert würfeln. Würfelst du gleich oder niedriger, so konntest du den Angrff parieren. Würfelst du drüber, so trifft dich der Angriff und du musst die unter &quot;Anmerkungen&quot; festgelegten Schadenspunkte bei deinen Lebenspunkten abziehen. 
+
+Du beherrscht allerdings auch Zauber. Die kannst du EINMALIG in einem Kampf zaubern anstelle eines normalen Angriffs. Du kannst selbst entscheiden ob Du direkt am Anfang oder als heroisches Ende den Zauber einsetzt. Oder auch gar nicht. Wie du möchtest. Und so wird gezaubert:
+
+Du beherrscht verschiedene Zauber. Welcher Level eines Zaubers gewirkt wird hängt vom jeweiligen Level des Zaubers ab. Du würfelst mit einem W10 das Level. Würfelst du eine 3, so wirkt dein Charakter einen Level 3 Zauber, solange er mindestens 30 im gewählten Zauber hat. Würfelst du eine 20, so zaubert dein Charakter einen Level 2 Zauber, wenn der Charakter mindestens 20 auf dem gewähltem Zauber Intellekt usw. Hier die Auflistung:
+
+ 10 Gift/Arkan/Frost/Feuer: Level 1
+ 20 Gift/Arkan/Frost/Feuer: Level 1-2
+ 30 Gift/Arkan/Frost/Feuer: Level 1-3
+ 40 Gift/Arkan/Frost/Feuer: Level 1-4
+ 50 Gift/Arkan/Frost/Feuer: Level 1-5
+ 60 Gift/Arkan/Frost/Feuer: Level 1-6
+ 70 Gift/Arkan/Frost/Feuer: Level 1-7
+ 80 Gift/Arkan/Frost/Feuer: Level 1-8
+ 90 Gift/Arkan/Frost/Feuer: Level 1-9
+100 Gift/Arkan/Frost/Feuer: Nur noch Level 10
+
+Würfelt man einen Zauber, der den eigenen Fähigkeitswert übersteigt, so missglückt der Zauber.
+
+Du kannst von vornherein Arkan, Feuer, Gift und Frost. Du selbst entscheidest im Laufe des Abenteuers welchen Zauber Du steigern möchtest. Ich empfehle: Spezialisiere dich auf einen. Es macht keinen Sinn alle Zauber zu leveln, aber mit keinem so richtig Schaden zufügen zu können.
+
+Zaubern zählt als normale Angriffs-Runde. Außer das dein Gegner den Angriff nicht parieren kann und ein Zauber dadurch IMMER trifft, es sei denn er missglückt. Nachdem du gezaubert hast ist der Gegner mit seinem Angriff dran.
+
+Das war es auch schon. Nun kämpfe gegen den Wolf, bis einer von euch keine Lebenspunkte mehr hat.
+
+(Solltest Du es noch einmal nachlesen wollen, so findest Du das gesamte &quot;How To Be A Hero&quot;-Regelwerk noch mal im Ordner &quot;Erklärungen&quot;)
 
 [[Ich hab gewonnen!]]
 [[Ich hab verloren!]]</tw-passagedata><tw-passagedata pid="19" name="Ich stürme auf das Knurren hinter mir zu" tags="" position="369,259" size="100,100">&lt;&lt;audio theme stop&gt;&gt;
 &lt;&lt;audio fight loop play&gt;&gt;
-Du drehst dich um und erblickst einen zähnefletschenden Wolf. Sein graues Fell ist aufgerichtet und er ist zum Angriff bereit. Du musst mit ihm Kämpfen, ob du willst oder nicht.
+Du drehst dich um und erblickst einen zähnefletschenden Wolf. Sein graues Fell ist aufgerichtet und er ist zum Angriff bereit. Du musst mit ihm Kämpfen, ob du willst oder nicht. Nimm dir den Charakterbogen des Wolfs zur Hand.
 
-Du stehst kurz vor einem Kampf. Ich erkläre dir kurz wie Kämpfe ablaufen. 
+Du stehst kurz vor einem Kampf. Ich erkläre dir kurz wie Kämpfe ablaufen: 
 
-1.) Du würfelst mit einem W6, ob du dein Ziel triffst. 
-2a.) Triffst du (1-3) so kannst du mit dem W20 Würfel/den W20 Würfeln (je nach Stärke/Geschick) deinen Schaden auswürfeln. Würfel danach wie anfangs erklärt mit einem W10 ob du Bonusschaden machst oder nicht. Schaue dann auf den Charakterbogen deines Gegners und ziehe ihm die entsprechenden Lebenspunkte ab (Also normaler Schaden + Bonusschaden). Als Magier würfelst du hier natürlich keine W20 sondern nur den W10 für das Level des Zaubers. Die Erklärung gab es bereits bei der Charaktererstellung. Du findest sie aber auch nochmal in dem Ordner &quot;Erklärungen&quot;.
-2b.) Triffst du nicht (4-6), so musst du eine Runde aussetzen (darfst keinen Schaden auswürfeln) und dein Gegner ist dran. 
-3a.) Wie auch bei dir würfelst du für den Gegner, ob er dich überhaupt trifft. 1-3 und dein Gegner trifft. 4-6 und dein Gegner verfehlt.
-3b.) Trifft er würfelst du entsprechend der Würfelangabe auf dem Charakterbogen deines Gegners den Schaden aus, den du selbst bekommst. Ein +X (X steht für einen beliebigen Wert) hinter den Würfeln ist zusätzlicher Schaden. Beispiel: Würfelt dein Gegner eine 6 und hat auf seinem Bogen eine +2 hinter seinen Würfeln stehen, so bekommst du 6+2 Schaden. Also insgesamt 8. Auch hier gilt: Ich vertrau dir. Sei ehrlich, so macht es am meisten Spaß.
-4.) Dies tust du nun so lange, bis entweder dein Gegner tot ist oder du keine Lebenspunkte hast.
-5.) Hab spaß beim Würfeln und dich ärgern!
+1) Du würfelst mit einem W100 (oder einem W10 als 10er Stelle und einem W10 als 1er Stelle - Vorherfestlegen welcher Würfel welcher ist. Nicht mogeln!) deinen Angriffswurf auf die entsprechende Fähigkeit deines Charakters (In diesem Falle Faustkampf mit 30 +16 Punkte Bonus durch die Begabung Handeln). Ist das Ergebnis ein Erfolg, trifft dein Charakter seinen Gegner und kann ihm Schaden zufügen. In diesem Fall musst du also 46 oder niedriger Würfeln.
 
-PS: Solange der Spielleiter es nicht anders angibt, hast DU immer den ersten Schlag bei einem Kampf. Sollte so etwas wie &quot;XYZ hat den ersten Schlag&quot; vor einem Kampf stehen, so beginnt der Kampf bei Punkt 3.).
+2) Nun kann dein Gegner versuchen deinen Angriff zu parieren/ausweichen. Würfel nun auf den Parieren/Ausweichen-Wert deines Gegners. Ist das Ergebnis gleich oder niedriger, so hat dein Gegner pariert und dein Angriff ging schief. Konnte dein Gegner nicht parieren, so würfelst du nun einen W10 Schaden aus. Hast du zum Beispiel eine 8 gewürfelt, so bekommt der Wolf 8 Lebenspunkte abgezogen.
+
+3) Nun ist dein Gegner dran. Dies funktioniert genauso wie dein Angriff. Der Wolf hat die Attacke &quot;Biss&quot; mit einem Wert von 30 (Denk an den Bonus der Begabung von 5). Würfle nun wieder einen W100 oder 2 W10. Hast du eine 35 oder niedriger gewürfelt, so gelingt der Angriff. Nun kannst Du auf deinen Parier-Wert würfeln. Würfelst du gleich oder niedriger, so konntest du den Angrff parieren. Würfelst du drüber, so trifft dich der Angriff und du musst die unter &quot;Anmerkungen&quot; festgelegten Schadenspunkte bei deinen Lebenspunkten abziehen. 
+
+Du beherrscht allerdings auch Zauber. Die kannst du EINMALIG in einem Kampf zaubern anstelle eines normalen Angriffs. Du kannst selbst entscheiden ob Du direkt am Anfang oder als heroisches Ende den Zauber einsetzt. Oder auch gar nicht. Wie du möchtest. Und so wird gezaubert:
+
+Du beherrscht verschiedene Zauber. Welcher Level eines Zaubers gewirkt wird hängt vom jeweiligen Level des Zaubers ab. Du würfelst mit einem W10 das Level. Würfelst du eine 3, so wirkt dein Charakter einen Level 3 Zauber, solange er mindestens 30 im gewählten Zauber hat. Würfelst du eine 20, so zaubert dein Charakter einen Level 2 Zauber, wenn der Charakter mindestens 20 auf dem gewähltem Zauber Intellekt usw. HIER GILT NICHT DER BONUS DURCH DIE BEGABUNG. NUR DER WERT DES ZAUBERS ZÄHLT! Hier die Auflistung:
+
+ 10 Gift/Arkan/Frost/Feuer: Level 1
+ 20 Gift/Arkan/Frost/Feuer: Level 1-2
+ 30 Gift/Arkan/Frost/Feuer: Level 1-3
+ 40 Gift/Arkan/Frost/Feuer: Level 1-4
+ 50 Gift/Arkan/Frost/Feuer: Level 1-5
+ 60 Gift/Arkan/Frost/Feuer: Level 1-6
+ 70 Gift/Arkan/Frost/Feuer: Level 1-7
+ 80 Gift/Arkan/Frost/Feuer: Level 1-8
+ 90 Gift/Arkan/Frost/Feuer: Level 1-9
+100 Gift/Arkan/Frost/Feuer: Nur noch Level 10
+
+Würfelt man einen Zauber, der den eigenen Fähigkeitswert übersteigt, so missglückt der Zauber.
+
+Du kannst von vornherein Arkan, Feuer, Gift und Frost. Du selbst entscheidest im Laufe des Abenteuers welchen Zauber Du steigern möchtest. Ich empfehle: Spezialisiere dich auf einen. Es macht keinen Sinn alle Zauber zu leveln, aber mit keinem so richtig Schaden zufügen zu können.
+
+Zaubern zählt als normale Angriffs-Runde. Außer das dein Gegner den Angriff nicht parieren kann und ein Zauber dadurch IMMER trifft, es sei denn er missglückt. Nachdem du gezaubert hast ist der Gegner mit seinem Angriff dran.
+
+Das war es auch schon. Nun kämpfe gegen den Wolf, bis einer von euch keine Lebenspunkte mehr hat.
+
+(Solltest Du es noch einmal nachlesen wollen, so findest Du das gesamte &quot;How To Be A Hero&quot;-Regelwerk noch mal im Ordner &quot;Erklärungen&quot;)
 
 [[Ich hab gewonnen!]]
 [[Ich hab verloren!]]</tw-passagedata><tw-passagedata pid="20" name="Ich versuche zu fliehen" tags="" position="370,367" size="100,100">Tut mir leid, aber das ist in diesem Fall nicht möglich. Warum? Weil du erst einmal lernen musst, wie man kämpft! Du willst doch nicht das Tutorial überspringen, oder?
@@ -1081,24 +1057,26 @@ Kommen wir nun zum Rucksack.
 &lt;&lt;audio theme loop play&gt;&gt;
 Du gehst langsam auf den leblosen Wolf zu und beugst dich hinunter. In dem Moment, in dem du deine Hand zu dem Wolf ausstreckst, knurrt der andere Wolf und schnappt kräftig nach deiner Hand.
 
-An dieser Stelle musst du nun zum ersten Mal auf einem deiner Werte würfeln. Dies ist die letzte Erklärung. Versprochen!
+An dieser Stelle musst du auf eine deiner Fähigkeiten werfen. Es funktioniert ähnich wie der Kampf.
 
-In diesem Fall musst du auf Geschick würfeln. Nimm den W10 und würfle. Hast du Zahlen unter oder gleich deinem Geschickwert gewürfelt? Gut! Du hast den Wurf geschafft! Sind die Zahlen über deinem Wert? Schade. Du hast den Wurf nicht geschafft. Beispiel:
+In diesem Fall musst du auf &quot;Handlung&quot; würfeln. Nimm den W100 (oder die beiden W10) und würfle. Hast du Zahlen unter oder gleich deinem &quot;Handlungs&quot;-Wert + einen Bonus von 16 (also insgesamt 46) durch deine Begabung &quot;Handeln&quot; gewürfelt? Gut! Du hast den Wurf geschafft! Sind die Zahlen über deinem Wert? Schade. Du hast den Wurf nicht geschafft. Hier nochmal ein paar Worte zum Bonus: Der eigentliche Wert einer Fähigkeit, auf den letzten Endes gewürfelt wird, besteht aus den für diese Fähigkeit eingesetzten Punkten zuzüglich des Wertes der entsprechenden Begabung.
 
-Dein Geschick ist 8. Gewürfelt hast du 7. Damit hast du den Wurf auf deinen Wert geschafft.
+Beispiel:
 
-Dein Geschick ist 8. Gewürfelt hast du 8. Damit hast du den Wurf auf deinen Wert geschafft.
+Hartmut hat insgesamt 200 seiner Punkte in Handeln gesteckt (Handeln = 20) und 50 davon in Holzfällen (Holzfällen = 50). Sein endgültiger Wert in Holzfällen berechnet sich folgendermaßen:
 
-Dein Geschick ist 8. Gewürfelt hast du 9. Damit hast du den Wurf nicht geschafft.
+Holzfällen 50 + Handeln 20 = Holzfällen 70
 
-Wenn ich also sage &quot;Würfel auf Stärke&quot;, dann funktioniert das auch genau nach dem selben Prinzip.
+Merk dir: gleich oder drunter ist immer ein gelungener Wurf, darüber gewürfelt ist immer ein fehlgeschlagener Wurf. DIES GILT FÜR JEDEN FÄHIGKEITSWURF!
 
-Merk dir das Prinzip. Du wirst es noch sehr oft brauchen. Kleine Info: Würfelst du eine 10, so ist es IMMER ein kritischer Fehlschlag. Auch hier bitte ich um Ehrlichkeit.
+Merk dir das Prinzip. Du wirst es noch sehr oft brauchen. Kleine Info: Es gibt auch Kritische Würfe. Bei einem Probenwurf kennzeichnen 10% des Fähigkeitswertes den Bereich für einen kritischen Erfolg. Liegt das Würfelergebnis in diesem Bereich, erledigt der Charakter die Aufgabe meist mit dem bestmöglichen Ergebnis. Würfe auf Begabungen haben keinen kritischen Erfolgsbereich.
+
+Die untere Grenze des Bereichs für einen kritischen Misserfolg wird durch 10% der Fähigkeit/Begabung plus 90 gekennzeichnet. Liegt der Wurf also zwischen dieser Zahl und 100, schlägt der Wurf kritisch fehl und der Charakter erledigt die Aufgabe meist mit dem schlechtmöglichsten Ergebnis.
 
 [[Ok, werde es mir merken]]
 </tw-passagedata><tw-passagedata pid="27" name="Ok, werde es mir merken" tags="" position="480,260" size="100,100">Du gehst langsam auf den leblosen Wolf zu und beugst dich hinunter. In dem Moment, in dem du deine Hand zu dem Wolf ausstreckst, knurrt der andere Wolf und schnappt kräftig nach deiner Hand.
 
-Würfel mit einem W20 auf deine Geschicklichkeit.
+Würfel mit einem W100 auf &quot;Handlung&quot;.
 
 [[Geschafft!]]
 [[Fehlschlag!]]
@@ -1136,7 +1114,7 @@ Nachdem du ein paar Minuten auf den Knien verbrachtest und nach Luft geringt has
 [[Einfach rein zu gehen]]
 [[Zu klopfen]]</tw-passagedata><tw-passagedata pid="37" name="Einfach rein zu gehen" tags="" position="700,490" size="100,100">Du lässt Höflichkeiten und Sitten beiseite und entschließt dich einfach hineinzugehen, denn dein Hunger und deine Müdigkeit nehmen bereits unmenschliche Maße an. Du legst deine Hand auf die Türklinke und drückst sie hinunter. Gerade als du die Tür schwungvoll aufstoßen willst, fällt dir auf, dass sie verschlossen ist. Dir bleibt nichts anderes übrig, als die Tür aufzubrechen.
 
-Mach einen Wurf auf Körperkraft (denk dran: die gewürfelte Zahl muss unter oder gleich deines Wertes sein um erfolgreich zu sein).
+Würfel nun auf &quot;Rohe Gewalt&quot; (denk dran: die gewürfelte Zahl muss unter oder gleich deines Wertes sein um erfolgreich zu sein).
 &lt;&lt;set $gesinnung -= 1&gt;&gt;
 [[Ich hab es geschafft die Tür aufzubrechen]]
 [[Ich hab es nicht geschafft die Tür aufzubrechen]]
@@ -1184,11 +1162,9 @@ Du hast das alte Messer erhalten. Du darfst dir nun die entsprechende Karte nehm
 
 Du hast nun einen Schadensbonus von +2. Dieser wird auf deinen gewürfelten Schaden addiert. Beispiel:
 
-Du würfelst mit einem W20 eine 13. Nun kannst du den Bonus von +2 draufaddieren und hast nun 15 Schaden gemacht.
+Du würfelst mit einem W10 eine 5. Nun kannst du den Bonus von +2 draufaddieren und hast nun 7 Schaden gemacht.
 
 Tipp: Schreibe dir deinen Schadensbonus rechts neben deinen Schaden. So kannst du ihn nicht vergessen.
-
-&lt;img src=&quot;images/beispieldmg.jpg&quot;&gt;
 
 Du entdeckst sonst nichts mehr. Neben einem Tisch, dem Strohbett und einem kleinen Schrank ist nichts mehr hier.
 &lt;&lt;set $messer += 1&gt;&gt;
@@ -1210,7 +1186,7 @@ Was tust du?
 [[Ich versuche den Hasen zu fangen]]
 [[Ich lasse den Hasen in ruhe und gehe weiter]]</tw-passagedata><tw-passagedata pid="47" name="Ich versuche den Hasen zu fangen" tags="" position="812,269" size="100,100">Dein Hunger ist einfach zu groß. Gelenkt von deinen Instinkten willst du diesen Hasen. Koste es, was es wolle.
 
-Wirf auf Geschicklichkeit.
+Wirf auf &quot;Handlung&quot;.
 
 [[Ich habe den Hasen gefangen]]
 [[Ich habe den Hasen nicht gefangen]]
@@ -1251,7 +1227,7 @@ Du gehst näher an den toten Körper heran. Als du nur noch wenige Zentimeter vo
 
 Noch bevor du zu Ende denken konntest, springt schon ein Goblin aus dem toten Körper des Wolfes. Er hatte ihn als Tarnung für seine Falle genutzt. Kannst du diesem Hinterhalt ausweichen?
 
-Würfel auf Geschicklichkeit.
+Würfel auf &quot;Handlung&quot;.
 
 [[Ich konnte dem Goblin ausweichen]]
 [[Ich konnte dem Goblin nicht ausweichen]]
@@ -1540,24 +1516,7 @@ Als du schon fast aufgegeben hast und dich mit dem Gedanken des Verhungerns anfr
 Was tust du?
 
 [[Ich versuche den Fuchs zu fangen]]
-[[Ich lasse den Fuchs in ruhe und gehe weiter]]</tw-passagedata><tw-passagedata pid="89" name="Respektvoll aber ein wenig gierig das Skelett durchsuchen" tags="" position="1286,367" size="100,100">&lt;&lt;if $klasse is &quot;Dieb&quot;&gt;&gt;
-Du durchsuchst das Skelett nach eventuellen Habseligkeiten. Du findest nichts, auch nicht unter dem Skelett. Die Hose ist bereits so gut wie weggefault und die den Speeren und Schwertern hat der Zahn der Zeit zu sehr zugesetzt. Sie sind allesamt unbrauchbar.
-
-Als du dich gerade vom Skelett abwendest, fällt dir auf, dass das Lederwams, das das Skelett trägt eigentlich noch ganz gut ist. Es ist ein wenig durchlöchert, wahrscheinlich von Pfeilen, aber ein bisschen Schutz bietet es trotzdem. 
-
-&lt;img src=&quot;Gegenstandskarten/Alter Lederwams.jpg&quot;&gt;
-
-Du hast ein altes Lederwams erhalten. Du darfst dir nun die entsprechende Karte nehmen. 
-
-Das Lederwams erlaubt es dir dich geschickter zu bewegen und du kannst dadurch besser Ausweichen. Ausweichen wird ganz einfach berechnet: In diesem Fall ist es Ausweichen von +2. Würfelt dein Gegner eine 4, so bekommst du nur 2 Schaden. Würfelt dein Gegner eine 15, so bekommst du nur 13 Schaden. Der Ausweichbonus deiner Rüstung wird also einfach dem Angriff deines Gegners abgezogen. So einfach. Sollte dein Gegner unter oder gleich deinem Ausweichbonus würfeln, so bekommst du garkeinen Schaden. Super, oder?
-
-Eine Rüstung ist ein wertvoller Gegenstand. Gratulation zu deinem Fund!
-
-Du möchtest jetzt...
-&lt;&lt;set $gesinnung -= 1&gt;&gt;
-&lt;&lt;set $wams += 1&gt;&gt;
-&lt;&lt;else&gt;&gt;
-Du durchsuchst das Skelett nach eventuellen Habseligkeiten. Du findest nichts, auch nicht unter dem Skelett. Die Hose ist bereits so gut wie weggefault und die den Speeren und Schwertern hat der Zahn der Zeit zu sehr zugesetzt. Sie sind allesamt unbrauchbar.
+[[Ich lasse den Fuchs in ruhe und gehe weiter]]</tw-passagedata><tw-passagedata pid="89" name="Respektvoll aber ein wenig gierig das Skelett durchsuchen" tags="" position="1286,367" size="100,100">Du durchsuchst das Skelett nach eventuellen Habseligkeiten. Du findest nichts, auch nicht unter dem Skelett. Die Hose ist bereits so gut wie weggefault und die den Speeren und Schwertern hat der Zahn der Zeit zu sehr zugesetzt. Sie sind allesamt unbrauchbar.
 
 Als du dich gerade vom Skelett abwendest, fällt dir auf, dass das Lederwams, das das Skelett trägt eigentlich noch ganz gut ist. Es ist ein wenig durchlöchert, wahrscheinlich von Pfeilen, aber ein bisschen Schutz bietet es trotzdem. 
 
@@ -1575,7 +1534,7 @@ Du möchtest jetzt...
 &lt;&lt;/if&gt;&gt;
 [[Weiter dem Trampelpfad folgen und hoffen auf jemanden zu treffen]]</tw-passagedata><tw-passagedata pid="90" name="Ich versuche den Fuchs zu fangen" tags="" position="1293,595" size="100,100">Dein Hunger ist einfach zu groß. Gelenkt von deinen Instinkten willst du diesen Fuchs. Koste es, was es wolle.
 
-Wirf auf Geschicklichkeit.
+Wirf auf &quot;Handlung&quot;.
 
 [[Ich habe den Fuchs gefangen]]
 [[Ich habe den Fuchs nicht gefangen]]
@@ -1611,7 +1570,7 @@ Du gehst näher an den toten Körper heran. Als du nur noch wenige Zentimeter vo
 
 Noch bevor du zu Ende denken konntest, springt schon ein Goblin aus dem toten Körper des Wolfes. Er hatte ihn als Tarnung für seine Falle genutzt. Kannst du diesem Hinterhalt ausweichen?
 
-Würfel auf Geschicklichkeit.
+Würfel auf &quot;Handlung&quot;.
 
 [[Ich konnte dem Goblin ausweichen]]
 [[Ich konnte dem Goblin nicht ausweichen]]
@@ -4232,10 +4191,8 @@ Ich bin dein Spielleiter. Ich sage dir, was du hörst, riechst, schmeckst, denks
 &lt;&lt;button Weiter TonWEB&gt;&gt;&lt;&lt;/button&gt;&gt;
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="319" name="STARTWEB" tags="" position="6,798" size="100,100">Herzlich willkommen!
 
-Du bist hier bei einem digitalen Soloabenteuer gelandet. Um das Soloabentuer zu bestehen, brauchst Du lediglich Charakterbögen, Gegenstands/Fähigkeitskartenkarten und Würfel. Passende Charakterbögen und Karten gibt es 
+Du bist hier bei einem digitalen Pen and Paper &quot;&lt;a href=&quot;https://howtobeahero.de&quot;&gt;How to be a Hero&lt;/a&gt;&quot;-Soloabenteuer gelandet. Um das Soloabenteuer zu bestehen, brauchst Du lediglich Charakterbögen, Gegenstands/Fähigkeitskartenkarten und Würfel. Passende Charakterbögen und Karten gibt es 
 &lt;a href=&quot;/DasNamenloseKind.rar&quot;&gt;HIER&lt;/a&gt;. Einfach runterladen und entpacken.
-
-Würfel liegen in digitaler Version bei, falls Du keine hast (Java vorrausgesetzt).
 
 Alles runtergeladen und startbereit? Sehr gut!
 
@@ -4243,7 +4200,7 @@ Alles runtergeladen und startbereit? Sehr gut!
 
 [[Kontakt]]
 
-Zuletzt aktualisiert: 22.02.2019</tw-passagedata><tw-passagedata pid="320" name="Kontakt" tags="" position="144,798" size="100,100">Kritik, Fragen, Anregungen? Dann einfach eine Mail an:
+Zuletzt aktualisiert: 03.11.2019</tw-passagedata><tw-passagedata pid="320" name="Kontakt" tags="" position="144,798" size="100,100">Kritik, Fragen, Anregungen? Dann einfach eine Mail an:
 marc[at]soloabenteuer.de
 
 Vielen Dank! :)
