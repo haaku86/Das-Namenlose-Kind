@@ -445,7 +445,7 @@ Wähle eine (fiktive) positive Eigenschaft von dir:
 &lt;&lt;radiobutton &quot;$positiv&quot; Freundlich&gt;&gt; Freundlich
 
 Wähle deine Klasse:
-&lt;&lt;radiobutton &quot;$klasse&quot; Kämpfer checked&gt;&gt; Kämpfer
+&lt;&lt;radiobutton &quot;$klasse&quot; Krieger checked&gt;&gt; Krieger
 &lt;&lt;radiobutton &quot;$klasse&quot; Magier&gt;&gt; Magier
 &lt;&lt;radiobutton &quot;$klasse&quot; Dieb&gt;&gt; Dieb
 
@@ -722,27 +722,27 @@ Freut mich dich kennen zu lernen! Ich hätte da aber noch eine Frage. Bist du ei
 &lt;&lt;radiobutton &quot;$geschlecht&quot; Abenteurer checked&gt;&gt; Abenteurer
 &lt;&lt;radiobutton &quot;$geschlecht&quot; Abenteurerin&gt;&gt; Abenteurerin
 &lt;&lt;button Weiter Willkommen&gt;&gt;&lt;&lt;/button&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="Willkommen" tags="" position="326,23" size="100,100">&lt;&lt;if $klasse is &quot;Kämpfer&quot;&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="3" name="Willkommen" tags="" position="326,23" size="100,100">&lt;&lt;if $klasse is &quot;Krieger&quot;&gt;&gt;
 
-Du bist also $geschlecht $name und bist $klasse/in. Sehr schön!
+Du bist also $geschlecht $name und bist $klasse/in. Sehr schön! Hier findest du den vorgefertigten Charakterbogen zum Ausdrucken (Rechte Maustaste -&gt; In neuem Tab öffnen): &lt;a href=&quot;Charakterbögen/Charakterbogen Krieger.jpg&quot;&gt;Klick mich&lt;/a&gt;
 
 Deine negative Eigenschaft: $negativ
 Deine positive Eigenschaft: $positiv
 
-Der/Die Kämpfer/in hat die Fähigkeit seine Gegner zu verwunden. Ob du deinen Gegner verwundest bestimmt der Wert Stärke. Du würfelst mit einem W10 die Wahrscheinlichkeit. Der gewürfelte Wert muss deinem Stärkewert oder niedriger entsprechen. Hast du 5 Stärke, so musst du mit einem W10 eine 5 oder weniger würfeln. Hast du 7 Stärke, so musst du für eine Wunde eine 7 oder weniger würfeln. Hier die komplette Liste:
+Der/Die Krieger/in hat die Fähigkeit seine Gegner zu verwunden. Ob du deinen Gegner verwundest bestimmt der Wert &lt;span class=&quot;redtext&quot;&gt;Stärke&lt;/span&gt;. Du würfelst mit einem W10 die Wahrscheinlichkeit aus. Der gewürfelte Wert muss deinem &lt;span class=&quot;redtext&quot;&gt;Stärke&lt;/span&gt;wert oder niedriger entsprechen. Hast du 5 &lt;span class=&quot;redtext&quot;&gt;Stärke&lt;/span&gt;, so musst du mit einem W10 eine 5 oder weniger würfeln. Hast du 7 &lt;span class=&quot;redtext&quot;&gt;Stärke&lt;/span&gt;, so musst du für eine Wunde eine 7 oder weniger würfeln. Hier die komplette Liste:
 
- 1 Stärke: 1 oder niedriger
- 2 Stärke: 2 oder niedriger
- 3 Stärke: 3 oder niedriger
- 4 Stärke: 4 oder niedriger
- 5 Stärke: 5 oder niedriger
- 6 Stärke: 6 oder niedriger
- 7 Stärke: 7 oder niedriger
- 8 Stärke: 8 oder niedriger
- 9 Stärke: 9 oder niedriger
-10 Stärke: Du verwundest immer
+ 1 &lt;span class=&quot;redtext&quot;&gt;Stärke&lt;/span&gt;: 1 oder niedriger
+ 2 &lt;span class=&quot;redtext&quot;&gt;Stärke&lt;/span&gt;: 2 oder niedriger
+ 3 &lt;span class=&quot;redtext&quot;&gt;Stärke&lt;/span&gt;: 3 oder niedriger
+ 4 &lt;span class=&quot;redtext&quot;&gt;Stärke&lt;/span&gt;: 4 oder niedriger
+ 5 &lt;span class=&quot;redtext&quot;&gt;Stärke&lt;/span&gt;: 5 oder niedriger
+ 6 &lt;span class=&quot;redtext&quot;&gt;Stärke&lt;/span&gt;: 6 oder niedriger
+ 7 &lt;span class=&quot;redtext&quot;&gt;Stärke&lt;/span&gt;: 7 oder niedriger
+ 8 &lt;span class=&quot;redtext&quot;&gt;Stärke&lt;/span&gt;: 8 oder niedriger
+ 9 &lt;span class=&quot;redtext&quot;&gt;Stärke&lt;/span&gt;: 9 oder niedriger
+10 &lt;span class=&quot;redtext&quot;&gt;Stärke&lt;/span&gt;: Du verwundest immer
 
-Dieser Bonusschaden wird IMMER nach einem ERFOLGREICHEN Angriff ausgewürfelt. Wie hoch der Schaden der Wunde ist, bestimmt der Schaden der Waffe. Der Schadensbonus ist auf jeder Waffenkarte mit einem &quot;+X Schaden&quot; festgelegt. Wie der eigentliche Kampf funktioniert wird später erklärt. Bitte behalte bis dahin deinen Bonusschaden im Hinterkopf. Du startest ohne eine Waffe.
+Dieser Bonusschaden wird &lt;span class=&quot;redtext&quot;&gt;immer&lt;/span&gt; nach einem &lt;span class=&quot;redtext&quot;&gt;erfolgreichen&lt;/span&gt; Angriff ausgewürfelt. Wie hoch der Schaden der Wunde ist, bestimmt der Schaden der Waffe. Der Schadensbonus ist auf jeder Waffenkarte mit einem &quot;+X Schaden&quot; festgelegt. Wie der eigentliche Kampf funktioniert wird später erklärt. Bitte behalte bis dahin deinen Bonusschaden im Hinterkopf. Du startest ohne eine Waffe.
 
 Hätten wir das auch geklärt. Nun noch eine klitze kleine Kleinigkeit und es kann losgehen. 
 
@@ -750,28 +750,28 @@ Ich bin dein Spielleiter. Ich sage dir, was du hörst, riechst, schmeckst, denks
 &lt;&lt;button Weiter Ton&gt;&gt;&lt;&lt;/button&gt;&gt;
 
 &lt;&lt;elseif $klasse is &quot;Magier&quot;&gt;&gt;
-Du bist also $geschlecht $name und bist $klasse/in. Sehr schön!
+Du bist also $geschlecht $name und bist $klasse/in. Sehr schön! Hier findest du den vorgefertigten Charakterbogen zum Ausdrucken (Rechte Maustaste -&gt; In neuem Tab öffnen): &lt;a href=&quot;Charakterbögen/Charakterbogen Magier.jpg&quot;&gt;Klick mich&lt;/a&gt;
 
 Deine negative Eigenschaft: $negativ
 Deine positive Eigenschaft: $positiv
 
-Der/Die Magier/in hat verschiedene Level an Zauber. Welcher Level eines Zaubers gewirkt wird hängt vom Intellekt des Magiers ab. Du würfelst mit einem W10 das Level. Würfelst du eine 3, so wirkt dein Charakter einen Level 3 Zauber, solange er mindestens 3 Intellekt hat. Würfelst du eine 2, so zaubert dein Charakter einen Level 2 Zauber, wenn der Charakter mindestens 2 Intellekt hat usw. Hier die Auflistung:
+Der/Die Magier/in hat verschiedene Level an Zauber. Welcher Level eines Zaubers gewirkt wird hängt vom &lt;span class=&quot;redtext&quot;&gt;Intellekt&lt;/span&gt; des Magiers ab. Du würfelst mit einem W10 das Level. Würfelst du eine 3, so wirkt dein Charakter einen Level 3 Zauber, solange er mindestens 3 &lt;span class=&quot;redtext&quot;&gt;Intellekt&lt;/span&gt; hat. Würfelst du eine 2, so zaubert dein Charakter einen Level 2 Zauber, wenn der Charakter mindestens 2 &lt;span class=&quot;redtext&quot;&gt;Intellekt&lt;/span&gt; hat usw. Hier die Auflistung:
 
- 1 Intellekt: 1
- 2 Intellekt: 1-2
- 3 Intellekt: 1-3
- 4 Intellekt: 1-4
- 5 Intellekt: 1-5
- 6 Intellekt: 1-6
- 7 Intellekt: 1-7
- 8 Intellekt: 1-8
- 9 Intellekt: 1-9
-10 Intellekt: Nur noch Level 10
+ 1 &lt;span class=&quot;redtext&quot;&gt;Intellekt&lt;/span&gt;: Level 1
+ 2 &lt;span class=&quot;redtext&quot;&gt;Intellekt&lt;/span&gt;: Level 1-2
+ 3 &lt;span class=&quot;redtext&quot;&gt;Intellekt&lt;/span&gt;: Level 1-3
+ 4 &lt;span class=&quot;redtext&quot;&gt;Intellekt&lt;/span&gt;: Level 1-4
+ 5 &lt;span class=&quot;redtext&quot;&gt;Intellekt&lt;/span&gt;: Level 1-5
+ 6 &lt;span class=&quot;redtext&quot;&gt;Intellekt&lt;/span&gt;: Level 1-6
+ 7 &lt;span class=&quot;redtext&quot;&gt;Intellekt&lt;/span&gt;: Level 1-7
+ 8 &lt;span class=&quot;redtext&quot;&gt;Intellekt&lt;/span&gt;: Level 1-8
+ 9 &lt;span class=&quot;redtext&quot;&gt;Intellekt&lt;/span&gt;: Level 1-9
+10 &lt;span class=&quot;redtext&quot;&gt;Intellekt&lt;/span&gt;: Nur noch Level 10
 
-Würfelt man einen Zauber, der den eigenen Intellekt übersteigt, so muss man einen weiteren W10 werfen. Hat der zweite W10 den gleichen oder niedrigeren Wert des vorher gewürfelten Zaubers, so gelingt das Wirken des Zaubers. Kurzes Beispiel:
+Würfelt man einen Zauber, der den eigenen &lt;span class=&quot;redtext&quot;&gt;Intellekt&lt;/span&gt; übersteigt, so muss man einen weiteren W10 werfen. Hat der zweite W10 den &lt;span class=&quot;redtext&quot;&gt;gleichen&lt;/span&gt; Wert wie der vorherige gewürfelte Zauber, so gelingt das Wirken des Zaubers. Kurzes Beispiel:
 
-Der Charakter hat 3 Intellekt und wirft mit dem ersten W10 eine 5.
-Der Charakter wirft ein weiteres Mal einen W10 und hat eine 6. Somit gelingt das Wirken und der Magier wirkt den Level 5 Zauber, trotz des niedrigeren Intellekts.
+Der Charakter hat 3 &lt;span class=&quot;redtext&quot;&gt;Intellekt&lt;/span&gt; und wirft mit dem ersten W10 eine 5.
+Der Charakter wirft ein weiteres Mal einen W10 und hat erneut eine 5. Somit gelingt das Wirken und der Magier wirkt den Level 5 Zauber, trotz des  eigentlich niedrigeren &lt;span class=&quot;redtext&quot;&gt;Intellekt&lt;/span&gt;.
 
 Bitte beachte, dass du deinen Zauber später nicht mehr ändern darfst. Wähle jetzt also zwischen Arkan, Feuer, Gift und Frost und nimm dir die entsprechenden Karten.
 
@@ -781,25 +781,25 @@ Ich bin dein Spielleiter. Ich sage dir, was du hörst, riechst, schmeckst, denks
 &lt;&lt;button Weiter Ton&gt;&gt;&lt;&lt;/button&gt;&gt;
 
 &lt;&lt;else&gt;&gt;
-Du bist also $geschlecht $name und bist $klasse/in. Sehr schön!
+Du bist also $geschlecht $name und bist $klasse/in. Sehr schön! Hier findest du den vorgefertigten Charakterbogen zum Ausdrucken (Rechte Maustaste -&gt; In neuem Tab öffnen): &lt;a href=&quot;Charakterbögen/Charakterbogen Dieb.jpg&quot;&gt;Klick mich&lt;/a&gt;
 
 Deine negative Eigenschaft: $negativ
 Deine positive Eigenschaft: $positiv
 
-Der/Die Dieb/in hat die Chance eine Blutung zu verursachen als Schadensbonus. Ob der Angriff eine Blutung auslöst oder nicht entscheidet der Wert Geschick. Du würfelst mit einem W10 die Wahrscheinlichkeit. Die Wahrscheinlichkeit steigt mit jedem Punkt auf dem Wert Geschick. Hast du 5 Geschick, so triffst du nur, wenn du eine 5 oder niedriger gewürfelt hast. Hast du 10 Geschick, so triffst du definitiv. Hier die komplette Liste:
+Der/Die Dieb/in hat die Chance eine Blutung zu verursachen als Schadensbonus. Ob der Angriff eine Blutung auslöst oder nicht entscheidet der Wert &lt;span class=&quot;redtext&quot;&gt;Geschick&lt;/span&gt;. Du würfelst mit einem W10 die Wahrscheinlichkeit aus. Die Wahrscheinlichkeit steigt mit jedem Punkt auf dem Wert &lt;span class=&quot;redtext&quot;&gt;Geschick&lt;/span&gt;. Hast du 5 &lt;span class=&quot;redtext&quot;&gt;Geschick&lt;/span&gt;, so triffst du nur, wenn du eine 5 oder niedriger gewürfelt hast. Hast du 10 &lt;span class=&quot;redtext&quot;&gt;Geschick&lt;/span&gt;, so triffst du definitiv. Hier die komplette Liste:
 
- 1 Geschick: 1
- 2 Geschick: 1-2
- 3 Geschick: 1-3
- 4 Geschick: 1-4
- 5 Geschick: 1-5
- 6 Geschick: 1-6
- 7 Geschick: 1-7
- 8 Geschick: 1-8
- 9 Geschick: 1-9
-10 Geschick: Immer
+ 1 &lt;span class=&quot;redtext&quot;&gt;Geschick&lt;/span&gt;: 1
+ 2 &lt;span class=&quot;redtext&quot;&gt;Geschick&lt;/span&gt;: 1-2
+ 3 &lt;span class=&quot;redtext&quot;&gt;Geschick&lt;/span&gt;: 1-3
+ 4 &lt;span class=&quot;redtext&quot;&gt;Geschick&lt;/span&gt;: 1-4
+ 5 &lt;span class=&quot;redtext&quot;&gt;Geschick&lt;/span&gt;: 1-5
+ 6 &lt;span class=&quot;redtext&quot;&gt;Geschick&lt;/span&gt;: 1-6
+ 7 &lt;span class=&quot;redtext&quot;&gt;Geschick&lt;/span&gt;: 1-7
+ 8 &lt;span class=&quot;redtext&quot;&gt;Geschick&lt;/span&gt;: 1-8
+ 9 &lt;span class=&quot;redtext&quot;&gt;Geschick&lt;/span&gt;: 1-9
+10 &lt;span class=&quot;redtext&quot;&gt;Geschick&lt;/span&gt;: Immer
 
-Fügst Du deinem Gegner eine Blutung zu, so bekommt er jede Runde ein Drittel deines Waffenschadens als Bonusschaden bis der Gegner tot ist, auch wenn du deinen Gegner in einer Runde verfehlen solltest. Du musst deinen Bonusschaden also nur einmal auswürfeln. Sobald du einmal getroffen hast brauchst du den Bonusschaden nicht mehr zusätzlich auswürfeln. Wie der normale Kampf funktioniert wird später erklärt. Bitte behalte bis dahin deinen Bonusschaden im Hinterkopf.
+Fügst Du deinem Gegner eine Blutung zu, so bekommt er jede Runde ein Drittel deines Waffenschadens als Bonusschaden für die nächsten 3 Runden, auch wenn du deinen Gegner in einer Runde verfehlen solltest. Danach musst du den Bonusschaden erneut auswürfeln (natürlich nur wenn du willst. Aber wer verzichtet schon freiwillig auf Schaden?). Wie der normale Kampf funktioniert wird später erklärt. Bitte behalte bis dahin deinen Bonusschaden im Hinterkopf.
 
 Hätten wir das auch geklärt. Nun noch eine klitze kleine Kleinigkeit und es kann losgehen. 
 
@@ -958,7 +958,7 @@ Ps: Ich vertrau dir an dieser Stelle. Bitte sei ehrlich zu mir und zu dir selbst
 
 [[Ich weiß wo Norden liegt]]</tw-passagedata><tw-passagedata pid="18" name="Ich stürme auf das Knurren im Busch zu" tags="" position="368,476" size="100,100">&lt;&lt;audio theme stop&gt;&gt;
 &lt;&lt;audio fight loop play&gt;&gt;
-Du fasst all deinen Mut zusammen und stürmst auf den Busch zu und erblickst einen zähnenfletschenden Wolf. Sein graues Fell ist aufgerichtet und er ist zum Angriff bereit. Du musst mit ihm Kämpfen, ob du willst oder nicht.
+Du fasst all deinen Mut zusammen und stürmst auf den Busch zu und erblickst einen zähnenfletschenden Wolf. Sein graues Fell ist aufgerichtet und er ist zum Angriff bereit. Du musst mit ihm Kämpfen, ob du willst oder nicht. Hier findest du den passenden Charakterbogen (Rechte Maustaste -&gt; In neuem Tab öffnen): &lt;a href=&quot;Charakterbögen/Wolf.png&quot;&gt;Klick mich&lt;/a&gt;
 
 Du stehst kurz vor einem Kampf. Ich erkläre dir kurz wie Kämpfe ablaufen. 
 
@@ -975,7 +975,7 @@ PS: Solange der Spielleiter es nicht anders angibt, hast DU immer den ersten Sch
 [[Ich hab gewonnen!]]
 [[Ich hab verloren!]]</tw-passagedata><tw-passagedata pid="19" name="Ich stürme auf das Knurren hinter mir zu" tags="" position="369,259" size="100,100">&lt;&lt;audio theme stop&gt;&gt;
 &lt;&lt;audio fight loop play&gt;&gt;
-Du drehst dich um und erblickst einen zähnefletschenden Wolf. Sein graues Fell ist aufgerichtet und er ist zum Angriff bereit. Du musst mit ihm Kämpfen, ob du willst oder nicht.
+Du drehst dich um und erblickst einen zähnefletschenden Wolf. Sein graues Fell ist aufgerichtet und er ist zum Angriff bereit. Du musst mit ihm Kämpfen, ob du willst oder nicht. Hier findest du den passenden Charakterbogen (Rechte Maustaste -&gt; In neuem Tab öffnen): &lt;a href=&quot;Charakterbögen/Wolf.png&quot;&gt;Klick mich&lt;/a&gt;
 
 Du stehst kurz vor einem Kampf. Ich erkläre dir kurz wie Kämpfe ablaufen. 
 
@@ -1005,15 +1005,13 @@ Die verlorenen Lebenspunkte durch den Kampf werden NICHT automatisch wieder aufg
 
 Es gibt ein &quot;Hungersystem&quot; in diesem PnP. Dein Charakter wird regelmäßig hunger kriegen. So wie du auch im echten Leben. Rationen (Getrocknetes Fleisch, Butterbrote usw.) zählen jeweils als eine Ration. Dein Charakter wird automatisch essen, wenn es nötig ist. Achte also darauf, dass du immer genug zu essen dabei hast.
 
-So, und nun nimm dir den leeren Charakterbogen. Der sieht so aus:
-
-&lt;img src=&quot;images/Charleer.jpg&quot; height=&quot;1200&quot; width=&quot;800&quot;&gt;
+So, und nun nimm dir nochmal deinen Charakterbogen.
 
 [[Hab ihn!]]</tw-passagedata><tw-passagedata pid="24" name="Hab ihn!" tags="" position="772,24" size="100,100">Wunderbar!
 
-Bevor wir mit dem Abenteuer beginnen können müssen wir nämlich erstmal deinen Charakter finalisieren. Bitte trage dazu erstmal oben Name, Geschlecht etc. ein. Fertig? Gut! Dann geht&#39;s jetzt an die Attribute deines Charakters. Du musst nun 4 Punkte auf 6 Attribute verteilen. Jeder Wert hat aber bereits einen Punkt.
+Bevor wir mit dem Abenteuer beginnen können müssen wir nämlich erstmal deinen Charakter finalisieren. Bitte trage dazu erstmal oben Name, Geschlecht etc. ein. Fertig? Gut! Damit ist der Charakter startklar.
 
-Hier die Erklärung und Auswirkungen der Attribute:
+Hier noch die Erklärung und Auswirkungen der Attribute:
 
 Stärke: 
 
@@ -1025,9 +1023,6 @@ Beeinflusst wie stark du bist und wieviel Schaden du machst. Jeder 3. Punkt in d
  7-8 Stärke = 4 W20 Schaden
 9-10 Stärke = 5 W20 Schaden
 
-Trage es wie folgt ein (mit deinen eigenen Werten):
-&lt;img src=&quot;images/beispielschaden.jpg&quot;&gt;
-
 Lebensenergie:
 
 Beeinflusst wieviele Lebenspunkte du hast und wie stark dein Durchhaltevermögen ist. Charaktere mit niedriger Lebensenergie sind meistens nicht so hartnäckig im Überleben wie Charaktere mit hoher Lebensenergie. Jeder Punkt in diesem Wert gibt dir 35 Lebenspunkte. Beispiel:
@@ -1038,22 +1033,19 @@ Beeinflusst wieviele Lebenspunkte du hast und wie stark dein Durchhaltevermögen
 4 LE = 140 Lebenspunkte
 5 LE = 175 Lebenspunkte
 
-Trage es wie folgt ein (mit deinen eigenen Werten):
-&lt;img src=&quot;images/beispielleben.jpg&quot;&gt;
-
-Tipp: Schreibe deine Lebenspunkte so auf: 70/70. Nun musst du während des Kampfes nur die vordere Zahl wegradieren und den neuen Wert angeben. So vergisst du deine Gesamtanzahl nicht und hast einen besseren Überblick.
+Tipp: Schreibe deine Lebenspunkte so auf: 70/70. Nun musst du während des Kampfes nur die vordere Zahl wegradieren und den neuen Wert angeben. So vergisst du deine Gesamtanzahl nicht und hast einen besseren Überblick. Solltest du es bis jetzt noch nicht getan haben, so trage nun deine Lebenspunkte auf deinem Charakterbogen ein.
 
 Viele Lebenspunkte wirken auf den ersten Blick praktisch, doch wenn dein Charakter &quot;Dumm wie Brot&quot; ist oder nur ein halbes Hemd, wirst du nicht sehr weit kommen. Überlege also gut, wie viele Punkte du hier investierst.
 
 Geschick:
 
-Dieser Wert hat direkte Auswirkungen. Dieser Wert bestimmt wie geschickt dein Charakter ist und wieviel Schaden er macht. Jeder 3. Punkt in diesem Wert gibt dir einen W20 zusätzlich als Basisschaden. Beispiel:
+Dieser Wert hat direkte Auswirkungen. Dieser Wert bestimmt wie geschickt dein Charakter ist und wieviel Schaden er macht. Jeder 3. Punkt in diesem Wert gibt dir einen W20 zusätzlich als Basisschaden wenn du den Dieb spielst. Beispiel:
 
  1-3 Geschick = 1 W20 Schaden
  4-7 Geschick = 2 W20 Schaden
 8-10 Geschick = 3 W20 Schaden
 
-Geschickte Charaktere können einer plötzlich nahekommenden Gefahr besser ausweichen, verletzen sich nicht so schnell bei Stürzen und sondergleichen.
+Geschickte Charaktere können außerdem einer plötzlich nahekommenden Gefahr besser ausweichen, verletzen sich nicht so schnell bei Stürzen und sondergleichen.
 
 Intellekt:
 
@@ -1069,11 +1061,7 @@ Glück:
 
 Mal hat man Glück, mal nicht. Dieser Wert bestimmt wieviel Glück du auf deinem Abenteuer haben wirst.
 
-Am Ende sollte dein Bogen ungefähr so aussehen:
-
-&lt;img src=&quot;images/beispielwerte.jpg&quot;&gt;
-
-Natürlich ist die Vergabe der Punkte deine Entscheidung. Ich empfehle trotzdem sehr stark, dass Du als Magier/in auf Intellekt gehst, mit dem Kämpfer auf Stärke und Lebensenergie und mit dem Dieb auf Geschick. Ein Charakter mit allen Punkten quer verteilt wird nicht lange überleben.
+Natürlich ist die spätere Vergabe der Punkte deine Entscheidung. Ich empfehle trotzdem sehr stark, dass Du als Magier/in auf Intellekt gehst, mit dem Krieger auf Stärke und Lebensenergie und mit dem Dieb auf Geschick. Ein Charakter mit allen Punkten quer verteilt wird nicht lange überleben.
 
 PS: Rüstungswert (RW) kommt später. Dort wird noch nichts eingetragen.
 &lt;img src=&quot;images/rüstungswert.jpg&quot;&gt;
@@ -1260,25 +1248,25 @@ Würfel auf Geschicklichkeit.
 
 [[Ich konnte dem Goblin ausweichen]]
 [[Ich konnte dem Goblin nicht ausweichen]]
-[[Ich konnte dem Goblin nicht ausweichen (kritisch)]]</tw-passagedata><tw-passagedata pid="59" name="Ich konnte dem Goblin ausweichen" tags="" position="1407,263" size="100,100">&lt;&lt;audio theme stop&gt;&gt;
+[[Ich konnte dem Goblin nicht ausweichen (kritisch)]]</tw-passagedata><tw-passagedata pid="59" name="Ich konnte dem Goblin ausweichen" tags="" position="1670.3333333333333,948.0000000000001" size="100,100">&lt;&lt;audio theme stop&gt;&gt;
 &lt;&lt;audio fight play&gt;&gt;
 Geschickt machst du einen Schritt zur Seite und bereitest dich auf den Kampf vor. Überrascht von deiner Geschicklichkeit ist der Goblin kurz überfordert.
 
-Der Kampf gegen den Goblin beginnt. Du hast den ersten Schlag!
+Der Kampf gegen den Goblin beginnt. Du hast den ersten Schlag! Hier findest du den passenden Charakterbogen (Rechte Maustaste -&gt; In neuem Tab öffnen): &lt;a href=&quot;Charakterbögen/Goblin.png&quot;&gt;Klick mich&lt;/a&gt;
 
 [[Ich habe den Goblin besiegt]]
 [[Der Goblin hat mich besiegt]]</tw-passagedata><tw-passagedata pid="60" name="Ich konnte dem Goblin nicht ausweichen" tags="" position="1547,951" size="100,100">&lt;&lt;audio theme stop&gt;&gt;
 &lt;&lt;audio fight loop play&gt;&gt;
 Du wurdest vom Goblin ziemlich überrascht. Bevor du reagieren kannst, greift er dich auch schon an.
 
-Der Kampf gegen den Goblin beginnt. Der Goblin hat den ersten Schlag.
+Der Kampf gegen den Goblin beginnt. Der Goblin hat den ersten Schlag. Hier findest du den passenden Charakterbogen (Rechte Maustaste -&gt; In neuem Tab öffnen): &lt;a href=&quot;Charakterbögen/Goblin.png&quot;&gt;Klick mich&lt;/a&gt;
 
 [[Ich habe den Goblin besiegt]]
 [[Der Goblin hat mich besiegt]]</tw-passagedata><tw-passagedata pid="61" name="Ich konnte dem Goblin nicht ausweichen (kritisch)" tags="" position="1544,837" size="100,100">&lt;&lt;audio theme stop&gt;&gt;
 &lt;&lt;audio fight loop play&gt;&gt;
 Völlig perplex und überrumpelt vom Goblin fällst du hin. Du bekommst 1W6 Schaden.
 
-Der Kampf gegen den Goblin beginnt. Der Goblin hat den ersten Schlag!
+Der Kampf gegen den Goblin beginnt. Der Goblin hat den ersten Schlag! Hier findest du den passenden Charakterbogen (Rechte Maustaste -&gt; In neuem Tab öffnen): &lt;a href=&quot;Charakterbögen/Goblin.png&quot;&gt;Klick mich&lt;/a&gt;
 
 [[Ich habe den Goblin besiegt]]
 [[Der Goblin hat mich besiegt]]</tw-passagedata><tw-passagedata pid="62" name="Ich habe den Goblin besiegt" tags="" position="1548,1066" size="100,100">&lt;&lt;audio fight stop&gt;&gt;
@@ -1739,7 +1727,7 @@ Du kämpfst nun gegen mehrere Gegner. Es ist nicht möglich alle Gegner gleichze
 
 Hast du deinen Wurf gegen die Gegner gemacht und deine Gegner sind dran, so musst du nun alle Würfel entsprechend der Charakterbögen der entsprechenden Gegner (in diesem Fall 1W6) und den Zusatzschaden (+2) deiner Gegner addieren. In diesem Falle sind es 2 Goblins. Du würfelst also 2W6+4. Danach bist du wieder dran.
 
-Kämpfe nun gegen die Goblins. Denk an die Regeln bei mehreren Gegnern.
+Kämpfe nun gegen die Goblins. Denk an die Regeln bei mehreren Gegnern. Hier findest du den passenden Charakterbogen (Rechte Maustaste -&gt; In neuem Tab öffnen): &lt;a href=&quot;Charakterbögen/Goblin.png&quot;&gt;Klick mich&lt;/a&gt;
 
 [[Ich konnte die Goblins besiegen]]
 [[Die Goblins haben mich besiegt]]</tw-passagedata><tw-passagedata pid="117" name="Ich bin ausgerutscht" tags="" position="1889,2895" size="100,100">&lt;&lt;audio cave stop&gt;&gt;
@@ -1752,7 +1740,8 @@ Du kämpfst nun gegen mehrere Gegner. Es ist nicht möglich, alle Gegner gleichz
 
 Hast du deinen Wurf gegen die Gegner gemacht und deine Gegner sind dran, so musst du nun alle Würfel entsprechend der Charakterbögen der entsprechenden Gegner (in diesem Fall 1W6) und den Zusatzschaden (+2) deiner Gegner addieren. In diesem Falle sind es 2 Goblins: Du würfelst also 2W6+4. Danach bist du wieder dran.
 
-Kämpfe nun gegen die Goblins und denk an die Regeln für den Kampf gegen mehrere Gegner.
+Kämpfe nun gegen die Goblins und denk an die Regeln für den Kampf gegen mehrere Gegner. Hier findest du den passenden Charakterbogen (Rechte Maustaste -&gt; In neuem Tab öffnen): &lt;a href=&quot;Charakterbögen/Goblin.png&quot;&gt;Klick mich&lt;/a&gt;
+
 [[Ich konnte die Goblins besiegen]]
 [[Die Goblins haben mich besiegt]]</tw-passagedata><tw-passagedata pid="118" name="Ich bin ausgerutscht (kritisch)" tags="" position="1887,3008" size="100,100">&lt;&lt;audio cave stop&gt;&gt;
 &lt;&lt;audio fight loop play&gt;&gt;
@@ -1768,7 +1757,7 @@ Kämpfe nun gegen die Goblins. Denk an die Regeln bei mehreren Gegnern.
 
 In diesem spezifischen Fall würfelst du jetzt erst mal 2 mal für die Goblins und danach für dich. Schließlich sind die Goblins in dieser Situation im Vorteil.
 
-Kämpfe nun gegen die Goblins und bedenke die Regeln bei mehreren Gegnern.
+Kämpfe nun gegen die Goblins und bedenke die Regeln bei mehreren Gegnern. Hier findest du den passenden Charakterbogen (Rechte Maustaste -&gt; In neuem Tab öffnen): &lt;a href=&quot;Charakterbögen/Goblin.png&quot;&gt;Klick mich&lt;/a&gt;
 
 [[Ich konnte die Goblins besiegen]]
 [[Die Goblins haben mich besiegt]]</tw-passagedata><tw-passagedata pid="119" name="Ich konnte die Goblins besiegen" tags="" position="1886,3246" size="100,100">Dies war kein leichter Kampf- ganz und gar nicht. Du hast ihn trotzdem gewonnen. Schwer atmend und völlig aus der Puste hältst du kurz einen Moment inne. Die beiden Goblins liegen tot vor dir und du kannst kaum glauben, dass du es wirklich geschafft hast.
@@ -1779,7 +1768,7 @@ Du drehst dich um und vor dir steht nun ein mit einer schweren Keule bewaffneter
 
 Eines steht jedoch fest. Dieser Goblin ist echt sauer. Der Anblick seiner toten Freunde macht die Situation nicht besser. Mit einem Zornesschrei springt er auf dich zu.
 
-Der Kampf gegen einen wütenden Goblin beginnt. Bitte nimm dir den entsprechenden Charakterbogen. Du hast den ersten Schlag.
+Der Kampf gegen einen wütenden Goblin beginnt. Bitte nimm dir den entsprechenden Charakterbogen. Du hast den ersten Schlag. Hier findest du den passenden Charakterbogen (Rechte Maustaste -&gt; In neuem Tab öffnen): &lt;a href=&quot;Charakterbögen/Charakterbogen Wütender Goblin.png&quot;&gt;Klick mich&lt;/a&gt;
 
 [[Ich habe den wütenden Goblin besiegt]]
 [[Ich habe den wütenden Goblin nicht besiegt]]</tw-passagedata><tw-passagedata pid="120" name="Die Goblins haben mich besiegt" tags="" position="1886,3125" size="100,100">&lt;&lt;audio fight stop&gt;&gt;
@@ -2178,7 +2167,7 @@ Der Oger zieht eine riesige Axt vor dir aus dem Boden und versucht einen erneute
 &lt;&lt;audio fight2 loop play&gt;&gt;
 Du weichst dem zweiten Angriff des Ogers aus und machst dich kampfbereit. Du hast tierische Angst, aber bist auch echt angefressen. Diesen Hinterhalt soll der Oger bereuen. Er hat sich das falsche Opfer ausgesucht!
 
-Der Kampf gegen den Oger beginnt. Du fängst an!
+Der Kampf gegen den Oger beginnt. Du fängst an! Hier findest du den passenden Charakterbogen (Rechte Maustaste -&gt; In neuem Tab öffnen): &lt;a href=&quot;Charakterbögen/Oger.png&quot;&gt;Klick mich&lt;/a&gt;
 
 [[Ich habe den Oger besiegt]]
 [[Der Oger hat mich besiegt]]</tw-passagedata><tw-passagedata pid="152" name="Ich habe den Oger besiegt" tags="" position="3464,708" size="100,100">Als der Oger geschwächt und schwer verletzt ein weiteres Mal seine riesige Axt auf dich niederpreschen lässt, machst du einen geschickten Satz zur Seite. Zu geschwächt um die Axt wieder aus den Boden zu ziehen, braucht er einen Moment länger und du hast seinen ungeschützten Rücken vor dir. Du nutzt die Gelegenheit und rammst ihn dein Messer in den Rücken. Beim Eindringen der Klinge spürst du, wie das Metall auf etwas Hartes trifft. Du scheinst seine Wirbelsäule erwischt zu haben und der Oger bricht augenblicklich wie ein nasser Sack tot zusammen. 
@@ -2394,7 +2383,7 @@ Du wühlst in deiner leeren Tasche nach Talern. Der Kapitän bemerkt es und gibt
 
 &quot;Sieh dich ma um, Matrose. Sieht das hier so aus, als wäre irgendwo ein Gäsezimmer versteckt? Ich könnt nicht mal ne Maus hier unterbringen.&quot;
 
-[[Ich hätte da noch was]]</tw-passagedata><tw-passagedata pid="176" name="Ich hätte gerne einen Krug feinstes Met" tags="" position="3941,2219" size="100,100">Der Wirt schüttelt mit dem Kopf.
+[[Ich hätte da noch was]]</tw-passagedata><tw-passagedata pid="176" name="Ich hätte gerne einen Krug feinstes Met" tags="" position="3229.3333333333335,1262.3333333333333" size="100,100">Der Wirt schüttelt mit dem Kopf.
 
 &quot;Den hätten wir hier alle gern. Allerdings verkaufen wir den Met, den wir von unseren Schiffahrten mitbringen an das Dorf Willos. Wir brauchen die Taler mehr, wie den Met. Hier gibt&#39;s nur gutes Wasser. Mehr nicht.&quot;
 
@@ -2417,7 +2406,7 @@ Du fragst vorsichtig nach, ob es wenigstens ein paar Goblins gibt, die den Touri
 
 Der Wirt atmet schwer und seufzt...
 
-[[Ich hätte da noch was]]</tw-passagedata><tw-passagedata pid="179" name="Ich hätte da noch was" tags="" position="3343,1265" size="100,100">&lt;&lt;if $fisch gte 10&gt;&gt;
+[[Ich hätte da noch was]]</tw-passagedata><tw-passagedata pid="179" name="Ich hätte da noch was" tags="" position="3341.3333333333335,1263.3333333333333" size="100,100">&lt;&lt;if $fisch gte 10&gt;&gt;
 Der Wirt sieht dich fragend an.
 
 &quot;Was gibt&#39;s, Matrose?&quot;
@@ -2874,14 +2863,14 @@ Du stürmst auf Deck und kannst sehen, wie erste Piraten bereits das Schiff geen
 
 Kaum hast du dir einen Überblick über die Situation verschafft, da stürmen auch schon zwei Piraten auf dich zu.
 
-Der Kampf gegen die Piraten beginnt. Die Piraten fangen an.
+Der Kampf gegen die Piraten beginnt. Die Piraten fangen an. Hier findest du den passenden Charakterbogen (Rechte Maustaste -&gt; In neuem Tab öffnen): &lt;a href=&quot;Charakterbögen/Pirat.png&quot;&gt;Klick mich&lt;/a&gt;
 [[Ich konnte die Piraten besiegen]]
 [[Ich konnte die Piraten nicht besiegen]]</tw-passagedata><tw-passagedata pid="216" name="Ich konnte die Piraten besiegen" tags="" position="4143,3108" size="100,100">&lt;&lt;audio swords play&gt;&gt;
 Leicht war der Kampf gegen die zwei Piraten nicht, aber du konntest sie durch geschicktes Ausweichen und einem Schuss purer Gewalt niederzwingen. 
 
 Als gerade der zweite Pirat leblos zu Boden sackt, kommen plötzlich drei Piraten von vorne auf dich zugestürmt. Einer der Seemänner von unter Deck wirft dir einen Regenerationstrank zu. Du kippst ihn schnell herunter und machst dich für den Kampf bereit.
 
-Der Kampf gegen drei Piraten beginnt. Vergiss den Effekt des Regenerationstrank nicht. Du fängst an. Beachte die spezielle Auswahlmöglichkeit, bevor du den Kampf beginnst.
+Der Kampf gegen drei Piraten beginnt. Vergiss den Effekt des Regenerationstrank nicht. Du fängst an. Beachte die spezielle Auswahlmöglichkeit, bevor du den Kampf beginnst. Hier findest du den passenden Charakterbogen (Rechte Maustaste -&gt; In neuem Tab öffnen): &lt;a href=&quot;Charakterbögen/Pirat.png&quot;&gt;Klick mich&lt;/a&gt;
 
 [[Ich habe die 3 Piraten besiegt]]
 [[Ich habe weniger als 20 Lebenspunkte!]]</tw-passagedata><tw-passagedata pid="217" name="Ich konnte die Piraten nicht besiegen" tags="" position="4155,2996" size="100,100">Dein Leben wird durch einen Säbel zu einem traurigen Ende gebracht und mit dir auch die Leben dutzender Seemänner... Das letzte was du siehst, ist ein Deck voller Piraten und sterbender Seemänner. Du schließt die Augen...
@@ -2897,7 +2886,7 @@ Während du dich umsiehst, entdeckst du einen Pirat, der sehr stark heraussticht
 
 Gerade als er die Brust eines Seemanns durchsticht und seinen Säbel wieder aus dem toten Körper gezogen hat, verpasst du ihm einen Schlag mit dem Griff deines Säbels. Er konnte den Angriff noch gerade eben abwehren, ist aber sichtlich überrumpelt.
 
-Der Kampf gegen den Kapitän beginnt. Du fängst an. Beachte die spezielle Auswahlmöglichkeit.
+Der Kampf gegen den Kapitän beginnt. Du fängst an. Beachte die spezielle Auswahlmöglichkeit. Hier findest du den passenden Charakterbogen (Rechte Maustaste -&gt; In neuem Tab öffnen): &lt;a href=&quot;Charakterbögen/Kapitän.png&quot;&gt;Klick mich&lt;/a&gt;
 [[Ich konnte den Kapitän besiegen!]]
 [[HILFE!!!]]</tw-passagedata><tw-passagedata pid="219" name="Ich habe weniger als 20 Lebenspunkte!" tags="" position="4038,3115" size="100,100">&lt;&lt;audio swords play&gt;&gt;
 Es steht nicht gut um dich. Du liegst schwer verletzt auf dem Boden und kannst dich nur noch gerade so eben verteidigen. 
@@ -2940,7 +2929,7 @@ Marcels Schlag hat dem Kapitän 15 Schadenspunkte gekostet. Du stehst wieder auf
 Der Kampf gegen den Kapitän ist noch nicht vorbei. Der Kampf geht weiter. Du beginnst.
 
 [[Ich habe den Kapitän besiegt]]
-[[Ich habe den Kapitän nicht besiegt]]</tw-passagedata><tw-passagedata pid="223" name="Marcel hat dem Kapitän den Rest gegeben" tags="" position="4167,3221" size="100,100">&lt;&lt;audio meer loop play&gt;&gt;
+[[Ich habe den Kapitän nicht besiegt]]</tw-passagedata><tw-passagedata pid="223" name="Marcel hat dem Kapitän den Rest gegeben" tags="" position="4182,3219.3333333333335" size="100,100">&lt;&lt;audio meer loop play&gt;&gt;
 Der Kapitän liegt schwer verletzt am Boden. Nur noch in der Lage zu atmen, stellt er keine Bedrohung mehr da. Seine Leute sehen es und lassen die Säbel fallen. Es wird still an Deck. Auch die Seemänner nehmen ihre Waffen runter. Jeder Kamerad zählt, aber wenn der Kapitän fällt, ist die Schlacht vorbei.
 
 Die Piraten versammeln sich um den sterbenden Kapitän und auch du nimmst deine Waffe runter. Die Piraten sind keine Bedrohung mehr, dass spürst selbst du Grünschnabel.
@@ -3423,7 +3412,7 @@ Du hast keine Wahl...
 
 [[Ich kümmere mich um den Mord]]
 [[Ich gehe zur Stadtmitte]]
-&lt;&lt;elseif $klasse is &quot;Kämpfer&quot;&gt;&gt;
+&lt;&lt;elseif $klasse is &quot;Krieger&quot;&gt;&gt;
 &quot;Ich hätte da eine Aufgabe die Muskeln abverlangt. In der Nähe von $stadt gibt es eine Mine. Sie ist unsere Eisenquelle und wir sind davon abhängig. Leider haben einige Oger sich diese Miene unter den Nagel gerissen und die Stadtwache ist zu feige und zu unterbemannt um die Miene zu säubern. Die Stadtwache hat also uns den Auftrag weitergegeben. Auch wenn es erst nicht so scheint ist dieser Auftrag sehr wichtig für uns. Die ganze Stadt lebt von diesem Eisen. Wir brauchen sie sowohl als Handelsgut, als auch für den Bau verschiedenster Waren. Und, kümmerst du dich darum?&quot;
 
 [[Ich kümmere mich um die Oger]]
@@ -3479,7 +3468,7 @@ Zurück zu:
 [[Der Anfang]] </tw-passagedata><tw-passagedata pid="263" name="Charaktererstellung überspringen" tags="" position="1125,20" size="100,100">Ok, dann überspringen wir die Erstellung deines Charakters, Erklärungen und alles Andere. Kämpfe kannst du nun einfach mit &quot;Gewonnen&quot; überspringen und dafür einfach die Geschichte und die Interaktivität genießen. Viel Spaß! Hast du schon Lust auf das spannende Abenteuer?
 &lt;&lt;set $name = &quot;John Doe&quot;&gt;&gt;
 &lt;&lt;set $geschlecht = &quot;Abenteurer&quot;&gt;&gt;
-&lt;&lt;set $klasse = &quot;Kämpfer&quot;&gt;&gt;
+&lt;&lt;set $klasse = &quot;Krieger&quot;&gt;&gt;
 [[Hab ich]]</tw-passagedata><tw-passagedata pid="264" name="Zur Mine" tags="" position="5078,604" size="100,100">&lt;&lt;audio markt stop&gt;&gt;
 &lt;&lt;audio theme4 stop&gt;&gt;
 Dank der guten Beschilderung der Mine findest du Sie recht schnell und einfach. Als du vor dem Mineneingang stehst wirfst du einen Blick darauf. Der Eingang sieht normal und gepflegt aus. Man sieht dem Eingang an, dass die Mine wichtig ist und noch immer stark genutzt wird. Es liegen allerdings auch vereinzelnd Knochen rum. Menschliche Knochen. Sie sind angenagt. An einigen hängt noch verwesendes Fleich. Die Oger hatten wohl keinen Hunger mehr. Es stinkt ekelhaft und du hälst dir die Nase zu. Durch die Holztür die in die Mine führt hörst du das rhytmische Schlagen von Spitzhacken auf Stein. Ab und an hörst du einen Oger grunzen oder einen Menschen vor Schmerzen schreien. Du hörst mindestens 4 verschiedene Oger. Atme noch einmal tief durch und fass dir Mut. Das wird nicht leicht.
@@ -3572,7 +3561,7 @@ Der ohnmächtigen Oger und Anführer werden in ein paar Minuten in den Kampf ein
 &lt;&lt;set _time to 6&gt;&gt;\
 In &lt;span class=&quot;redtext&quot;&gt;@@#countdown;_time@@&lt;/span&gt; Sekunden kommen 2 weitere Oger!
 
-Du hast den Anführer und den anderen Oger überrumpelt. Du kämpfst gegen einen Minen-Oger und dem Minen-Oger Anführer. Nimm dir die beiden Charakterbögen. Du fängst an.
+Du hast den Anführer und den anderen Oger überrumpelt. Du kämpfst gegen einen Minen-Oger und dem Minen-Oger Anführer. Du fängst an. Hier findest du den passenden Charakterbogen Des Anführers(Rechte Maustaste -&gt; In neuem Tab öffnen): &lt;a href=&quot;Charakterbögen/Minen-Oger Anführer.png&quot;&gt;Klick mich&lt;/a&gt; und des normalen Ogers (Rechte Maustaste -&gt; In neuem Tab öffnen): &lt;a href=&quot;Charakterbögen/Minen-Oger.png&quot;&gt;Klick mich&lt;/a&gt;
 
 [[Ich habe den Anführer der Oger besiegt!]]
 [[Ich habe gegen die Oger verloren]]
@@ -3596,7 +3585,7 @@ Einer der Arbeiter hebt den Ranzen des Anführers hoch und gibt ihn dir. Du find
 &lt;&lt;set $taler += 40&gt;&gt;
 Du sagst den Minenarbeitern sie sollen nachhause gehen, sich ausruhen und zu ihren Familien zurückkehren und in ein paar Tagen wieder an die normale Arbeit gehen. Sie jubeln und feiern dich. Loblieder singend verlassen die ensklavten Arbeiter die Mine. Auch du machst dich auf den Heimweg. Du hast nun $taler Taler.
 
-[[Ich gehe zur Stadtmitte]]</tw-passagedata><tw-passagedata pid="279" name="Die anderen beiden Oger kommen" tags="" position="4991,1422" size="100,100">Mitten in den Kampf vertieft bemerkst du nicht, dass die beiden Oger wieder wach sind. Sie überrumpeln dich und beide Oger dürfen dich einmal angreifen. Danach geht der Kampf dort weiter, wo du aufgehört hast.
+[[Ich gehe zur Stadtmitte]]</tw-passagedata><tw-passagedata pid="279" name="Die anderen beiden Oger kommen" tags="" position="4991,1422" size="100,100">Mitten in den Kampf vertieft bemerkst du nicht, dass die beiden Oger wieder wach sind. Sie überrumpeln dich und beide Oger dürfen dich einmal angreifen. Danach geht der Kampf dort weiter, wo du aufgehört hast. Hier findest du den passenden Charakterbogen (Rechte Maustaste -&gt; In neuem Tab öffnen): &lt;a href=&quot;Charakterbögen/Minen-Oger.png&quot;&gt;Klick mich&lt;/a&gt;
 
 [[Ich habe den Anführer der Oger besiegt!]]
 [[Alle drei Oger sind tot und nur der Anführer lebt noch!]]
@@ -3631,7 +3620,7 @@ Wir werden dich nie vergessen, $name.</tw-passagedata><tw-passagedata pid="284" 
 &lt;&lt;set _time to 360&gt;&gt;\
 In &lt;span class=&quot;redtext&quot;&gt;@@#countdown;_time@@&lt;/span&gt; Sekunden kommen der Anführer und ein weiterer Oger!
 
-Du hast die beiden Oger überrumpelt. Du kämpfst gegen zwei Minen-Oger. Nimm dir den Charakterbogen. Du fängst an.
+Du hast die beiden Oger überrumpelt. Du kämpfst gegen zwei Minen-Oger. Du fängst an. Hier findest du den passenden Charakterbogen (Rechte Maustaste -&gt; In neuem Tab öffnen): &lt;a href=&quot;Charakterbögen/Minen-Oger.png&quot;&gt;Klick mich&lt;/a&gt;
 
 [[Ich habe die beiden Oger besiegt!]]
 [[Ich habe gegen die Oger verloren]]
@@ -3905,7 +3894,7 @@ Wähle eine (fiktive) positive Eigenschaft von dir:
 &lt;&lt;radiobutton &quot;$positiv&quot; Freundlich&gt;&gt; Freundlich
 
 Wähle deine Klasse:
-&lt;&lt;radiobutton &quot;$klasse&quot; Kämpfer checked&gt;&gt; Kämpfer
+&lt;&lt;radiobutton &quot;$klasse&quot; Krieger checked&gt;&gt; Krieger
 &lt;&lt;radiobutton &quot;$klasse&quot; Magier&gt;&gt; Magier
 &lt;&lt;radiobutton &quot;$klasse&quot; Dieb&gt;&gt; Dieb
 
@@ -4177,14 +4166,14 @@ Freut mich dich kennen zu lernen! Ich hätte da aber noch eine Frage. Bist du ei
 &lt;&lt;radiobutton &quot;$geschlecht&quot; Abenteurer checked&gt;&gt; Abenteurer
 &lt;&lt;radiobutton &quot;$geschlecht&quot; Abenteurerin&gt;&gt; Abenteurerin
 &lt;&lt;button Weiter WillkommenWEB&gt;&gt;&lt;&lt;/button&gt;&gt;
-&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="319" name="WillkommenWEB" tags="" position="250,911" size="100,100">&lt;&lt;if $klasse is &quot;Kämpfer&quot;&gt;&gt;
+&lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="319" name="WillkommenWEB" tags="" position="250,911" size="100,100">&lt;&lt;if $klasse is &quot;Krieger&quot;&gt;&gt;
 
 Du bist also $geschlecht $name und bist $klasse/in. Sehr schön!
 
 Deine negative Eigenschaft: $negativ
 Deine positive Eigenschaft: $positiv
 
-Der/Die Kämpfer/in hat die Fähigkeit seine Gegner zu verwunden. Ob du deinen Gegner verwundest bestimmt der Wert Stärke. Du würfelst mit einem W10 die Wahrscheinlichkeit. Der gewürfelte Wert muss deinem Stärkewert oder niedriger entsprechen. Hast du 5 Stärke, so musst du mit einem W10 eine 5 oder weniger würfeln. Hast du 7 Stärke, so musst du für eine Wunde eine 7 oder weniger würfeln. Hier die komplette Liste:
+Der/Die Krieger/in hat die Fähigkeit seine Gegner zu verwunden. Ob du deinen Gegner verwundest bestimmt der Wert Stärke. Du würfelst mit einem W10 die Wahrscheinlichkeit. Der gewürfelte Wert muss deinem Stärkewert oder niedriger entsprechen. Hast du 5 Stärke, so musst du mit einem W10 eine 5 oder weniger würfeln. Hast du 7 Stärke, so musst du für eine Wunde eine 7 oder weniger würfeln. Hier die komplette Liste:
 
  1 Stärke: 1 oder niedriger
  2 Stärke: 2 oder niedriger
@@ -4263,7 +4252,7 @@ Ich bin dein Spielleiter. Ich sage dir, was du hörst, riechst, schmeckst, denks
 &lt;&lt;/if&gt;&gt;</tw-passagedata><tw-passagedata pid="320" name="STARTWEB" tags="" position="6,798" size="100,100">Herzlich willkommen!
 
 Du bist hier bei einem digitalen Soloabenteuer gelandet. Um das Soloabentuer zu bestehen, brauchst Du lediglich Charakterbögen, Gegenstands/Fähigkeitskartenkarten und Würfel. Passende Charakterbögen und Karten gibt es 
-&lt;a href=&quot;/DasNamenloseKind.rar&quot;&gt;HIER&lt;/a&gt;. Einfach runterladen und entpacken.
+&lt;a href=&quot;/DasNamenloseKind.rar&quot;&gt;HIER&lt;/a&gt;. Einfach runterladen und entpacken. Das File enthält auch Musik und das Abenteuer. Solltest du also das File runtergeladen und entpackt haben, so kannst du diesen Tab hier schließen. :)
 
 Würfel liegen in digitaler Version bei, falls Du keine hast (Java vorrausgesetzt).
 
@@ -4289,9 +4278,9 @@ Dich erwartet aber in jedem Fall ein spannendes Abenteuer. Wir wünschen viel Sp
 Solltest Du was auf dem Herzen haben, so schreib doch eine Mail:
 marc[at]soloabenteuer.de
 
-&lt;&lt;button Zurück DerAnfangWEB&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="323" name="StoryCaption" tags="" position="154,536" size="100,100">Kritik, Fragen, Anregungen? Mail an: marc[at]soloabenteuer.de</tw-passagedata><tw-passagedata pid="324" name="Kapitel 4" tags="" position="5648,15" size="100,100">[[Die Stadt verlassen und weiterziehen]]</tw-passagedata><tw-passagedata pid="325" name="Ich erzähle dem Mann meine Geschichte" tags="" position="5303,165.66666666666666" size="100,100">Du erzählst ihm von deinem Erwachen, deinem bisherigen Abenteuer und fragst ihn außerdem, wie du zurück kommst. Er merkt dir sichtlich an, dass dich die ganze Sache ziemlich mitnimmt. Er schaut etwas bedröppelt und ratlos. Nach einer kurzen Stille zuckt er mit den Schultern und versucht dich ein wenig zu beruhigen.
+&lt;&lt;button Zurück DerAnfangWEB&gt;&gt;&lt;&lt;/button&gt;&gt;</tw-passagedata><tw-passagedata pid="323" name="StoryCaption" tags="" position="154,536" size="100,100">Kritik, Fragen, Anregungen? Mail an: marc[at]soloabenteuer.de</tw-passagedata><tw-passagedata pid="324" name="Kapitel 4" tags="" position="5648,15" size="100,100">[[Die Stadt verlassen und weiterziehen]]</tw-passagedata><tw-passagedata pid="325" name="Ich erzähle dem Mann meine Geschichte" tags="" position="5303,165" size="100,100">Du erzählst ihm von deinem Erwachen, deinem bisherigen Abenteuer und fragst ihn außerdem, wie du zurück kommst. Er merkt dir sichtlich an, dass dich die ganze Sache ziemlich mitnimmt. Er schaut etwas bedröppelt und ratlos. Nach einer kurzen Stille zuckt er mit den Schultern und versucht dich ein wenig zu beruhigen.
 
-&quot;Es tut mir leid, $name. Ich habe keine Ahnung was dir da passiert ist. Es klingt aber sehr seltsam. Und zugegeben auch ein wenig gruselig. Fast verhext sogar. Da lasse ich lieber meine Finger von. Aber ein paar Tage von hier entfernt gibt es eine kleine Zauberer-Schule. Wenn dir jemand sagen kann was mit dir passiert ist und was los ist, dann sind es die Zauberer. Sie sind weit herumgekommen, sehr gebildet und auch sehr weise. Schließlich sind es Zauberer. Wie ich bereits erwähnte. Vielleicht redest du einfach mal mit denen. Mehr kann ich dir leider auch nicht helfen. Verlasse $stadt und halte dich östlich. Die Zauberer-Schule heißt Imvar. gute 3 Tage wirst du bei normalem Schritt schon brauchen. Und nimm dir genug zu essen mit. Sonst wirst du wahrscheinlich hungern wie ein Bettler.&quot;
+&quot;Es tut mir leid, $name. Ich habe keine Ahnung was euch da passiert ist. Es klingt aber sehr seltsam. Und zugegeben auch ein wenig gruselig. Fast verhext sogar. Da lasse ich lieber meine Finger von. Aber ein paar Tage von hier entfernt gibt es eine kleine Magier-Schule. Wenn euch jemand sagen kann was mit euch passiert ist und was los ist, dann sind es die Magier. Sie sind weit herumgekommen, sehr gebildet und auch sehr weise. Schließlich sind es Magier. Wie ich bereits erwähnte. Vielleicht redet ihr einfach mal mit denen. Mehr kann ich euch leider auch nicht sagen. Verlasst $stadt und haltet euch östlich. Die Magier-Schule heißt &lt;span class=&quot;redtext&quot;&gt;Imwar&lt;/span&gt;. Gute 3 Tage werdet ihr wohl bei normalem Schritt schon brauchen. Und nehmt euch genug zu essen mit. Sonst werdet ihr wahrscheinlich hungern wie ein Bettler.&quot;
 
 Er schaut entschuldigend, aber auch verständnisvoll und freundlich. Du nickst, gibst ihm die Hand zum Abschied und verlässt das Gildenhaus.
 
